@@ -1,0 +1,9 @@
+# 配置服务器端口，默认是8080，可以不用配置
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5 #thymeleaf松校验
+    encoding: utf-8
+    cache: false #关闭缓存，避免改了模板还需要重新启动项目
