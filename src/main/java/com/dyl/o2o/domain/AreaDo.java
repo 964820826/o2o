@@ -1,5 +1,7 @@
 package com.dyl.o2o.domain;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
 /**
@@ -9,9 +11,10 @@ import java.util.Date;
  * @description：
  * @date ：Created in 2019/9/15 16:25
  */
+@Component
 public class AreaDo {
     //区域id
-    private Integer id;//为避免创建对象时默认赋值，故实体类中都使用包装类型
+    private Integer areaId;//为避免创建对象时默认赋值，故实体类中都使用包装类型
     //区域名称
     private String areaName;
     //区域权重（权重越大，排名越靠前）
@@ -22,12 +25,12 @@ public class AreaDo {
     private Date lastEditTime;
 
 
-    public Integer getId() {
-        return id;
+    public Integer getAreaId() {
+        return areaId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer areaId) {
+        this.areaId = areaId;
     }
 
     public String getAreaName() {

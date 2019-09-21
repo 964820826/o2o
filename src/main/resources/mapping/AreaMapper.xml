@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.dyl.o2o.Dao.AreaDao">
+<mapper namespace="com.dyl.o2o.dao.AreaDao">
 
-	<resultMap id="getAreaById" type="com.dyl.o2o.domain.AreaDo">
-		<result column="id" jdbcType="INTEGER" property="id" />
+<!--	<resultMap id="getAreaById" type="com.dyl.o2o.domain.AreaDo">
+		<result column="areaId" jdbcType="INTEGER" property="area_id" />
 		<result column="areaName" jdbcType="VARCHAR" property="area_name" />
 		<result column="priority" jdbcType="INTEGER" property="priority" />
-		<result column="createTime" jdbcType="DATE" property="createTime" />
-		<result column="lastEditTime" jdbcType="DATE" property="lastEditTime" />
-	</resultMap>
+		<result column="createTime" jdbcType="DATE" property="create_time" />
+		<result column="lastEditTime" jdbcType="DATE" property="last_edit_time" />
+	</resultMap>-->
 
-	<select id="getAreaById" resultType="com.dyl.o2o.domain.AreaDo">
-		select * from tb_area where id = #{id}
+	<select id="allArea" resultType="com.dyl.o2o.domain.AreaDo">
+		select * from tb_area
 	</select>
 
 </mapper>
