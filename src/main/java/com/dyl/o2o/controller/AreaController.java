@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @author ：dyl
  * @description：
@@ -20,9 +22,9 @@ public class AreaController {
     @Autowired
     AreaService areaService;
 
-    @RequestMapping("/getAreaById")
+    @RequestMapping("/getArea")
     public String getArea(Model model){
-        AreaDo areaDo = areaService.allArea();
+        List<AreaDo> areaDo = areaService.allArea();
         return areaDo.toString();
     }
 }

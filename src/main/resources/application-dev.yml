@@ -14,10 +14,11 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://localhost:3306/o2o?useUnicode=UTF8&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/o2o?useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   #配置mybatis
-  mybatis:
-    mapper-locations: classpath:mapping/*.xml #mapper映射xml文件（存放mybatis对应sql语句的）的路径
+mybatis-plus:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.dyl.o2o.domain
 

@@ -1,10 +1,12 @@
 package com.dyl.o2o.service.impl;
 
-import com.dyl.o2o.dao.AreaDao;
 import com.dyl.o2o.domain.AreaDo;
+import com.dyl.o2o.mapper.AreaMapper;
 import com.dyl.o2o.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author ：dyl
@@ -15,11 +17,11 @@ import org.springframework.stereotype.Service;
 public class AreaServiceImpl implements AreaService {
 
     @Autowired
-    private AreaDao areaDao;
+    private AreaMapper areaMapper;
 
     @Override
-    public AreaDo allArea() {
-        AreaDo areaDo = areaDao.allArea();
-        return areaDo;
+    public List<AreaDo> allArea() {
+        List<AreaDo> areaDoList = areaMapper.allArea();
+        return areaDoList;
     }
 }
