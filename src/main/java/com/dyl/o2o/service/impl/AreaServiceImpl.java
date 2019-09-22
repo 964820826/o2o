@@ -24,4 +24,7 @@ public class AreaServiceImpl implements AreaService {
         List<AreaDo> areaDoList = areaMapper.allArea();
         return areaDoList;
     }
+
+
+
 }

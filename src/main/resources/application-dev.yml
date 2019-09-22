@@ -17,8 +17,13 @@ spring:
     url: jdbc:mysql://localhost:3306/o2o?useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
 
-  #配置mybatis
 mybatis-plus:
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: com.dyl.o2o.domain
 
+logging:
+  level:
+    root: warn
+    com.dyl.o2o.mapper: trace
+  pattern: #配置输出格式
+    console: '%p%m%n' # %p日志级别 %m日志内容 %n换行
