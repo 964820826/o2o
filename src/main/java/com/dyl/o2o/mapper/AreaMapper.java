@@ -15,5 +15,5 @@ import java.util.List;
 @Repository
 @Mapper
 public interface AreaMapper extends BaseMapper<AreaDo> {//继承BaseMapper为了避免重复写基础的crud
-    List<AreaDo> allArea();
+
 }

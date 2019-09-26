@@ -20,11 +20,9 @@ public class AreaServiceImpl implements AreaService {
     private AreaMapper areaMapper;
 
     @Override
-    public List<AreaDo> allArea() {
-        List<AreaDo> areaDoList = areaMapper.allArea();
+    public List<AreaDo> selectList() {
+        List<AreaDo> areaDoList = areaMapper.selectList(null);
         return areaDoList;
     }
-
-
 
 }

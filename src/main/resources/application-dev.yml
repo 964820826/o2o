@@ -23,7 +23,5 @@ mybatis-plus:
 
 logging:
   level:
-    root: warn
-    com.dyl.o2o.mapper: trace
-  pattern: #配置输出格式
-    console: '%p%m%n' # %p日志级别 %m日志内容 %n换行
+    root: info
+    com.dyl.o2o.mapper: debug

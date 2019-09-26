@@ -22,9 +22,15 @@ public class AreaController {
     @Autowired
     AreaService areaService;
 
+    @RequestMapping("/selectList")
+    public String areaSelectList(Model model){
+        List<AreaDo> areaDo = areaService.selectList();
+        return areaDo.toString();
+    }
+
     @RequestMapping("/getArea")
     public String getArea(Model model){
-        List<AreaDo> areaDo = areaService.allArea();
+        List<AreaDo> areaDo = areaService.selectList();
         return areaDo.toString();
     }
 }

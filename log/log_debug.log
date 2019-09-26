@@ -1,0 +1,3 @@
+2019-09-26 15:15:21.122 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.mapper.AreaMapper.selectList - ==>  Preparing: SELECT area_id,create_time,area_name,last_edit_time,priority FROM tb_area 
+2019-09-26 15:15:21.188 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.mapper.AreaMapper.selectList - ==> Parameters: 
+2019-09-26 15:15:21.273 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.mapper.AreaMapper.selectList - <==      Total: 2
