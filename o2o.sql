@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 本地数据库
+ Source Server         : 本地
  Source Server Type    : MySQL
  Source Server Version : 80017
- Source Host           : 127.0.0.1:3306
+ Source Host           : localhost:3306
  Source Schema         : o2o
 
  Target Server Type    : MySQL
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 19/09/2019 23:34:17
+ Date: 26/09/2019 17:54:02
 */
 
 SET NAMES utf8mb4;
@@ -22,14 +22,14 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_area`;
 CREATE TABLE `tb_area`  (
-  `area_id` int(2) NOT NULL AUTO_INCREMENT,
-  `area_name` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `priority` int(2) NOT NULL DEFAULT 0,
-  `create_time` datetime(0) NULL DEFAULT NULL,
-  `last_edit_time` datetime(0) NULL DEFAULT NULL,
+  `area_id` int(2) NOT NULL AUTO_INCREMENT COMMENT '区域id',
+  `area_name` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '区域名称',
+  `priority` int(2) NOT NULL DEFAULT 0 COMMENT '权重，越高排名越前',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
   PRIMARY KEY (`area_id`) USING BTREE,
   UNIQUE INDEX `UK_AREA`(`area_name`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '区域信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_area
@@ -75,36 +75,13 @@ CREATE TABLE `tb_local_auth`  (
   PRIMARY KEY (`local_auth_id`) USING BTREE,
   UNIQUE INDEX `uk_local_profile`(`username`) USING BTREE,
   INDEX `fk_localauth_profile`(`user_id`) USING BTREE,
-  CONSTRAINT `fk_localauth_profile` FOREIGN KEY (`user_id`) REFERENCES `tb_person_info` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `fk_localauth_profile` FOREIGN KEY (`user_id`) REFERENCES `tb_user_info` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_local_auth
 -- ----------------------------
 INSERT INTO `tb_local_auth` VALUES (13, 1, 'testbind', '59s99bs556bb255by262e26s206e52bs', '2017-10-16 03:52:54', '2017-10-16 04:22:06');
-
--- ----------------------------
--- Table structure for tb_person_info
--- ----------------------------
-DROP TABLE IF EXISTS `tb_person_info`;
-CREATE TABLE `tb_person_info`  (
-  `user_id` int(10) NOT NULL AUTO_INCREMENT,
-  `name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `profile_img` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `email` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `gender` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `enable_status` int(2) NOT NULL DEFAULT 0 COMMENT '0:禁止使用本商城，1:允许使用本商城',
-  `user_type` int(2) NOT NULL DEFAULT 1 COMMENT '1:顾客，2:店家，3:超级管理员',
-  `create_time` datetime(0) NULL DEFAULT NULL,
-  `last_edit_time` datetime(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of tb_person_info
--- ----------------------------
-INSERT INTO `tb_person_info` VALUES (1, '测试', 'test', 'test', '1', 1, 2, NULL, NULL);
-INSERT INTO `tb_person_info` VALUES (8, '李翔', 'http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJmNzyG67YKicCIOXYUKHEC32ZJANTfoaRGVB1MvkW8KagcYfDOic9IicZO5Gibp5QBsLC3p2tLq22quQ/0', NULL, '1', 1, 1, '2017-10-11 04:28:41', NULL);
 
 -- ----------------------------
 -- Table structure for tb_product
@@ -248,7 +225,7 @@ CREATE TABLE `tb_shop`  (
   INDEX `fk_shop_profile`(`owner_id`) USING BTREE,
   INDEX `fk_shop_shopcate`(`shop_category_id`) USING BTREE,
   CONSTRAINT `fk_shop_area` FOREIGN KEY (`area_id`) REFERENCES `tb_area` (`area_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `fk_shop_profile` FOREIGN KEY (`owner_id`) REFERENCES `tb_person_info` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `fk_shop_profile` FOREIGN KEY (`owner_id`) REFERENCES `tb_user_info` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_shop_shopcate` FOREIGN KEY (`shop_category_id`) REFERENCES `tb_shop_category` (`shop_category_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
@@ -307,6 +284,29 @@ INSERT INTO `tb_shop_category` VALUES (34, 'test2', '', NULL, 0, NULL, NULL, 12)
 INSERT INTO `tb_shop_category` VALUES (35, 'test3', '', NULL, 0, NULL, NULL, 12);
 
 -- ----------------------------
+-- Table structure for tb_user_info
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_user_info`;
+CREATE TABLE `tb_user_info`  (
+  `user_id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户名',
+  `profile_img` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '头像地址',
+  `email` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮箱',
+  `gender` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '性别',
+  `enable_status` int(2) NOT NULL DEFAULT 0 COMMENT '0:禁止使用本商城，1:允许使用本商城',
+  `user_type` int(2) NOT NULL DEFAULT 1 COMMENT '1:顾客，2:店家，3:超级管理员',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
+  PRIMARY KEY (`user_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户信息表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tb_user_info
+-- ----------------------------
+INSERT INTO `tb_user_info` VALUES (1, '测试', 'test', 'test', '1', 1, 2, NULL, NULL);
+INSERT INTO `tb_user_info` VALUES (8, '李翔', 'http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJmNzyG67YKicCIOXYUKHEC32ZJANTfoaRGVB1MvkW8KagcYfDOic9IicZO5Gibp5QBsLC3p2tLq22quQ/0', NULL, '1', 1, 1, '2017-10-11 04:28:41', NULL);
+
+-- ----------------------------
 -- Table structure for tb_wechat_auth
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_wechat_auth`;
@@ -318,7 +318,7 @@ CREATE TABLE `tb_wechat_auth`  (
   PRIMARY KEY (`wechat_auth_id`) USING BTREE,
   UNIQUE INDEX `open_id`(`open_id`) USING BTREE,
   INDEX `fk_wechatauth_profile`(`user_id`) USING BTREE,
-  CONSTRAINT `fk_wechatauth_profile` FOREIGN KEY (`user_id`) REFERENCES `tb_person_info` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `fk_wechatauth_profile` FOREIGN KEY (`user_id`) REFERENCES `tb_user_info` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
