@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * 区域实体类，对应数据库表(tb_area)
+ * 区域实体类
  *
  * @author ：dyl
  * @description：

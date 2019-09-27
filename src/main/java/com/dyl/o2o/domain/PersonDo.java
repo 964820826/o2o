@@ -1,19 +1,21 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.util.Date;
 
-/**
+/** 个人表，个人为系统使用的个体，可视为user，但为与常规理解登陆账户的user区分，使用person命名
  * @author ：dyl
  * @date ：Created in 2019/9/26 16:09
  */
 @Data
-public class UserDo {
+@TableName("tb_person")
+public class PersonDo {
     //用户Id
-    private Long userId;
+    private Long personId;
     //用户名
-    private String userName;
+    private String personName;
     //头像地址
     private String profileImg;
     //邮箱
@@ -23,7 +25,7 @@ public class UserDo {
     //用户状态 禁用为0 启用为1
     private Integer enableStatus;
     //用户类型 1.顾客 2.店家 3.超管
-    private Integer userType;
+    private Integer personType;
     //创建时间
     private Date createTime;
     //修改时间
