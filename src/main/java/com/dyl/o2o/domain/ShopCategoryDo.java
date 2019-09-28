@@ -20,12 +20,13 @@ public class ShopCategoryDo {
     private String shopCategoryDesc;
     //图片
     private String shopCategoryImg;
+    //权重，越大越靠前
+    private Integer priority;
     //创建时间
     private Date creatTime;
     //修改时间
     private Date lastEditTime;
-    //权重，越大越靠前
-    private Integer priority;
     //上级id（自关联）
-    private Long parentId;
+    private ShopCategoryDo parent;
+
 }

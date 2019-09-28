@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 27/09/2019 20:57:09
+ Date: 28/09/2019 18:02:07
 */
 
 SET NAMES utf8mb4;
@@ -151,44 +151,45 @@ INSERT INTO `tb_product` VALUES (12, '优质大白咖啡', '非常好喝哦', '/
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_product_category`;
 CREATE TABLE `tb_product_category`  (
-  `product_category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_category_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `priority` int(2) NULL DEFAULT 0,
-  `create_time` datetime(0) NULL DEFAULT NULL,
-  `shop_id` int(20) NOT NULL DEFAULT 0,
+  `product_category_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '商品类别Id',
+  `shop_id` int(20) NOT NULL DEFAULT 0 COMMENT '所属店铺id（外键，只对应id）',
+  `product_category_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '商品类别名称',
+  `priority` int(2) NULL DEFAULT 0 COMMENT '权重',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `last_edit_id` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
   PRIMARY KEY (`product_category_id`) USING BTREE,
   INDEX `fk_procate_shop`(`shop_id`) USING BTREE,
   CONSTRAINT `fk_procate_shop` FOREIGN KEY (`shop_id`) REFERENCES `tb_shop` (`shop_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品类别' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_product_category
 -- ----------------------------
-INSERT INTO `tb_product_category` VALUES (1, '眼镜类', 1, NULL, 29);
-INSERT INTO `tb_product_category` VALUES (2, '无镜类', 2, NULL, 29);
-INSERT INTO `tb_product_category` VALUES (3, '开心类', 3, NULL, 29);
-INSERT INTO `tb_product_category` VALUES (4, '优质奶茶', 6, NULL, 28);
-INSERT INTO `tb_product_category` VALUES (5, '劣质奶茶', 3, NULL, 28);
-INSERT INTO `tb_product_category` VALUES (6, '优质咖啡', 5, NULL, 28);
-INSERT INTO `tb_product_category` VALUES (7, '劣质咖啡', 2, NULL, 28);
-INSERT INTO `tb_product_category` VALUES (8, '甜品小吃', 4, NULL, 28);
-INSERT INTO `tb_product_category` VALUES (9, '苦品凉茶', 4, NULL, 28);
+INSERT INTO `tb_product_category` VALUES (1, 29, '眼镜类', 1, NULL, NULL);
+INSERT INTO `tb_product_category` VALUES (2, 29, '无镜类', 2, NULL, NULL);
+INSERT INTO `tb_product_category` VALUES (3, 29, '开心类', 3, NULL, NULL);
+INSERT INTO `tb_product_category` VALUES (4, 28, '优质奶茶', 6, NULL, NULL);
+INSERT INTO `tb_product_category` VALUES (5, 28, '劣质奶茶', 3, NULL, NULL);
+INSERT INTO `tb_product_category` VALUES (6, 28, '优质咖啡', 5, NULL, NULL);
+INSERT INTO `tb_product_category` VALUES (7, 28, '劣质咖啡', 2, NULL, NULL);
+INSERT INTO `tb_product_category` VALUES (8, 28, '甜品小吃', 4, NULL, NULL);
+INSERT INTO `tb_product_category` VALUES (9, 28, '苦品凉茶', 4, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tb_product_img
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_product_img`;
 CREATE TABLE `tb_product_img`  (
-  `product_img_id` int(20) NOT NULL AUTO_INCREMENT,
-  `img_addr` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `img_desc` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `priority` int(2) NULL DEFAULT 0,
-  `create_time` datetime(0) NULL DEFAULT NULL,
-  `product_id` int(20) NULL DEFAULT NULL,
+  `product_img_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '商品图片id',
+  `img_addr` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '图片地址',
+  `img_desc` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '图片描述',
+  `priority` int(2) NULL DEFAULT 0 COMMENT '权重（越大排名越靠前）',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `product_id` int(20) NULL DEFAULT NULL COMMENT '所属商品id（外键，只对应id）',
   PRIMARY KEY (`product_img_id`) USING BTREE,
   INDEX `fk_proimg_product`(`product_id`) USING BTREE,
   CONSTRAINT `fk_proimg_product` FOREIGN KEY (`product_id`) REFERENCES `tb_product` (`product_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品图片' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_product_img
@@ -229,20 +230,20 @@ INSERT INTO `tb_product_img` VALUES (30, '/upload/images/item/shop/28/2017100216
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_shop`;
 CREATE TABLE `tb_shop`  (
-  `shop_id` int(10) NOT NULL AUTO_INCREMENT,
-  `owner_id` int(10) NOT NULL COMMENT '店铺创建人',
-  `area_id` int(5) NULL DEFAULT NULL,
-  `shop_category_id` int(11) NULL DEFAULT NULL,
-  `shop_name` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `shop_desc` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `shop_addr` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `phone` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `shop_img` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `priority` int(3) NULL DEFAULT 0,
-  `create_time` datetime(0) NULL DEFAULT NULL,
-  `last_edit_time` datetime(0) NULL DEFAULT NULL,
-  `enable_status` int(2) NOT NULL DEFAULT 0,
-  `advice` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `shop_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '店铺id',
+  `owner_id` int(10) NOT NULL COMMENT '店铺创建人（外键，对应owner）',
+  `area_id` int(5) NULL DEFAULT NULL COMMENT '区域（外键，对应area）',
+  `shop_category_id` int(11) NULL DEFAULT NULL COMMENT '店铺类别（外键，对应shopCategory）',
+  `shop_name` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '店铺名称',
+  `shop_desc` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '店铺描述',
+  `shop_img` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '店铺图片',
+  `priority` int(3) NULL DEFAULT 0 COMMENT '权重',
+  `shop_addr` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '店铺地址',
+  `phone` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '联系电话',
+  `enable_status` int(2) NOT NULL DEFAULT 0 COMMENT '可用状态 -1不可用  0审核中  1可用',
+  `advice` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '建议（超管对于店铺的建议）',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
   PRIMARY KEY (`shop_id`) USING BTREE,
   INDEX `fk_shop_area`(`area_id`) USING BTREE,
   INDEX `fk_shop_profile`(`owner_id`) USING BTREE,
@@ -250,61 +251,61 @@ CREATE TABLE `tb_shop`  (
   CONSTRAINT `fk_shop_area` FOREIGN KEY (`area_id`) REFERENCES `tb_area` (`area_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_shop_profile` FOREIGN KEY (`owner_id`) REFERENCES `tb_person` (`person_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_shop_shopcate` FOREIGN KEY (`shop_category_id`) REFERENCES `tb_shop_category` (`shop_category_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '店铺信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_shop
 -- ----------------------------
-INSERT INTO `tb_shop` VALUES (1, 1, 3, 14, '正式店铺名称', '测试描述', '正式地址', '13810524086', '/upload/item/shop/1/2017091621545314507.jpg', 10, '2017-08-03 00:08:32', '2017-09-16 21:54:53', 0, '审核中');
-INSERT INTO `tb_shop` VALUES (28, 1, 2, 22, '小黄人主题奶茶店', '不接受预订，请直接来店里进行消费', '位于东苑2号', '13810524086', '/upload/images/item/shop/28/2017092601041469991.png', 50, '2017-09-26 01:04:13', '2017-09-26 01:04:13', 1, NULL);
-INSERT INTO `tb_shop` VALUES (29, 1, 3, 22, '暴漫奶茶店', '过来喝喝就知道啦，你是我的奶茶', '西苑1号', '1211334565', '/upload/images/item/shop/29/2017092601054939287.jpg', 40, '2017-09-26 01:05:49', '2017-09-26 01:05:49', 1, NULL);
-INSERT INTO `tb_shop` VALUES (30, 1, 2, 20, '彪哥大排档', '敢说不好吃吗', '东苑1号', '13628763625', '/upload/images/item/shop/30/2017092601063878278.jpg', 30, '2017-09-26 01:06:37', '2017-09-26 01:06:37', 1, NULL);
-INSERT INTO `tb_shop` VALUES (31, 1, 2, 20, '威哥大排档', '干掉彪哥大排档', '东苑南路', '126554437261', '/upload/images/item/shop/31/2017092601072177572.jpg', 20, '2017-09-26 01:07:21', '2017-09-26 01:07:21', 1, NULL);
-INSERT INTO `tb_shop` VALUES (32, 1, 2, 22, '你是我的奶茶', '奶茶店再次来袭', '东苑六路', '13652384615', '/upload/images/item/shop/32/2017092601081463136.jpg', 10, '2017-09-26 01:08:13', '2017-09-26 01:08:13', 1, NULL);
-INSERT INTO `tb_shop` VALUES (35, 8, 2, 22, '奶茶来了', '奶茶来了', '西苑7路', NULL, NULL, 0, NULL, NULL, 0, NULL);
+INSERT INTO `tb_shop` VALUES (1, 1, 3, 14, '正式店铺名称', '测试描述', '/upload/item/shop/1/2017091621545314507.jpg', 10, '正式地址', '13810524086', 0, '审核中', '2017-08-03 00:08:32', '2017-09-16 21:54:53');
+INSERT INTO `tb_shop` VALUES (28, 1, 2, 22, '小黄人主题奶茶店', '不接受预订，请直接来店里进行消费', '/upload/images/item/shop/28/2017092601041469991.png', 50, '位于东苑2号', '13810524086', 1, NULL, '2017-09-26 01:04:13', '2017-09-26 01:04:13');
+INSERT INTO `tb_shop` VALUES (29, 1, 3, 22, '暴漫奶茶店', '过来喝喝就知道啦，你是我的奶茶', '/upload/images/item/shop/29/2017092601054939287.jpg', 40, '西苑1号', '1211334565', 1, NULL, '2017-09-26 01:05:49', '2017-09-26 01:05:49');
+INSERT INTO `tb_shop` VALUES (30, 1, 2, 20, '彪哥大排档', '敢说不好吃吗', '/upload/images/item/shop/30/2017092601063878278.jpg', 30, '东苑1号', '13628763625', 1, NULL, '2017-09-26 01:06:37', '2017-09-26 01:06:37');
+INSERT INTO `tb_shop` VALUES (31, 1, 2, 20, '威哥大排档', '干掉彪哥大排档', '/upload/images/item/shop/31/2017092601072177572.jpg', 20, '东苑南路', '126554437261', 1, NULL, '2017-09-26 01:07:21', '2017-09-26 01:07:21');
+INSERT INTO `tb_shop` VALUES (32, 1, 2, 22, '你是我的奶茶', '奶茶店再次来袭', '/upload/images/item/shop/32/2017092601081463136.jpg', 10, '东苑六路', '13652384615', 1, NULL, '2017-09-26 01:08:13', '2017-09-26 01:08:13');
+INSERT INTO `tb_shop` VALUES (35, 8, 2, 22, '奶茶来了', '奶茶来了', NULL, 0, '西苑7路', NULL, 0, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tb_shop_category
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_shop_category`;
 CREATE TABLE `tb_shop_category`  (
-  `shop_category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_category_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
-  `shop_category_desc` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '',
-  `shop_category_img` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `priority` int(2) NOT NULL DEFAULT 0,
-  `create_time` datetime(0) NULL DEFAULT NULL,
-  `last_edit_time` datetime(0) NULL DEFAULT NULL,
-  `parent_id` int(11) NULL DEFAULT NULL,
+  `shop_category_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '店铺类别id',
+  `parent_id` int(11) NULL DEFAULT NULL COMMENT '上级id（外键自关联，对应对象里的parent）',
+  `shop_category_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '店铺类别名称',
+  `shop_category_desc` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺类别描述',
+  `shop_category_img` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '店铺类别图片',
+  `priority` int(2) NOT NULL DEFAULT 0 COMMENT '权重',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
   PRIMARY KEY (`shop_category_id`) USING BTREE,
   INDEX `fk_shop_category_self`(`parent_id`) USING BTREE,
   CONSTRAINT `fk_shop_category_self` FOREIGN KEY (`parent_id`) REFERENCES `tb_shop_category` (`shop_category_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '店铺类别' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_shop_category
 -- ----------------------------
-INSERT INTO `tb_shop_category` VALUES (10, '二手市场', '二手商品交易', '/upload/images/item/shopcategory/2017061223272255687.png', 100, '2017-06-04 20:10:58', '2017-06-12 23:27:22', NULL);
-INSERT INTO `tb_shop_category` VALUES (11, '美容美发', '美容美发', '/upload/images/item/shopcategory/2017061223273314635.png', 99, '2017-06-04 20:12:57', '2017-06-12 23:27:33', NULL);
-INSERT INTO `tb_shop_category` VALUES (12, '美食饮品', '美食饮品', '/upload/images/item/shopcategory/2017061223274213433.png', 98, '2017-06-04 20:15:21', '2017-06-12 23:27:42', NULL);
-INSERT INTO `tb_shop_category` VALUES (13, '休闲娱乐', '休闲娱乐', '/upload/images/item/shopcategory/2017061223275121460.png', 97, '2017-06-04 20:19:29', '2017-06-12 23:27:51', NULL);
-INSERT INTO `tb_shop_category` VALUES (14, '旧车', '旧车', '/upload/images/item/shopcategory/2017060420315183203.png', 80, '2017-06-04 20:31:51', '2017-06-04 20:31:51', 10);
-INSERT INTO `tb_shop_category` VALUES (15, '二手书籍', '二手书籍', '/upload/images/item/shopcategory/2017060420322333745.png', 79, '2017-06-04 20:32:23', '2017-06-04 20:32:23', 10);
-INSERT INTO `tb_shop_category` VALUES (17, '护理', '护理', '/upload/images/item/shopcategory/2017060420372391702.png', 76, '2017-06-04 20:37:23', '2017-06-04 20:37:23', 11);
-INSERT INTO `tb_shop_category` VALUES (18, '理发', '理发', '/upload/images/item/shopcategory/2017060420374775350.png', 74, '2017-06-04 20:37:47', '2017-06-04 20:37:47', 11);
-INSERT INTO `tb_shop_category` VALUES (20, '大排档', '大排档', '/upload/images/item/shopcategory/2017060420460491494.png', 59, '2017-06-04 20:46:04', '2017-06-04 20:46:04', 12);
-INSERT INTO `tb_shop_category` VALUES (22, '奶茶店', '奶茶店', '/upload/images/item/shopcategory/2017060420464594520.png', 58, '2017-06-04 20:46:45', '2017-06-04 20:46:45', 12);
-INSERT INTO `tb_shop_category` VALUES (24, '密室逃生', '密室逃生', '/upload/images/item/shopcategory/2017060420500783376.png', 56, '2017-06-04 20:50:07', '2017-06-04 21:45:53', 13);
-INSERT INTO `tb_shop_category` VALUES (25, 'KTV', 'KTV', '/upload/images/item/shopcategory/2017060420505834244.png', 57, '2017-06-04 20:50:58', '2017-06-04 20:51:14', 13);
-INSERT INTO `tb_shop_category` VALUES (27, '培训教育', '培训教育', '/upload/images/item/shopcategory/2017061223280082147.png', 96, '2017-06-04 21:51:36', '2017-06-12 23:28:00', NULL);
-INSERT INTO `tb_shop_category` VALUES (28, '租赁市场', '租赁市场', '/upload/images/item/shopcategory/2017061223281361578.png', 95, '2017-06-04 21:53:52', '2017-06-12 23:28:13', NULL);
-INSERT INTO `tb_shop_category` VALUES (29, '程序设计', '程序设计', '/upload/images/item/shopcategory/2017060421593496807.png', 50, '2017-06-04 21:59:34', '2017-06-04 21:59:34', 27);
-INSERT INTO `tb_shop_category` VALUES (30, '声乐舞蹈', '声乐舞蹈', '/upload/images/item/shopcategory/2017060421595843693.png', 49, '2017-06-04 21:59:58', '2017-06-04 21:59:58', 27);
-INSERT INTO `tb_shop_category` VALUES (31, '演出道具', '演出道具', '/upload/images/item/shopcategory/2017060422114076152.png', 45, '2017-06-04 22:11:40', '2017-06-04 22:11:40', 28);
-INSERT INTO `tb_shop_category` VALUES (32, '交通工具', '交通工具', '/upload/images/item/shopcategory/2017060422121144586.png', 44, '2017-06-04 22:12:11', '2017-06-04 22:12:11', 28);
-INSERT INTO `tb_shop_category` VALUES (33, 'test1', '', NULL, 0, NULL, NULL, 12);
-INSERT INTO `tb_shop_category` VALUES (34, 'test2', '', NULL, 0, NULL, NULL, 12);
-INSERT INTO `tb_shop_category` VALUES (35, 'test3', '', NULL, 0, NULL, NULL, 12);
+INSERT INTO `tb_shop_category` VALUES (10, NULL, '二手市场', '二手商品交易', '/upload/images/item/shopcategory/2017061223272255687.png', 100, '2017-06-04 20:10:58', '2017-06-12 23:27:22');
+INSERT INTO `tb_shop_category` VALUES (11, NULL, '美容美发', '美容美发', '/upload/images/item/shopcategory/2017061223273314635.png', 99, '2017-06-04 20:12:57', '2017-06-12 23:27:33');
+INSERT INTO `tb_shop_category` VALUES (12, NULL, '美食饮品', '美食饮品', '/upload/images/item/shopcategory/2017061223274213433.png', 98, '2017-06-04 20:15:21', '2017-06-12 23:27:42');
+INSERT INTO `tb_shop_category` VALUES (13, NULL, '休闲娱乐', '休闲娱乐', '/upload/images/item/shopcategory/2017061223275121460.png', 97, '2017-06-04 20:19:29', '2017-06-12 23:27:51');
+INSERT INTO `tb_shop_category` VALUES (14, 10, '旧车', '旧车', '/upload/images/item/shopcategory/2017060420315183203.png', 80, '2017-06-04 20:31:51', '2017-06-04 20:31:51');
+INSERT INTO `tb_shop_category` VALUES (15, 10, '二手书籍', '二手书籍', '/upload/images/item/shopcategory/2017060420322333745.png', 79, '2017-06-04 20:32:23', '2017-06-04 20:32:23');
+INSERT INTO `tb_shop_category` VALUES (17, 11, '护理', '护理', '/upload/images/item/shopcategory/2017060420372391702.png', 76, '2017-06-04 20:37:23', '2017-06-04 20:37:23');
+INSERT INTO `tb_shop_category` VALUES (18, 11, '理发', '理发', '/upload/images/item/shopcategory/2017060420374775350.png', 74, '2017-06-04 20:37:47', '2017-06-04 20:37:47');
+INSERT INTO `tb_shop_category` VALUES (20, 12, '大排档', '大排档', '/upload/images/item/shopcategory/2017060420460491494.png', 59, '2017-06-04 20:46:04', '2017-06-04 20:46:04');
+INSERT INTO `tb_shop_category` VALUES (22, 12, '奶茶店', '奶茶店', '/upload/images/item/shopcategory/2017060420464594520.png', 58, '2017-06-04 20:46:45', '2017-06-04 20:46:45');
+INSERT INTO `tb_shop_category` VALUES (24, 13, '密室逃生', '密室逃生', '/upload/images/item/shopcategory/2017060420500783376.png', 56, '2017-06-04 20:50:07', '2017-06-04 21:45:53');
+INSERT INTO `tb_shop_category` VALUES (25, 13, 'KTV', 'KTV', '/upload/images/item/shopcategory/2017060420505834244.png', 57, '2017-06-04 20:50:58', '2017-06-04 20:51:14');
+INSERT INTO `tb_shop_category` VALUES (27, NULL, '培训教育', '培训教育', '/upload/images/item/shopcategory/2017061223280082147.png', 96, '2017-06-04 21:51:36', '2017-06-12 23:28:00');
+INSERT INTO `tb_shop_category` VALUES (28, NULL, '租赁市场', '租赁市场', '/upload/images/item/shopcategory/2017061223281361578.png', 95, '2017-06-04 21:53:52', '2017-06-12 23:28:13');
+INSERT INTO `tb_shop_category` VALUES (29, 27, '程序设计', '程序设计', '/upload/images/item/shopcategory/2017060421593496807.png', 50, '2017-06-04 21:59:34', '2017-06-04 21:59:34');
+INSERT INTO `tb_shop_category` VALUES (30, 27, '声乐舞蹈', '声乐舞蹈', '/upload/images/item/shopcategory/2017060421595843693.png', 49, '2017-06-04 21:59:58', '2017-06-04 21:59:58');
+INSERT INTO `tb_shop_category` VALUES (31, 28, '演出道具', '演出道具', '/upload/images/item/shopcategory/2017060422114076152.png', 45, '2017-06-04 22:11:40', '2017-06-04 22:11:40');
+INSERT INTO `tb_shop_category` VALUES (32, 28, '交通工具', '交通工具', '/upload/images/item/shopcategory/2017060422121144586.png', 44, '2017-06-04 22:12:11', '2017-06-04 22:12:11');
+INSERT INTO `tb_shop_category` VALUES (33, 12, 'test1', '', NULL, 0, NULL, NULL);
+INSERT INTO `tb_shop_category` VALUES (34, 12, 'test2', '', NULL, 0, NULL, NULL);
+INSERT INTO `tb_shop_category` VALUES (35, 12, 'test3', '', NULL, 0, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tb_wechat_auth
