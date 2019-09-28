@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 本地
+ Source Server         : 本地数据库
  Source Server Type    : MySQL
  Source Server Version : 80017
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 28/09/2019 18:02:07
+ Date: 29/09/2019 00:04:23
 */
 
 SET NAMES utf8mb4;
@@ -22,11 +22,11 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_area`;
 CREATE TABLE `tb_area`  (
-  `area_id` int(2) NOT NULL AUTO_INCREMENT COMMENT '区域id',
+  `area_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '区域id',
   `area_name` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '区域名称',
-  `priority` int(2) NOT NULL DEFAULT 0 COMMENT '权重，越高排名越前',
+  `priority` int(2) NULL DEFAULT 0 COMMENT '权重，越高排名越前',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `last_edit_time` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`area_id`) USING BTREE,
   UNIQUE INDEX `UK_AREA`(`area_name`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '区域信息表' ROW_FORMAT = Dynamic;
@@ -42,14 +42,14 @@ INSERT INTO `tb_area` VALUES (3, '西苑', 2, NULL, NULL);
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_head_line`;
 CREATE TABLE `tb_head_line`  (
-  `head_line_id` int(100) NOT NULL AUTO_INCREMENT COMMENT '头条id',
+  `head_line_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '头条id',
   `head_line_name` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '头条名称',
   `head_line_link` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '头条指向链接',
   `head_line_img` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '头条图片',
   `priority` int(2) NULL DEFAULT 0 COMMENT '权重，越大排名越靠前',
-  `enable_status` int(2) NOT NULL DEFAULT 0 COMMENT '启用状态，0：禁用 1：启用',
+  `enable_status` int(2) NULL DEFAULT 0 COMMENT '启用状态，0：禁用 1：启用',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `last_edit_time` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`head_line_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
@@ -66,12 +66,12 @@ INSERT INTO `tb_head_line` VALUES (15, '4', 'http://115.28.159.6/myo2o/frontend/
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_local_auth`;
 CREATE TABLE `tb_local_auth`  (
-  `local_auth_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '本地账号id',
-  `person_id` int(10) NOT NULL COMMENT '用户id（用于外键关联，对应对象里复合类型）',
+  `local_auth_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '本地账号id',
+  `person_id` int(20) NOT NULL COMMENT '用户id（用于外键关联，对应对象里复合类型）',
   `local_auth_name` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '本地账号名',
   `password` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '登陆密码',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `last_edit_time` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`local_auth_id`) USING BTREE,
   UNIQUE INDEX `uk_local_profile`(`local_auth_name`) USING BTREE,
   INDEX `fk_localauth_profile`(`person_id`) USING BTREE,
@@ -88,15 +88,15 @@ INSERT INTO `tb_local_auth` VALUES (13, 1, 'testbind', '59s99bs556bb255by262e26s
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_person`;
 CREATE TABLE `tb_person`  (
-  `person_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '用户id',
+  `person_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '用户id',
   `person_name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户名',
   `profile_img` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '头像地址',
   `email` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮箱',
   `gender` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '性别',
-  `enable_status` int(2) NOT NULL DEFAULT 0 COMMENT '0:禁止使用本商城，1:允许使用本商城',
-  `person_type` int(2) NOT NULL DEFAULT 1 COMMENT '1:顾客，2:店家，3:超级管理员',
+  `enable_status` int(2) NULL DEFAULT 0 COMMENT '0:禁止使用本商城，1:允许使用本商城',
+  `person_type` int(2) NULL DEFAULT 1 COMMENT '1:顾客，2:店家，3:超级管理员',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `last_edit_time` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`person_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '个人信息表（用户表）' ROW_FORMAT = Dynamic;
 
@@ -111,52 +111,52 @@ INSERT INTO `tb_person` VALUES (8, '李翔', 'http://wx.qlogo.cn/mmopen/vi_32/Q0
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_product`;
 CREATE TABLE `tb_product`  (
-  `product_id` int(100) NOT NULL AUTO_INCREMENT,
-  `product_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `product_desc` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `img_addr` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '',
-  `normal_price` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `promotion_price` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `priority` int(2) NOT NULL DEFAULT 0,
-  `create_time` datetime(0) NULL DEFAULT NULL,
-  `last_edit_time` datetime(0) NULL DEFAULT NULL,
-  `enable_status` int(2) NOT NULL DEFAULT 0,
-  `product_category_id` int(11) NULL DEFAULT NULL,
-  `shop_id` int(20) NOT NULL DEFAULT 0,
+  `product_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '商品id',
+  `product_category_id` int(20) NOT NULL COMMENT '商品类别id（外键，复合类型）',
+  `shop_id` int(20) NOT NULL DEFAULT 0 COMMENT '所属店铺（外键，复合类型）',
+  `product_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '商品名称',
+  `product_desc` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '商品描述',
+  `product_thum` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '缩略图地址',
+  `normal_price` float(10, 2) NULL DEFAULT 0.00 COMMENT '商品正常价格',
+  `discount_price` float(10, 2) NULL DEFAULT 0.00 COMMENT '商品折扣价格',
+  `priority` int(2) NULL DEFAULT 0 COMMENT '权重（越大排名越靠前）',
+  `enable_status` int(2) NULL DEFAULT 0 COMMENT '可用状态 0不可用  1可用',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`product_id`) USING BTREE,
   INDEX `fk_product_procate`(`product_category_id`) USING BTREE,
   INDEX `fk_product_shop`(`shop_id`) USING BTREE,
   CONSTRAINT `fk_product_procate` FOREIGN KEY (`product_category_id`) REFERENCES `tb_product_category` (`product_category_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_product_shop` FOREIGN KEY (`shop_id`) REFERENCES `tb_shop` (`shop_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品详情' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_product
 -- ----------------------------
-INSERT INTO `tb_product` VALUES (1, '大黄人', '我是大黄人', 'upload/images/item/shop/29/2017092601204036435.jpg', '2', '1', 100, '2017-09-26 01:20:40', '2017-09-26 01:20:40', 1, 3, 29);
-INSERT INTO `tb_product` VALUES (2, '小黄人', '我是小黄人', 'upload/images/item/shop/29/2017092601212211185.jpg', '3', '2', 90, '2017-09-26 01:21:22', '2017-09-26 01:21:22', 1, 2, 29);
-INSERT INTO `tb_product` VALUES (3, '暴漫人', '开心了', 'upload/images/item/shop/29/2017092601220059819.jpg', '3', '2', 80, '2017-09-26 01:22:00', '2017-09-26 01:22:00', 1, 3, 29);
-INSERT INTO `tb_product` VALUES (4, '宇宙第一', '宇宙无敌', 'upload/images/item/shop/29/2017092601224389939.jpg', '5', '2', 70, '2017-09-26 01:22:43', '2017-09-26 01:22:43', 1, 3, 29);
-INSERT INTO `tb_product` VALUES (5, '眼凸凸', '宇宙无敌', 'upload/images/item/shop/29/2017092601231570458.jpg', '3', '2', 60, '2017-09-26 01:23:15', '2017-09-26 01:23:15', 1, 3, 29);
-INSERT INTO `tb_product` VALUES (6, '笑眯眯', '笑眯眯 甜蜜蜜', 'upload/images/item/shop/29/2017092601234922140.jpg', '2', '2', 50, '2017-09-26 01:23:49', '2017-09-26 01:23:49', 1, 3, 29);
-INSERT INTO `tb_product` VALUES (7, '优质小黄人奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216554368403.jpg', '6', '3', 100, '2017-10-02 16:55:43', '2017-10-02 16:55:43', 1, 4, 28);
-INSERT INTO `tb_product` VALUES (8, '优质暴漫奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216561443475.jpg', '6', '3', 100, '2017-10-02 16:56:14', '2017-10-02 16:56:14', 1, 4, 28);
-INSERT INTO `tb_product` VALUES (9, '优质大白奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216564398563.jpg', '6', '3', 90, '2017-10-02 16:56:43', '2017-10-02 16:56:43', 1, 4, 28);
-INSERT INTO `tb_product` VALUES (10, '优质二维码奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216570762900.jpg', '5', '3', 80, '2017-10-02 16:57:07', '2017-10-02 16:57:07', 1, 4, 28);
-INSERT INTO `tb_product` VALUES (11, '优质二维码咖啡', '非常好喝哦', '/upload/images/item/shop/28/2017100216573090557.jpg', '8', '3', 60, '2017-10-02 16:57:30', '2017-10-02 16:57:30', 1, 6, 28);
-INSERT INTO `tb_product` VALUES (12, '优质大白咖啡', '非常好喝哦', '/upload/images/item/shop/28/2017100216575922088.jpg', '8', '3', 50, '2017-10-02 16:57:59', '2017-10-02 16:57:59', 1, 6, 28);
+INSERT INTO `tb_product` VALUES (1, 3, 29, '大黄人', '我是大黄人', 'upload/images/item/shop/29/2017092601204036435.jpg', 2.00, 1.00, 100, 1, '2017-09-26 01:20:40', '2017-09-26 01:20:40');
+INSERT INTO `tb_product` VALUES (2, 2, 29, '小黄人', '我是小黄人', 'upload/images/item/shop/29/2017092601212211185.jpg', 3.00, 2.00, 90, 1, '2017-09-26 01:21:22', '2017-09-26 01:21:22');
+INSERT INTO `tb_product` VALUES (3, 3, 29, '暴漫人', '开心了', 'upload/images/item/shop/29/2017092601220059819.jpg', 3.00, 2.00, 80, 1, '2017-09-26 01:22:00', '2017-09-26 01:22:00');
+INSERT INTO `tb_product` VALUES (4, 3, 29, '宇宙第一', '宇宙无敌', 'upload/images/item/shop/29/2017092601224389939.jpg', 5.00, 2.00, 70, 1, '2017-09-26 01:22:43', '2017-09-26 01:22:43');
+INSERT INTO `tb_product` VALUES (5, 3, 29, '眼凸凸', '宇宙无敌', 'upload/images/item/shop/29/2017092601231570458.jpg', 3.00, 2.00, 60, 1, '2017-09-26 01:23:15', '2017-09-26 01:23:15');
+INSERT INTO `tb_product` VALUES (6, 3, 29, '笑眯眯', '笑眯眯 甜蜜蜜', 'upload/images/item/shop/29/2017092601234922140.jpg', 2.00, 2.00, 50, 1, '2017-09-26 01:23:49', '2017-09-26 01:23:49');
+INSERT INTO `tb_product` VALUES (7, 4, 28, '优质小黄人奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216554368403.jpg', 6.00, 3.00, 100, 1, '2017-10-02 16:55:43', '2017-10-02 16:55:43');
+INSERT INTO `tb_product` VALUES (8, 4, 28, '优质暴漫奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216561443475.jpg', 6.00, 3.00, 100, 1, '2017-10-02 16:56:14', '2017-10-02 16:56:14');
+INSERT INTO `tb_product` VALUES (9, 4, 28, '优质大白奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216564398563.jpg', 6.00, 3.00, 90, 1, '2017-10-02 16:56:43', '2017-10-02 16:56:43');
+INSERT INTO `tb_product` VALUES (10, 4, 28, '优质二维码奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216570762900.jpg', 5.00, 3.00, 80, 1, '2017-10-02 16:57:07', '2017-10-02 16:57:07');
+INSERT INTO `tb_product` VALUES (11, 6, 28, '优质二维码咖啡', '非常好喝哦', '/upload/images/item/shop/28/2017100216573090557.jpg', 8.00, 3.00, 60, 1, '2017-10-02 16:57:30', '2017-10-02 16:57:30');
+INSERT INTO `tb_product` VALUES (12, 6, 28, '优质大白咖啡', '非常好喝哦', '/upload/images/item/shop/28/2017100216575922088.jpg', 8.00, 3.00, 50, 1, '2017-10-02 16:57:59', '2017-10-02 16:57:59');
 
 -- ----------------------------
 -- Table structure for tb_product_category
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_product_category`;
 CREATE TABLE `tb_product_category`  (
-  `product_category_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '商品类别Id',
+  `product_category_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '商品类别Id',
   `shop_id` int(20) NOT NULL DEFAULT 0 COMMENT '所属店铺id（外键，只对应id）',
   `product_category_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '商品类别名称',
   `priority` int(2) NULL DEFAULT 0 COMMENT '权重',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `last_edit_id` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
+  `last_edit_id` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`product_category_id`) USING BTREE,
   INDEX `fk_procate_shop`(`shop_id`) USING BTREE,
   CONSTRAINT `fk_procate_shop` FOREIGN KEY (`shop_id`) REFERENCES `tb_shop` (`shop_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -181,11 +181,11 @@ INSERT INTO `tb_product_category` VALUES (9, 28, '苦品凉茶', 4, NULL, NULL);
 DROP TABLE IF EXISTS `tb_product_img`;
 CREATE TABLE `tb_product_img`  (
   `product_img_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '商品图片id',
+  `product_id` int(20) NOT NULL COMMENT '所属商品id（外键，只对应id）',
   `img_addr` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '图片地址',
-  `img_desc` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '图片描述',
+  `img_desc` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '图片描述',
   `priority` int(2) NULL DEFAULT 0 COMMENT '权重（越大排名越靠前）',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `product_id` int(20) NULL DEFAULT NULL COMMENT '所属商品id（外键，只对应id）',
   PRIMARY KEY (`product_img_id`) USING BTREE,
   INDEX `fk_proimg_product`(`product_id`) USING BTREE,
   CONSTRAINT `fk_proimg_product` FOREIGN KEY (`product_id`) REFERENCES `tb_product` (`product_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -194,56 +194,56 @@ CREATE TABLE `tb_product_img`  (
 -- ----------------------------
 -- Records of tb_product_img
 -- ----------------------------
-INSERT INTO `tb_product_img` VALUES (1, 'upload/images/item/shop/29/2017092601204025128.jpg', NULL, NULL, '2017-09-26 01:20:40', 1);
-INSERT INTO `tb_product_img` VALUES (2, 'upload/images/item/shop/29/2017092601204051262.jpg', NULL, NULL, '2017-09-26 01:20:40', 1);
-INSERT INTO `tb_product_img` VALUES (3, 'upload/images/item/shop/29/2017092601212217105.jpg', NULL, NULL, '2017-09-26 01:21:22', 2);
-INSERT INTO `tb_product_img` VALUES (4, 'upload/images/item/shop/29/2017092601212268219.jpg', NULL, NULL, '2017-09-26 01:21:22', 2);
-INSERT INTO `tb_product_img` VALUES (5, 'upload/images/item/shop/29/2017092601220074062.jpg', NULL, NULL, '2017-09-26 01:22:00', 3);
-INSERT INTO `tb_product_img` VALUES (6, 'upload/images/item/shop/29/2017092601220019993.jpg', NULL, NULL, '2017-09-26 01:22:00', 3);
-INSERT INTO `tb_product_img` VALUES (7, 'upload/images/item/shop/29/2017092601224322685.jpg', NULL, NULL, '2017-09-26 01:22:43', 4);
-INSERT INTO `tb_product_img` VALUES (8, 'upload/images/item/shop/29/2017092601224353777.jpg', NULL, NULL, '2017-09-26 01:22:43', 4);
-INSERT INTO `tb_product_img` VALUES (9, 'upload/images/item/shop/29/2017092601231572675.jpg', NULL, NULL, '2017-09-26 01:23:15', 5);
-INSERT INTO `tb_product_img` VALUES (10, 'upload/images/item/shop/29/2017092601231516853.jpg', NULL, NULL, '2017-09-26 01:23:15', 5);
-INSERT INTO `tb_product_img` VALUES (11, 'upload/images/item/shop/29/2017092601234987131.jpg', NULL, NULL, '2017-09-26 01:23:49', 6);
-INSERT INTO `tb_product_img` VALUES (12, 'upload/images/item/shop/29/2017092601234984991.jpg', NULL, NULL, '2017-09-26 01:23:49', 6);
-INSERT INTO `tb_product_img` VALUES (13, '/upload/images/item/shop/28/2017100216554379623.jpg', NULL, NULL, '2017-10-02 16:55:43', 7);
-INSERT INTO `tb_product_img` VALUES (14, '/upload/images/item/shop/28/2017100216554382464.jpg', NULL, NULL, '2017-10-02 16:55:43', 7);
-INSERT INTO `tb_product_img` VALUES (15, '/upload/images/item/shop/28/2017100216554324232.jpg', NULL, NULL, '2017-10-02 16:55:43', 7);
-INSERT INTO `tb_product_img` VALUES (16, '/upload/images/item/shop/28/2017100216561440352.jpg', NULL, NULL, '2017-10-02 16:56:14', 8);
-INSERT INTO `tb_product_img` VALUES (17, '/upload/images/item/shop/28/2017100216561435083.jpg', NULL, NULL, '2017-10-02 16:56:14', 8);
-INSERT INTO `tb_product_img` VALUES (18, '/upload/images/item/shop/28/2017100216561472866.jpg', NULL, NULL, '2017-10-02 16:56:14', 8);
-INSERT INTO `tb_product_img` VALUES (19, '/upload/images/item/shop/28/2017100216564440981.jpg', NULL, NULL, '2017-10-02 16:56:44', 9);
-INSERT INTO `tb_product_img` VALUES (20, '/upload/images/item/shop/28/2017100216564491563.jpg', NULL, NULL, '2017-10-02 16:56:44', 9);
-INSERT INTO `tb_product_img` VALUES (21, '/upload/images/item/shop/28/2017100216564437552.jpg', NULL, NULL, '2017-10-02 16:56:44', 9);
-INSERT INTO `tb_product_img` VALUES (22, '/upload/images/item/shop/28/2017100216570748189.jpg', NULL, NULL, '2017-10-02 16:57:07', 10);
-INSERT INTO `tb_product_img` VALUES (23, '/upload/images/item/shop/28/2017100216570710458.jpg', NULL, NULL, '2017-10-02 16:57:07', 10);
-INSERT INTO `tb_product_img` VALUES (24, '/upload/images/item/shop/28/2017100216570779065.jpg', NULL, NULL, '2017-10-02 16:57:07', 10);
-INSERT INTO `tb_product_img` VALUES (25, '/upload/images/item/shop/28/2017100216573094393.jpg', NULL, NULL, '2017-10-02 16:57:30', 11);
-INSERT INTO `tb_product_img` VALUES (26, '/upload/images/item/shop/28/2017100216573050300.jpg', NULL, NULL, '2017-10-02 16:57:30', 11);
-INSERT INTO `tb_product_img` VALUES (27, '/upload/images/item/shop/28/2017100216573037951.jpg', NULL, NULL, '2017-10-02 16:57:30', 11);
-INSERT INTO `tb_product_img` VALUES (28, '/upload/images/item/shop/28/2017100216580055004.jpg', NULL, NULL, '2017-10-02 16:58:00', 12);
-INSERT INTO `tb_product_img` VALUES (29, '/upload/images/item/shop/28/2017100216580081030.jpg', NULL, NULL, '2017-10-02 16:58:00', 12);
-INSERT INTO `tb_product_img` VALUES (30, '/upload/images/item/shop/28/2017100216580022626.jpg', NULL, NULL, '2017-10-02 16:58:00', 12);
+INSERT INTO `tb_product_img` VALUES (1, 1, 'upload/images/item/shop/29/2017092601204025128.jpg', NULL, NULL, '2017-09-26 01:20:40');
+INSERT INTO `tb_product_img` VALUES (2, 1, 'upload/images/item/shop/29/2017092601204051262.jpg', NULL, NULL, '2017-09-26 01:20:40');
+INSERT INTO `tb_product_img` VALUES (3, 2, 'upload/images/item/shop/29/2017092601212217105.jpg', NULL, NULL, '2017-09-26 01:21:22');
+INSERT INTO `tb_product_img` VALUES (4, 2, 'upload/images/item/shop/29/2017092601212268219.jpg', NULL, NULL, '2017-09-26 01:21:22');
+INSERT INTO `tb_product_img` VALUES (5, 3, 'upload/images/item/shop/29/2017092601220074062.jpg', NULL, NULL, '2017-09-26 01:22:00');
+INSERT INTO `tb_product_img` VALUES (6, 3, 'upload/images/item/shop/29/2017092601220019993.jpg', NULL, NULL, '2017-09-26 01:22:00');
+INSERT INTO `tb_product_img` VALUES (7, 4, 'upload/images/item/shop/29/2017092601224322685.jpg', NULL, NULL, '2017-09-26 01:22:43');
+INSERT INTO `tb_product_img` VALUES (8, 4, 'upload/images/item/shop/29/2017092601224353777.jpg', NULL, NULL, '2017-09-26 01:22:43');
+INSERT INTO `tb_product_img` VALUES (9, 5, 'upload/images/item/shop/29/2017092601231572675.jpg', NULL, NULL, '2017-09-26 01:23:15');
+INSERT INTO `tb_product_img` VALUES (10, 5, 'upload/images/item/shop/29/2017092601231516853.jpg', NULL, NULL, '2017-09-26 01:23:15');
+INSERT INTO `tb_product_img` VALUES (11, 6, 'upload/images/item/shop/29/2017092601234987131.jpg', NULL, NULL, '2017-09-26 01:23:49');
+INSERT INTO `tb_product_img` VALUES (12, 6, 'upload/images/item/shop/29/2017092601234984991.jpg', NULL, NULL, '2017-09-26 01:23:49');
+INSERT INTO `tb_product_img` VALUES (13, 7, '/upload/images/item/shop/28/2017100216554379623.jpg', NULL, NULL, '2017-10-02 16:55:43');
+INSERT INTO `tb_product_img` VALUES (14, 7, '/upload/images/item/shop/28/2017100216554382464.jpg', NULL, NULL, '2017-10-02 16:55:43');
+INSERT INTO `tb_product_img` VALUES (15, 7, '/upload/images/item/shop/28/2017100216554324232.jpg', NULL, NULL, '2017-10-02 16:55:43');
+INSERT INTO `tb_product_img` VALUES (16, 8, '/upload/images/item/shop/28/2017100216561440352.jpg', NULL, NULL, '2017-10-02 16:56:14');
+INSERT INTO `tb_product_img` VALUES (17, 8, '/upload/images/item/shop/28/2017100216561435083.jpg', NULL, NULL, '2017-10-02 16:56:14');
+INSERT INTO `tb_product_img` VALUES (18, 8, '/upload/images/item/shop/28/2017100216561472866.jpg', NULL, NULL, '2017-10-02 16:56:14');
+INSERT INTO `tb_product_img` VALUES (19, 9, '/upload/images/item/shop/28/2017100216564440981.jpg', NULL, NULL, '2017-10-02 16:56:44');
+INSERT INTO `tb_product_img` VALUES (20, 9, '/upload/images/item/shop/28/2017100216564491563.jpg', NULL, NULL, '2017-10-02 16:56:44');
+INSERT INTO `tb_product_img` VALUES (21, 9, '/upload/images/item/shop/28/2017100216564437552.jpg', NULL, NULL, '2017-10-02 16:56:44');
+INSERT INTO `tb_product_img` VALUES (22, 10, '/upload/images/item/shop/28/2017100216570748189.jpg', NULL, NULL, '2017-10-02 16:57:07');
+INSERT INTO `tb_product_img` VALUES (23, 10, '/upload/images/item/shop/28/2017100216570710458.jpg', NULL, NULL, '2017-10-02 16:57:07');
+INSERT INTO `tb_product_img` VALUES (24, 10, '/upload/images/item/shop/28/2017100216570779065.jpg', NULL, NULL, '2017-10-02 16:57:07');
+INSERT INTO `tb_product_img` VALUES (25, 11, '/upload/images/item/shop/28/2017100216573094393.jpg', NULL, NULL, '2017-10-02 16:57:30');
+INSERT INTO `tb_product_img` VALUES (26, 11, '/upload/images/item/shop/28/2017100216573050300.jpg', NULL, NULL, '2017-10-02 16:57:30');
+INSERT INTO `tb_product_img` VALUES (27, 11, '/upload/images/item/shop/28/2017100216573037951.jpg', NULL, NULL, '2017-10-02 16:57:30');
+INSERT INTO `tb_product_img` VALUES (28, 12, '/upload/images/item/shop/28/2017100216580055004.jpg', NULL, NULL, '2017-10-02 16:58:00');
+INSERT INTO `tb_product_img` VALUES (29, 12, '/upload/images/item/shop/28/2017100216580081030.jpg', NULL, NULL, '2017-10-02 16:58:00');
+INSERT INTO `tb_product_img` VALUES (30, 12, '/upload/images/item/shop/28/2017100216580022626.jpg', NULL, NULL, '2017-10-02 16:58:00');
 
 -- ----------------------------
 -- Table structure for tb_shop
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_shop`;
 CREATE TABLE `tb_shop`  (
-  `shop_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '店铺id',
-  `owner_id` int(10) NOT NULL COMMENT '店铺创建人（外键，对应owner）',
-  `area_id` int(5) NULL DEFAULT NULL COMMENT '区域（外键，对应area）',
-  `shop_category_id` int(11) NULL DEFAULT NULL COMMENT '店铺类别（外键，对应shopCategory）',
+  `shop_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '店铺id',
+  `owner_id` int(20) NOT NULL COMMENT '店铺创建人（外键，对应owner）',
+  `area_id` int(20) NOT NULL COMMENT '区域（外键，对应area）',
+  `shop_category_id` int(20) NOT NULL COMMENT '店铺类别（外键，对应shopCategory）',
   `shop_name` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '店铺名称',
-  `shop_desc` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '店铺描述',
-  `shop_img` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '店铺图片',
+  `shop_desc` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺描述',
+  `shop_img` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺图片',
   `priority` int(3) NULL DEFAULT 0 COMMENT '权重',
-  `shop_addr` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '店铺地址',
-  `phone` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '联系电话',
-  `enable_status` int(2) NOT NULL DEFAULT 0 COMMENT '可用状态 -1不可用  0审核中  1可用',
-  `advice` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '建议（超管对于店铺的建议）',
+  `shop_addr` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺地址',
+  `phone` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '联系电话',
+  `enable_status` int(2) NULL DEFAULT 0 COMMENT '可用状态 -1不可用  0审核中  1可用',
+  `advice` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '建议（超管对于店铺的建议）',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `last_edit_time` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`shop_id`) USING BTREE,
   INDEX `fk_shop_area`(`area_id`) USING BTREE,
   INDEX `fk_shop_profile`(`owner_id`) USING BTREE,
@@ -269,14 +269,14 @@ INSERT INTO `tb_shop` VALUES (35, 8, 2, 22, '奶茶来了', '奶茶来了', NULL
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_shop_category`;
 CREATE TABLE `tb_shop_category`  (
-  `shop_category_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '店铺类别id',
-  `parent_id` int(11) NULL DEFAULT NULL COMMENT '上级id（外键自关联，对应对象里的parent）',
+  `shop_category_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '店铺类别id',
+  `parent_id` int(20) NULL DEFAULT NULL COMMENT '上级id（外键自关联，对应对象里的parent）',
   `shop_category_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '店铺类别名称',
   `shop_category_desc` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺类别描述',
-  `shop_category_img` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '店铺类别图片',
-  `priority` int(2) NOT NULL DEFAULT 0 COMMENT '权重',
+  `shop_category_img` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺类别图片',
+  `priority` int(2) NULL DEFAULT 0 COMMENT '权重',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `last_edit_time` datetime(0) NULL DEFAULT NULL COMMENT '最后修改时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`shop_category_id`) USING BTREE,
   INDEX `fk_shop_category_self`(`parent_id`) USING BTREE,
   CONSTRAINT `fk_shop_category_self` FOREIGN KEY (`parent_id`) REFERENCES `tb_shop_category` (`shop_category_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -312,8 +312,8 @@ INSERT INTO `tb_shop_category` VALUES (35, 12, 'test3', '', NULL, 0, NULL, NULL)
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_wechat_auth`;
 CREATE TABLE `tb_wechat_auth`  (
-  `wechat_auth_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '微信授权id',
-  `person_id` int(10) NOT NULL COMMENT '用户id（外键关联，对应对象里复合类型）',
+  `wechat_auth_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '微信授权id',
+  `person_id` int(20) NOT NULL COMMENT '用户id（外键关联，对应对象里复合类型）',
   `open_id` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '与微信账号关联的id',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`wechat_auth_id`) USING BTREE,

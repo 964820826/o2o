@@ -33,9 +33,9 @@
 	MYISAM是表级锁，操作一条记录时整个表不允许其他数据修改。InnoDB是行级锁，当需要有事务支持时需选用InnoDB
 #### 数据表主键为自动递增
 	id仅作为唯一标识使用，无其他含义，故自增即可
-#### 数据表中记录时间使用datetime
+#### 数据表中记录时间使用datetime，且时间自动更新，不需在程序中设置时间
 	datetime相比timestamp时间跨度更大，而且使用范围是中国，不需要调整时区，故选用datetime
-####   将person作为登陆的个体，围绕PersonDo有微信授权类（WechatAuthDo）本地账户类（LocalAuthDo）
+#### 将person作为登陆的个体，围绕PersonDo有微信授权类（WechatAuthDo）本地账户类（LocalAuthDo）
 
 #### 表关系使用外键关联
     因数据库数据表及数据量较小，为确保数据的关联、明确表之间的关系，使用外键
