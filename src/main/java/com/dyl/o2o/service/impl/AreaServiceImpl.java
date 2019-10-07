@@ -1,27 +1,31 @@
 package com.dyl.o2o.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.dyl.o2o.domain.AreaDo;
-import com.dyl.o2o.mapper.AreaMapper;
+import com.dyl.o2o.dao.AreaDao;
 import com.dyl.o2o.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
+/** 区域service层的实现类
  * @author ：dyl
  * @description：
  * @date ：Created in 2019/9/19 23:15
  */
-@Service
+@Service //指代service层，将此类实例化，需标注到实现类上
 public class AreaServiceImpl implements AreaService {
 
-    @Autowired
-    private AreaMapper areaMapper;
+    @Autowired //自动装配，不必通过new的方式创建对象
+    private AreaDao areaDao;
 
     @Override
     public List<AreaDo> selectList() {
-        List<AreaDo> areaDoList = areaMapper.selectList(null);
+        //权重降序查询所有区域信息
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.orderByDesc("priority");
+        List<AreaDo> areaDoList = areaDao.selectList(queryWrapper);
         return areaDoList;
     }
 

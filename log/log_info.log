@@ -1,165 +1,64 @@
-2019-09-26 10:12:51.600 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 5796 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-09-26 10:12:51.722 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-09-26 10:12:54.464 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-09-26 10:12:54.489 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-09-26 10:12:54.503 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-09-26 10:12:54.504 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-09-26 10:12:54.662 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-09-26 10:12:54.662 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2770 ms
-2019-09-26 10:12:55.863 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-26 10:12:56.310 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-09-26 10:12:56.346 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
-2019-09-26 10:12:56.347 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
-2019-09-26 10:12:56.359 [main] INFO  org.apache.catalina.util.LifecycleBase - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
-2019-09-26 10:12:56.360 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
-2019-09-26 10:12:56.360 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
-2019-09-26 10:12:56.365 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-09-26 10:12:56.378 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-26 10:36:50.191 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 11408 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-09-26 10:36:50.195 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-09-26 10:36:53.563 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-09-26 10:36:53.584 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-09-26 10:36:53.596 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-09-26 10:36:53.597 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-09-26 10:36:53.743 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-09-26 10:36:53.744 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3304 ms
-2019-09-26 10:36:54.820 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-26 10:36:55.194 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-09-26 10:36:55.236 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-09-26 10:36:55.243 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 6.834 seconds (JVM running for 10.559)
-2019-09-26 10:38:04.438 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-09-26 10:38:04.439 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-09-26 10:38:04.452 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
-2019-09-26 10:38:04.564 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-09-26 10:38:04.831 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-09-26 10:39:47.502 [Thread-9] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-26 10:39:47.509 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-09-26 10:39:47.957 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-09-26 10:39:56.722 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 11364 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-09-26 10:39:56.726 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-09-26 10:39:59.733 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-09-26 10:39:59.779 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-09-26 10:39:59.801 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-09-26 10:39:59.801 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-09-26 10:40:00.019 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-09-26 10:40:00.019 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3186 ms
-2019-09-26 10:40:01.069 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-26 10:40:01.462 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-09-26 10:40:01.498 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-09-26 10:40:01.503 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 6.606 seconds (JVM running for 8.59)
-2019-09-26 10:40:03.396 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-09-26 10:40:03.397 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-09-26 10:40:03.408 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
-2019-09-26 10:40:03.534 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-09-26 10:40:03.801 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-09-26 13:38:57.841 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-26 13:38:57.843 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-09-26 13:38:57.874 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-09-26 13:39:08.328 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 7232 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-09-26 13:39:08.333 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-09-26 13:39:11.677 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-09-26 13:39:11.698 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-09-26 13:39:11.711 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-09-26 13:39:11.712 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-09-26 13:39:11.866 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-09-26 13:39:11.866 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3322 ms
-2019-09-26 13:39:13.365 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-26 13:39:13.882 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-09-26 13:39:13.939 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-09-26 13:39:13.944 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 7.624 seconds (JVM running for 9.33)
-2019-09-26 15:10:17.938 [Thread-7] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-26 15:13:29.915 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 4868 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-09-26 15:13:29.921 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-09-26 15:13:33.551 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-09-26 15:13:33.577 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-09-26 15:13:33.588 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-09-26 15:13:33.588 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-09-26 15:13:33.786 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-09-26 15:13:33.787 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3747 ms
-2019-09-26 15:13:35.321 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-26 15:13:37.196 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-09-26 15:13:37.245 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-09-26 15:13:37.254 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 9.55 seconds (JVM running for 12.631)
-2019-09-26 15:13:40.250 [Thread-17] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-26 15:13:50.852 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 3276 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-09-26 15:13:50.858 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-09-26 15:13:53.747 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-09-26 15:13:53.775 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-09-26 15:13:53.787 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-09-26 15:13:53.788 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-09-26 15:13:53.970 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-09-26 15:13:53.971 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2794 ms
-2019-09-26 15:13:55.510 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-26 15:13:55.951 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-09-26 15:13:56.008 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-09-26 15:13:56.019 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 6.784 seconds (JVM running for 8.768)
-2019-09-26 15:14:03.582 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-09-26 15:14:03.582 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-09-26 15:14:03.601 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 19 ms
-2019-09-26 15:14:04.023 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-09-26 15:14:04.357 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-09-26 15:14:58.433 [Thread-11] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-26 15:14:58.437 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-09-26 15:14:58.451 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-09-26 15:15:08.441 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 6476 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-09-26 15:15:08.445 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-09-26 15:15:11.623 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-09-26 15:15:11.659 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-09-26 15:15:11.692 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-09-26 15:15:11.693 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-09-26 15:15:11.910 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-09-26 15:15:11.910 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3338 ms
-2019-09-26 15:15:13.264 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-26 15:15:13.775 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-09-26 15:15:13.821 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-09-26 15:15:13.831 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 7.089 seconds (JVM running for 9.34)
-2019-09-26 15:15:20.643 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-09-26 15:15:20.644 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-09-26 15:15:20.659 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
-2019-09-26 15:15:20.835 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-09-26 15:15:21.110 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-09-26 15:16:05.958 [Thread-12] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-26 15:16:05.960 [Thread-12] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-09-26 15:16:05.976 [Thread-12] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-09-26 15:16:13.939 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 7820 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-09-26 15:16:13.944 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-09-26 15:16:17.583 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-09-26 15:16:17.609 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-09-26 15:16:17.621 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-09-26 15:16:17.621 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-09-26 15:16:17.795 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-09-26 15:16:17.795 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3584 ms
-2019-09-26 15:16:18.832 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-26 15:16:19.380 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-09-26 15:16:19.439 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-09-26 15:16:19.447 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 7.408 seconds (JVM running for 9.196)
-2019-09-26 15:16:28.293 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-09-26 15:16:28.293 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-09-26 15:16:28.305 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
-2019-09-26 15:16:28.414 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-09-26 15:16:28.805 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-09-26 15:17:41.060 [Thread-10] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-26 15:17:41.061 [Thread-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-09-26 15:17:41.085 [Thread-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-09-26 15:17:53.002 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 1244 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-09-26 15:17:53.007 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-09-26 15:17:54.956 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-09-26 15:17:54.979 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-09-26 15:17:54.993 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-09-26 15:17:54.994 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-09-26 15:17:55.148 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-09-26 15:17:55.148 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1977 ms
-2019-09-26 15:17:56.229 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-26 15:17:56.647 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-09-26 15:17:56.715 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-09-26 15:17:56.722 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 5.905 seconds (JVM running for 8.96)
-2019-09-26 15:18:06.619 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-09-26 15:18:06.619 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-09-26 15:18:06.630 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
-2019-09-26 15:18:06.804 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-09-26 15:18:07.086 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-09-26 17:55:57.085 [Thread-11] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-26 17:55:57.099 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-09-26 17:55:57.122 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-04 11:55:04.091 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 4988 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-04 11:55:04.095 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-10-04 11:55:04.989 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-10-04 11:55:05.001 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-04 11:55:05.008 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-10-04 11:55:05.008 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 11:55:05.088 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-10-04 11:55:05.088 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 959 ms
+2019-10-04 11:55:05.570 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 11:55:05.788 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-10-04 11:55:05.810 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-04 11:55:05.813 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 2.238 seconds (JVM running for 3.356)
+2019-10-04 11:55:22.709 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-04 11:55:22.710 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-10-04 11:55:22.714 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2019-10-04 11:55:25.939 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-04 11:55:26.225 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-04 12:48:16.093 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 12:48:16.718 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 15:10:29.532 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 15:10:30.126 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-04 15:10:30.285 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-04 15:10:30.384 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 15:10:30.385 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-04 15:10:30.387 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-04 15:11:30.182 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 15:11:30.781 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-04 15:11:30.934 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-04 15:11:31.044 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 15:11:31.045 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-04 15:11:31.049 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-04 15:12:08.682 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 15:12:09.261 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-04 15:12:09.402 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-04 15:12:09.450 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 15:12:09.451 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-04 15:12:09.454 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-04 15:57:07.522 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 15:57:07.528 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-04 15:57:07.534 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-04 15:57:16.392 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 15:57:16.959 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-04 15:57:17.088 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-04 15:57:17.134 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 15:57:17.135 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-04 15:57:17.136 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-04 16:27:23.482 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 16:27:24.113 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-04 16:27:24.284 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-04 16:27:24.345 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 16:27:24.346 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-04 16:27:24.349 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-04 16:33:42.140 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 16:33:42.726 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-04 16:33:42.859 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-04 16:33:42.906 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 16:33:42.908 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-04 16:33:42.910 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-04 16:39:28.534 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 16:39:29.100 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-04 16:39:29.235 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-04 16:39:29.287 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 16:39:29.288 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-04 16:39:29.290 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

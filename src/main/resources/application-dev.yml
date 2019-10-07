@@ -14,14 +14,16 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://localhost:3306/o2o?useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/o2o?useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis-plus:
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: com.dyl.o2o.domain
 
+#设置日志相关
 logging:
   level:
     root: info
     com.dyl.o2o.mapper: debug
+  path: ./log

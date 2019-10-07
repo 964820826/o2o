@@ -1,5 +1,6 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import java.util.Date;
@@ -15,7 +16,8 @@ import java.util.Date;
 @TableName(value = "tb_area")
 public class AreaDo {
     //区域id
-    private Integer areaId;//为避免创建对象时默认赋值，故实体类中都使用包装类型
+    @TableId
+    private Long areaId;//为避免创建对象时默认赋值，故实体类中都使用包装类型
     //区域名称
     private String areaName;
     //区域权重（权重越大，排名越靠前）

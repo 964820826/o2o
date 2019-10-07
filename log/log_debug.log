@@ -1,3 +1,31 @@
-2019-09-26 15:15:21.122 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.mapper.AreaMapper.selectList - ==>  Preparing: SELECT area_id,create_time,area_name,last_edit_time,priority FROM tb_area 
-2019-09-26 15:15:21.188 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.mapper.AreaMapper.selectList - ==> Parameters: 
-2019-09-26 15:15:21.273 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.mapper.AreaMapper.selectList - <==      Total: 2
+2019-10-04 11:55:26.232 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==>  Preparing: SELECT area_id,create_time,area_name,last_edit_time,priority FROM tb_area ORDER BY priority DESC 
+2019-10-04 11:55:26.254 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==> Parameters: 
+2019-10-04 11:55:26.293 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.AreaDao.selectList - <==      Total: 2
+2019-10-04 11:55:47.968 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==>  Preparing: SELECT area_id,create_time,area_name,last_edit_time,priority FROM tb_area ORDER BY priority DESC 
+2019-10-04 11:55:47.968 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==> Parameters: 
+2019-10-04 11:55:47.969 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.AreaDao.selectList - <==      Total: 2
+2019-10-04 12:48:14.532 [main] DEBUG com.dyl.o2o.dao.ShopDaoTeset - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-04 15:10:27.971 [main] DEBUG com.dyl.o2o.dao.ShopDaoTeset - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-04 15:10:30.292 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( owner_id, area_id, create_time ) VALUES ( ?, ?, ? ) 
+2019-10-04 15:10:30.318 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 1(Long), 2(Long), 2019-10-04 15:10:30.085(Timestamp)
+2019-10-04 15:11:28.587 [main] DEBUG com.dyl.o2o.dao.ShopDaoTeset - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-04 15:11:30.942 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, owner_id, area_id, create_time ) VALUES ( ?, ?, ?, ? ) 
+2019-10-04 15:11:30.968 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 10(Long), 1(Long), 2(Long), 2019-10-04 15:11:30.74(Timestamp)
+2019-10-04 15:12:07.145 [main] DEBUG com.dyl.o2o.dao.ShopDaoTeset - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-04 15:12:09.409 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time ) VALUES ( ?, ?, ?, ?, ? ) 
+2019-10-04 15:12:09.436 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 10(Long), 王二烧烤(String), 1(Long), 2(Long), 2019-10-04 15:12:09.222(Timestamp)
+2019-10-04 15:12:09.443 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-04 15:57:14.828 [main] DEBUG com.dyl.o2o.dao.ShopDaoTeset - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-04 15:57:17.095 [main] DEBUG com.dyl.o2o.dao.ShopDao.update - ==>  Preparing: UPDATE tb_shop SET shop_name=? 
+2019-10-04 15:57:17.123 [main] DEBUG com.dyl.o2o.dao.ShopDao.update - ==> Parameters: 王三烧烤(String)
+2019-10-04 15:57:17.127 [main] DEBUG com.dyl.o2o.dao.ShopDao.update - <==    Updates: 8
+2019-10-04 16:27:21.813 [main] DEBUG com.dyl.o2o.dao.ShopDaoTeset - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-04 16:27:24.294 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_id=? WHERE null=? 
+2019-10-04 16:33:40.550 [main] DEBUG com.dyl.o2o.dao.ShopDaoTest - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-04 16:33:42.866 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_name=? WHERE id=? 
+2019-10-04 16:33:42.895 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 王四烧烤(String), 36(Long)
+2019-10-04 16:33:42.898 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-04 16:39:26.967 [main] DEBUG com.dyl.o2o.dao.ShopDaoTest - Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-10-04 16:39:29.242 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_name=? WHERE shop_id=? 
+2019-10-04 16:39:29.275 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 王wu烧烤(String), 36(Long)
+2019-10-04 16:39:29.278 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
