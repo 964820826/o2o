@@ -1,5 +1,7 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
@@ -13,6 +15,7 @@ import java.util.Date;
 @TableName("tb_shop")
 public class ShopDo {
     //店铺id
+    @TableId
     private Long shopId;
     //店铺名称
     private String shopName;
@@ -34,10 +37,10 @@ public class ShopDo {
     private Date createTime;
     //最后修改时间
     private Date lastEditTime;
-    //店主
-    private PersonDo owner;
-    //区域
-    private AreaDo area;
-    //店铺类别
-    private ShopCategoryDo shopCategory;
+    //归属店主的id
+    private Long ownerId;
+    //所在区域的id
+    private Long areaId;
+    //所在店铺类别的id
+    private Long shopCategoryId;
 }

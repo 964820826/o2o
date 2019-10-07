@@ -1,33 +1,28 @@
-package com.dyl.o2o;
+package com.dyl.o2o.dao;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.dyl.o2o.BaseTest;
 import com.dyl.o2o.domain.AreaDo;
-import com.dyl.o2o.mapper.AreaMapper;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
  * 测试AreaMapper
  * @author ：dyl
- * @description：
  * @date ：Created in 2019/9/22 14:03
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class AreaMapperTest {
+public class AreaDaoTest extends BaseTest {
 
     @Autowired
-    AreaMapper areaMapper;
+    AreaDao areaDao;
 
     @Test
     public void testSelectList(){
-        System.out.println("测试开始!!");
-        List<AreaDo> areaDoList = areaMapper.selectList(null);
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.orderByDesc("priority");
+        List<AreaDo> areaDoList = areaDao.selectList(queryWrapper);
         for (AreaDo areaDo : areaDoList) {
             System.out.println(areaDo.toString());
         }
@@ -37,8 +32,8 @@ public class AreaMapperTest {
     public void insert(){
         System.out.println("测试开始!!");
         AreaDo areaDo = new AreaDo();
-        areaDo.setAreaName("东区");
-        int rows = areaMapper.insert(areaDo);
+        areaDo.setAreaName("西区");
+        int rows = areaDao.insert(areaDo);
         System.out.println("影响记录数：" + rows);
     }
 }
