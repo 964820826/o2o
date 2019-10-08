@@ -1,7 +1,6 @@
 package com.dyl.o2o.service;
 
 import com.dyl.o2o.domain.ShopDo;
-import com.dyl.o2o.dto.ShopExecution;
 
 import java.io.File;
 
@@ -11,5 +10,5 @@ import java.io.File;
  */
 public interface ShopService {
 
-    public void save(ShopDo shop, File shopImg);
+    void save(ShopDo shop, File shopImg);
 }

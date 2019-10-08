@@ -2,7 +2,6 @@ package com.dyl.o2o.service.impl;
 
 import com.dyl.o2o.dao.ShopDao;
 import com.dyl.o2o.domain.ShopDo;
-import com.dyl.o2o.dto.ShopExecution;
 import com.dyl.o2o.service.ShopService;
 import com.dyl.o2o.util.ImageUtil;
 import com.dyl.o2o.util.PathUtil;
@@ -36,13 +35,17 @@ public class ShopServiceImpl implements ShopService {
             //添加店铺成功
             if(shopImg != null){
                 //添加店铺图片到数据库并将地址设置到shop中
-                addShopImg(shop, shopImg);
+                try{
+                    addShopImg(shop, shopImg);
+                }catch (Exception e){
+                    throw new RuntimeException("生成店铺缩略图失败");
+                }
+                //更新店铺的图片地址
+                effectedNum = shopDao.updateById(shop);
+                if (effectedNum <= 0){
+                    throw new RuntimeException("更新店铺图片失败！");
+                }
             }
-        }
-        //更新店铺的图片地址
-        effectedNum = shopDao.updateById(shop);
-        if (effectedNum <= 0){
-            throw new RuntimeException("更新店铺图片失败！");
         }
     }
 
@@ -52,7 +55,7 @@ public class ShopServiceImpl implements ShopService {
      * @param shopImg
      */
     private void addShopImg(ShopDo shop, File shopImg) {
-        //获取shop图片的相对路径
+        //获取生成图片的相对路径
         String imgFolderRelativeAddr = PathUtil.getShopImgFolderRelativePath(shop.getShopId());
         String shopImgAddr = ImageUtil.generateThumbnail(shopImg,imgFolderRelativeAddr);
         shop.setShopImg(shopImgAddr);

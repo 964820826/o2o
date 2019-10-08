@@ -1,5 +1,6 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -15,7 +16,7 @@ import java.util.Date;
 @TableName("tb_shop")
 public class ShopDo {
     //店铺id
-    @TableId
+    @TableId(value = "shop_id", type = IdType.AUTO)
     private Long shopId;
     //店铺名称
     private String shopName;

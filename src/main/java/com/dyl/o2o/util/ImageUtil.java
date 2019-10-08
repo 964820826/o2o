@@ -24,7 +24,7 @@ import java.util.Random;
 public class ImageUtil {
     private static final Logger LOG = LoggerFactory.getLogger(ImageUtil.class);
 
-    //classPath路径
+    //classPath路径 test和java下运行获取到的目录不同
     private static String classPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
     //设置时间格式
     private static final SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
@@ -72,12 +72,14 @@ public class ImageUtil {
         File dest = new File(imgFullPath);
         try {
             //获取水印图片
-            BufferedImage buffer = ImageIO.read(new File(classPath + "/static/img/watermark.png"));
+            System.out.println("水印图片地址" + classPath + "static/img/watermark.png");
+            BufferedImage buffer = ImageIO.read(new File(classPath + "static/img/watermark.png"));
             //生成缩略图
             Thumbnails.of(img).size(500, 500).watermark(Positions.BOTTOM_RIGHT, buffer, 0.25f).outputQuality(0.8f).toFile(dest);
         } catch (IOException e) {
             LOG.error(e.toString());
             e.printStackTrace();
+            throw new RuntimeException("生成缩略图发生错误！");
         }
         return imgRelativeAddr;
     }

@@ -15,7 +15,6 @@ public class PathUtil {
      */
     public static String getImgBasePath(){
         String imgBasePath = System.getProperty("user.dir") + "/img";
-        System.out.println(imgBasePath);
         //获取系统名称
 //        String os = System.getProperty("os.name");
         //将分隔符设置为系统识别的分隔符
@@ -28,7 +27,7 @@ public class PathUtil {
      * @param shopId
      */
     public static String getShopImgFolderRelativePath(long shopId){
-        String shopImgFolderPath = getImgBasePath() + "/" + shopId + "/";
+        String shopImgFolderPath = "/" + shopId + "/";
         return shopImgFolderPath.replace("/",separator);
     }
 
