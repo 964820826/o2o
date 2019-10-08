@@ -1,64 +1,162 @@
-2019-10-04 11:55:04.091 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 4988 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-04 11:55:04.095 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-04 11:55:04.989 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-10-04 11:55:05.001 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-10-04 11:55:05.008 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-04 11:55:05.008 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-04 11:55:05.088 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-04 11:55:05.088 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 959 ms
-2019-10-04 11:55:05.570 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-04 11:55:05.788 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-10-04 11:55:05.810 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-10-04 11:55:05.813 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 2.238 seconds (JVM running for 3.356)
-2019-10-04 11:55:22.709 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-04 11:55:22.710 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-04 11:55:22.714 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-2019-10-04 11:55:25.939 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-04 11:55:26.225 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-04 12:48:16.093 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-04 12:48:16.718 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-04 15:10:29.532 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-04 15:10:30.126 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-04 15:10:30.285 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-04 15:10:30.384 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-04 15:10:30.385 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-04 15:10:30.387 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-04 15:11:30.182 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-04 15:11:30.781 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-04 15:11:30.934 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-04 15:11:31.044 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-04 15:11:31.045 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-04 15:11:31.049 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-04 15:12:08.682 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-04 15:12:09.261 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-04 15:12:09.402 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-04 15:12:09.450 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-04 15:12:09.451 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-04 15:12:09.454 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-04 15:57:07.522 [Thread-6] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-04 15:57:07.528 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-04 15:57:07.534 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-04 15:57:16.392 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-04 15:57:16.959 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-04 15:57:17.088 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-04 15:57:17.134 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-04 15:57:17.135 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-04 15:57:17.136 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-04 16:27:23.482 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-04 16:27:24.113 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-04 16:27:24.284 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-04 16:27:24.345 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-04 16:27:24.346 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-04 16:27:24.349 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-04 16:33:42.140 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-04 16:33:42.726 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-04 16:33:42.859 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-04 16:33:42.906 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-04 16:33:42.908 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-04 16:33:42.910 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-04 16:39:28.534 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-04 16:39:29.100 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-04 16:39:29.235 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-04 16:39:29.287 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-04 16:39:29.288 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-04 16:39:29.290 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 21:02:42.094 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 6828 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 21:02:42.097 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 21:02:43.771 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:02:44.172 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.664 seconds (JVM running for 3.378)
+2019-10-08 21:02:44.352 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 21:02:44.496 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 21:02:44.697 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:02:44.699 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 21:02:44.702 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 21:10:37.015 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 20372 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 21:10:37.016 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 21:10:38.594 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:10:38.961 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.468 seconds (JVM running for 3.1)
+2019-10-08 21:10:39.103 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 21:10:39.237 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 21:10:39.395 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:10:39.397 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 21:10:39.400 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 21:13:31.070 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 21808 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 21:13:31.071 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 21:13:32.809 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:13:33.293 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.706 seconds (JVM running for 3.852)
+2019-10-08 21:13:33.453 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 21:13:33.593 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 21:43:02.455 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:43:02.456 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 21:43:02.462 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 21:43:20.152 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 15012 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 21:43:20.153 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 21:43:21.759 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:43:22.155 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.532 seconds (JVM running for 3.204)
+2019-10-08 21:43:22.292 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 21:43:22.422 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 21:43:22.559 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:43:22.560 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 21:43:22.564 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 21:44:18.078 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 7844 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 21:44:18.079 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 21:44:19.863 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:44:20.341 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.908 seconds (JVM running for 3.699)
+2019-10-08 21:44:20.505 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 21:44:20.660 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 21:47:07.911 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:47:07.912 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 21:47:07.917 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 21:49:25.821 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 4368 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 21:49:25.823 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 21:49:27.641 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:49:28.124 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.964 seconds (JVM running for 3.764)
+2019-10-08 21:49:28.285 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 21:49:28.436 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 21:55:25.831 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:55:25.833 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 21:55:25.842 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 21:55:36.371 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 13424 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 21:55:36.372 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 21:55:38.190 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:55:38.670 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.953 seconds (JVM running for 3.73)
+2019-10-08 21:55:38.832 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 21:55:38.982 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 21:59:27.320 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:59:27.322 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 21:59:27.327 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 21:59:55.640 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 25192 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 21:59:55.641 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 21:59:57.326 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:59:57.709 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.613 seconds (JVM running for 3.254)
+2019-10-08 21:59:57.852 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 21:59:57.986 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 21:59:58.130 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 21:59:58.132 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 21:59:58.135 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 22:01:01.760 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 18316 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 22:01:01.762 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 22:01:03.573 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:01:04.066 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.923 seconds (JVM running for 3.688)
+2019-10-08 22:01:04.239 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 22:01:04.395 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 22:01:04.569 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:01:04.571 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 22:01:04.575 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 22:02:35.330 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 19420 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 22:02:35.331 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 22:02:37.044 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:02:37.509 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.765 seconds (JVM running for 3.487)
+2019-10-08 22:02:37.659 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 22:02:37.799 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 22:02:37.933 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:02:37.934 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 22:02:37.937 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 22:05:35.303 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 15372 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 22:05:35.304 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 22:05:36.873 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:05:37.237 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.459 seconds (JVM running for 3.091)
+2019-10-08 22:05:37.377 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 22:05:37.525 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 22:05:37.664 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:05:37.665 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 22:05:37.669 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 22:06:17.918 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 5736 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 22:06:17.920 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 22:06:19.585 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:06:20.053 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.703 seconds (JVM running for 3.447)
+2019-10-08 22:06:20.204 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 22:06:20.349 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 22:06:20.490 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:06:20.491 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 22:06:20.495 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 22:08:42.121 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 5360 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 22:08:42.122 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 22:08:43.823 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:08:44.291 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.661 seconds (JVM running for 3.846)
+2019-10-08 22:08:44.457 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 22:08:44.608 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 22:08:47.852 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:08:47.853 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 22:08:47.858 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 22:12:23.542 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 13696 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 22:12:23.543 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 22:12:25.175 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:12:25.627 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.667 seconds (JVM running for 3.43)
+2019-10-08 22:12:25.801 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 22:12:25.940 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 22:16:34.606 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:16:34.608 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 22:16:34.613 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 22:16:41.315 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 20128 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 22:16:41.317 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 22:16:43.043 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:16:43.486 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.794 seconds (JVM running for 3.567)
+2019-10-08 22:16:43.634 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 22:16:43.781 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 22:17:05.083 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:17:05.084 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 22:17:05.088 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 22:18:25.352 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 9856 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 22:18:25.353 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 22:18:27.053 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:18:27.520 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.74 seconds (JVM running for 3.466)
+2019-10-08 22:18:27.673 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 22:18:27.823 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 22:18:57.626 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:18:57.627 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 22:18:57.631 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 22:20:32.443 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 9116 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 22:20:32.445 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 22:20:34.072 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:20:34.452 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.546 seconds (JVM running for 3.15)
+2019-10-08 22:20:34.590 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 22:20:34.714 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 22:20:35.671 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:20:35.672 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 22:20:35.675 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-10-08 22:21:51.003 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 8560 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-10-08 22:21:51.005 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
+2019-10-08 22:21:52.711 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:21:53.179 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.788 seconds (JVM running for 3.559)
+2019-10-08 22:21:53.344 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-10-08 22:21:53.493 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-10-08 22:33:32.458 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-08 22:33:32.459 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-10-08 22:33:32.464 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
