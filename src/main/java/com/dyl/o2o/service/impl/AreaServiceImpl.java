@@ -11,7 +11,6 @@ import java.util.List;
 
 /** 区域service层的实现类
  * @author ：dyl
- * @description：
  * @date ：Created in 2019/9/19 23:15
  */
 @Service //指代service层，将此类实例化，需标注到实现类上
