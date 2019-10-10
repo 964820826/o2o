@@ -89,3 +89,6 @@
 2019-10-08 22:21:53.551 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
 2019-10-08 22:21:53.578 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:21:53.503(Timestamp), 0(Integer)
 2019-10-08 22:21:53.580 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-10 23:38:19.221 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-10 23:38:19.248 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-10 23:38:19.167(Timestamp), 0(Integer)
+2019-10-10 23:38:19.259 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1

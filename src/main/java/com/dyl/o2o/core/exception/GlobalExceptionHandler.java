@@ -1,23 +1,25 @@
 package com.dyl.o2o.core.exception;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.ControllerAdvice;
+import com.dyl.o2o.util.R;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-/** 全局异常处理类
+import java.io.IOException;
+
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
+
+/** 全局异常处理
  * @author ：dyl
- * @date ：Created in 2019/10/3 12:33
+ * @date ：Created in 2019/10/10 16:06
  */
-@ControllerAdvice //标注为全局异常处理类
+@RestControllerAdvice //全局处理异常类的注解（
+@Slf4j
 public class GlobalExceptionHandler {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GlobalExceptionHandler.class);
-
-    @ExceptionHandler(Exception.class) //处理所有controller层抛出的Exception及其子类
-    public String handlerException(Exception e){
-        LOGGER.error(e.getMessage(),e);
-        System.out.println("出现异常，请查看日志");
-        return "";
+    @ExceptionHandler(value = IOException.class)
+    public R APIExceptionHandler(Exception e){
+        log.error("数据读取发生异常：" + e.getMessage());
+        return R.error(BAD_REQUEST.value(),"提交失败");
     }
 }
