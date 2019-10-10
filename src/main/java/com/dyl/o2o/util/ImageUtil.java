@@ -113,7 +113,7 @@ public class ImageUtil {
      *
      * @return
      */
-    private static String getRandomFileName() {
+    public static String getRandomFileName() {
         //获取当前时间
         String nowTimeStr = sDateFormat.format(new Date());
         //获取5位的随机数

@@ -20,16 +20,16 @@ public class ShopDo {
     private Long shopId;
     //店铺名称
     private String shopName;
-    //店铺描述
+    //店铺简介
     private String shopDesc;
     //店铺图片
     private String shopImg;
     //权重
     private Integer priority;
     //地址
-    private String shop_addr;
+    private String shopAddr;
     //联系方式
-    private String phone;
+    private String shopPhone;
     //可用状态 -1:不可用 0:审核中 1:可用
     private Integer enableStatus;
     //建议（超管给店铺的建议）
