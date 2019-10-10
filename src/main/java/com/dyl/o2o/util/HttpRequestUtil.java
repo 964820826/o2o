@@ -15,7 +15,7 @@ public class HttpRequestUtil {
      */
     public static int getInt(HttpServletRequest request,String key){
         try {
-            return Integer.decode(request.getParameter(key));
+            return Integer.valueOf(request.getParameter(key));
         } catch (NumberFormatException e) {
             return -1;
         }
