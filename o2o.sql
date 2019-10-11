@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 08/10/2019 23:33:07
+ Date: 11/10/2019 23:59:23
 */
 
 SET NAMES utf8mb4;
@@ -29,7 +29,7 @@ CREATE TABLE `tb_area`  (
   `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`area_id`) USING BTREE,
   UNIQUE INDEX `UK_AREA`(`area_name`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '区域信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '区域信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_area
@@ -51,7 +51,7 @@ CREATE TABLE `tb_head_line`  (
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`head_line_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_head_line
@@ -128,7 +128,7 @@ CREATE TABLE `tb_product`  (
   INDEX `fk_product_shop`(`shop_id`) USING BTREE,
   CONSTRAINT `fk_product_procate` FOREIGN KEY (`product_category_id`) REFERENCES `tb_product_category` (`product_category_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_product_shop` FOREIGN KEY (`shop_id`) REFERENCES `tb_shop` (`shop_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品详情' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品详情' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_product
@@ -160,7 +160,7 @@ CREATE TABLE `tb_product_category`  (
   PRIMARY KEY (`product_category_id`) USING BTREE,
   INDEX `fk_procate_shop`(`shop_id`) USING BTREE,
   CONSTRAINT `fk_procate_shop` FOREIGN KEY (`shop_id`) REFERENCES `tb_shop` (`shop_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品类别' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品类别' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_product_category
@@ -189,7 +189,7 @@ CREATE TABLE `tb_product_img`  (
   PRIMARY KEY (`product_img_id`) USING BTREE,
   INDEX `fk_proimg_product`(`product_id`) USING BTREE,
   CONSTRAINT `fk_proimg_product` FOREIGN KEY (`product_id`) REFERENCES `tb_product` (`product_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品图片' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品图片' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_product_img
@@ -231,15 +231,15 @@ INSERT INTO `tb_product_img` VALUES (30, 12, '/upload/images/item/shop/28/201710
 DROP TABLE IF EXISTS `tb_shop`;
 CREATE TABLE `tb_shop`  (
   `shop_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '店铺id',
-  `owner_id` int(20) NOT NULL COMMENT '店铺创建人（外键，对应owner）',
-  `area_id` int(20) NOT NULL COMMENT '区域（外键，对应area）',
-  `shop_category_id` int(20) NOT NULL COMMENT '店铺类别（外键，对应shopCategory）',
+  `owner_id` int(20) NOT NULL COMMENT '店铺创建人（外键）',
+  `area_id` int(20) NOT NULL COMMENT '区域（外键）',
+  `shop_category_id` int(20) NOT NULL COMMENT '店铺类别（外键）',
   `shop_name` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '店铺名称',
   `shop_desc` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺描述',
   `shop_img` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺图片',
   `priority` int(3) NULL DEFAULT 0 COMMENT '权重',
   `shop_addr` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺地址',
-  `phone` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '联系电话',
+  `shop_phone` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '联系电话',
   `enable_status` int(2) NULL DEFAULT 0 COMMENT '可用状态 -1不可用  0审核中  1可用',
   `advice` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '建议（超管对于店铺的建议）',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
@@ -251,7 +251,7 @@ CREATE TABLE `tb_shop`  (
   CONSTRAINT `fk_shop_area` FOREIGN KEY (`area_id`) REFERENCES `tb_area` (`area_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_shop_profile` FOREIGN KEY (`owner_id`) REFERENCES `tb_person` (`person_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_shop_shopcate` FOREIGN KEY (`shop_category_id`) REFERENCES `tb_shop_category` (`shop_category_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '店铺信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 55 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '店铺信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_shop
@@ -274,7 +274,7 @@ INSERT INTO `tb_shop` VALUES (49, 8, 3, 12, '王二烤鱼', '', '\\49\\201910082
 DROP TABLE IF EXISTS `tb_shop_category`;
 CREATE TABLE `tb_shop_category`  (
   `shop_category_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '店铺类别id',
-  `parent_id` int(20) NULL DEFAULT NULL COMMENT '上级id（外键自关联，对应对象里的parent）',
+  `parent_id` int(20) NULL DEFAULT NULL COMMENT '上级id（外键自关联）',
   `shop_category_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '店铺类别名称',
   `shop_category_desc` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺类别描述',
   `shop_category_img` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '店铺类别图片',
@@ -284,11 +284,12 @@ CREATE TABLE `tb_shop_category`  (
   PRIMARY KEY (`shop_category_id`) USING BTREE,
   INDEX `fk_shop_category_self`(`parent_id`) USING BTREE,
   CONSTRAINT `fk_shop_category_self` FOREIGN KEY (`parent_id`) REFERENCES `tb_shop_category` (`shop_category_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '店铺类别' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '店铺类别' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_shop_category
 -- ----------------------------
+INSERT INTO `tb_shop_category` VALUES (-1, 12, 'test3', '', NULL, 0, NULL, '2019-10-11 23:17:20');
 INSERT INTO `tb_shop_category` VALUES (10, NULL, '二手市场', '二手商品交易', '/upload/images/item/shopcategory/2017061223272255687.png', 100, '2017-06-04 20:10:58', '2017-06-12 23:27:22');
 INSERT INTO `tb_shop_category` VALUES (11, NULL, '美容美发', '美容美发', '/upload/images/item/shopcategory/2017061223273314635.png', 99, '2017-06-04 20:12:57', '2017-06-12 23:27:33');
 INSERT INTO `tb_shop_category` VALUES (12, NULL, '美食饮品', '美食饮品', '/upload/images/item/shopcategory/2017061223274213433.png', 98, '2017-06-04 20:15:21', '2017-06-12 23:27:42');
@@ -309,7 +310,6 @@ INSERT INTO `tb_shop_category` VALUES (31, 28, '演出道具', '演出道具', '
 INSERT INTO `tb_shop_category` VALUES (32, 28, '交通工具', '交通工具', '/upload/images/item/shopcategory/2017060422121144586.png', 44, '2017-06-04 22:12:11', '2017-06-04 22:12:11');
 INSERT INTO `tb_shop_category` VALUES (33, 12, 'test1', '', NULL, 0, NULL, NULL);
 INSERT INTO `tb_shop_category` VALUES (34, 12, 'test2', '', NULL, 0, NULL, NULL);
-INSERT INTO `tb_shop_category` VALUES (35, 12, 'test3', '', NULL, 0, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tb_wechat_auth
