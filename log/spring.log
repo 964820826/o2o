@@ -1,0 +1,182 @@
+2019-10-11 11:11:20.200  INFO 10084 --- [main] com.dyl.o2o.O2oApplication               : Starting O2oApplication on DESKTOP-QS0OB6V with PID 10084 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
+2019-10-11 11:11:20.205  INFO 10084 --- [main] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-10-11 11:11:23.381  INFO 10084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-11 11:11:23.422  INFO 10084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-11 11:11:23.423  INFO 10084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 11:11:23.699  INFO 10084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-11 11:11:23.708  INFO 10084 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3101 ms
+2019-10-11 11:11:26.454  INFO 10084 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 11:11:26.663  WARN 10084 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 11:11:26.987 ERROR 10084 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:263)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:195)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:297)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.dyl.o2o.O2oApplication.main(O2oApplication.java:10)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:230)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1124)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1210)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:585)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005)
+	... 14 common frames omitted
+
+2019-10-11 11:11:26.996  INFO 10084 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-10-11 11:11:27.009  INFO 10084 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-11 11:11:27.017 ERROR 10084 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-10-11 11:11:27.022  INFO 10084 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 11:14:21.177  INFO 9864 --- [main] com.dyl.o2o.O2oApplication               : Starting O2oApplication on DESKTOP-QS0OB6V with PID 9864 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
+2019-10-11 11:14:21.184  INFO 9864 --- [main] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-10-11 11:14:24.219  INFO 9864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-10-11 11:14:24.259  INFO 9864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-11 11:14:24.265  INFO 9864 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 11:14:24.467  INFO 9864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-11 11:14:24.468  INFO 9864 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3105 ms
+2019-10-11 11:14:25.737  INFO 9864 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 11:14:25.921  WARN 9864 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 11:14:26.216  INFO 9864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-10-11 11:14:26.223  INFO 9864 --- [main] com.dyl.o2o.O2oApplication               : Started O2oApplication in 6.759 seconds (JVM running for 8.89)
+2019-10-11 11:14:36.007  INFO 9864 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 11:14:36.007  INFO 9864 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-11 11:14:36.019  INFO 9864 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-10-11 12:01:25.267  INFO 9864 --- [Thread-11] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 12:02:00.768  INFO 11976 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on DESKTOP-QS0OB6V with PID 11976 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
+2019-10-11 12:02:00.773  INFO 11976 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-10-11 12:02:00.891  INFO 11976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 12:02:00.892  INFO 11976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 12:02:06.611  INFO 11976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-10-11 12:02:06.752  INFO 11976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-11 12:02:06.753  INFO 11976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 12:02:07.287  INFO 11976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-11 12:02:07.291  INFO 11976 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6398 ms
+2019-10-11 12:02:11.537  INFO 11976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 12:02:11.900  WARN 11976 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 12:02:12.424  INFO 11976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-11 12:02:12.551  INFO 11976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-10-11 12:02:12.558  INFO 11976 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 14.588 seconds (JVM running for 19.403)
+2019-10-11 12:10:28.686  INFO 11976 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 12:10:28.688  INFO 11976 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-11 12:10:28.703  INFO 11976 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-10-11 14:14:54.837  INFO 11976 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 14:15:03.230  INFO 2500 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on DESKTOP-QS0OB6V with PID 2500 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
+2019-10-11 14:15:03.235  INFO 2500 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-10-11 14:15:03.454  INFO 2500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 14:15:03.455  INFO 2500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 14:15:08.425  INFO 2500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-10-11 14:15:08.503  INFO 2500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-11 14:15:08.504  INFO 2500 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 14:15:08.838  INFO 2500 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-11 14:15:08.843  INFO 2500 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5388 ms
+2019-10-11 14:15:13.140  INFO 2500 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 14:15:13.497  WARN 2500 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 14:15:13.848  INFO 2500 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-11 14:15:13.953  INFO 2500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-10-11 14:15:13.962  INFO 2500 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 12.776 seconds (JVM running for 15.886)
+2019-10-11 14:15:54.875  INFO 2500 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 14:15:54.876  INFO 2500 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-11 14:15:54.891  INFO 2500 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2019-10-11 16:08:22.257  INFO 2500 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 16:08:32.534  INFO 5540 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on DESKTOP-QS0OB6V with PID 5540 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
+2019-10-11 16:08:32.538  INFO 5540 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-10-11 16:08:32.950  INFO 5540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 16:08:32.950  INFO 5540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 16:08:37.326  INFO 5540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-10-11 16:08:37.399  INFO 5540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-11 16:08:37.400  INFO 5540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 16:08:37.677  INFO 5540 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-11 16:08:37.693  INFO 5540 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4743 ms
+2019-10-11 16:08:40.142  INFO 5540 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 16:08:40.523  WARN 5540 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 16:08:40.812  INFO 5540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-11 16:08:40.931  INFO 5540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-10-11 16:08:40.937  INFO 5540 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 11.435 seconds (JVM running for 16.083)
+2019-10-11 16:08:43.515  INFO 5540 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 16:08:43.515  INFO 5540 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-11 16:08:43.531  INFO 5540 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2019-10-11 16:50:39.142  INFO 5540 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 16:53:44.798  INFO 8792 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on DESKTOP-QS0OB6V with PID 8792 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
+2019-10-11 16:53:44.803  INFO 8792 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-10-11 16:53:44.916  INFO 8792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 16:53:44.917  INFO 8792 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 16:53:47.810  INFO 8792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-10-11 16:53:47.856  INFO 8792 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-11 16:53:47.857  INFO 8792 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 16:53:48.168  INFO 8792 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-11 16:53:48.177  INFO 8792 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3259 ms
+2019-10-11 16:53:50.038  INFO 8792 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 16:53:50.291  WARN 8792 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 16:53:50.646  INFO 8792 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-11 16:53:50.835  INFO 8792 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-10-11 16:53:50.842  INFO 8792 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 7.496 seconds (JVM running for 15.475)
+2019-10-11 16:53:55.926  INFO 8792 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 16:53:55.926  INFO 8792 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-11 16:53:55.944  INFO 8792 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-10-11 16:54:30.126  INFO 8792 --- [Thread-23] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 16:54:44.362  INFO 4948 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on DESKTOP-QS0OB6V with PID 4948 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
+2019-10-11 16:54:44.366  INFO 4948 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-10-11 16:54:44.510  INFO 4948 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 16:54:44.510  INFO 4948 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 16:54:48.048  INFO 4948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-10-11 16:54:48.156  INFO 4948 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-11 16:54:48.188  INFO 4948 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 16:54:48.765  INFO 4948 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-11 16:54:48.772  INFO 4948 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4262 ms
+2019-10-11 16:54:52.595  INFO 4948 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 16:54:53.397  WARN 4948 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 16:54:53.780  INFO 4948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-11 16:54:53.874  INFO 4948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-10-11 16:54:53.880  INFO 4948 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 10.858 seconds (JVM running for 14.382)
+2019-10-11 16:54:57.812  INFO 4948 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 16:54:57.813  INFO 4948 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-11 16:54:57.832  INFO 4948 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-10-11 17:04:15.526  INFO 4948 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-11 17:04:28.298  INFO 13664 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on DESKTOP-QS0OB6V with PID 13664 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
+2019-10-11 17:04:28.305  INFO 13664 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-10-11 17:04:28.407  INFO 13664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-10-11 17:04:28.408  INFO 13664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-10-11 17:04:33.503  INFO 13664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-10-11 17:04:33.546  INFO 13664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-11 17:04:33.547  INFO 13664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-11 17:04:33.775  INFO 13664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-11 17:04:33.777  INFO 13664 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5369 ms
+2019-10-11 17:04:36.057  INFO 13664 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-11 17:04:36.317  WARN 13664 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 17:04:36.675  INFO 13664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-11 17:04:36.854  INFO 13664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-10-11 17:04:36.866  INFO 13664 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 10.859 seconds (JVM running for 13.525)
+2019-10-11 17:09:06.565  INFO 13664 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-11 17:09:06.567  INFO 13664 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-11 17:09:06.583  INFO 13664 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
