@@ -23,10 +23,10 @@ public class ShopCategoryDo {
     //权重，越大越靠前
     private Integer priority;
     //创建时间
-    private Date creatTime;
+    private Date createTime;
     //修改时间
     private Date lastEditTime;
     //上级id（自关联）
-    private ShopCategoryDo parent;
+    private Long parentId;
 
 }
