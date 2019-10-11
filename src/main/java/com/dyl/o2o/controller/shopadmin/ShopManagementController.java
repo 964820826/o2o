@@ -1,22 +1,29 @@
 package com.dyl.o2o.controller.shopadmin;
 
+import com.dyl.o2o.domain.AreaDo;
 import com.dyl.o2o.domain.PersonDo;
+import com.dyl.o2o.domain.ShopCategoryDo;
 import com.dyl.o2o.domain.ShopDo;
+import com.dyl.o2o.service.AreaService;
+import com.dyl.o2o.service.ShopCategoryService;
 import com.dyl.o2o.service.ShopService;
 import com.dyl.o2o.util.HttpRequestUtil;
 import com.dyl.o2o.util.ImageUtil;
 import com.dyl.o2o.util.PathUtil;
+import com.dyl.o2o.util.R;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /** 店铺管理controller
  * @author ：dyl
@@ -28,9 +35,18 @@ public class ShopManagementController {
 
     @Autowired
     ShopService shopService;
+    @Autowired
+    ShopCategoryService shopCategoryService;
+    @Autowired
+    AreaService areaService;
 
-    @RequestMapping(value = "/shop", method = RequestMethod.POST)
+    /**
+     * 注册店铺
+     * @param request
+     */
+    @PostMapping(value = "/shop")
     private void registerShop(HttpServletRequest request) {
+
         //1.接收并转化参数，包括店铺信息和图片信息
         String shopStr = HttpRequestUtil.getString(request,"shopStr");
         ObjectMapper mapper = new ObjectMapper();
@@ -97,6 +113,26 @@ public class ShopManagementController {
                 throw new RuntimeException("关闭文件流发生异常：" + e.getMessage());
             }
         }
+    }
+
+    /**
+     * 获取店铺创建初始化信息
+     * @return
+     */
+    @RequestMapping("/shopInitInfo")
+    public Map<String,Object> getShopInitInfo(){
+        Map<String,Object> modelMap = new HashMap<String,Object>();
+        List<ShopCategoryDo> shopCategoryDoList = new ArrayList<ShopCategoryDo>();
+        List<AreaDo> areaDoList = new ArrayList<AreaDo>();
+        try{
+            shopCategoryDoList = shopCategoryService.selectShopCategoryList(new ShopCategoryDo());
+            areaDoList = areaService.selectList();
+        }catch(Exception e){
+            throw new RuntimeException("获取初始化信息异常！" + e.getMessage());
+        }
+        modelMap.put("shopCategoryList", shopCategoryDoList);
+        modelMap.put("areaList", areaDoList);
+        return modelMap;
     }
 
 }

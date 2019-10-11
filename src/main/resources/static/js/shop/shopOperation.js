@@ -1,6 +1,6 @@
 $(function () {
     //获取店铺初始信息
-    var initUrl = '/shop/shopInitInfo';
+    var initUrl = '/shopAdmin/shopInitInfo';
     //注册店铺
     var registerShopUrl = '/shopAdmin/shop';
 

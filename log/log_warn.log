@@ -33,3 +33,28 @@
 2019-10-11 16:53:50.291 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
 2019-10-11 16:54:53.397 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
 2019-10-11 17:04:36.317 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 21:46:29.642 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 21:58:59.143 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 21:58:59.861 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 22:01:36.855 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 22:01:37.527 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 22:03:39.617 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 22:03:40.329 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 22:26:56.413 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 22:26:57.358 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 22:28:01.070 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s94ms312µs200ns).
+2019-10-11 22:28:34.823 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 22:28:35.406 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 22:28:57.481 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 22:28:58.065 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 23:26:28.695 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 23:26:29.374 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 23:27:30.066 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 23:27:30.773 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 23:52:20.972 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m19s553ms783µs400ns).
+2019-10-11 23:53:26.436 [restartedMain] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 23:53:26.690 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 23:56:10.632 [restartedMain] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 23:56:10.744 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-11 23:57:17.371 [restartedMain] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDo.
+2019-10-11 23:57:17.616 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
