@@ -1,22 +1,22 @@
 package com.dyl.o2o.controller.shopadmin;
 
-import com.dyl.o2o.domain.AreaDo;
-import com.dyl.o2o.domain.PersonDo;
-import com.dyl.o2o.domain.ShopCategoryDo;
-import com.dyl.o2o.domain.ShopDo;
+import com.dyl.o2o.common.R;
+import com.dyl.o2o.common.ResultCode;
+import com.dyl.o2o.domain.AreaDO;
+import com.dyl.o2o.domain.PersonDO;
+import com.dyl.o2o.domain.ShopCategoryDO;
+import com.dyl.o2o.domain.ShopDO;
 import com.dyl.o2o.service.AreaService;
 import com.dyl.o2o.service.ShopCategoryService;
 import com.dyl.o2o.service.ShopService;
-import com.dyl.o2o.util.HttpRequestUtil;
 import com.dyl.o2o.util.ImageUtil;
 import com.dyl.o2o.util.PathUtil;
-import com.dyl.o2o.util.R;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.dyl.o2o.util.CaptchaUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
@@ -29,6 +29,7 @@ import java.util.Map;
  * @author ：dyl
  * @date ：Created in 2019/10/8 23:13
  */
+@Slf4j
 @RestController
 @RequestMapping("/shopAdmin")
 public class ShopManagementController {
@@ -45,74 +46,39 @@ public class ShopManagementController {
      * @param request
      */
     @PostMapping(value = "/shop")
-    private void registerShop(HttpServletRequest request) {
-
-        //1.接收并转化参数，包括店铺信息和图片信息
-        String shopStr = HttpRequestUtil.getString(request,"shopStr");
-        ObjectMapper mapper = new ObjectMapper();
-        ShopDo shopDo = null;
-        try {//将json字符串转为实体类
-            shopDo = mapper.readValue(shopStr, ShopDo.class);
-        } catch (IOException e) {
-            e.printStackTrace();
+    private R registerShop(ShopDO shopDO, HttpServletRequest request){
+        if (!CaptchaUtil.checkVerifyCode(request)){
+            return R.error(ResultCode.CAPTCHA_FAIL);
         }
-        //接收图片
-        CommonsMultipartFile shopImg = null;
-        //从会话的上下文获取图片
-        CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver(request.getSession().getServletContext());//todo 待优化，从网上找有没有更优解决办法
-        if(commonsMultipartResolver.isMultipart(request)){
-            MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;//将请求强转为多媒体请求
-            shopImg = (CommonsMultipartFile) multipartHttpServletRequest.getFile("shopImg");
-        }else{//todo 若不具备文件流则报错，用参数校验来验证，统一异常拦截来处理异常
-
-        }
-
-        //2.注册店铺
-        if(shopDo != null && shopImg != null){
-            //从会话中获取操作人员
-            PersonDo owner = new PersonDo();
-            owner.setPersonId(1L);//todo 此处暂时使用固定代码，后面添加session操作，从session中获取
-            shopDo.setOwnerId(owner.getPersonId());
-            File shopImgFile = new File(PathUtil.getImgBasePath() + ImageUtil.getRandomFileName());
+        //图片处理
+        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+        MultipartFile uploadImg = multipartRequest.getFile("img");
+        if (shopDO != null &&uploadImg != null){
+            String imgFileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(uploadImg.getOriginalFilename());
+            File imgFile = new File(imgFileAbsolutePath);
             try {
-                shopImgFile.createNewFile();
-            } catch (IOException e) {//todo 异常处理
+                //MultipartFile转File,若原文件存在则会覆盖原文件,不存在则创建
+                uploadImg.transferTo(imgFile);
+                //生成缩略图替换原文件
+                ImageUtil.generateThumbnail(imgFile);
+
+                //从会话中获取操作人员
+                PersonDO owner = new PersonDO();
+                owner.setPersonId(1L);//todo 此处暂时使用固定代码，后面添加session操作，从session中获取
+                shopDO.setOwnerId(owner.getPersonId());
+                shopDO.setShopImg(imgFile.getName());
+                shopService.save(shopDO);
+            }catch (Exception e) {
+                imgFile.delete();
+                log.error("保存店铺信息异常:" + e.getMessage());
                 e.printStackTrace();
+                return R.error(ResultCode.INNER_ERROR);
             }
-            try {
-                inputStreamToFile(shopImg.getInputStream(),shopImgFile);
-            } catch (IOException e) {//todo
-                e.printStackTrace();
-            }
-            try {
-//                shopService.save(shopDo, shopImg);
-            }catch(Exception e){
-                throw new RuntimeException("业务异常" + e.getMessage());
-            }
-        }else{//todo 参数校验不通过抛异常
-
+        }else{
+            return R.error(ResultCode.PARAM_NOT_COMPLETE);
         }
-    }
-
-    private static void inputStreamToFile(InputStream inputStream, File file){
-        FileOutputStream outputStream = null;
-        try{
-            outputStream = new FileOutputStream(file);
-            int bytesRead = 0;
-            byte[] buffer = new byte[1024];
-            while ((bytesRead = inputStream.read(buffer)) != -1){
-                outputStream.write(buffer,0,bytesRead);
-            }
-        }catch (Exception e){
-            throw new RuntimeException("读取文件流出现异常：" + e.getMessage());
-        }finally {
-            try {
-                outputStream.close();
-                inputStream.close();
-            } catch (IOException e) {
-                throw new RuntimeException("关闭文件流发生异常：" + e.getMessage());
-            }
-        }
+        log.info("添加店铺成功");
+        return R.success();
     }
 
     /**
@@ -120,19 +86,20 @@ public class ShopManagementController {
      * @return
      */
     @RequestMapping("/shopInitInfo")
-    public Map<String,Object> getShopInitInfo(){
-        Map<String,Object> modelMap = new HashMap<String,Object>();
-        List<ShopCategoryDo> shopCategoryDoList = new ArrayList<ShopCategoryDo>();
-        List<AreaDo> areaDoList = new ArrayList<AreaDo>();
+    public R getShopInitInfo(HttpServletRequest request){
+        Map<String,Object> map = new HashMap<String,Object>();
+        List<ShopCategoryDO> shopCategoryDOList = new ArrayList<ShopCategoryDO>();
+        List<AreaDO> areaDOList = new ArrayList<AreaDO>();
         try{
-            shopCategoryDoList = shopCategoryService.selectShopCategoryList(new ShopCategoryDo());
-            areaDoList = areaService.selectList();
+            //获取一级店铺类别和所有区域列表
+            shopCategoryDOList = shopCategoryService.selectShopCategoryList(new ShopCategoryDO());
+            areaDOList = areaService.selectList();
+            map.put("shopCategoryDOList", shopCategoryDOList);
+            map.put("areaDOList",areaDOList);
+            return R.success(map);
         }catch(Exception e){
-            throw new RuntimeException("获取初始化信息异常！" + e.getMessage());
+            return R.error(e.getMessage());
         }
-        modelMap.put("shopCategoryList", shopCategoryDoList);
-        modelMap.put("areaList", areaDoList);
-        return modelMap;
     }
 
 }

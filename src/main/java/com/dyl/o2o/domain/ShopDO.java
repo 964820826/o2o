@@ -14,7 +14,7 @@ import java.util.Date;
  */
 @Data
 @TableName("tb_shop")
-public class ShopDo {
+public class ShopDO {
     //店铺id
     @TableId(value = "shop_id", type = IdType.AUTO)
     private Long shopId;

@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Data
 @TableName("tb_head_line")
-public class HeadLineDo {
+public class HeadLineDO {
     //头条id
     private Long headLineId;
     //头条名称

@@ -14,7 +14,7 @@ import java.util.Date;
  */
 @Data
 @TableName(value = "tb_area")
-public class AreaDo {
+public class AreaDO {
     //区域id
     @TableId
     private Long areaId;//为避免创建对象时默认赋值，故实体类中都使用包装类型

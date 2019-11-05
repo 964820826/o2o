@@ -1,7 +1,7 @@
 package com.dyl.o2o.service;
 
 import com.dyl.o2o.BaseTest;
-import com.dyl.o2o.domain.AreaDo;
+import com.dyl.o2o.domain.AreaDO;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,9 +17,9 @@ public class AreaServiceTest extends BaseTest {
 
     @Test
     public void testListArea(){
-        List<AreaDo> areaDoList = areaService.selectList();
+        List<AreaDO> areaDoList = areaService.selectList();
         System.out.println("共 " + areaDoList.size() + " 条记录！");
-        for (AreaDo area : areaDoList){
+        for (AreaDO area : areaDoList){
             System.out.println(area.toString());
         }
     }

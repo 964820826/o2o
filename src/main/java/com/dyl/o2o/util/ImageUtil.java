@@ -1,5 +1,6 @@
 package com.dyl.o2o.util;
 
+import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
 import org.slf4j.Logger;
@@ -21,8 +22,8 @@ import java.util.Random;
  * @author ：dyl
  * @date ：Created in 2019/10/4 20:34
  */
+@Slf4j
 public class ImageUtil {
-    private static final Logger LOG = LoggerFactory.getLogger(ImageUtil.class);
 
     //classPath路径 test和java下运行获取到的目录不同
     private static String classPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
@@ -32,68 +33,23 @@ public class ImageUtil {
     private static final Random random = new Random();
 
     /**
-     * 将传入的CommonsMultipartFile转化成File（CommonsMultipartFile测试时需要从前端传入后才能生成，不方便测试，故转为File类，测试时使用File类来测试）
-     * @param cFile
-     * @return
-     */
-    public static File transferCommonsMultipartFileToFile(CommonsMultipartFile cFile){
-        File newFile = new File(cFile.getOriginalFilename());
-        try {
-            cFile.transferTo(newFile);
-        } catch (IOException e) {
-            LOG.error(e.toString());
-            e.printStackTrace();
-        }
-        return newFile;
-    }
-
-    /**
-     * 根据传来的图片生成缩略图并保存到目标地址中
+     * 根据传来的图片生成缩略图并替换原图片
      *
      * @param img
-     * @param imgFolderRelativeAddr 图片所在目录的相对路径
-     * @return 图片相对路径，用于保存到数据库中
      */
-    public static String generateThumbnail(File img, String imgFolderRelativeAddr) {//todo targetAddr的用途，具体指代什么地址
-        //生成的文件名由程序生成
-        String fileName = getRandomFileName();
-        //图片扩展类型
-        String extension = getFileExtension(img);
-        //创建缩略图保存的目标地址所涉及的目录
-        makeDirPath(imgFolderRelativeAddr);
-        //文件相对路径
-        String imgRelativeAddr = imgFolderRelativeAddr + fileName + extension;
-        LOG.debug("生成图片的相对路径为：" + imgRelativeAddr);
-        //文件绝对路径（如：E:\IDEAWorkspace\git\o2o\src\main\resources\static\img\watermark.png）
-        String imgFullPath = PathUtil.getImgBasePath() + imgFolderRelativeAddr + fileName + extension;
-        LOG.debug("生成图片的绝对路径为：" + imgFullPath);
-        System.out.println("imgFullPath= " + imgFullPath);
-        //根据完整路径创建文件
-        File dest = new File(imgFullPath);
+    public static void generateThumbnail(File img) {
+        //图片完整路径
+        String fullPath = img.getAbsolutePath();
         try {
             //获取水印图片
             System.out.println("水印图片地址" + classPath + "static/img/watermark.png");
             BufferedImage buffer = ImageIO.read(new File(classPath + "static/img/watermark.png"));
             //生成缩略图
-            Thumbnails.of(img).size(500, 500).watermark(Positions.BOTTOM_RIGHT, buffer, 0.25f).outputQuality(0.8f).toFile(dest);
+            Thumbnails.of(img).size(500, 500).watermark(Positions.BOTTOM_RIGHT, buffer, 0.25f).outputQuality(0.8f).toFile(img.getAbsolutePath());
         } catch (IOException e) {
-            LOG.error(e.toString());
+            log.error(e.toString());
             e.printStackTrace();
             throw new RuntimeException("生成缩略图发生错误！");
-        }
-        return imgRelativeAddr;
-    }
-
-    /**
-     * 创建目标路径所涉及到的目录，如D:/upload/img/xxx.jpg，就需要创建upload和img文件夹
-     *
-     * @param targetAddr
-     */
-    private static void makeDirPath(String targetAddr) {
-        String realFilePath = PathUtil.getImgBasePath() + targetAddr;
-        File dirPath = new File(realFilePath);
-        if (!dirPath.exists()) {
-            dirPath.mkdirs();
         }
     }
 
@@ -103,9 +59,18 @@ public class ImageUtil {
      * @param file
      * @return
      */
-    private static String getFileExtension(File file) {
+    public static String getFileExtension(File file) {
         String originalFileName = file.getName();
         return originalFileName.substring(originalFileName.lastIndexOf("."));
+    }
+
+    /**
+     * 根据文件名获取该文件名的扩展
+     * @param fileName
+     * @return
+     */
+    public static String getFileNameExtension(String fileName){
+        return fileName.substring(fileName.lastIndexOf("."));
     }
 
     /**

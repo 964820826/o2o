@@ -1,10 +1,7 @@
 package com.dyl.o2o.dao;
 
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.dyl.o2o.BaseTest;
-import com.dyl.o2o.domain.AreaDo;
-import com.dyl.o2o.domain.PersonDo;
-import com.dyl.o2o.domain.ShopDo;
+import com.dyl.o2o.domain.ShopDO;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,7 +18,7 @@ public class ShopDaoTest extends BaseTest {
 
     @Test
     public void testInsertShop(){
-        ShopDo shop = new ShopDo();
+        ShopDO shop = new ShopDO();
         shop.setShopName("王二烧烤");
         shop.setAreaId(2L);
         shop.setOwnerId(1L);
@@ -33,7 +30,7 @@ public class ShopDaoTest extends BaseTest {
 
     @Test
     public void testUpdateShop(){
-        ShopDo shop = new ShopDo();
+        ShopDO shop = new ShopDO();
         shop.setShopId(36L);
         shop.setShopName("王wu烧烤");
         int count = shopDao.updateById(shop);
