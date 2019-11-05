@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Data
 @TableName("tb_shop_category")
-public class ShopCategoryDo {
+public class ShopCategoryDO {
     //店铺类别Id
     private Long shopCategoryId;
     //店铺类别名称

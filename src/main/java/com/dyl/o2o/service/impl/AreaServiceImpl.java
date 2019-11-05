@@ -1,7 +1,7 @@
 package com.dyl.o2o.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.dyl.o2o.domain.AreaDo;
+import com.dyl.o2o.domain.AreaDO;
 import com.dyl.o2o.dao.AreaDao;
 import com.dyl.o2o.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +20,11 @@ public class AreaServiceImpl implements AreaService {
     private AreaDao areaDao;
 
     @Override
-    public List<AreaDo> selectList() {
+    public List<AreaDO> selectList() {
         //权重降序查询所有区域信息
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.orderByDesc("priority");
-        List<AreaDo> areaDoList = areaDao.selectList(queryWrapper);
+        List<AreaDO> areaDoList = areaDao.selectList(queryWrapper);
         return areaDoList;
     }
 

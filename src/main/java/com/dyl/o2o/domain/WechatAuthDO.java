@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Data
 @TableName("tb_wechat_auth")
-public class WechatAuthDo {
+public class WechatAuthDO {
     //微信授权id
     private Long wechatAtuhId;
     //绑定微信账号与公众号的唯一标识
@@ -19,6 +19,6 @@ public class WechatAuthDo {
     //微信授权时间
     private Date createTime;
     //微信授权对应用户
-    private PersonDo personDo;
+    private PersonDO personDo;
 
 }

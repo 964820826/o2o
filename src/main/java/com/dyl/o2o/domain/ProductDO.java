@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Data
 @TableName("tb_product")
-public class ProductDo {
+public class ProductDO {
     //商品id
     private Long productId;
     //商品名称
@@ -37,9 +37,9 @@ public class ProductDo {
 
     //商品详情图片
     @TableField(exist = false)//数据库中不存在此字段
-    private List<ProductImgDo> productImgList;
+    private List<ProductImgDO> productImgList;
     //商品所属类别
-    private ProductCategoryDo productCategory;
+    private ProductCategoryDO productCategory;
     //商品所属店铺
-    private ShopDo shop;
+    private ShopDO shop;
 }

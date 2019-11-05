@@ -1,8 +1,7 @@
 package com.dyl.o2o.service;
 
 import com.dyl.o2o.BaseTest;
-import com.dyl.o2o.dao.ShopCategoryDao;
-import com.dyl.o2o.domain.ShopCategoryDo;
+import com.dyl.o2o.domain.ShopCategoryDO;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,9 +18,9 @@ public class ShopCategoryServiceTest extends BaseTest {
 
     @Test
     public void testGetShopCategoryList(){
-        ShopCategoryDo condition = new ShopCategoryDo();
-        List<ShopCategoryDo> shopCategoryDoList = shopCategoryService.selectShopCategoryList(condition);
-        for (ShopCategoryDo shopCategory : shopCategoryDoList){
+        ShopCategoryDO condition = new ShopCategoryDO();
+        List<ShopCategoryDO> shopCategoryDOList = shopCategoryService.selectShopCategoryList(condition);
+        for (ShopCategoryDO shopCategory : shopCategoryDOList){
             System.out.println(shopCategory.toString());
         }
     }

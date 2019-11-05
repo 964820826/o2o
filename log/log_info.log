@@ -1,438 +1,141 @@
-2019-10-08 21:02:42.094 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 6828 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 21:02:42.097 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 21:02:43.771 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:02:44.172 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.664 seconds (JVM running for 3.378)
-2019-10-08 21:02:44.352 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 21:02:44.496 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 21:02:44.697 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:02:44.699 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 21:02:44.702 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 21:10:37.015 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 20372 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 21:10:37.016 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 21:10:38.594 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:10:38.961 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.468 seconds (JVM running for 3.1)
-2019-10-08 21:10:39.103 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 21:10:39.237 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 21:10:39.395 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:10:39.397 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 21:10:39.400 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 21:13:31.070 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 21808 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 21:13:31.071 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 21:13:32.809 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:13:33.293 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.706 seconds (JVM running for 3.852)
-2019-10-08 21:13:33.453 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 21:13:33.593 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 21:43:02.455 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:43:02.456 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 21:43:02.462 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 21:43:20.152 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 15012 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 21:43:20.153 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 21:43:21.759 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:43:22.155 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.532 seconds (JVM running for 3.204)
-2019-10-08 21:43:22.292 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 21:43:22.422 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 21:43:22.559 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:43:22.560 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 21:43:22.564 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 21:44:18.078 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 7844 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 21:44:18.079 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 21:44:19.863 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:44:20.341 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.908 seconds (JVM running for 3.699)
-2019-10-08 21:44:20.505 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 21:44:20.660 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 21:47:07.911 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:47:07.912 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 21:47:07.917 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 21:49:25.821 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 4368 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 21:49:25.823 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 21:49:27.641 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:49:28.124 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.964 seconds (JVM running for 3.764)
-2019-10-08 21:49:28.285 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 21:49:28.436 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 21:55:25.831 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:55:25.833 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 21:55:25.842 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 21:55:36.371 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 13424 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 21:55:36.372 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 21:55:38.190 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:55:38.670 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.953 seconds (JVM running for 3.73)
-2019-10-08 21:55:38.832 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 21:55:38.982 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 21:59:27.320 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:59:27.322 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 21:59:27.327 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 21:59:55.640 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 25192 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 21:59:55.641 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 21:59:57.326 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:59:57.709 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.613 seconds (JVM running for 3.254)
-2019-10-08 21:59:57.852 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 21:59:57.986 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 21:59:58.130 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 21:59:58.132 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 21:59:58.135 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 22:01:01.760 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 18316 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 22:01:01.762 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 22:01:03.573 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:01:04.066 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.923 seconds (JVM running for 3.688)
-2019-10-08 22:01:04.239 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 22:01:04.395 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 22:01:04.569 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:01:04.571 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 22:01:04.575 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 22:02:35.330 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 19420 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 22:02:35.331 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 22:02:37.044 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:02:37.509 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.765 seconds (JVM running for 3.487)
-2019-10-08 22:02:37.659 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 22:02:37.799 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 22:02:37.933 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:02:37.934 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 22:02:37.937 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 22:05:35.303 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 15372 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 22:05:35.304 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 22:05:36.873 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:05:37.237 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.459 seconds (JVM running for 3.091)
-2019-10-08 22:05:37.377 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 22:05:37.525 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 22:05:37.664 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:05:37.665 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 22:05:37.669 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 22:06:17.918 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 5736 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 22:06:17.920 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 22:06:19.585 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:06:20.053 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.703 seconds (JVM running for 3.447)
-2019-10-08 22:06:20.204 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 22:06:20.349 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 22:06:20.490 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:06:20.491 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 22:06:20.495 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 22:08:42.121 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 5360 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 22:08:42.122 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 22:08:43.823 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:08:44.291 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.661 seconds (JVM running for 3.846)
-2019-10-08 22:08:44.457 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 22:08:44.608 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 22:08:47.852 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:08:47.853 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 22:08:47.858 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 22:12:23.542 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 13696 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 22:12:23.543 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 22:12:25.175 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:12:25.627 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.667 seconds (JVM running for 3.43)
-2019-10-08 22:12:25.801 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 22:12:25.940 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 22:16:34.606 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:16:34.608 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 22:16:34.613 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 22:16:41.315 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 20128 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 22:16:41.317 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 22:16:43.043 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:16:43.486 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.794 seconds (JVM running for 3.567)
-2019-10-08 22:16:43.634 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 22:16:43.781 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 22:17:05.083 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:17:05.084 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 22:17:05.088 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 22:18:25.352 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 9856 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 22:18:25.353 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 22:18:27.053 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:18:27.520 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.74 seconds (JVM running for 3.466)
-2019-10-08 22:18:27.673 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 22:18:27.823 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 22:18:57.626 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:18:57.627 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 22:18:57.631 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 22:20:32.443 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 9116 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 22:20:32.445 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 22:20:34.072 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:20:34.452 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.546 seconds (JVM running for 3.15)
-2019-10-08 22:20:34.590 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 22:20:34.714 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 22:20:35.671 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:20:35.672 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 22:20:35.675 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-08 22:21:51.003 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 8560 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-08 22:21:51.005 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-08 22:21:52.711 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:21:53.179 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 2.788 seconds (JVM running for 3.559)
-2019-10-08 22:21:53.344 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-08 22:21:53.493 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-08 22:33:32.458 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:33:32.459 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-08 22:33:32.464 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-10 23:38:15.846 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Starting ShopServiceTest on dyl-pc with PID 18728 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-10 23:38:15.858 [main] INFO  com.dyl.o2o.service.ShopServiceTest - The following profiles are active: dev
-2019-10-10 23:38:15.947 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 19420 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-10 23:38:16.033 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-10 23:38:17.219 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-10-10 23:38:17.249 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-10 23:38:17.250 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-10 23:38:17.357 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-10 23:38:17.357 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1258 ms
-2019-10-10 23:38:17.982 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-10 23:38:18.209 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-10 23:38:18.268 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-10-10 23:38:18.272 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 3.07 seconds (JVM running for 3.813)
-2019-10-10 23:38:18.800 [main] INFO  com.dyl.o2o.service.ShopServiceTest - Started ShopServiceTest in 3.782 seconds (JVM running for 5.32)
-2019-10-10 23:38:18.994 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-10 23:38:19.157 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-10 23:38:41.217 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-10 23:38:41.217 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-10 23:38:41.223 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
-2019-10-10 23:39:34.099 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-10 23:39:34.100 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-10 23:39:34.106 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-10 23:41:15.023 [Thread-7] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 11:11:20.200 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 10084 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-10-11 11:11:20.205 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 11:11:23.381 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-10-11 11:11:23.422 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 11:11:23.423 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 11:11:23.699 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 11:11:23.708 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3101 ms
-2019-10-11 11:11:26.454 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 11:11:26.996 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
-2019-10-11 11:11:27.009 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-10-11 11:11:27.022 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 11:14:21.177 [main] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 9864 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-10-11 11:14:21.184 [main] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 11:14:24.219 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2019-10-11 11:14:24.259 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 11:14:24.265 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 11:14:24.467 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 11:14:24.468 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3105 ms
-2019-10-11 11:14:25.737 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 11:14:26.216 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2019-10-11 11:14:26.223 [main] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 6.759 seconds (JVM running for 8.89)
-2019-10-11 11:14:36.007 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-11 11:14:36.007 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-11 11:14:36.019 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
-2019-10-11 12:01:25.267 [Thread-11] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 12:02:00.768 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 11976 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-10-11 12:02:00.773 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 12:02:00.891 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-10-11 12:02:00.892 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-10-11 12:02:06.611 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2019-10-11 12:02:06.752 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 12:02:06.753 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 12:02:07.287 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 12:02:07.291 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6398 ms
-2019-10-11 12:02:11.537 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 12:02:12.424 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-10-11 12:02:12.551 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2019-10-11 12:02:12.558 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 14.588 seconds (JVM running for 19.403)
-2019-10-11 12:10:28.686 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-11 12:10:28.688 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-11 12:10:28.703 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
-2019-10-11 14:14:54.837 [Thread-14] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 14:15:03.230 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 2500 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-10-11 14:15:03.235 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 14:15:03.454 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-10-11 14:15:03.455 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-10-11 14:15:08.425 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2019-10-11 14:15:08.503 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 14:15:08.504 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 14:15:08.838 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 14:15:08.843 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5388 ms
-2019-10-11 14:15:13.140 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 14:15:13.848 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-10-11 14:15:13.953 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2019-10-11 14:15:13.962 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 12.776 seconds (JVM running for 15.886)
-2019-10-11 14:15:54.875 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-11 14:15:54.876 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-11 14:15:54.891 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
-2019-10-11 16:08:22.257 [Thread-19] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 16:08:32.534 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 5540 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-10-11 16:08:32.538 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 16:08:32.950 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-10-11 16:08:32.950 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-10-11 16:08:37.326 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2019-10-11 16:08:37.399 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 16:08:37.400 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 16:08:37.677 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 16:08:37.693 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4743 ms
-2019-10-11 16:08:40.142 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 16:08:40.812 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-10-11 16:08:40.931 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2019-10-11 16:08:40.937 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 11.435 seconds (JVM running for 16.083)
-2019-10-11 16:08:43.515 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-11 16:08:43.515 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-11 16:08:43.531 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
-2019-10-11 16:50:39.142 [Thread-18] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 16:53:44.798 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 8792 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-10-11 16:53:44.803 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 16:53:44.916 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-10-11 16:53:44.917 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-10-11 16:53:47.810 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2019-10-11 16:53:47.856 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 16:53:47.857 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 16:53:48.168 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 16:53:48.177 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3259 ms
-2019-10-11 16:53:50.038 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 16:53:50.646 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-10-11 16:53:50.835 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2019-10-11 16:53:50.842 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 7.496 seconds (JVM running for 15.475)
-2019-10-11 16:53:55.926 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-11 16:53:55.926 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-11 16:53:55.944 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 17 ms
-2019-10-11 16:54:30.126 [Thread-23] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 16:54:44.362 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 4948 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-10-11 16:54:44.366 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 16:54:44.510 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-10-11 16:54:44.510 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-10-11 16:54:48.048 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2019-10-11 16:54:48.156 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 16:54:48.188 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 16:54:48.765 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 16:54:48.772 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4262 ms
-2019-10-11 16:54:52.595 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 16:54:53.780 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-10-11 16:54:53.874 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2019-10-11 16:54:53.880 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 10.858 seconds (JVM running for 14.382)
-2019-10-11 16:54:57.812 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-11 16:54:57.813 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-11 16:54:57.832 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
-2019-10-11 17:04:15.526 [Thread-14] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 17:04:28.298 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on DESKTOP-QS0OB6V with PID 13664 (E:\IDEAWorkSpace\git\o2o\target\classes started by Administrator in E:\IDEAWorkSpace\git\o2o)
-2019-10-11 17:04:28.305 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 17:04:28.407 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-10-11 17:04:28.408 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-10-11 17:04:33.503 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2019-10-11 17:04:33.546 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 17:04:33.547 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 17:04:33.775 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 17:04:33.777 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5369 ms
-2019-10-11 17:04:36.057 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 17:04:36.675 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-10-11 17:04:36.854 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2019-10-11 17:04:36.866 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 10.859 seconds (JVM running for 13.525)
-2019-10-11 17:09:06.565 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-11 17:09:06.567 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-11 17:09:06.583 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 14 ms
-2019-10-11 21:46:27.101 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Starting ShopCategoryServiceTest on dyl-pc with PID 8300 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 21:46:27.102 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - The following profiles are active: dev
-2019-10-11 21:46:29.392 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 21:46:30.074 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Started ShopCategoryServiceTest in 3.602 seconds (JVM running for 5.192)
-2019-10-11 21:47:34.904 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 21:58:57.823 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Starting ShopCategoryServiceTest on dyl-pc with PID 12012 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 21:58:57.824 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - The following profiles are active: dev
-2019-10-11 21:58:59.658 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 21:59:00.164 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Started ShopCategoryServiceTest in 2.988 seconds (JVM running for 3.79)
-2019-10-11 21:59:02.420 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-11 21:59:03.001 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-11 21:59:06.729 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 21:59:06.730 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-11 21:59:06.735 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-11 22:01:35.455 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Starting ShopCategoryServiceTest on dyl-pc with PID 16744 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 22:01:35.456 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - The following profiles are active: dev
-2019-10-11 22:01:37.329 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 22:01:37.808 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Started ShopCategoryServiceTest in 2.953 seconds (JVM running for 3.741)
-2019-10-11 22:01:38.968 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-11 22:01:39.536 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-11 22:01:42.271 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 22:01:42.272 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-11 22:01:42.278 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-11 22:03:38.299 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Starting ShopCategoryServiceTest on dyl-pc with PID 1412 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 22:03:38.300 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - The following profiles are active: dev
-2019-10-11 22:03:40.130 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 22:03:40.620 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Started ShopCategoryServiceTest in 2.896 seconds (JVM running for 3.674)
-2019-10-11 22:03:40.844 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-11 22:03:40.991 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-11 22:26:54.732 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Starting ShopCategoryServiceTest on dyl-pc with PID 2044 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 22:26:54.733 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - The following profiles are active: dev
-2019-10-11 22:26:57.024 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 22:26:57.704 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Started ShopCategoryServiceTest in 3.535 seconds (JVM running for 4.998)
-2019-10-11 22:27:02.881 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-11 22:27:04.876 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-11 22:28:08.307 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 22:28:08.309 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-11 22:28:08.315 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-11 22:28:33.534 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Starting ShopCategoryServiceTest on dyl-pc with PID 8748 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 22:28:33.535 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - The following profiles are active: dev
-2019-10-11 22:28:35.238 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 22:28:35.649 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Started ShopCategoryServiceTest in 2.742 seconds (JVM running for 3.398)
-2019-10-11 22:28:35.848 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-11 22:28:35.989 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-11 22:28:36.067 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 22:28:36.069 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-11 22:28:36.070 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-11 22:28:56.211 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Starting ShopCategoryServiceTest on dyl-pc with PID 6652 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 22:28:56.212 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - The following profiles are active: dev
-2019-10-11 22:28:57.899 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 22:28:58.331 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Started ShopCategoryServiceTest in 2.681 seconds (JVM running for 3.303)
-2019-10-11 22:28:58.554 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-11 22:28:58.706 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-11 22:28:58.781 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 22:28:58.783 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-11 22:28:58.785 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-11 23:26:27.414 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Starting ShopCategoryServiceTest on dyl-pc with PID 14188 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 23:26:27.415 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - The following profiles are active: dev
-2019-10-11 23:26:29.179 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 23:26:29.644 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Started ShopCategoryServiceTest in 2.867 seconds (JVM running for 3.687)
-2019-10-11 23:26:29.851 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-11 23:26:29.997 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-11 23:26:30.105 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 23:26:30.106 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-11 23:26:30.111 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-11 23:27:28.717 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Starting ShopCategoryServiceTest on dyl-pc with PID 6128 (started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 23:27:28.719 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - The following profiles are active: dev
-2019-10-11 23:27:30.566 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 23:27:31.045 [main] INFO  com.dyl.o2o.service.ShopCategoryServiceTest - Started ShopCategoryServiceTest in 2.96 seconds (JVM running for 3.706)
-2019-10-11 23:27:31.268 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-11 23:27:31.418 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-10-11 23:52:20.983 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 23:52:20.984 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2019-10-11 23:52:20.989 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2019-10-11 23:53:24.908 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 13524 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 23:53:24.910 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 23:53:24.943 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-10-11 23:53:24.943 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-10-11 23:53:25.948 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2019-10-11 23:53:25.967 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 23:53:25.967 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 23:53:26.042 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 23:53:26.042 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1099 ms
-2019-10-11 23:53:26.596 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 23:53:26.819 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-10-11 23:53:26.878 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2019-10-11 23:53:26.883 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 2.494 seconds (JVM running for 3.098)
-2019-10-11 23:54:36.427 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-11 23:54:36.428 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-11 23:54:36.434 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
-2019-10-11 23:56:09.881 [Thread-10] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 23:56:10.131 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 13524 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 23:56:10.131 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 23:56:10.512 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2019-10-11 23:56:10.513 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 23:56:10.513 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 23:56:10.529 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 23:56:10.529 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 395 ms
-2019-10-11 23:56:10.708 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 23:56:10.777 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-10-11 23:56:10.797 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2019-10-11 23:56:10.797 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.721 seconds (JVM running for 167.013)
-2019-10-11 23:56:10.800 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2019-10-11 23:56:13.558 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-11 23:56:13.559 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-11 23:56:13.564 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
-2019-10-11 23:57:12.198 [Thread-23] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-11 23:57:15.910 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 12684 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-10-11 23:57:15.912 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-10-11 23:57:15.945 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-10-11 23:57:15.946 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-10-11 23:57:16.916 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
-2019-10-11 23:57:16.933 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-10-11 23:57:16.933 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-11 23:57:17.004 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-10-11 23:57:17.005 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1059 ms
-2019-10-11 23:57:17.524 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-11 23:57:17.720 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-10-11 23:57:17.764 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
-2019-10-11 23:57:17.767 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 2.379 seconds (JVM running for 2.963)
-2019-10-11 23:57:20.961 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-11 23:57:20.961 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-10-11 23:57:20.967 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
-2019-10-11 23:58:01.639 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-10-11 23:58:01.739 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-11-05 21:04:03.229 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-05 21:04:03.233 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-11-05 21:04:03.241 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2019-11-05 21:04:03.723 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-11-05 21:04:03.848 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-11-05 21:23:41.997 [Thread-13] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:23:41.998 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-11-05 21:23:42.004 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-11-05 21:23:44.063 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-05 21:23:44.066 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-11-05 21:23:44.113 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-05 21:23:44.113 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-05 21:23:45.161 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-11-05 21:23:45.181 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-05 21:23:45.182 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-05 21:23:45.261 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-11-05 21:23:45.261 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1147 ms
+2019-11-05 21:23:45.799 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:23:46.007 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-11-05 21:23:46.076 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-05 21:23:46.079 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 2.677 seconds (JVM running for 3.417)
+2019-11-05 21:23:57.226 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-05 21:23:57.226 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-11-05 21:23:57.234 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2019-11-05 21:23:57.707 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-11-05 21:23:57.808 [http-nio-8081-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-11-05 21:35:04.210 [Thread-11] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:35:04.210 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-11-05 21:35:04.215 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-11-05 21:35:04.448 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-05 21:35:04.448 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-11-05 21:35:04.811 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-11-05 21:35:04.812 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-05 21:35:04.812 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-05 21:35:04.827 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-11-05 21:35:04.828 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 377 ms
+2019-11-05 21:35:05.001 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:35:05.068 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-11-05 21:35:05.104 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-05 21:35:05.105 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.713 seconds (JVM running for 682.443)
+2019-11-05 21:35:05.108 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-11-05 21:41:16.937 [Thread-20] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:41:17.208 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-05 21:41:17.208 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-11-05 21:41:17.493 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-11-05 21:41:17.494 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-05 21:41:17.494 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-05 21:41:17.505 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-11-05 21:41:17.505 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 295 ms
+2019-11-05 21:41:17.665 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:41:17.735 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-11-05 21:41:17.769 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-05 21:41:17.770 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.604 seconds (JVM running for 1055.108)
+2019-11-05 21:41:17.771 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-11-05 21:41:19.147 [Thread-26] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:41:19.398 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-05 21:41:19.399 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-11-05 21:41:19.784 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-11-05 21:41:19.786 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-05 21:41:19.786 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-05 21:41:19.798 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-11-05 21:41:19.798 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 397 ms
+2019-11-05 21:41:19.957 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:41:20.020 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-11-05 21:41:20.053 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-05 21:41:20.053 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.694 seconds (JVM running for 1057.391)
+2019-11-05 21:41:20.054 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-11-05 21:44:32.629 [Thread-32] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:44:32.894 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-05 21:44:32.895 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-11-05 21:44:33.217 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-11-05 21:44:33.218 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-05 21:44:33.218 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-05 21:44:33.229 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-11-05 21:44:33.229 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 331 ms
+2019-11-05 21:44:33.383 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:44:33.446 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-11-05 21:44:33.480 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-05 21:44:33.481 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.635 seconds (JVM running for 1250.819)
+2019-11-05 21:44:33.482 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-11-05 21:46:22.281 [Thread-38] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:46:22.503 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-05 21:46:22.504 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-11-05 21:46:22.788 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-11-05 21:46:22.789 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-05 21:46:22.789 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-05 21:46:22.800 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-11-05 21:46:22.800 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 294 ms
+2019-11-05 21:46:23.099 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:46:23.248 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-11-05 21:46:23.323 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-05 21:46:23.324 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.864 seconds (JVM running for 1360.662)
+2019-11-05 21:46:23.327 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-11-05 21:58:15.415 [Thread-44] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:58:15.698 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-05 21:58:15.698 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-11-05 21:58:15.998 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-11-05 21:58:15.999 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-05 21:58:15.999 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-05 21:58:16.027 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-11-05 21:58:16.027 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 326 ms
+2019-11-05 21:58:16.216 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:58:16.284 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-11-05 21:58:16.316 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-05 21:58:16.316 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.666 seconds (JVM running for 2073.653)
+2019-11-05 21:58:16.318 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-11-05 22:02:33.740 [Thread-50] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 22:02:33.992 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-05 22:02:33.992 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-11-05 22:02:34.361 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-11-05 22:02:34.362 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-05 22:02:34.362 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-05 22:02:34.386 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-11-05 22:02:34.388 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 393 ms
+2019-11-05 22:02:34.579 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 22:02:34.674 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-11-05 22:02:34.714 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-05 22:02:34.715 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.77 seconds (JVM running for 2332.052)
+2019-11-05 22:02:34.716 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-11-05 22:05:57.695 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-05 22:05:57.695 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-11-05 22:05:57.699 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2019-11-05 22:06:44.619 [Thread-61] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 22:06:47.068 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 14252 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-05 22:06:47.071 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-11-05 22:06:47.110 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-05 22:06:47.110 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-05 22:06:48.056 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-11-05 22:06:48.074 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-05 22:06:48.074 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-05 22:06:48.149 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-11-05 22:06:48.149 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1039 ms
+2019-11-05 22:06:48.673 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 22:06:48.868 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-11-05 22:06:48.932 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-05 22:06:48.935 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 2.381 seconds (JVM running for 2.931)
+2019-11-05 22:53:24.846 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-05 22:53:24.846 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-11-05 22:53:24.853 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2019-11-05 22:53:34.358 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-11-05 22:53:34.475 [http-nio-8081-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.

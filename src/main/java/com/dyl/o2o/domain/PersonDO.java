@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Data
 @TableName("tb_person")
-public class PersonDo {
+public class PersonDO {
     //用户Id
     private Long personId;
     //用户名

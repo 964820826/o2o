@@ -1,6 +1,6 @@
 package com.dyl.o2o.service;
 
-import com.dyl.o2o.domain.ShopCategoryDo;
+import com.dyl.o2o.domain.ShopCategoryDO;
 
 import java.util.List;
 
@@ -14,5 +14,5 @@ public interface ShopCategoryService {
      * 获取店铺类别列表
      * @return
      */
-    List<ShopCategoryDo> selectShopCategoryList(ShopCategoryDo condition);
+    List<ShopCategoryDO> selectShopCategoryList(ShopCategoryDO condition);
 }

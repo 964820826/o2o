@@ -1,7 +1,7 @@
 package com.dyl.o2o.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.dyl.o2o.domain.ShopDo;
+import com.dyl.o2o.domain.ShopDO;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 @Mapper
-public interface ShopDao extends BaseMapper<ShopDo> {
+public interface ShopDao extends BaseMapper<ShopDO> {
 
 }

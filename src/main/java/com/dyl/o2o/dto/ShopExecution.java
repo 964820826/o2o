@@ -1,6 +1,6 @@
 package com.dyl.o2o.dto;
 
-import com.dyl.o2o.domain.ShopDo;
+import com.dyl.o2o.domain.ShopDO;
 
 import java.util.List;
 
@@ -20,10 +20,10 @@ public class ShopExecution {
     private int count;
 
     //操作的店铺(增删改店铺是使用)
-    private ShopDo shopDo;
+    private ShopDO shopDo;
 
     //操作的shop列表（查询时使用）
-    private List<ShopDo> shopDoList;
+    private List<ShopDO> shopDoList;
 
     //无参构造函数
     public ShopExecution() {

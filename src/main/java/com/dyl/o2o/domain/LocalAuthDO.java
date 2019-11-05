@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Data
 @TableName("tb_local_auth")
-public class LocalAuthDo {
+public class LocalAuthDO {
     //本地账户Id
     private Long localAuthId;
     //本地账户名
@@ -23,5 +23,5 @@ public class LocalAuthDo {
     //最后修改时间
     private Date lastEditTime;
     //对应用户
-    private PersonDo personDo;
+    private PersonDO personDo;
 }

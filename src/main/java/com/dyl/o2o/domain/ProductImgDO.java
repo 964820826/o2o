@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Data
 @TableName("td_product_img")
-public class ProductImgDo {
+public class ProductImgDO {
     //图片id
     private Long productImgId;
     //图片地址

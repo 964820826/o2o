@@ -1,6 +1,7 @@
 package com.dyl.o2o.service;
 
-import com.dyl.o2o.domain.ShopDo;
+import com.dyl.o2o.domain.ShopDO;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 
@@ -10,5 +11,7 @@ import java.io.File;
  */
 public interface ShopService {
 
-    void save(ShopDo shop, File shopImg);
+//    void save(ShopDO shop, File shopImg);
+
+    void save(ShopDO shopDO);
 }
