@@ -1,0 +1,94 @@
+2019-10-08 21:02:44.604 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_id, shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2019-10-08 21:02:44.635 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 1181555527258533890(Long), 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:02:44.506(Timestamp), 0(Integer)
+2019-10-08 21:10:39.292 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 21:10:39.318 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:10:39.247(Timestamp), 0(Integer)
+2019-10-08 21:10:39.321 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 21:10:39.377 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 21:10:39.382 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:10:39.247(Timestamp), E:\IDEAWorkspace\git\o2o\img\37\2019100821103976103.jpg(String), 0(Integer), 37(Long)
+2019-10-08 21:10:39.383 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 21:13:41.603 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 21:13:41.854 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:13:40.732(Timestamp), 0(Integer)
+2019-10-08 21:13:41.856 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 21:43:02.439 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 21:43:02.444 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:13:40.732(Timestamp), E:\IDEAWorkspace\git\o2o\img\38\2019100821141234060.jpg(String), 0(Integer), 38(Long)
+2019-10-08 21:43:02.445 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 21:43:22.475 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 21:43:22.500 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:43:22.432(Timestamp), 0(Integer)
+2019-10-08 21:43:22.502 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 21:43:22.542 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 21:43:22.547 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:43:22.432(Timestamp), E:\IDEAWorkspace\git\o2o\img\39\2019100821432298763.jpg(String), 0(Integer), 39(Long)
+2019-10-08 21:43:22.548 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 21:44:27.667 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 21:44:27.919 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:44:26.264(Timestamp), 0(Integer)
+2019-10-08 21:44:27.922 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 21:47:02.618 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 21:47:02.651 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:44:26.264(Timestamp), E:\IDEAWorkspace\git\o2o\img\40\2019100821460465577.jpg(String), 0(Integer), 40(Long)
+2019-10-08 21:47:02.653 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 21:49:37.294 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 21:49:37.544 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:49:36.585(Timestamp), 0(Integer)
+2019-10-08 21:49:37.547 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 21:55:25.828 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 21:55:25.835 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:49:36.585(Timestamp), E:\IDEAWorkspace\git\o2o\img\41\2019100821542786105.jpg(String), 0(Integer), 41(Long)
+2019-10-08 21:55:46.134 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 21:55:46.386 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:55:45.44(Timestamp), 0(Integer)
+2019-10-08 21:55:46.388 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 21:59:25.073 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 21:59:25.107 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:55:45.44(Timestamp), \42\2019100821555299683.jpg(String), 0(Integer), 42(Long)
+2019-10-08 21:59:25.108 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 21:59:58.041 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 21:59:58.068 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:59:57.997(Timestamp), 0(Integer)
+2019-10-08 21:59:58.070 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 21:59:58.114 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 21:59:58.118 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 21:59:57.997(Timestamp), \43\2019100821595814564.jpg(String), 0(Integer), 43(Long)
+2019-10-08 21:59:58.119 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 22:01:04.464 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 22:01:04.494 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:01:04.409(Timestamp), 0(Integer)
+2019-10-08 22:01:04.495 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 22:01:04.552 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 22:01:04.556 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:01:04.409(Timestamp), \44\2019100822010471785.jpg(String), 0(Integer), 44(Long)
+2019-10-08 22:01:04.558 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 22:02:37.852 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 22:02:37.878 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:02:37.809(Timestamp), 0(Integer)
+2019-10-08 22:02:37.879 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 22:02:37.918 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 22:02:37.922 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:02:37.809(Timestamp), \45\2019100822023778340.jpg(String), 0(Integer), 45(Long)
+2019-10-08 22:02:37.923 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 22:05:37.578 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 22:05:37.603 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:05:37.535(Timestamp), 0(Integer)
+2019-10-08 22:05:37.605 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 22:05:37.647 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 22:05:37.652 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:05:37.535(Timestamp), \46\2019100822053739806.jpg(String), 0(Integer), 46(Long)
+2019-10-08 22:05:37.653 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 22:06:20.405 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 22:06:20.432 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:06:20.359(Timestamp), 0(Integer)
+2019-10-08 22:06:20.434 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 22:06:20.476 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 22:06:20.480 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:06:20.359(Timestamp), \47\2019100822062088393.jpg(String), 0(Integer), 47(Long)
+2019-10-08 22:06:20.481 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 22:08:44.661 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 22:08:44.687 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:08:44.618(Timestamp), 0(Integer)
+2019-10-08 22:08:44.688 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 22:08:47.837 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 22:08:47.841 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:08:44.618(Timestamp), \48\2019100822084749611.jpg(String), 0(Integer), 48(Long)
+2019-10-08 22:08:47.842 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 22:12:25.992 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 22:12:26.018 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:12:25.95(Timestamp), 0(Integer)
+2019-10-08 22:12:26.019 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 22:16:34.590 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==>  Preparing: UPDATE tb_shop SET shop_category_id=?, shop_name=?, owner_id=?, area_id=?, create_time=?, shop_img=?, enable_status=? WHERE shop_id=? 
+2019-10-08 22:16:34.595 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:12:25.95(Timestamp), \49\2019100822123168936.jpg(String), 0(Integer), 49(Long)
+2019-10-08 22:16:34.596 [main] DEBUG com.dyl.o2o.dao.ShopDao.updateById - <==    Updates: 1
+2019-10-08 22:16:43.835 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 22:16:43.862 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:16:43.791(Timestamp), 0(Integer)
+2019-10-08 22:16:43.864 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 22:18:27.888 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 22:18:27.918 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:18:27.834(Timestamp), 0(Integer)
+2019-10-08 22:18:27.920 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 22:20:34.769 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 22:20:34.795 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:20:34.724(Timestamp), 0(Integer)
+2019-10-08 22:20:34.799 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-08 22:21:53.551 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-08 22:21:53.578 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-08 22:21:53.503(Timestamp), 0(Integer)
+2019-10-08 22:21:53.580 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1
+2019-10-10 23:38:19.221 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==>  Preparing: INSERT INTO tb_shop ( shop_category_id, shop_name, owner_id, area_id, create_time, enable_status ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-10-10 23:38:19.248 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - ==> Parameters: 12(Long), 王二烤鱼(String), 8(Long), 3(Long), 2019-10-10 23:38:19.167(Timestamp), 0(Integer)
+2019-10-10 23:38:19.259 [main] DEBUG com.dyl.o2o.dao.ShopDao.insert - <==    Updates: 1

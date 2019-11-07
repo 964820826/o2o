@@ -1,0 +1,16 @@
+2019-11-05 21:09:05.269 [http-nio-8081-exec-6] ERROR c.d.o.c.shopadmin.ShopManagementController - 保存店铺信息异常:
+### Error updating database.  Cause: java.sql.SQLException: Field 'area_id' doesn't have a default value
+### The error may exist in com/dyl/o2o/dao/ShopDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.ShopDao.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO tb_shop  ( shop_desc, shop_category_id, shop_addr,  shop_name, owner_id,   create_time, shop_img, shop_phone,  enable_status )  VALUES  ( ?, ?, ?,  ?, ?,   ?, ?, ?,  ? )
+### Cause: java.sql.SQLException: Field 'area_id' doesn't have a default value
+; Field 'area_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'area_id' doesn't have a default value
+2019-11-05 21:13:46.624 [http-nio-8081-exec-3] ERROR c.d.o.c.shopadmin.ShopManagementController - 保存店铺信息异常:
+### Error updating database.  Cause: java.sql.SQLException: Field 'area_id' doesn't have a default value
+### The error may exist in com/dyl/o2o/dao/ShopDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.ShopDao.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO tb_shop  ( shop_desc, shop_category_id, shop_addr,  shop_name, owner_id,   create_time, shop_img, shop_phone,  enable_status )  VALUES  ( ?, ?, ?,  ?, ?,   ?, ?, ?,  ? )
+### Cause: java.sql.SQLException: Field 'area_id' doesn't have a default value
+; Field 'area_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'area_id' doesn't have a default value
