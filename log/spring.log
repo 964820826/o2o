@@ -1,179 +1,120 @@
-2019-11-05 21:04:03.229  INFO 16968 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-05 21:04:03.233  INFO 16968 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-05 21:04:03.241  INFO 16968 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2019-11-05 21:04:03.723  INFO 16968 --- [http-nio-8081-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-11-05 21:04:03.848  INFO 16968 --- [http-nio-8081-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-11-05 21:09:05.269 ERROR 16968 --- [http-nio-8081-exec-6] c.d.o.c.s.ShopManagementController       : 保存店铺信息异常:
-### Error updating database.  Cause: java.sql.SQLException: Field 'area_id' doesn't have a default value
-### The error may exist in com/dyl/o2o/dao/ShopDao.java (best guess)
-### The error may involve com.dyl.o2o.dao.ShopDao.insert-Inline
-### The error occurred while setting parameters
-### SQL: INSERT INTO tb_shop  ( shop_desc, shop_category_id, shop_addr,  shop_name, owner_id,   create_time, shop_img, shop_phone,  enable_status )  VALUES  ( ?, ?, ?,  ?, ?,   ?, ?, ?,  ? )
-### Cause: java.sql.SQLException: Field 'area_id' doesn't have a default value
-; Field 'area_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'area_id' doesn't have a default value
-2019-11-05 21:10:12.905  WARN 16968 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m31s428ms935µs900ns).
-2019-11-05 21:13:46.624  WARN 16968 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s713ms118µs600ns).
-2019-11-05 21:13:46.624 ERROR 16968 --- [http-nio-8081-exec-3] c.d.o.c.s.ShopManagementController       : 保存店铺信息异常:
-### Error updating database.  Cause: java.sql.SQLException: Field 'area_id' doesn't have a default value
-### The error may exist in com/dyl/o2o/dao/ShopDao.java (best guess)
-### The error may involve com.dyl.o2o.dao.ShopDao.insert-Inline
-### The error occurred while setting parameters
-### SQL: INSERT INTO tb_shop  ( shop_desc, shop_category_id, shop_addr,  shop_name, owner_id,   create_time, shop_img, shop_phone,  enable_status )  VALUES  ( ?, ?, ?,  ?, ?,   ?, ?, ?,  ? )
-### Cause: java.sql.SQLException: Field 'area_id' doesn't have a default value
-; Field 'area_id' doesn't have a default value; nested exception is java.sql.SQLException: Field 'area_id' doesn't have a default value
-2019-11-05 21:15:40.162  WARN 16968 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s536ms10µs100ns).
-2019-11-05 21:23:41.951  WARN 16968 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m17s721ms636µs200ns).
-2019-11-05 21:23:41.997  INFO 16968 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:23:41.998  INFO 16968 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-11-05 21:23:42.004  INFO 16968 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-11-05 21:23:44.063  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-05 21:23:44.066  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-05 21:23:44.113  INFO 10776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-05 21:23:44.113  INFO 10776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-05 21:23:45.161  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2019-11-05 21:23:45.181  INFO 10776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-05 21:23:45.182  INFO 10776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-05 21:23:45.261  INFO 10776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-05 21:23:45.261  INFO 10776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1147 ms
-2019-11-05 21:23:45.637  WARN 10776 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-05 21:23:45.799  INFO 10776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:23:45.894  WARN 10776 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-05 21:23:46.007  INFO 10776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-05 21:23:46.076  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2019-11-05 21:23:46.079  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 2.677 seconds (JVM running for 3.417)
-2019-11-05 21:23:57.226  INFO 10776 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-05 21:23:57.226  INFO 10776 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-05 21:23:57.234  INFO 10776 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2019-11-05 21:23:57.707  INFO 10776 --- [http-nio-8081-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-11-05 21:23:57.808  INFO 10776 --- [http-nio-8081-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-11-05 21:35:04.210  INFO 10776 --- [Thread-11] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:35:04.210  INFO 10776 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-11-05 21:35:04.215  INFO 10776 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-11-05 21:35:04.448  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-05 21:35:04.448  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-05 21:35:04.811  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2019-11-05 21:35:04.812  INFO 10776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-05 21:35:04.812  INFO 10776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-05 21:35:04.827  INFO 10776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-05 21:35:04.828  INFO 10776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 377 ms
-2019-11-05 21:35:04.930  WARN 10776 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-05 21:35:05.001  INFO 10776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:35:05.035  WARN 10776 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-05 21:35:05.068  INFO 10776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-05 21:35:05.104  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2019-11-05 21:35:05.105  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.713 seconds (JVM running for 682.443)
-2019-11-05 21:35:05.108  INFO 10776 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-05 21:41:16.937  INFO 10776 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:41:17.208  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-05 21:41:17.208  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-05 21:41:17.493  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2019-11-05 21:41:17.494  INFO 10776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-05 21:41:17.494  INFO 10776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-05 21:41:17.505  INFO 10776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-05 21:41:17.505  INFO 10776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 295 ms
-2019-11-05 21:41:17.597  WARN 10776 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-05 21:41:17.665  INFO 10776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:41:17.699  WARN 10776 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-05 21:41:17.735  INFO 10776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-05 21:41:17.769  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2019-11-05 21:41:17.770  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.604 seconds (JVM running for 1055.108)
-2019-11-05 21:41:17.771  INFO 10776 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-05 21:41:19.147  INFO 10776 --- [Thread-26] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:41:19.398  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-05 21:41:19.399  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-05 21:41:19.784  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2019-11-05 21:41:19.786  INFO 10776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-05 21:41:19.786  INFO 10776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-05 21:41:19.798  INFO 10776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-05 21:41:19.798  INFO 10776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 397 ms
-2019-11-05 21:41:19.891  WARN 10776 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-05 21:41:19.957  INFO 10776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:41:19.989  WARN 10776 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-05 21:41:20.020  INFO 10776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-05 21:41:20.053  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2019-11-05 21:41:20.053  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.694 seconds (JVM running for 1057.391)
-2019-11-05 21:41:20.054  INFO 10776 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-05 21:44:32.629  INFO 10776 --- [Thread-32] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:44:32.894  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-05 21:44:32.895  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-05 21:44:33.217  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2019-11-05 21:44:33.218  INFO 10776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-05 21:44:33.218  INFO 10776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-05 21:44:33.229  INFO 10776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-05 21:44:33.229  INFO 10776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 331 ms
-2019-11-05 21:44:33.319  WARN 10776 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-05 21:44:33.383  INFO 10776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:44:33.415  WARN 10776 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-05 21:44:33.446  INFO 10776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-05 21:44:33.480  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2019-11-05 21:44:33.481  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.635 seconds (JVM running for 1250.819)
-2019-11-05 21:44:33.482  INFO 10776 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-05 21:46:22.281  INFO 10776 --- [Thread-38] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:46:22.503  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-05 21:46:22.504  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-05 21:46:22.788  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2019-11-05 21:46:22.789  INFO 10776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-05 21:46:22.789  INFO 10776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-05 21:46:22.800  INFO 10776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-05 21:46:22.800  INFO 10776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 294 ms
-2019-11-05 21:46:22.909  WARN 10776 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-05 21:46:23.099  INFO 10776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:46:23.171  WARN 10776 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-05 21:46:23.248  INFO 10776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-05 21:46:23.323  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2019-11-05 21:46:23.324  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.864 seconds (JVM running for 1360.662)
-2019-11-05 21:46:23.327  INFO 10776 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-05 21:58:15.415  INFO 10776 --- [Thread-44] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:58:15.698  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-05 21:58:15.698  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-05 21:58:15.998  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2019-11-05 21:58:15.999  INFO 10776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-05 21:58:15.999  INFO 10776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-05 21:58:16.027  INFO 10776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-05 21:58:16.027  INFO 10776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 326 ms
-2019-11-05 21:58:16.139  WARN 10776 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-05 21:58:16.216  INFO 10776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-05 21:58:16.251  WARN 10776 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-05 21:58:16.284  INFO 10776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-05 21:58:16.316  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2019-11-05 21:58:16.316  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.666 seconds (JVM running for 2073.653)
-2019-11-05 21:58:16.318  INFO 10776 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-05 22:02:33.740  INFO 10776 --- [Thread-50] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-05 22:02:33.992  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 10776 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-05 22:02:33.992  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-05 22:02:34.361  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2019-11-05 22:02:34.362  INFO 10776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-05 22:02:34.362  INFO 10776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-05 22:02:34.386  INFO 10776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-05 22:02:34.388  INFO 10776 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 393 ms
-2019-11-05 22:02:34.503  WARN 10776 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-05 22:02:34.579  INFO 10776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-05 22:02:34.626  WARN 10776 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-05 22:02:34.674  INFO 10776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-05 22:02:34.714  INFO 10776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2019-11-05 22:02:34.715  INFO 10776 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.77 seconds (JVM running for 2332.052)
-2019-11-05 22:02:34.716  INFO 10776 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-05 22:05:57.695  INFO 10776 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-05 22:05:57.695  INFO 10776 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-05 22:05:57.699  INFO 10776 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2019-11-05 22:06:44.619  INFO 10776 --- [Thread-61] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-05 22:06:47.068  INFO 14252 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 14252 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-05 22:06:47.071  INFO 14252 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-05 22:06:47.110  INFO 14252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-05 22:06:47.110  INFO 14252 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-05 22:06:48.056  INFO 14252 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2019-11-05 22:06:48.074  INFO 14252 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-05 22:06:48.074  INFO 14252 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-05 22:06:48.149  INFO 14252 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-05 22:06:48.149  INFO 14252 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1039 ms
-2019-11-05 22:06:48.519  WARN 14252 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-05 22:06:48.673  INFO 14252 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-05 22:06:48.763  WARN 14252 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-05 22:06:48.868  INFO 14252 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-05 22:06:48.932  INFO 14252 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2019-11-05 22:06:48.935  INFO 14252 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 2.381 seconds (JVM running for 2.931)
-2019-11-05 22:53:24.846  INFO 14252 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-05 22:53:24.846  INFO 14252 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-05 22:53:24.853  INFO 14252 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2019-11-05 22:53:34.358  INFO 14252 --- [http-nio-8081-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-11-05 22:53:34.475  INFO 14252 --- [http-nio-8081-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:09:42.261  WARN 844 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:09:42.693  INFO 844 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:09:42.862  WARN 844 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:09:43.261  INFO 844 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.insert] use [master] Strategy,SqlCommandType [INSERT]..
+2019-11-21 22:09:43.261  INFO 844 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:master
+2019-11-21 22:09:43.339  INFO 844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:09:43.855  INFO 844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:09:43.993  INFO 844 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:09:43.993  INFO 844 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:09:43.993  INFO 844 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-21 22:15:54.086  WARN 12764 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:15:54.511  INFO 12764 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:15:54.673  WARN 12764 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:15:55.027  INFO 12764 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.insert] use [master] Strategy,SqlCommandType [INSERT]..
+2019-11-21 22:15:55.028  INFO 12764 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:master
+2019-11-21 22:15:55.068  INFO 12764 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:15:55.206  INFO 12764 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:15:55.267  INFO 12764 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:15:55.268  INFO 12764 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:15:55.270  INFO 12764 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-21 22:26:19.409  INFO 18096 --- [main] com.dyl.o2o.dao.AreaDaoTest              : Starting AreaDaoTest on dyl-pc with PID 18096 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-21 22:26:19.410  INFO 18096 --- [main] com.dyl.o2o.dao.AreaDaoTest              : The following profiles are active: dev
+2019-11-21 22:26:20.595  WARN 18096 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:26:21.023  INFO 18096 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:26:21.183  WARN 18096 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:26:21.400  INFO 18096 --- [main] com.dyl.o2o.dao.AreaDaoTest              : Started AreaDaoTest in 2.502 seconds (JVM running for 3.127)
+2019-11-21 22:26:21.600  INFO 18096 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-11-21 22:26:21.601  INFO 18096 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:slave
+2019-11-21 22:26:21.615  INFO 18096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:26:21.760  INFO 18096 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:26:21.818  INFO 18096 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:26:21.819  INFO 18096 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:26:21.821  INFO 18096 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-21 22:26:51.785  WARN 17652 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:26:52.197  INFO 17652 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:26:52.363  WARN 17652 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:26:52.738  INFO 17652 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-11-21 22:26:52.739  INFO 17652 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:slave
+2019-11-21 22:26:52.751  INFO 17652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:26:52.885  INFO 17652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:26:52.952  INFO 17652 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:26:52.953  INFO 17652 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:26:52.955  INFO 17652 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-21 22:28:10.491  INFO 4060 --- [main] com.dyl.o2o.dao.AreaDaoTest              : Starting AreaDaoTest on dyl-pc with PID 4060 (started by A in E:\IDEAWorkspace\git\o2o)
+2019-11-21 22:28:10.491 DEBUG 4060 --- [main] com.dyl.o2o.dao.AreaDaoTest              : Running with Spring Boot v2.1.8.RELEASE, Spring v5.1.9.RELEASE
+2019-11-21 22:28:10.492  INFO 4060 --- [main] com.dyl.o2o.dao.AreaDaoTest              : The following profiles are active: dev
+2019-11-21 22:28:11.653  WARN 4060 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:28:12.088  INFO 4060 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:28:12.265  WARN 4060 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:28:12.469  INFO 4060 --- [main] com.dyl.o2o.dao.AreaDaoTest              : Started AreaDaoTest in 2.474 seconds (JVM running for 3.091)
+2019-11-21 22:28:12.643  INFO 4060 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-11-21 22:28:12.644  INFO 4060 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:slave
+2019-11-21 22:28:12.656  INFO 4060 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:28:12.788  INFO 4060 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:28:12.801 DEBUG 4060 --- [main] com.dyl.o2o.dao.AreaDao.selectList       : ==>  Preparing: SELECT area_id,create_time,area_name,last_edit_time,priority FROM tb_area ORDER BY priority DESC 
+2019-11-21 22:28:12.824 DEBUG 4060 --- [main] com.dyl.o2o.dao.AreaDao.selectList       : ==> Parameters: 
+2019-11-21 22:28:12.844 DEBUG 4060 --- [main] com.dyl.o2o.dao.AreaDao.selectList       : <==      Total: 4
+2019-11-21 22:28:12.853  INFO 4060 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:28:12.854  INFO 4060 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:28:12.856  INFO 4060 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-21 22:28:26.152  WARN 3100 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:28:26.574  INFO 3100 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:28:26.745  WARN 3100 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:28:27.101  INFO 3100 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-11-21 22:28:27.102  INFO 3100 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:slave
+2019-11-21 22:28:27.113  INFO 3100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:28:27.241  INFO 3100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:28:27.306  INFO 3100 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:28:27.307  INFO 3100 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:28:27.309  INFO 3100 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-21 22:28:47.427  WARN 15892 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:28:47.840  INFO 15892 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:28:48.003  WARN 15892 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:28:48.392  INFO 15892 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-11-21 22:28:48.393  INFO 15892 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:slave
+2019-11-21 22:28:48.404  INFO 15892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:28:48.533  INFO 15892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:28:48.602  INFO 15892 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:28:48.604  INFO 15892 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:28:48.606  INFO 15892 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-21 22:29:22.871  WARN 19092 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:29:23.283  INFO 19092 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:29:23.449  WARN 19092 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:29:23.854  INFO 19092 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-11-21 22:29:23.854  INFO 19092 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:slave
+2019-11-21 22:29:23.866  INFO 19092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:29:23.993  INFO 19092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:29:24.057  INFO 19092 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:29:24.059  INFO 19092 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:29:24.069  INFO 19092 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-21 22:30:15.346  WARN 18236 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:30:15.821  INFO 18236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:30:15.984  WARN 18236 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:30:16.390  INFO 18236 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-11-21 22:30:16.390  INFO 18236 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:slave
+2019-11-21 22:30:16.410  INFO 18236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:30:16.546  INFO 18236 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:30:16.615  INFO 18236 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:30:16.616  INFO 18236 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:30:16.618  INFO 18236 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-21 22:30:42.116  WARN 4148 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:30:42.529  INFO 4148 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:30:42.686  WARN 4148 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:30:43.070  INFO 4148 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-11-21 22:30:43.071  INFO 4148 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:slave
+2019-11-21 22:30:43.083  INFO 4148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:30:43.219  INFO 4148 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:30:43.286  INFO 4148 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:30:43.287  INFO 4148 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:30:43.289  INFO 4148 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-21 22:32:26.411  WARN 19268 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-11-21 22:32:26.854  INFO 19268 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:32:27.016  WARN 19268 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-11-21 22:32:27.387  INFO 19268 --- [main] c.d.o.c.s.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-11-21 22:32:27.387  INFO 19268 --- [main] c.d.o.c.split.DynamicDataSourceHolder    : 使用的数据源为:slave
+2019-11-21 22:32:27.399  INFO 19268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-21 22:32:27.527  INFO 19268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-21 22:32:27.597  INFO 19268 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-21 22:32:27.599  INFO 19268 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-21 22:32:27.600  INFO 19268 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

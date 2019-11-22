@@ -162,7 +162,7 @@
 	不能设置为INHERITED或者同义词NULL。默认是DEBUG
 	-->
 	<root level="info">
-		<appender-ref ref="CONSOLE"/>
+<!--		<appender-ref ref="CONSOLE"/>-->
 		<appender-ref ref="DEBUG_FILE"/>
 		<appender-ref ref="INFO_FILE"/>
 		<appender-ref ref="WARN_FILE"/>

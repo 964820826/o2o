@@ -38,7 +38,7 @@ function getShopInitInfo() {
 }
 
 //点击提交时执行
-$('#form').submit(function () {
+$('#submit').click(function () {
     var form = document.getElementById("form");
     var formData = new FormData(form);
     var shopName = formData.get("shopName");
@@ -54,8 +54,12 @@ $('#form').submit(function () {
         success: function (data) {
             if (data.code == 0){
                 $.toast('提交成功！');
+                $("#form input").each(function () {
+                    $(this).val("");
+                })
             }else{
                 $.toast('提交失败！' + data.massage);
+                $("#captcha").val("");
             }
         }
     });

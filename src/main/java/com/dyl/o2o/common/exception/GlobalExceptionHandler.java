@@ -1,4 +1,4 @@
-package com.dyl.o2o.core.exception;
+package com.dyl.o2o.common.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
