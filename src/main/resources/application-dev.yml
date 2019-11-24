@@ -1,6 +1,6 @@
 # 配置服务器端口，默认是8080，可以不用配置
 server:
-  port: 8081
+  port: 8080
 
 #spring相关配置
 spring:

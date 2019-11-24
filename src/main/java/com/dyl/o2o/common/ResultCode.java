@@ -15,7 +15,8 @@ public enum ResultCode {
     PARAM_TYPE_ERROR(10003,"参数类型错误"),
 
     //内部错误
-    INNER_ERROR(50001,"内部错误");
+    INNER_ERROR(50001,"内部错误"),
+    NO_AUTHORITY(50002,"无操作权限");
 
     /**
      * 状态码

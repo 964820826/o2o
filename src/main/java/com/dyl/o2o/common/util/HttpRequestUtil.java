@@ -1,4 +1,4 @@
-package com.dyl.o2o.util;
+package com.dyl.o2o.common.util;
 
 import javax.servlet.http.HttpServletRequest;
 

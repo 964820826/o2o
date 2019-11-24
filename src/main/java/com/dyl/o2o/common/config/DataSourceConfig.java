@@ -9,8 +9,6 @@ import com.dyl.o2o.common.split.DynamicDataSourceInterceptor;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.type.JdbcType;
-import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -81,6 +79,10 @@ public class DataSourceConfig {
         return dynamicDataSource;
     }
 
+    /**
+     * 分页插件
+     * @return
+     */
     @Bean
     public PaginationInterceptor paginationInterceptor(){
         return new PaginationInterceptor();

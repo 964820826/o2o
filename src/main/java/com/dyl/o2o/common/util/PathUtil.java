@@ -1,4 +1,4 @@
-package com.dyl.o2o.util;
+package com.dyl.o2o.common.util;
 
 /** 路径处理工具类
  * @author ：dyl

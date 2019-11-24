@@ -1,6 +1,5 @@
-package com.dyl.o2o.util;
+package com.dyl.o2o.common.util;
 
-import com.google.code.kaptcha.Producer;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +22,12 @@ public class CaptchaUtil {
     @Autowired
     private DefaultKaptcha defaultKaptcha;
 
+    /**
+     * 生成验证码
+     * @param request
+     * @param response
+     * @throws IOException
+     */
     @GetMapping("/captchaImage")
     public void captchaImage(HttpServletRequest request, HttpServletResponse response) throws IOException {
         ByteArrayOutputStream jpegOutputStream = new ByteArrayOutputStream();
@@ -54,9 +59,10 @@ public class CaptchaUtil {
     /**
      * 校验验证码是否正确
      * @param request
-     * @return
+     * @return 验证通过返回true
      */
     public static boolean checkVerifyCode(HttpServletRequest request){
+        //从会话中获取原始验证码，从请求中获取输入的验证码，忽略大小写比较，相同则返回true
         String originalCaptcha = (String) request.getSession().getAttribute("verify");
         String inputCaptcha = HttpRequestUtil.getString(request,"captcha");
         if (originalCaptcha.equalsIgnoreCase(inputCaptcha)){

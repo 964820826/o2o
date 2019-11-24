@@ -25,9 +25,8 @@ public class AreaServiceImpl implements AreaService {
         //权重降序查询所有区域信息
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.orderByDesc("priority");
-//        List<AreaDO> areaDoList = areaDao.selectList(queryWrapper);
-        List areaDoList = new ArrayList();
-        return areaDoList;
+        List<AreaDO> areaDOList = areaDao.selectList(queryWrapper);
+        return areaDOList;
     }
 
 }

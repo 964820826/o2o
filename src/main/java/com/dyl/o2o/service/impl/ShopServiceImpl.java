@@ -1,9 +1,11 @@
 package com.dyl.o2o.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.dyl.o2o.dao.ShopDao;
 import com.dyl.o2o.domain.ShopDO;
 import com.dyl.o2o.service.ShopService;
-import com.dyl.o2o.util.PathUtil;
+import com.dyl.o2o.common.util.ImageUtil;
+import com.dyl.o2o.common.util.PathUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +17,7 @@ import java.util.Date;
  * @date ：Created in 2019/10/7 12:11
  */
 @Service
-public class ShopServiceImpl implements ShopService {
+public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements ShopService {
 
     @Autowired
     ShopDao shopDao;
@@ -47,25 +49,45 @@ public class ShopServiceImpl implements ShopService {
 //        }
 //    }
 
+    /**
+     * 创建店铺
+     * @param shopDO
+     * @return
+     */
     @Override
-    public void save(ShopDO shopDO) {
+    public boolean save(ShopDO shopDO) {
         shopDO.setEnableStatus(0);
         shopDO.setCreateTime(new Date());
         int effectedNum = shopDao.insert(shopDO);
-        if(effectedNum <= 0){
-            throw new RuntimeException("店铺创建异常！");
+        if(effectedNum > 0){
+            return true;
+        }else {
+            return false;
         }
     }
 
     /**
-     * 添加店铺图片
-     * @param shop
-     * @param shopImg
+     * 更新店铺
+     * @param shopDO
+     * @param img 新上传的图片（需转为File类型）
      */
-    private void addShopImg(ShopDO shop, File shopImg) {
-        //获取生成图片的相对路径
-        String imgFolderRelativeAddr = PathUtil.getShopImgFolderRelativePath(shop.getShopId());
-//        String shopImgAddr = ImageUtil.generateThumbnail(shopImg,imgFolderRelativeAddr);
-//        shop.setShopImg(shopImgAddr);
+    public void update(ShopDO shopDO, File img) throws Exception {
+        //获取原图片地址
+        String imgPath = shopDao.selectById(shopDO.getShopId()).getShopImg();
+        //保存新图片
+        ImageUtil.generateThumbnail(img);//生成缩略图替换掉原文件
+        shopDO.setShopImg(img.getName());
+        if (shopDao.updateById(shopDO) != 1){
+            //若更新店铺失败则删除上传的图片
+            img.delete();
+            throw new Exception("更新店铺失败");
+        }
+        //删除原图片
+        File oldImg = new File(imgPath);
+        oldImg.delete();
+    }
+    @Override
+    public boolean updateById(ShopDO entity) {
+        return super.updateById(entity);
     }
 }

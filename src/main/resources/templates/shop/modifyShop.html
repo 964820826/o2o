@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +33,7 @@
                         <div class="item-inner">
                             <div class="item-title label">店铺名称</div>
                             <div class="item-input">
-                                <input type="text" id="shopName" name="shopName" placeholder="店铺名称" required>
+                                <input type="text" id="shopName" name="shopName" th:value="${shopDO.shopName}" placeholder="店铺名称" required>
                             </div>
                         </div>
                     </div>
@@ -150,6 +150,6 @@
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.js' charset='utf-8'></script>
 <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
 
-<script type='text/javascript' src='/js/shop/shopOperation.js' charset='utf-8'></script>
+<script type='text/javascript' src='/js/shop/modifyShop.js' charset='utf-8'></script>
 </body>
 </html>
