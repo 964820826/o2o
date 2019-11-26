@@ -1,22 +1,28 @@
 $(function () {
-    //页面加载时自动调用方法
-    var shopId = getQueryString("shopId");
-    if (shopId != null){
-        //修改店铺，获取店铺原信息
-        getShopInitInfo(shopId);
-    } else {
+    // //页面加载时自动调用方法
+    // var shopId = getQueryString("shopId");
+    // if (shopId != null){
+    //     //修改店铺，获取店铺原信息
+    //     getShopInitInfo(shopId);
+    // } else {
         //新增店铺
         getShopInitInfo();
-    }
+    // }
 })
 
 //获取店铺初始信息
 var initUrl = '/shopAdmin/shopInitInfo';
+//获取店铺分类
+var shopCategoryUrl = '/shopCategory';
 //注册店铺
 var registerShopUrl = '/shopAdmin/shop';
 
 //获取店铺初始信息（下拉框、原参数）
 function getShopInitInfo() {
+    // $.getJSON(shopCategoryUrl, function (data) {
+    //     if ()
+    //
+    // })
     $.getJSON(initUrl, function (data) {//访问initUrl,返回的数据为data
         if (data.code == 0){
             var shopCategoryOption = '';

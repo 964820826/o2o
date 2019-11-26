@@ -1,4 +1,4 @@
-package com.dyl.o2o.controller.shopadmin;
+package com.dyl.o2o.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -15,6 +15,11 @@ import com.dyl.o2o.service.ShopService;
 import com.dyl.o2o.common.util.ImageUtil;
 import com.dyl.o2o.common.util.PathUtil;
 import com.dyl.o2o.common.util.CaptchaUtil;
+import com.sun.istack.internal.Nullable;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,8 +40,9 @@ import java.util.Map;
  */
 @Slf4j
 @RestController
-@RequestMapping("/shopAdmin")
-public class ShopManagementController {
+@RequestMapping("/shop")
+@Api(tags = "店铺")
+public class ShopController {
 
     @Autowired
     ShopService shopService;
@@ -46,12 +52,12 @@ public class ShopManagementController {
     AreaService areaService;
 
     /**
-     * 对某个店铺进行管理操作
+     * 根据获取店铺信息
      * @param id
      * @param request
      * @return
      */
-    @GetMapping(value = "/shopManagement/{id}")
+    @GetMapping(value = "/manage/{id}")
     private R shopManage(@PathVariable Long id, HttpServletRequest request){
         //todo 从session中获取用户信息，只能管理该用户名下的店铺
         PersonDO personDO = (PersonDO) request.getSession().getAttribute("user");
@@ -71,7 +77,7 @@ public class ShopManagementController {
      * 查询店铺列表
      * @return
      */
-    @GetMapping(value = "/shop")
+    @GetMapping(value = "")
     private R getShopList(HttpServletRequest request){
         //todo 从会话中获取用户id
         //设置查询条件
@@ -88,8 +94,9 @@ public class ShopManagementController {
      * 注册店铺
      * @param request
      */
-    @PostMapping(value = "/shop")
-    private R registerShop(ShopDO shopDO, HttpServletRequest request){
+    @ApiOperation(value = "注册店铺")
+    @PostMapping(value="",headers="content-type=multipart/form-data")
+    private R registerShop(@RequestBody ShopDO shopDO, HttpServletRequest request){
         if (!CaptchaUtil.checkVerifyCode(request)){
             return R.error(ResultCode.CAPTCHA_FAIL);
         }
@@ -133,7 +140,7 @@ public class ShopManagementController {
      */
     //todo:参数校验，入参id不可为空
     //todo:获取登陆的用户，只能展示该用户下的店铺，若修改其他店铺则报错
-    @PutMapping("/shop")
+    @PutMapping("")
     public R updateShop(ShopDO shopDO, HttpServletRequest request) throws Exception {
         //校验验证码
         if (!CaptchaUtil.checkVerifyCode(request)){
@@ -162,7 +169,7 @@ public class ShopManagementController {
      * @param id
      * @return
      */
-    @GetMapping("/shop/{id}")
+    @GetMapping("/{id}")
     public String getShopById(HttpServletRequest request, @PathVariable("id") Long id){
         Map<String ,Object> map = new HashMap<>();
         ShopDO shopDO = shopService.getById(id);
@@ -171,6 +178,27 @@ public class ShopManagementController {
         request.setAttribute("areaDOList", areaDOList);
         return "shop/modifyShop";
     }
+
+//    /**
+//     * 获取店铺创建初始化信息
+//     * @return
+//     */
+//    @GetMapping("/shopInitInfo")
+//    public R getShopInitInfo(HttpServletRequest request){
+//        Map<String,Object> map = new HashMap<String,Object>();
+//        List<ShopCategoryDO> shopCategoryDOList = new ArrayList<ShopCategoryDO>();
+//        List<AreaDO> areaDOList = new ArrayList<AreaDO>();
+//        try{
+//            //获取一级店铺类别和所有区域列表
+//            shopCategoryDOList = shopCategoryService.selectShopCategoryList(new ShopCategoryDO());
+//            areaDOList = areaService.selectList();
+//            map.put("shopCategoryDOList", shopCategoryDOList);
+//            map.put("areaDOList",areaDOList);
+//            return R.success(map);
+//        }catch(Exception e){
+//            return R.error(e.getMessage());
+//        }
+//    }
 
     /**
      * 获取店铺创建初始化信息
@@ -192,5 +220,4 @@ public class ShopManagementController {
             return R.error(e.getMessage());
         }
     }
-
 }
