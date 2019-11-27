@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -18,51 +19,46 @@ import java.util.Date;
 @TableName("tb_shop")
 @ApiModel(value = "shop对象",description = "店铺对象")
 public class ShopDO {
-    //店铺id
     @TableId(value = "shop_id", type = IdType.AUTO)
+    @ApiModelProperty(value = "店铺id",example = "0")
     private Long shopId;
 
-    //店铺名称
-    @ApiModelProperty(example = "一点点奶茶")
+    @ApiModelProperty(value = "店铺名", example = "一点点奶茶")
     private String shopName;
 
-    //店铺简介
+    @ApiModelProperty(value = "店铺简介",example = "一个店铺")
     private String shopDesc;
 
-    //店铺图片
+    @ApiModelProperty(hidden = true)
     private String shopImg;
 
-    //权重
+    @ApiModelProperty(value = "权重（越大排名越靠前）",example = "0")
     private Integer priority;
 
-    //地址
+    @ApiModelProperty(value = "地址")
     private String shopAddr;
 
-    //联系方式
+    @ApiModelProperty(value = "店铺联系电话",example = "13012345678")
     private String shopPhone;
 
-    //可用状态 -1:不可用 0:审核中 1:可用
+    @ApiModelProperty(value = "可用状态 -1:不可用 0:审核中 1:可用",example = "0")
     private Integer enableStatus;
 
-    //建议（超管给店铺的建议）
-    @ApiModelProperty(example = "建议")
+    @ApiModelProperty(value = "建议（超管给店铺的建议）",example = "通过")
     private String advice;
 
-    //创建时间
+    @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
-    //最后修改时间
+    @ApiModelProperty(value = "最后修改时间")
     private Date lastEditTime;
 
-    //归属店主的id
-    @ApiModelProperty(example = "1")
+    @ApiModelProperty(value = "店主的personId",example = "1")
     private Long ownerId;
 
-    //所在区域的id
-    @ApiModelProperty(example = "1")
+    @ApiModelProperty(value = "店铺类别id",example = "12")
     private Long shopCategoryId;
 
-    //所在店铺类别的id
-    @ApiModelProperty(example = "12")
+    @ApiModelProperty(value = "区域id",example = "2")
     private Long areaId;
 }

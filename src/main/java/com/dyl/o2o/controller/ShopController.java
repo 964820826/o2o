@@ -1,10 +1,9 @@
 package com.dyl.o2o.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
+import com.dyl.o2o.common.util.CaptchaUtil;
 import com.dyl.o2o.domain.AreaDO;
 import com.dyl.o2o.domain.PersonDO;
 import com.dyl.o2o.domain.ShopCategoryDO;
@@ -14,15 +13,9 @@ import com.dyl.o2o.service.ShopCategoryService;
 import com.dyl.o2o.service.ShopService;
 import com.dyl.o2o.common.util.ImageUtil;
 import com.dyl.o2o.common.util.PathUtil;
-import com.dyl.o2o.common.util.CaptchaUtil;
-import com.sun.istack.internal.Nullable;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -90,19 +83,20 @@ public class ShopController {
 //        List<ShopDO> shopDOList = page.getRecords();
         return R.success(shopDOList);
     }
+
     /**
      * 注册店铺
      * @param request
      */
     @ApiOperation(value = "注册店铺")
-    @PostMapping(value="",headers="content-type=multipart/form-data")
-    private R registerShop(@RequestBody ShopDO shopDO, HttpServletRequest request){
-        if (!CaptchaUtil.checkVerifyCode(request)){
+    @PostMapping(value="")
+    @ApiImplicitParams({//name与入参中的参数名对应,value代表输入框上的提示
+            @ApiImplicitParam(name = "inputCaptcha", value = "验证码",required = true),
+    })
+    private R registerShop(@ApiParam(value = "店铺缩略图") MultipartFile uploadImg, String inputCaptcha, ShopDO shopDO, HttpServletRequest request){
+        if (!CaptchaUtil.checkVerifyCode(inputCaptcha,request.getSession())){
             return R.error(ResultCode.CAPTCHA_FAIL);
         }
-        //图片处理
-        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
-        MultipartFile uploadImg = multipartRequest.getFile("img");
         if (shopDO != null &&uploadImg != null){
             String imgFileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(uploadImg.getOriginalFilename());
             File imgFile = new File(imgFileAbsolutePath);
@@ -122,7 +116,7 @@ public class ShopController {
                 imgFile.delete();
                 log.error("保存店铺信息异常:" + e.getMessage());
                 e.printStackTrace();
-                return R.error(ResultCode.INNER_ERROR);
+                return R.error(ResultCode.SERVICE_ERROR);
             }
         }else{
             return R.error(ResultCode.PARAM_NOT_COMPLETE);
@@ -143,9 +137,9 @@ public class ShopController {
     @PutMapping("")
     public R updateShop(ShopDO shopDO, HttpServletRequest request) throws Exception {
         //校验验证码
-        if (!CaptchaUtil.checkVerifyCode(request)){
-            return R.error(ResultCode.CAPTCHA_FAIL);
-        }
+//        if (!CaptchaUtil.checkVerifyCode(request)){
+//            return R.error(ResultCode.CAPTCHA_FAIL);
+//        }
         //若有上传图片则更新图片
         if (request.getAttribute("img") != null){
             //从请求中获取图片
