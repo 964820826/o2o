@@ -16,10 +16,6 @@ public class CaptchaUtil {
     public static boolean checkVerifyCode(String inputCaptcha, HttpSession session){
         //从会话中获取原始验证码，从请求中获取输入的验证码，忽略大小写比较，相同则返回true
         String originalCaptcha = (String) session.getAttribute("verify");
-        if (originalCaptcha.equalsIgnoreCase(inputCaptcha)){
-            return true;
-        }else {
-            return false;
-        }
+        return originalCaptcha.equalsIgnoreCase(inputCaptcha);
     }
 }

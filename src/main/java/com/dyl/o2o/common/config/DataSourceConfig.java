@@ -116,7 +116,7 @@ public class DataSourceConfig {
         configuration.setCacheEnabled(false);
         sqlSessionFactory.setConfiguration(configuration);
         //加入上面两个拦截器
-        Interceptor interceptor[] = {paginationInterceptor(),dynamicDataSourceInterceptor()};
+        Interceptor[] interceptor = {paginationInterceptor(), dynamicDataSourceInterceptor()};
         sqlSessionFactory.setPlugins(interceptor);
         return sqlSessionFactory.getObject();
 

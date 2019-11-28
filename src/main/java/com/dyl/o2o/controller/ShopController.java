@@ -135,20 +135,25 @@ public class ShopController {
     //todo:参数校验，入参id不可为空
     //todo:获取登陆的用户，只能展示该用户下的店铺，若修改其他店铺则报错
     @PutMapping("")
-    public R updateShop(ShopDO shopDO, HttpServletRequest request) throws Exception {
+    @ApiOperation(value = "修改店铺")
+    public R updateShop(@ApiParam(value = "新图片") MultipartFile newImg, ShopDO shopDO, String captcha, HttpServletRequest request) throws Exception {
         //校验验证码
-//        if (!CaptchaUtil.checkVerifyCode(request)){
-//            return R.error(ResultCode.CAPTCHA_FAIL);
-//        }
+        if (!CaptchaUtil.checkVerifyCode(captcha, request.getSession())){
+            return R.error(ResultCode.CAPTCHA_FAIL);
+        }
         //若有上传图片则更新图片
         if (request.getAttribute("img") != null){
             //从请求中获取图片
-            MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
-            MultipartFile newImg = multipartHttpServletRequest.getFile("img");
+//            MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
+//            MultipartFile newImg = multipartHttpServletRequest.getFile("img");
             //保存图片
             String imgFileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(newImg.getOriginalFilename());
             File img = new File(imgFileAbsolutePath);
+            if (!img.getParentFile().exists()){
+                img.getParentFile().mkdirs();
+            }
             newImg.transferTo(img);
+            ImageUtil.generateThumbnail(img);
 
             //更新店铺信息及图片
             shopService.update(shopDO,img);
@@ -164,54 +169,27 @@ public class ShopController {
      * @return
      */
     @GetMapping("/{id}")
-    public String getShopById(HttpServletRequest request, @PathVariable("id") Long id){
+    public R getShopById(HttpServletRequest request, @PathVariable("id") Long id){
         Map<String ,Object> map = new HashMap<>();
         ShopDO shopDO = shopService.getById(id);
         List<AreaDO> areaDOList = areaService.selectList();
         request.setAttribute("shopDO", shopDO);
         request.setAttribute("areaDOList", areaDOList);
-        return "shop/modifyShop";
+        return R.success();
     }
 
-//    /**
-//     * 获取店铺创建初始化信息
-//     * @return
-//     */
-//    @GetMapping("/shopInitInfo")
-//    public R getShopInitInfo(HttpServletRequest request){
-//        Map<String,Object> map = new HashMap<String,Object>();
-//        List<ShopCategoryDO> shopCategoryDOList = new ArrayList<ShopCategoryDO>();
-//        List<AreaDO> areaDOList = new ArrayList<AreaDO>();
-//        try{
-//            //获取一级店铺类别和所有区域列表
-//            shopCategoryDOList = shopCategoryService.selectShopCategoryList(new ShopCategoryDO());
-//            areaDOList = areaService.selectList();
-//            map.put("shopCategoryDOList", shopCategoryDOList);
-//            map.put("areaDOList",areaDOList);
-//            return R.success(map);
-//        }catch(Exception e){
-//            return R.error(e.getMessage());
-//        }
-//    }
-
     /**
-     * 获取店铺创建初始化信息
+     * 获取当前用户名下的店铺
+     * @param request
      * @return
      */
-    @GetMapping("/shopInitInfo")
-    public R getShopInitInfo(HttpServletRequest request){
-        Map<String,Object> map = new HashMap<String,Object>();
-        List<ShopCategoryDO> shopCategoryDOList = new ArrayList<ShopCategoryDO>();
-        List<AreaDO> areaDOList = new ArrayList<AreaDO>();
-        try{
-            //获取一级店铺类别和所有区域列表
-            shopCategoryDOList = shopCategoryService.selectShopCategoryList(new ShopCategoryDO());
-            areaDOList = areaService.selectList();
-            map.put("shopCategoryDOList", shopCategoryDOList);
-            map.put("areaDOList",areaDOList);
-            return R.success(map);
-        }catch(Exception e){
-            return R.error(e.getMessage());
-        }
+    @GetMapping("/currentUser")
+    public R getCurrentUserShop(HttpServletRequest request){
+        //从session中获取当前登陆用户personId
+        Long personId = 1L;
+        ShopDO queryCondition = new ShopDO();
+        queryCondition.setOwnerId(personId);
+        ShopDO shopDO = shopService.getOne(new QueryWrapper<>(queryCondition));
+        return R.success(shopDO);
     }
 }
