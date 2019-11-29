@@ -1,10 +1,12 @@
 package com.dyl.o2o.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.dyl.o2o.domain.AreaDO;
+
+import java.util.List;
 
 /**
  * 区域相关service层
  */
-public interface AreaService extends IService<AreaDO> {
+public interface AreaService {
+    List<AreaDO> selectList();
 }

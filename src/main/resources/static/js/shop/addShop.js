@@ -14,34 +14,37 @@ $(function () {
 var initUrl = '/shopAdmin/shopInitInfo';
 //获取店铺分类
 var shopCategoryUrl = '/shopCategory';
-//获取区域分类
-var areaUrl = '/area';
 //注册店铺
-var registerShopUrl = '/shop';
+var registerShopUrl = '/shopAdmin/shop';
 
 //获取店铺初始信息（下拉框、原参数）
 function getShopInitInfo() {
-    $.getJSON(shopCategoryUrl, function (data) {
+    // $.getJSON(shopCategoryUrl, function (data) {
+    //     if ()
+    //
+    // })
+    $.getJSON(initUrl, function (data) {//访问initUrl,返回的数据为data
         if (data.code == 0){
             var shopCategoryOption = '';
-            var shopCategoryArr = data.data;
-            for (var i=0; i<shopCategoryArr.length; i++){
-                shopCategoryOption += '<option value = "' + shopCategoryArr[i].shopCategoryId + '">' + shopCategoryArr[i].shopCategoryName + '</option>';
-            }
-            $('#shopCategory').html(shopCategoryOption);
-        }else {
-            $.toast('获取初始信息失败!' + data.massage);
-        }
-    })
-    $.getJSON(areaUrl, function (data) {
-        if (data.code == 0){
             var areaOption = '';
-            var areaArr = data.data;
-            for (var i=0; i<areaArr.length; i++){
-                areaOption += '<option value = "' + areaArr[i].areaId + '">' + areaArr[i].areaName + '</option>';
+            var shopCategoryList = data.data.shopCategoryDOList;
+            for (var i = 0; i < shopCategoryList.length; i++) {
+                shopCategoryOption += '<option value="' + shopCategoryList[i].shopCategoryId + '">' + shopCategoryList[i].shopCategoryName + '</option>';
             }
+            // data.shopCategoryDOList.forEach(function (item, index){//遍历shopCategoryList，生成下拉框
+            //     tempHtml += '<option data-id="' + item.shopCagetoryId + '">' + item.shopCategoryName + '</option>';
+            // });
+            var areaList = data.data.areaDOList;
+            for (var i = 0; i < areaList.length; i++) {
+                areaOption += '<option value="' + areaList[i].areaId + '">' + areaList[i].areaName + '</option>';
+            }
+            // data.areaDOList.map(function (item, index) {
+            //     tempAreaHtml += '<option data-id="' + item.areaId + '">' + item.areaName + '</option>';
+            // });
+            //将js生成的下拉列表填充到前端
+            $('#shopCategory').html(shopCategoryOption);
             $('#area').html(areaOption);
-        }else {
+        }else{
             $.toast('获取初始信息失败!' + data.massage);
         }
     });
@@ -73,8 +76,6 @@ $('#submit').click(function () {
             }
         }
     });
-    //更换验证码
-    $("#captchaImg").click();
 });
 
 function getQueryString(name) {

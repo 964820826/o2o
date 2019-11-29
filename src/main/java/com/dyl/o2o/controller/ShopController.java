@@ -91,20 +91,16 @@ public class ShopController {
     @ApiOperation(value = "注册店铺")
     @PostMapping(value="")
     @ApiImplicitParams({//name与入参中的参数名对应,value代表输入框上的提示
-            @ApiImplicitParam(name = "captcha", value = "验证码",required = true),
+            @ApiImplicitParam(name = "inputCaptcha", value = "验证码",required = true),
     })
-    private R registerShop(@ApiParam(name = "uploadImg",value = "店铺缩略图",required = true) MultipartFile uploadImg,
-                           String captcha, ShopDO shopDO, HttpServletRequest request){
-        if (!CaptchaUtil.checkVerifyCode(captcha,request.getSession())){
+    private R registerShop(@ApiParam(value = "店铺缩略图") MultipartFile uploadImg, String inputCaptcha, ShopDO shopDO, HttpServletRequest request){
+        if (!CaptchaUtil.checkVerifyCode(inputCaptcha,request.getSession())){
             return R.error(ResultCode.CAPTCHA_FAIL);
         }
         if (shopDO != null &&uploadImg != null){
             String imgFileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(uploadImg.getOriginalFilename());
             File imgFile = new File(imgFileAbsolutePath);
             try {
-                if (!imgFile.getParentFile().exists()){
-                    imgFile.getParentFile().mkdirs();
-                }
                 //MultipartFile转File,若原文件存在则会覆盖原文件,不存在则创建
                 uploadImg.transferTo(imgFile);
                 //生成缩略图替换原文件
@@ -172,15 +168,15 @@ public class ShopController {
      * @param id
      * @return
      */
-//    @GetMapping("/{id}")
-//    public R getShopById(HttpServletRequest request, @PathVariable("id") Long id){
-//        Map<String ,Object> map = new HashMap<>();
-//        ShopDO shopDO = shopService.getById(id);
-//        List<AreaDO> areaDOList = areaService.selectList();
-//        request.setAttribute("shopDO", shopDO);
-//        request.setAttribute("areaDOList", areaDOList);
-//        return R.success();
-//    }
+    @GetMapping("/{id}")
+    public R getShopById(HttpServletRequest request, @PathVariable("id") Long id){
+        Map<String ,Object> map = new HashMap<>();
+        ShopDO shopDO = shopService.getById(id);
+        List<AreaDO> areaDOList = areaService.selectList();
+        request.setAttribute("shopDO", shopDO);
+        request.setAttribute("areaDOList", areaDOList);
+        return R.success();
+    }
 
     /**
      * 获取当前用户名下的店铺
