@@ -17,7 +17,7 @@ public class AreaServiceTest extends BaseTest {
 
     @Test
     public void testListArea(){
-        List<AreaDO> areaDoList = areaService.selectList();
+        List<AreaDO> areaDoList = areaService.list();
         System.out.println("共 " + areaDoList.size() + " 条记录！");
         for (AreaDO area : areaDoList){
             System.out.println(area.toString());
