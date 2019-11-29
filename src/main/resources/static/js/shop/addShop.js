@@ -8,7 +8,7 @@ $(function () {
         //新增店铺
         getShopInitInfo();
     // }
-})
+});
 
 //获取店铺初始信息
 var initUrl = '/shopAdmin/shopInitInfo';
@@ -76,7 +76,7 @@ $('#submit').click(function () {
             }
         }
     });
-})
+});
 
 function getQueryString(name) {
     //匹配字符串开头或者以&开头的，中间为任意长度除&号的部分，结尾以&或者字符串结尾结束;如&shopId=3

@@ -59,11 +59,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements Shop
         shopDO.setEnableStatus(0);
         shopDO.setCreateTime(new Date());
         int effectedNum = shopDao.insert(shopDO);
-        if(effectedNum > 0){
-            return true;
-        }else {
-            return false;
-        }
+        return effectedNum > 0;
     }
 
     /**

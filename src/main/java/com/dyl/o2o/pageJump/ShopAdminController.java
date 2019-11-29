@@ -29,4 +29,13 @@ public class ShopAdminController {
     public String modifyShop(){
         return "shop/modifyShop";
     }
+
+    /**
+     * 跳转到管理店铺界面
+     * @return
+     */
+    @GetMapping(value = "/manage")
+    public String manageShop(){
+        return "shop/manageShop";
+    }
 }
