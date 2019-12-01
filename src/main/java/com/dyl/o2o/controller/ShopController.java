@@ -18,7 +18,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
@@ -68,19 +67,41 @@ public class ShopController {
 
     /**
      * 查询店铺列表
+     * @param shopDO
      * @return
      */
-    @GetMapping(value = "")
-    private R getShopList(HttpServletRequest request){
-        //todo 从会话中获取用户id
-        //设置查询条件
-        ShopDO shopDO = new ShopDO();
-        shopDO.setOwnerId(1L);//此处硬编码，后续修改
-        QueryWrapper queryWrapper = new QueryWrapper(shopDO);
-        //调用service层查询
-        List<ShopDO> shopDOList = shopService.list(queryWrapper);
-//        IPage<ShopDO> page = shopService.page(new Page<ShopDO>(1,5),queryWrapper);
-//        List<ShopDO> shopDOList = page.getRecords();
+    @GetMapping(value = "/list")
+    @ApiOperation(value = "查询店铺列表",notes = "若输入店铺类别为一级类别的id，则获取该一类下的所有店铺")
+    private R getShopListPage(ShopDO shopDO){
+        //用于存放所有结果
+        List<ShopDO> shopDOList = new ArrayList<>();
+        shopDO.setEnableStatus(1);
+        //判断店铺类别的输入条件是一级类别还是二级类别
+        if (shopDO.getShopCategoryId() != null && shopDO.getShopCategoryId() > 0){
+            ShopCategoryDO shopCategoryCondition = new ShopCategoryDO();
+            shopCategoryCondition.setParentId(shopDO.getShopCategoryId());
+            //获取下级店铺类别
+            List<ShopCategoryDO> shopCategoryDOList = shopCategoryService.selectShopCategoryList(shopCategoryCondition);
+            if (shopCategoryDOList.size() != 0){
+                //有下级类别，为一级店铺类别，获取该类别下所有二级类别
+                List<ShopDO> shopDOS = new ArrayList<>();
+                //根据店铺类别获取该店铺类别下的店铺，合并到一个列表中
+                for (ShopCategoryDO shopCategoryDO : shopCategoryDOList) {
+                    shopDO.setShopCategoryId(shopCategoryDO.getShopCategoryId());
+                    List<ShopDO> shoopDOS = shopService.list(new QueryWrapper<>(shopDO));
+                    shopDOList.addAll(shoopDOS);
+                }
+            } else {
+                //查询二级类别id查询店铺
+                shopDOList = shopService.list(new QueryWrapper<>(shopDO));
+            }
+        }else {
+            //不依据店铺类别查询
+            shopDOList = shopService.list(new QueryWrapper<>(shopDO));
+        }
+        if (shopDOList.size() ==0){
+            return R.error(ResultCode.NO_RESULT);
+        }
         return R.success(shopDOList);
     }
 

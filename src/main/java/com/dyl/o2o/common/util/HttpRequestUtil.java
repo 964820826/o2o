@@ -22,6 +22,20 @@ public class HttpRequestUtil {
     }
 
     /**
+     * 从request里获取长整型
+     * @param request
+     * @param key
+     * @return
+     */
+    public static Long getLong(HttpServletRequest request, String key){
+        try {
+            return Long.valueOf(request.getParameter(key));
+        } catch (NumberFormatException e) {
+            return -1L;
+        }
+    }
+
+    /**
      * 从request里获取字符串
      * @param request
      * @param key

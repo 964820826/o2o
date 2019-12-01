@@ -1,210 +1,657 @@
-2019-11-28 19:40:01.836 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 76092 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 19:40:01.846 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-11-28 19:40:01.896 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-28 19:40:01.897 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-28 19:40:02.928 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fe1763b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 19:40:03.221 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-11-28 19:40:03.239 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-28 19:40:03.239 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 19:40:03.319 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-11-28 19:40:03.319 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1422 ms
-2019-11-28 19:40:04.082 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 19:40:04.191 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 19:40:04.232 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-11-28 19:40:04.415 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-28 19:40:04.432 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-28 19:40:04.464 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-28 19:40:04.531 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 19:40:04.649 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 19:40:04.652 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 3.392 seconds (JVM running for 4.726)
-2019-11-28 20:23:14.608 [Thread-11] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:23:14.824 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 76092 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 20:23:14.824 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-11-28 20:23:15.204 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fe1763b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 20:23:15.262 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-11-28 20:23:15.263 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-28 20:23:15.263 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 20:23:15.274 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-11-28 20:23:15.275 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 449 ms
-2019-11-28 20:23:15.496 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 20:23:15.536 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:23:15.545 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-11-28 20:23:15.613 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-28 20:23:15.614 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-28 20:23:15.619 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-28 20:23:15.630 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 20:23:15.648 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 20:23:15.649 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.871 seconds (JVM running for 2595.722)
-2019-11-28 20:23:15.651 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2019-11-28 20:31:31.161 [Thread-20] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:31:31.423 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 76092 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 20:31:31.423 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-11-28 20:31:31.827 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fe1763b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 20:31:31.883 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-11-28 20:31:31.884 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-28 20:31:31.884 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 20:31:31.895 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-11-28 20:31:31.895 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 470 ms
-2019-11-28 20:31:32.117 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 20:31:32.156 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:31:32.165 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-11-28 20:31:32.229 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-28 20:31:32.229 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-28 20:31:32.234 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-28 20:31:32.245 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 20:31:32.271 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 20:31:32.272 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.899 seconds (JVM running for 3092.345)
-2019-11-28 20:31:32.274 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2019-11-28 20:42:21.579 [Thread-26] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:42:21.846 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 76092 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 20:42:21.846 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-11-28 20:42:22.216 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fe1763b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 20:42:22.270 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-11-28 20:42:22.271 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-28 20:42:22.271 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 20:42:22.283 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-11-28 20:42:22.283 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 435 ms
-2019-11-28 20:42:22.500 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 20:42:22.538 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:42:22.547 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-11-28 20:42:22.612 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-28 20:42:22.613 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-28 20:42:22.618 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-28 20:42:22.627 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 20:42:22.653 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 20:42:22.654 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.854 seconds (JVM running for 3742.727)
-2019-11-28 20:42:22.656 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2019-11-28 20:42:26.785 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-28 20:42:26.786 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-11-28 20:42:26.794 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 8 ms
-2019-11-28 20:50:29.661 [Thread-37] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:50:31.549 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 92680 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 20:50:31.552 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-11-28 20:50:31.591 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-28 20:50:31.591 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-28 20:50:32.554 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b4d529c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 20:50:32.804 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-11-28 20:50:32.820 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-28 20:50:32.821 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 20:50:32.896 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-11-28 20:50:32.896 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1305 ms
-2019-11-28 20:50:33.652 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 20:50:33.764 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:50:33.806 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-11-28 20:50:34.008 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-28 20:50:34.026 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-28 20:50:34.060 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-28 20:50:34.128 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 20:50:34.251 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 20:50:34.254 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 3.294 seconds (JVM running for 3.901)
-2019-11-28 20:51:00.239 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-28 20:51:00.239 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-11-28 20:51:00.245 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
-2019-11-28 20:58:36.616 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:59:05.626 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 95464 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 20:59:05.630 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-11-28 20:59:05.671 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-28 20:59:05.671 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-28 20:59:06.676 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c18dd4d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 20:59:06.928 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-11-28 20:59:06.945 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-28 20:59:06.945 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 20:59:07.021 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-11-28 20:59:07.022 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1351 ms
-2019-11-28 20:59:07.755 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 20:59:07.865 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:59:07.904 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-11-28 20:59:08.077 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-28 20:59:08.093 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-28 20:59:08.125 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-28 20:59:08.190 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 20:59:08.315 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 20:59:08.318 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 3.299 seconds (JVM running for 4.463)
-2019-11-28 20:59:40.322 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-28 20:59:40.322 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-11-28 20:59:40.327 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
-2019-11-28 20:59:58.261 [Thread-15] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 21:00:30.822 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 89956 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 21:00:30.825 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-11-28 21:00:30.870 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-28 21:00:30.870 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-28 21:00:31.834 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef2147de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 21:00:32.088 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-11-28 21:00:32.105 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-28 21:00:32.106 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 21:00:32.183 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-11-28 21:00:32.183 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1313 ms
-2019-11-28 21:00:32.861 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 21:00:32.964 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 21:00:33.005 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-11-28 21:00:33.177 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-28 21:00:33.192 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-28 21:00:33.222 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-28 21:00:33.286 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 21:00:33.394 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 21:00:33.396 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 3.123 seconds (JVM running for 3.687)
-2019-11-28 21:00:49.146 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-28 21:00:49.147 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-11-28 21:00:49.153 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
-2019-11-28 21:06:47.131 [Thread-14] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 21:07:26.734 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 96916 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 21:07:26.737 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-11-28 21:07:26.767 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-28 21:07:26.768 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-28 21:07:27.713 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$371282ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 21:07:27.981 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-11-28 21:07:27.998 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-28 21:07:27.999 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 21:07:28.075 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-11-28 21:07:28.075 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1307 ms
-2019-11-28 21:07:28.787 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 21:07:28.891 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 21:07:28.929 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-11-28 21:07:29.107 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-28 21:07:29.123 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-28 21:07:29.154 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-28 21:07:29.218 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 21:07:29.364 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 21:07:29.367 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 3.079 seconds (JVM running for 4.369)
-2019-11-28 21:07:30.560 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-28 21:07:30.560 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-11-28 21:07:30.565 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
-2019-11-28 22:20:13.960 [Thread-9] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 22:20:14.182 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 96916 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 22:20:14.182 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-11-28 22:20:14.637 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$371282ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 22:20:14.709 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-11-28 22:20:14.710 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-28 22:20:14.710 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 22:20:14.724 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-11-28 22:20:14.724 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 539 ms
-2019-11-28 22:20:14.987 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 22:20:15.037 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 22:20:15.050 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-11-28 22:20:15.128 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-28 22:20:15.129 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-28 22:20:15.133 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-28 22:20:15.145 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 22:20:15.162 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 22:20:15.163 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 1.046 seconds (JVM running for 4370.165)
-2019-11-28 22:20:15.165 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2019-11-28 22:41:14.633 [Thread-19] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 22:41:14.849 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 96916 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 22:41:14.849 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
-2019-11-28 22:41:15.230 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$371282ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 22:41:15.287 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-11-28 22:41:15.288 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-28 22:41:15.288 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 22:41:15.299 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-11-28 22:41:15.300 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 448 ms
-2019-11-28 22:41:15.520 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 22:41:15.560 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 22:41:15.568 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-11-28 22:41:15.631 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-28 22:41:15.632 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-28 22:41:15.637 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-28 22:41:15.647 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 22:41:15.672 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 22:41:15.673 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.865 seconds (JVM running for 5630.674)
-2019-11-28 22:41:15.675 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-2019-11-28 23:15:42.131 [Thread-30] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 00:03:31.776 [Thread-10] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 00:03:32.050 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126896 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 00:03:32.051 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 00:03:32.473 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6ffbeabe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 00:03:32.539 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 00:03:32.540 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 00:03:32.540 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 00:03:32.554 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 00:03:32.554 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 499 ms
+2019-12-01 00:03:32.920 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 00:03:32.976 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 00:03:32.988 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 00:03:32.998 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 00:03:33.071 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 00:03:33.072 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 00:03:33.080 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 00:03:33.092 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 00:03:33.127 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 00:03:33.128 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 1.145 seconds (JVM running for 356.284)
+2019-12-01 00:03:33.131 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 00:16:40.452 [Thread-25] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:21:48.160 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:21:48.164 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 10:21:48.207 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-01 10:21:48.207 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-01 10:21:49.237 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:21:49.518 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:21:49.537 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 10:21:49.538 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:21:49.624 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 10:21:49.624 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1417 ms
+2019-12-01 10:21:50.381 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:21:50.487 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:21:50.531 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 10:21:50.562 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 10:21:50.713 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 10:21:50.730 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 10:21:50.762 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 10:21:50.830 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:21:50.949 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:21:50.952 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 3.402 seconds (JVM running for 4.024)
+2019-12-01 10:21:58.176 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:21:58.176 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:21:58.182 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2019-12-01 10:22:35.342 [Thread-10] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:22:35.579 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:22:35.580 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 10:22:36.005 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:22:36.098 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:22:36.099 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 10:22:36.099 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:22:36.121 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 10:22:36.121 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 538 ms
+2019-12-01 10:22:36.441 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:22:36.486 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:22:36.496 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 10:22:36.505 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 10:22:36.570 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 10:22:36.571 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 10:22:36.578 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 10:22:36.590 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:22:36.629 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:22:36.629 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 1.106 seconds (JVM running for 49.7)
+2019-12-01 10:22:36.632 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 10:22:36.714 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:22:36.715 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:22:36.720 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2019-12-01 10:23:28.221 [Thread-20] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:23:28.566 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:23:28.566 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 10:23:28.978 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:23:29.044 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:23:29.045 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 10:23:29.045 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:23:29.060 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 10:23:29.060 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 491 ms
+2019-12-01 10:23:29.368 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:23:29.410 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:23:29.421 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 10:23:29.431 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 10:23:29.489 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 10:23:29.489 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 10:23:29.495 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 10:23:29.505 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:23:29.538 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:23:29.538 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 1.034 seconds (JVM running for 102.609)
+2019-12-01 10:23:29.540 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 10:24:18.406 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:24:18.407 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:24:18.412 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2019-12-01 10:24:19.139 [Thread-26] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:24:19.586 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:24:19.586 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 10:24:20.005 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:24:20.074 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:24:20.075 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 10:24:20.075 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:24:20.092 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 10:24:20.092 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 501 ms
+2019-12-01 10:24:20.441 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:24:20.487 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:24:20.500 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 10:24:20.511 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 10:24:20.585 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 10:24:20.586 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 10:24:20.592 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 10:24:20.603 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:24:20.634 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:24:20.634 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 1.247 seconds (JVM running for 153.706)
+2019-12-01 10:24:20.636 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 10:24:21.193 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:24:21.194 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:24:21.197 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2019-12-01 10:25:58.634 [Thread-32] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:25:58.920 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:25:58.920 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 10:25:59.323 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:25:59.387 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:25:59.388 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 10:25:59.388 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:25:59.402 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 10:25:59.402 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 479 ms
+2019-12-01 10:25:59.675 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:25:59.716 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:25:59.728 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 10:25:59.737 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 10:25:59.801 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 10:25:59.802 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 10:25:59.809 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 10:25:59.820 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:25:59.854 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:25:59.854 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.98 seconds (JVM running for 252.925)
+2019-12-01 10:25:59.856 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 10:25:59.975 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:25:59.976 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:25:59.979 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2019-12-01 10:26:21.572 [http-nio-8080-exec-10] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectPage] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 10:26:21.573 [http-nio-8080-exec-10] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 10:26:21.591 [http-nio-8080-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-01 10:26:21.694 [http-nio-8080-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-01 10:28:48.080 [Thread-38] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:28:48.081 [Thread-38] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-12-01 10:28:48.087 [Thread-38] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-12-01 10:28:48.392 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:28:48.392 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 10:28:48.767 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:28:48.823 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:28:48.824 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 10:28:48.824 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:28:48.836 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 10:28:48.836 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 441 ms
+2019-12-01 10:28:49.054 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:28:49.092 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:28:49.101 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 10:28:49.110 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 10:28:49.167 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 10:28:49.168 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 10:28:49.171 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 10:28:49.179 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:28:49.199 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:28:49.200 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.85 seconds (JVM running for 422.27)
+2019-12-01 10:28:49.201 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 10:39:45.883 [Thread-44] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:39:46.184 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:39:46.185 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 10:39:46.587 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:39:46.647 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:39:46.647 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 10:39:46.647 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:39:46.660 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 10:39:46.661 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 473 ms
+2019-12-01 10:39:46.909 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:39:46.949 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:39:46.958 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 10:39:46.967 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 10:39:47.026 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 10:39:47.027 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 10:39:47.031 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 10:39:47.041 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:39:47.073 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:39:47.074 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.942 seconds (JVM running for 1080.144)
+2019-12-01 10:39:47.076 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 10:39:52.082 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:39:52.083 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:39:52.085 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2019-12-01 10:44:38.938 [Thread-50] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:44:39.170 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:44:39.171 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 10:44:39.536 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:44:39.590 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:44:39.591 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 10:44:39.591 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:44:39.604 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 10:44:39.604 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 431 ms
+2019-12-01 10:44:39.818 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:44:39.856 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:44:39.864 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 10:44:39.872 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 10:44:39.929 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 10:44:39.929 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 10:44:39.933 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 10:44:39.941 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:44:39.960 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:44:39.960 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.825 seconds (JVM running for 1373.031)
+2019-12-01 10:44:39.962 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 10:57:00.188 [Thread-56] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:57:00.527 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:57:00.527 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 10:57:00.920 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:57:00.977 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:57:00.978 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 10:57:00.978 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:57:00.991 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 10:57:00.991 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 460 ms
+2019-12-01 10:57:01.225 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:57:01.265 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:57:01.275 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 10:57:01.283 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 10:57:01.340 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 10:57:01.341 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 10:57:01.346 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 10:57:01.356 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:57:01.385 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:57:01.386 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.94 seconds (JVM running for 2114.457)
+2019-12-01 10:57:01.387 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 11:03:11.665 [Thread-62] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 11:03:11.863 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 11:03:11.863 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 11:03:12.224 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 11:03:12.279 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 11:03:12.279 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 11:03:12.280 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 11:03:12.292 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 11:03:12.292 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 427 ms
+2019-12-01 11:03:12.499 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 11:03:12.537 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 11:03:12.546 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 11:03:12.554 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 11:03:12.609 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 11:03:12.610 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 11:03:12.614 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 11:03:12.621 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 11:03:12.640 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 11:03:12.641 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.812 seconds (JVM running for 2485.711)
+2019-12-01 11:03:12.642 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 17:22:55.025 [Thread-68] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 17:22:55.352 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 17:22:55.352 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 17:22:55.777 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 17:22:55.845 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 17:22:55.846 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 17:22:55.846 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 17:22:55.862 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 17:22:55.862 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 506 ms
+2019-12-01 17:22:56.110 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 17:22:56.155 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 17:22:56.166 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 17:22:56.175 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 17:22:56.240 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 17:22:56.241 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 17:22:56.247 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 17:22:56.257 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 17:22:56.287 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 17:22:56.287 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.994 seconds (JVM running for 25269.616)
+2019-12-01 17:22:56.289 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:07:00.999 [Thread-74] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:07:01.369 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:07:01.370 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:07:02.021 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:07:02.089 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:07:02.090 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:07:02.090 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:07:02.102 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:07:02.102 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 730 ms
+2019-12-01 20:07:02.388 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:07:02.440 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:07:02.454 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:07:02.463 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:07:02.534 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:07:02.535 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:07:02.541 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:07:02.553 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:07:02.590 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:07:02.591 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 1.27 seconds (JVM running for 35116.178)
+2019-12-01 20:07:02.592 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:07:23.761 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:07:23.762 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:07:23.766 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2019-12-01 20:08:12.779 [Thread-80] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:08:13.135 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:08:13.135 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:08:13.539 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:08:13.599 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:08:13.600 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:08:13.600 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:08:13.612 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:08:13.612 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 474 ms
+2019-12-01 20:08:13.844 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:08:13.882 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:08:13.891 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:08:13.899 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:08:13.955 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:08:13.956 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:08:13.963 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:08:13.972 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:08:14.001 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:08:14.002 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.913 seconds (JVM running for 35187.588)
+2019-12-01 20:08:14.003 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:08:14.467 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:08:14.468 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:08:14.470 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2019-12-01 20:08:20.788 [http-nio-8080-exec-10] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:08:20.789 [http-nio-8080-exec-10] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 20:08:20.792 [http-nio-8080-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2019-12-01 20:08:20.803 [http-nio-8080-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2019-12-01 20:09:25.003 [http-nio-8080-exec-8] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:09:25.004 [http-nio-8080-exec-8] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 20:09:25.009 [http-nio-8080-exec-8] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:09:25.009 [http-nio-8080-exec-8] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 20:09:38.529 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:09:38.529 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 20:09:38.534 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:09:38.535 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 20:09:38.539 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:09:38.539 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 20:17:13.138 [Thread-86] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:17:13.139 [Thread-86] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2019-12-01 20:17:13.145 [Thread-86] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2019-12-01 20:17:13.477 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:17:13.477 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:17:13.864 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:17:13.928 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:17:13.929 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:17:13.929 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:17:13.942 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:17:13.942 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 462 ms
+2019-12-01 20:17:14.230 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:17:14.273 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:17:14.284 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:17:14.294 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:17:14.359 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:17:14.360 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:17:14.365 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:17:14.375 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:17:14.406 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:17:14.407 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.967 seconds (JVM running for 35727.995)
+2019-12-01 20:17:14.409 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:17:17.439 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:17:17.440 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:17:17.443 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2019-12-01 20:17:27.761 [http-nio-8080-exec-10] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:17:27.762 [http-nio-8080-exec-10] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 20:17:27.765 [http-nio-8080-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2019-12-01 20:17:27.768 [http-nio-8080-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2019-12-01 20:17:27.777 [http-nio-8080-exec-10] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:17:27.777 [http-nio-8080-exec-10] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 20:17:27.780 [http-nio-8080-exec-10] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:17:27.780 [http-nio-8080-exec-10] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 20:20:03.745 [Thread-92] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:20:03.746 [Thread-92] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2019-12-01 20:20:03.750 [Thread-92] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2019-12-01 20:20:04.036 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:20:04.036 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:20:04.419 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:20:04.481 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:20:04.481 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:20:04.481 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:20:04.494 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:20:04.494 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 455 ms
+2019-12-01 20:20:04.786 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:20:04.834 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:20:04.846 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:20:04.856 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:20:04.918 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:20:04.919 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:20:04.924 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:20:04.932 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:20:04.960 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:20:04.960 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.967 seconds (JVM running for 35898.547)
+2019-12-01 20:20:04.962 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:21:48.748 [Thread-98] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:21:49.044 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:21:49.045 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:21:49.439 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:21:49.497 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:21:49.498 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:21:49.498 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:21:49.509 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:21:49.509 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 462 ms
+2019-12-01 20:21:49.748 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:21:49.786 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:21:49.795 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:21:49.803 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:21:49.860 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:21:49.861 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:21:49.867 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:21:49.877 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:21:49.906 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:21:49.906 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.911 seconds (JVM running for 36003.494)
+2019-12-01 20:21:49.908 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:23:04.624 [Thread-104] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:23:04.889 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:23:04.890 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:23:05.317 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:23:05.408 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:23:05.409 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:23:05.409 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:23:05.421 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:23:05.421 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 529 ms
+2019-12-01 20:23:05.780 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:23:05.824 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:23:05.835 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:23:05.844 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:23:05.909 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:23:05.910 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:23:05.915 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:23:05.931 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:23:05.957 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:23:05.958 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 1.103 seconds (JVM running for 36079.545)
+2019-12-01 20:23:05.960 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:23:11.336 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:23:11.336 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:23:11.339 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2019-12-01 20:23:47.920 [Thread-110] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:23:48.199 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:23:48.199 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:23:48.589 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:23:48.649 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:23:48.650 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:23:48.650 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:23:48.661 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:23:48.661 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 459 ms
+2019-12-01 20:23:48.899 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:23:48.939 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:23:48.952 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:23:48.961 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:23:49.020 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:23:49.021 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:23:49.027 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:23:49.040 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:23:49.068 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:23:49.069 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.917 seconds (JVM running for 36122.656)
+2019-12-01 20:23:49.070 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:23:53.029 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:23:53.029 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:23:53.032 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2019-12-01 20:23:58.577 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:23:58.578 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 20:23:58.579 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2019-12-01 20:23:58.583 [http-nio-8080-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2019-12-01 20:24:45.110 [Thread-116] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:24:45.111 [Thread-116] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2019-12-01 20:24:45.118 [Thread-116] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2019-12-01 20:24:45.428 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:24:45.428 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:24:45.815 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:24:45.870 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:24:45.870 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:24:45.870 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:24:45.882 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:24:45.882 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 452 ms
+2019-12-01 20:24:46.109 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:24:46.149 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:24:46.158 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:24:46.166 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:24:46.223 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:24:46.224 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:24:46.228 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:24:46.253 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:24:46.254 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.865 seconds (JVM running for 36179.841)
+2019-12-01 20:24:46.256 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:24:46.437 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:24:46.437 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:24:46.440 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2019-12-01 20:25:20.293 [Thread-122] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:25:20.709 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:25:20.710 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:25:21.128 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:25:21.188 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:25:21.190 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:25:21.190 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:25:21.201 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:25:21.201 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 488 ms
+2019-12-01 20:25:21.428 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:25:21.466 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:25:21.475 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:25:21.483 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:25:21.539 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:25:21.540 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:25:21.545 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:25:21.575 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:25:21.576 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.915 seconds (JVM running for 36215.163)
+2019-12-01 20:25:21.577 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:25:39.179 [Thread-128] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:25:39.454 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:25:39.454 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:25:39.838 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:25:39.896 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:25:39.897 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:25:39.897 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:25:39.908 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:25:39.908 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 451 ms
+2019-12-01 20:25:40.140 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:25:40.178 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:25:40.188 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:25:40.197 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:25:40.256 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:25:40.257 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:25:40.263 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:25:40.293 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:25:40.294 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.881 seconds (JVM running for 36233.88)
+2019-12-01 20:25:40.295 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 20:25:41.032 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:25:41.032 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:25:41.035 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2019-12-01 20:29:47.899 [Thread-134] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:29:49.577 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:29:49.577 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 20:29:49.971 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:29:50.031 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:29:50.032 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 20:29:50.032 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:29:50.044 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 20:29:50.044 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 463 ms
+2019-12-01 20:29:50.281 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:29:50.320 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:29:50.329 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 20:29:50.337 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 20:29:50.394 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 20:29:50.395 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 20:29:50.401 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 20:29:50.435 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:29:50.435 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 2.269 seconds (JVM running for 36484.023)
+2019-12-01 20:29:50.437 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 21:02:02.188 [Thread-140] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:02:02.583 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 21:02:02.583 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 21:02:03.106 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 21:02:03.172 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 21:02:03.173 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 21:02:03.173 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 21:02:03.184 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 21:02:03.184 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 598 ms
+2019-12-01 21:02:03.430 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 21:02:03.474 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:02:03.484 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 21:02:03.493 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 21:02:03.559 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 21:02:03.560 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 21:02:03.565 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 21:02:03.595 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 21:02:03.597 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 1.06 seconds (JVM running for 38417.183)
+2019-12-01 21:02:03.600 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 21:13:30.528 [http-nio-8080-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 21:13:30.529 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 21:13:30.532 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2019-12-01 21:15:14.686 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:15:14.687 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 21:15:14.689 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2019-12-01 21:15:14.697 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2019-12-01 21:16:40.813 [http-nio-8080-exec-2] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:16:40.814 [http-nio-8080-exec-2] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 21:17:42.922 [Thread-146] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:17:42.923 [Thread-146] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2019-12-01 21:17:42.926 [Thread-146] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2019-12-01 21:17:44.735 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 21:17:44.736 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 21:17:45.222 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 21:17:45.284 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 21:17:45.285 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 21:17:45.286 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 21:17:45.298 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 21:17:45.298 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 558 ms
+2019-12-01 21:17:45.592 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 21:17:45.654 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:17:45.669 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 21:17:45.679 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 21:17:45.752 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 21:17:45.753 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 21:17:45.760 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 21:17:45.803 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 21:17:45.803 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 1.195 seconds (JVM running for 39359.391)
+2019-12-01 21:17:45.805 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 21:17:47.097 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 21:17:47.097 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 21:17:47.100 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2019-12-01 21:17:51.528 [http-nio-8080-exec-2] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:17:51.529 [http-nio-8080-exec-2] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 21:17:51.531 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2019-12-01 21:17:51.535 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2019-12-01 21:18:02.384 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:18:02.385 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 21:20:10.280 [Thread-152] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:20:10.285 [Thread-152] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2019-12-01 21:20:10.289 [Thread-152] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2019-12-01 21:20:10.700 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 21:20:10.700 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 21:20:11.093 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 21:20:11.150 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 21:20:11.151 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 21:20:11.152 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 21:20:11.163 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 21:20:11.163 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 459 ms
+2019-12-01 21:20:11.403 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 21:20:11.442 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:20:11.451 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 21:20:11.459 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 21:20:11.515 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 21:20:11.516 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 21:20:11.522 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 21:20:11.552 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 21:20:11.553 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.966 seconds (JVM running for 39505.14)
+2019-12-01 21:20:11.554 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 21:20:12.437 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 21:20:12.438 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 21:20:12.440 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2019-12-01 21:20:14.701 [http-nio-8080-exec-2] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:20:14.702 [http-nio-8080-exec-2] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 21:20:14.705 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2019-12-01 21:20:14.711 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2019-12-01 21:45:55.514 [Thread-158] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:45:55.514 [Thread-158] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+2019-12-01 21:45:55.950 [Thread-158] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+2019-12-01 21:45:57.428 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 21:45:57.429 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-01 21:45:57.828 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 21:45:57.887 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-01 21:45:57.888 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-01 21:45:57.889 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 21:45:57.900 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-01 21:45:57.900 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 468 ms
+2019-12-01 21:45:58.151 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 21:45:58.193 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:45:58.203 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-01 21:45:58.212 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-01 21:45:58.276 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-01 21:45:58.277 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-01 21:45:58.284 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-01 21:45:58.316 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 21:45:58.317 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 0.992 seconds (JVM running for 41051.904)
+2019-12-01 21:45:58.319 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-12-01 21:46:05.746 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 21:46:05.747 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-01 21:46:05.750 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2019-12-01 21:52:48.230 [http-nio-8080-exec-5] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:52:48.232 [http-nio-8080-exec-5] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 21:52:48.233 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+2019-12-01 21:52:48.237 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+2019-12-01 21:55:05.274 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:55:05.274 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 21:55:17.410 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:55:17.410 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 21:56:00.626 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:56:00.626 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-01 23:55:56.786 [Thread-169] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 23:55:56.787 [Thread-169] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+2019-12-01 23:55:56.790 [Thread-169] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.

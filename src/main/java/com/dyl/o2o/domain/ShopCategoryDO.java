@@ -16,27 +16,25 @@ import java.util.Date;
 @TableName("tb_shop_category")
 @ApiModel(value = "shopCategory对象", description = "店铺类别对象")
 public class ShopCategoryDO {
-    //店铺类别Id
+    @ApiModelProperty("店铺类别id")
     private Long shopCategoryId;
 
-    //店铺类别名称
+    @ApiModelProperty("店铺类别名称")
     private String shopCategoryName;
 
-    //店铺类别描述
+    @ApiModelProperty("店铺类别描述")
     private String shopCategoryDesc;
 
-    //图片
+    @ApiModelProperty("店铺类别图片地址")
     private String shopCategoryImg;
 
-    //权重，越大越靠前
+    @ApiModelProperty("权重，越大越靠前")
     private Integer priority;
 
-    //创建时间
-    @ApiModelProperty(hidden = true)
+    @ApiModelProperty(value = "创建时间",hidden = true)
     private Date createTime;
 
-    //修改时间
-    @ApiModelProperty(hidden = true)
+    @ApiModelProperty(value = "修改时间",hidden = true)
     private Date lastEditTime;
 
     //上级id（自关联）

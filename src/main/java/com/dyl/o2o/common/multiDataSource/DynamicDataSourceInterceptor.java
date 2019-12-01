@@ -1,4 +1,4 @@
-package com.dyl.o2o.common.split;
+package com.dyl.o2o.common.multiDataSource;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.executor.Executor;

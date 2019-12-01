@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/shop")
-public class ShopAdminController {
+public class ShopJump {
 
     /**
      * 跳转到添加店铺页面
@@ -37,5 +37,14 @@ public class ShopAdminController {
     @GetMapping(value = "/manage")
     public String manageShop(){
         return "shop/manageShop";
+    }
+
+    /**
+     * 跳转到店铺列表页面
+     * @return
+     */
+    @GetMapping("/listShop")
+    public String listShop(){
+        return "shop/listShop";
     }
 }

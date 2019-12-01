@@ -1,230 +1,777 @@
-2019-11-28 19:40:01.836  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 76092 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 19:40:01.846  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-28 19:40:01.896  INFO 76092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-28 19:40:01.897  INFO 76092 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-28 19:40:02.928  INFO 76092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fe1763b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 19:40:03.221  INFO 76092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-28 19:40:03.239  INFO 76092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-28 19:40:03.239  INFO 76092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 19:40:03.319  INFO 76092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-28 19:40:03.319  INFO 76092 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1422 ms
-2019-11-28 19:40:03.724  WARN 76092 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-28 19:40:04.082  INFO 76092 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 19:40:04.191  INFO 76092 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 19:40:04.232  INFO 76092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-28 19:40:04.302  WARN 76092 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-28 19:40:04.415  INFO 76092 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-11-28 19:40:04.432  INFO 76092 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-11-28 19:40:04.464  INFO 76092 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-11-28 19:40:04.531  INFO 76092 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 19:40:04.649  INFO 76092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 19:40:04.652  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 3.392 seconds (JVM running for 4.726)
-2019-11-28 20:23:14.608  INFO 76092 --- [Thread-11] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:23:14.824  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 76092 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 20:23:14.824  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-28 20:23:15.204  INFO 76092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fe1763b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 20:23:15.262  INFO 76092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-28 20:23:15.263  INFO 76092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-28 20:23:15.263  INFO 76092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 20:23:15.274  INFO 76092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-28 20:23:15.275  INFO 76092 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 449 ms
-2019-11-28 20:23:15.373  WARN 76092 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-28 20:23:15.496  INFO 76092 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 20:23:15.536  INFO 76092 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:23:15.545  INFO 76092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-28 20:23:15.572  WARN 76092 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-28 20:23:15.613  INFO 76092 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-11-28 20:23:15.614  INFO 76092 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-11-28 20:23:15.619  INFO 76092 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-11-28 20:23:15.630  INFO 76092 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 20:23:15.648  INFO 76092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 20:23:15.649  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.871 seconds (JVM running for 2595.722)
-2019-11-28 20:23:15.651  INFO 76092 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-28 20:31:31.161  INFO 76092 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:31:31.423  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 76092 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 20:31:31.423  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-28 20:31:31.827  INFO 76092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fe1763b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 20:31:31.883  INFO 76092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-28 20:31:31.884  INFO 76092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-28 20:31:31.884  INFO 76092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 20:31:31.895  INFO 76092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-28 20:31:31.895  INFO 76092 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 470 ms
-2019-11-28 20:31:31.989  WARN 76092 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-28 20:31:32.117  INFO 76092 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 20:31:32.156  INFO 76092 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:31:32.165  INFO 76092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-28 20:31:32.190  WARN 76092 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-28 20:31:32.229  INFO 76092 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-11-28 20:31:32.229  INFO 76092 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-11-28 20:31:32.234  INFO 76092 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-11-28 20:31:32.245  INFO 76092 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 20:31:32.271  INFO 76092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 20:31:32.272  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.899 seconds (JVM running for 3092.345)
-2019-11-28 20:31:32.274  INFO 76092 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-28 20:42:21.579  INFO 76092 --- [Thread-26] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:42:21.846  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 76092 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 20:42:21.846  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-28 20:42:22.216  INFO 76092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fe1763b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 20:42:22.270  INFO 76092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-28 20:42:22.271  INFO 76092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-28 20:42:22.271  INFO 76092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 20:42:22.283  INFO 76092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-28 20:42:22.283  INFO 76092 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 435 ms
-2019-11-28 20:42:22.373  WARN 76092 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-28 20:42:22.500  INFO 76092 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 20:42:22.538  INFO 76092 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:42:22.547  INFO 76092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-28 20:42:22.574  WARN 76092 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-28 20:42:22.612  INFO 76092 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-11-28 20:42:22.613  INFO 76092 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-11-28 20:42:22.618  INFO 76092 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-11-28 20:42:22.627  INFO 76092 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 20:42:22.653  INFO 76092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 20:42:22.654  INFO 76092 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.854 seconds (JVM running for 3742.727)
-2019-11-28 20:42:22.656  INFO 76092 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-28 20:42:26.785  INFO 76092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-28 20:42:26.786  INFO 76092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-28 20:42:26.794  INFO 76092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2019-11-28 20:50:29.661  INFO 76092 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:50:31.549  INFO 92680 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 92680 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 20:50:31.552  INFO 92680 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-28 20:50:31.591  INFO 92680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-28 20:50:31.591  INFO 92680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-28 20:50:32.554  INFO 92680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b4d529c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 20:50:32.804  INFO 92680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-28 20:50:32.820  INFO 92680 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-28 20:50:32.821  INFO 92680 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 20:50:32.896  INFO 92680 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-28 20:50:32.896  INFO 92680 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1305 ms
-2019-11-28 20:50:33.315  WARN 92680 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-28 20:50:33.652  INFO 92680 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 20:50:33.764  INFO 92680 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:50:33.806  INFO 92680 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-28 20:50:33.884  WARN 92680 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-28 20:50:34.008  INFO 92680 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-11-28 20:50:34.026  INFO 92680 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-11-28 20:50:34.060  INFO 92680 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-11-28 20:50:34.128  INFO 92680 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 20:50:34.251  INFO 92680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 20:50:34.254  INFO 92680 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 3.294 seconds (JVM running for 3.901)
-2019-11-28 20:51:00.239  INFO 92680 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-28 20:51:00.239  INFO 92680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-28 20:51:00.245  INFO 92680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2019-11-28 20:58:36.616  INFO 92680 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:59:05.626  INFO 95464 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 95464 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 20:59:05.630  INFO 95464 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-28 20:59:05.671  INFO 95464 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-28 20:59:05.671  INFO 95464 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-28 20:59:06.676  INFO 95464 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c18dd4d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 20:59:06.928  INFO 95464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-28 20:59:06.945  INFO 95464 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-28 20:59:06.945  INFO 95464 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 20:59:07.021  INFO 95464 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-28 20:59:07.022  INFO 95464 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1351 ms
-2019-11-28 20:59:07.415  WARN 95464 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-28 20:59:07.755  INFO 95464 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 20:59:07.865  INFO 95464 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 20:59:07.904  INFO 95464 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-28 20:59:07.971  WARN 95464 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-28 20:59:08.077  INFO 95464 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-11-28 20:59:08.093  INFO 95464 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-11-28 20:59:08.125  INFO 95464 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-11-28 20:59:08.190  INFO 95464 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 20:59:08.315  INFO 95464 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 20:59:08.318  INFO 95464 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 3.299 seconds (JVM running for 4.463)
-2019-11-28 20:59:40.322  INFO 95464 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-28 20:59:40.322  INFO 95464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-28 20:59:40.327  INFO 95464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2019-11-28 20:59:58.261  INFO 95464 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 21:00:30.822  INFO 89956 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 89956 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 21:00:30.825  INFO 89956 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-28 21:00:30.870  INFO 89956 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-28 21:00:30.870  INFO 89956 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-28 21:00:31.834  INFO 89956 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef2147de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 21:00:32.088  INFO 89956 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-28 21:00:32.105  INFO 89956 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-28 21:00:32.106  INFO 89956 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 21:00:32.183  INFO 89956 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-28 21:00:32.183  INFO 89956 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1313 ms
-2019-11-28 21:00:32.549  WARN 89956 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-28 21:00:32.861  INFO 89956 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 21:00:32.964  INFO 89956 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 21:00:33.005  INFO 89956 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-28 21:00:33.071  WARN 89956 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-28 21:00:33.177  INFO 89956 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-11-28 21:00:33.192  INFO 89956 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-11-28 21:00:33.222  INFO 89956 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-11-28 21:00:33.286  INFO 89956 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 21:00:33.394  INFO 89956 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 21:00:33.396  INFO 89956 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 3.123 seconds (JVM running for 3.687)
-2019-11-28 21:00:49.146  INFO 89956 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-28 21:00:49.147  INFO 89956 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-28 21:00:49.153  INFO 89956 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2019-11-28 21:06:47.131  INFO 89956 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 21:07:26.734  INFO 96916 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 96916 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 21:07:26.737  INFO 96916 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-28 21:07:26.767  INFO 96916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-11-28 21:07:26.768  INFO 96916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-11-28 21:07:27.713  INFO 96916 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$371282ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 21:07:27.981  INFO 96916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-28 21:07:27.998  INFO 96916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-28 21:07:27.999  INFO 96916 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 21:07:28.075  INFO 96916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-28 21:07:28.075  INFO 96916 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1307 ms
-2019-11-28 21:07:28.445  WARN 96916 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-28 21:07:28.787  INFO 96916 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 21:07:28.891  INFO 96916 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 21:07:28.929  INFO 96916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-28 21:07:28.995  WARN 96916 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-28 21:07:29.107  INFO 96916 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-11-28 21:07:29.123  INFO 96916 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-11-28 21:07:29.154  INFO 96916 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-11-28 21:07:29.218  INFO 96916 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 21:07:29.364  INFO 96916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 21:07:29.367  INFO 96916 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 3.079 seconds (JVM running for 4.369)
-2019-11-28 21:07:30.560  INFO 96916 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-28 21:07:30.560  INFO 96916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-28 21:07:30.565  INFO 96916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2019-11-28 22:20:13.960  INFO 96916 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 22:20:14.182  INFO 96916 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 96916 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 22:20:14.182  INFO 96916 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-28 22:20:14.637  INFO 96916 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$371282ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 22:20:14.709  INFO 96916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-28 22:20:14.710  INFO 96916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-28 22:20:14.710  INFO 96916 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 22:20:14.724  INFO 96916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-28 22:20:14.724  INFO 96916 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 539 ms
-2019-11-28 22:20:14.838  WARN 96916 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-28 22:20:14.987  INFO 96916 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 22:20:15.037  INFO 96916 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 22:20:15.050  INFO 96916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-28 22:20:15.080  WARN 96916 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-28 22:20:15.128  INFO 96916 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-11-28 22:20:15.129  INFO 96916 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-11-28 22:20:15.133  INFO 96916 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-11-28 22:20:15.145  INFO 96916 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 22:20:15.162  INFO 96916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 22:20:15.163  INFO 96916 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.046 seconds (JVM running for 4370.165)
-2019-11-28 22:20:15.165  INFO 96916 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-28 22:41:14.633  INFO 96916 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-28 22:41:14.849  INFO 96916 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 96916 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
-2019-11-28 22:41:14.849  INFO 96916 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
-2019-11-28 22:41:15.230  INFO 96916 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$371282ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-28 22:41:15.287  INFO 96916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-28 22:41:15.288  INFO 96916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-28 22:41:15.288  INFO 96916 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-28 22:41:15.299  INFO 96916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-28 22:41:15.300  INFO 96916 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 448 ms
-2019-11-28 22:41:15.392  WARN 96916 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
-2019-11-28 22:41:15.520  INFO 96916 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-28 22:41:15.560  INFO 96916 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-28 22:41:15.568  INFO 96916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-11-28 22:41:15.593  WARN 96916 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-11-28 22:41:15.631  INFO 96916 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-11-28 22:41:15.632  INFO 96916 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-11-28 22:41:15.637  INFO 96916 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-11-28 22:41:15.647  INFO 96916 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
-2019-11-28 22:41:15.672  INFO 96916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-28 22:41:15.673  INFO 96916 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.865 seconds (JVM running for 5630.674)
-2019-11-28 22:41:15.675  INFO 96916 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-11-28 23:15:42.131  INFO 96916 --- [Thread-30] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 00:03:31.776  INFO 126896 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 00:03:32.050  INFO 126896 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126896 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 00:03:32.051  INFO 126896 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 00:03:32.473  INFO 126896 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6ffbeabe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 00:03:32.539  INFO 126896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 00:03:32.540  INFO 126896 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 00:03:32.540  INFO 126896 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 00:03:32.554  INFO 126896 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 00:03:32.554  INFO 126896 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 499 ms
+2019-12-01 00:03:32.673  WARN 126896 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 00:03:32.726  WARN 126896 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 00:03:32.920  INFO 126896 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 00:03:32.976  INFO 126896 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 00:03:32.988  INFO 126896 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 00:03:32.998  INFO 126896 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 00:03:33.019  WARN 126896 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 00:03:33.071  INFO 126896 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 00:03:33.072  INFO 126896 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 00:03:33.080  INFO 126896 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 00:03:33.092  INFO 126896 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 00:03:33.127  INFO 126896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 00:03:33.128  INFO 126896 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.145 seconds (JVM running for 356.284)
+2019-12-01 00:03:33.131  INFO 126896 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 00:16:40.452  INFO 126896 --- [Thread-25] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:21:48.160  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:21:48.164  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 10:21:48.207  INFO 126308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-01 10:21:48.207  INFO 126308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-01 10:21:49.237  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:21:49.518  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:21:49.537  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 10:21:49.538  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:21:49.624  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 10:21:49.624  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1417 ms
+2019-12-01 10:21:50.047  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 10:21:50.092  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 10:21:50.381  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:21:50.487  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:21:50.531  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 10:21:50.562  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 10:21:50.602  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 10:21:50.713  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 10:21:50.730  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 10:21:50.762  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 10:21:50.830  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:21:50.949  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:21:50.952  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 3.402 seconds (JVM running for 4.024)
+2019-12-01 10:21:58.176  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:21:58.176  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:21:58.182  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-12-01 10:22:35.342  INFO 126308 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:22:35.579  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:22:35.580  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 10:22:36.005  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:22:36.098  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:22:36.099  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 10:22:36.099  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:22:36.121  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 10:22:36.121  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 538 ms
+2019-12-01 10:22:36.255  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 10:22:36.292  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 10:22:36.441  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:22:36.486  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:22:36.496  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 10:22:36.505  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 10:22:36.524  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 10:22:36.570  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 10:22:36.571  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 10:22:36.578  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 10:22:36.590  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:22:36.629  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:22:36.629  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.106 seconds (JVM running for 49.7)
+2019-12-01 10:22:36.632  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 10:22:36.714  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:22:36.715  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:22:36.720  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-12-01 10:23:28.221  INFO 126308 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:23:28.566  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:23:28.566  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 10:23:28.978  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:23:29.044  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:23:29.045  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 10:23:29.045  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:23:29.060  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 10:23:29.060  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 491 ms
+2019-12-01 10:23:29.173  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 10:23:29.213  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 10:23:29.368  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:23:29.410  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:23:29.421  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 10:23:29.431  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 10:23:29.448  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 10:23:29.489  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 10:23:29.489  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 10:23:29.495  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 10:23:29.505  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:23:29.538  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:23:29.538  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.034 seconds (JVM running for 102.609)
+2019-12-01 10:23:29.540  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 10:24:18.406  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:24:18.407  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:24:18.412  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-12-01 10:24:19.139  INFO 126308 --- [Thread-26] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:24:19.586  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:24:19.586  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 10:24:20.005  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:24:20.074  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:24:20.075  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 10:24:20.075  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:24:20.092  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 10:24:20.092  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 501 ms
+2019-12-01 10:24:20.235  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 10:24:20.280  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 10:24:20.441  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:24:20.487  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:24:20.500  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 10:24:20.511  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 10:24:20.538  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 10:24:20.585  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 10:24:20.586  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 10:24:20.592  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 10:24:20.603  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:24:20.634  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:24:20.634  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.247 seconds (JVM running for 153.706)
+2019-12-01 10:24:20.636  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 10:24:21.193  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:24:21.194  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:24:21.197  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-01 10:24:27.657 ERROR 126308 --- [http-nio-8080-exec-10] c.d.o.c.e.GlobalExceptionHandler         : 内部异常：Ambiguous handler methods mapped for '/shop/0': {private com.dyl.o2o.common.R com.dyl.o2o.controller.ShopController.getShopListPage(java.lang.Long,javax.servlet.http.HttpServletRequest), public com.dyl.o2o.common.R com.dyl.o2o.controller.ShopController.getShopById(javax.servlet.http.HttpServletRequest,java.lang.Long)}
+2019-12-01 10:24:27.661  WARN 126308 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IllegalStateException: Ambiguous handler methods mapped for '/shop/0': {private com.dyl.o2o.common.R com.dyl.o2o.controller.ShopController.getShopListPage(java.lang.Long,javax.servlet.http.HttpServletRequest), public com.dyl.o2o.common.R com.dyl.o2o.controller.ShopController.getShopById(javax.servlet.http.HttpServletRequest,java.lang.Long)}]
+2019-12-01 10:25:58.634  INFO 126308 --- [Thread-32] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:25:58.920  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:25:58.920  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 10:25:59.323  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:25:59.387  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:25:59.388  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 10:25:59.388  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:25:59.402  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 10:25:59.402  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 479 ms
+2019-12-01 10:25:59.510  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 10:25:59.543  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 10:25:59.675  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:25:59.716  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:25:59.728  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 10:25:59.737  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 10:25:59.755  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 10:25:59.801  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 10:25:59.802  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 10:25:59.809  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 10:25:59.820  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:25:59.854  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:25:59.854  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.98 seconds (JVM running for 252.925)
+2019-12-01 10:25:59.856  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 10:25:59.975  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:25:59.976  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:25:59.979  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-01 10:26:21.572  INFO 126308 --- [http-nio-8080-exec-10] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopDao.selectPage] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 10:26:21.573  INFO 126308 --- [http-nio-8080-exec-10] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 10:26:21.591  INFO 126308 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-01 10:26:21.694  INFO 126308 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-01 10:28:48.080  INFO 126308 --- [Thread-38] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:28:48.081  INFO 126308 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-01 10:28:48.087  INFO 126308 --- [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-01 10:28:48.392  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:28:48.392  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 10:28:48.767  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:28:48.823  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:28:48.824  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 10:28:48.824  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:28:48.836  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 10:28:48.836  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 441 ms
+2019-12-01 10:28:48.925  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 10:28:48.951  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 10:28:49.054  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:28:49.092  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:28:49.101  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 10:28:49.110  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 10:28:49.127  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 10:28:49.167  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 10:28:49.168  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 10:28:49.171  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 10:28:49.179  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:28:49.199  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:28:49.200  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.85 seconds (JVM running for 422.27)
+2019-12-01 10:28:49.201  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 10:39:45.883  INFO 126308 --- [Thread-44] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:39:46.184  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:39:46.185  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 10:39:46.587  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:39:46.647  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:39:46.647  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 10:39:46.647  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:39:46.660  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 10:39:46.661  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 473 ms
+2019-12-01 10:39:46.757  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 10:39:46.785  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 10:39:46.909  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:39:46.949  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:39:46.958  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 10:39:46.967  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 10:39:46.984  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 10:39:47.026  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 10:39:47.027  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 10:39:47.031  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 10:39:47.041  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:39:47.073  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:39:47.074  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.942 seconds (JVM running for 1080.144)
+2019-12-01 10:39:47.076  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 10:39:52.082  INFO 126308 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 10:39:52.083  INFO 126308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 10:39:52.085  INFO 126308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2019-12-01 10:44:38.938  INFO 126308 --- [Thread-50] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:44:39.170  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:44:39.171  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 10:44:39.536  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:44:39.590  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:44:39.591  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 10:44:39.591  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:44:39.604  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 10:44:39.604  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 431 ms
+2019-12-01 10:44:39.692  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 10:44:39.717  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 10:44:39.818  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:44:39.856  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:44:39.864  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 10:44:39.872  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 10:44:39.889  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 10:44:39.929  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 10:44:39.929  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 10:44:39.933  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 10:44:39.941  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:44:39.960  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:44:39.960  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.825 seconds (JVM running for 1373.031)
+2019-12-01 10:44:39.962  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 10:57:00.188  INFO 126308 --- [Thread-56] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:57:00.527  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 10:57:00.527  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 10:57:00.920  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 10:57:00.977  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 10:57:00.978  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 10:57:00.978  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 10:57:00.991  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 10:57:00.991  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 460 ms
+2019-12-01 10:57:01.081  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 10:57:01.106  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 10:57:01.225  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 10:57:01.265  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 10:57:01.275  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 10:57:01.283  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 10:57:01.299  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 10:57:01.340  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 10:57:01.341  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 10:57:01.346  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 10:57:01.356  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 10:57:01.385  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 10:57:01.386  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.94 seconds (JVM running for 2114.457)
+2019-12-01 10:57:01.387  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 11:03:11.665  INFO 126308 --- [Thread-62] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 11:03:11.863  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 11:03:11.863  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 11:03:12.224  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 11:03:12.279  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 11:03:12.279  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 11:03:12.280  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 11:03:12.292  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 11:03:12.292  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 427 ms
+2019-12-01 11:03:12.375  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 11:03:12.400  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 11:03:12.499  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 11:03:12.537  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 11:03:12.546  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 11:03:12.554  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 11:03:12.570  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 11:03:12.609  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 11:03:12.610  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 11:03:12.614  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 11:03:12.621  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 11:03:12.640  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 11:03:12.641  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.812 seconds (JVM running for 2485.711)
+2019-12-01 11:03:12.642  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 17:22:55.025  INFO 126308 --- [Thread-68] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 17:22:55.352  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 17:22:55.352  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 17:22:55.777  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 17:22:55.845  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 17:22:55.846  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 17:22:55.846  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 17:22:55.862  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 17:22:55.862  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 506 ms
+2019-12-01 17:22:55.957  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 17:22:55.983  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 17:22:56.110  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 17:22:56.155  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 17:22:56.166  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 17:22:56.175  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 17:22:56.193  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 17:22:56.240  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 17:22:56.241  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 17:22:56.247  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 17:22:56.257  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 17:22:56.287  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 17:22:56.287  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.994 seconds (JVM running for 25269.616)
+2019-12-01 17:22:56.289  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:07:00.999  INFO 126308 --- [Thread-74] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:07:01.369  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:07:01.370  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:07:02.021  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:07:02.089  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:07:02.090  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:07:02.090  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:07:02.102  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:07:02.102  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 730 ms
+2019-12-01 20:07:02.205  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:07:02.238  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:07:02.388  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:07:02.440  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:07:02.454  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:07:02.463  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:07:02.483  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:07:02.534  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:07:02.535  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:07:02.541  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:07:02.553  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:07:02.590  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:07:02.591  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.27 seconds (JVM running for 35116.178)
+2019-12-01 20:07:02.592  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:07:23.761  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:07:23.762  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:07:23.766  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-12-01 20:08:12.779  INFO 126308 --- [Thread-80] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:08:13.135  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:08:13.135  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:08:13.539  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:08:13.599  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:08:13.600  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:08:13.600  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:08:13.612  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:08:13.612  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 474 ms
+2019-12-01 20:08:13.706  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:08:13.731  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:08:13.844  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:08:13.882  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:08:13.891  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:08:13.899  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:08:13.916  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:08:13.955  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:08:13.956  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:08:13.963  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:08:13.972  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:08:14.001  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:08:14.002  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.913 seconds (JVM running for 35187.588)
+2019-12-01 20:08:14.003  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:08:14.467  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:08:14.468  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:08:14.470  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2019-12-01 20:08:20.788  INFO 126308 --- [http-nio-8080-exec-10] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:08:20.789  INFO 126308 --- [http-nio-8080-exec-10] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 20:08:20.792  INFO 126308 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-12-01 20:08:20.803  INFO 126308 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-12-01 20:09:25.003  INFO 126308 --- [http-nio-8080-exec-8] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:09:25.004  INFO 126308 --- [http-nio-8080-exec-8] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 20:09:25.009  INFO 126308 --- [http-nio-8080-exec-8] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:09:25.009  INFO 126308 --- [http-nio-8080-exec-8] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 20:09:38.529  INFO 126308 --- [http-nio-8080-exec-7] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:09:38.529  INFO 126308 --- [http-nio-8080-exec-7] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 20:09:38.534  INFO 126308 --- [http-nio-8080-exec-7] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:09:38.535  INFO 126308 --- [http-nio-8080-exec-7] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 20:09:38.539  INFO 126308 --- [http-nio-8080-exec-7] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:09:38.539  INFO 126308 --- [http-nio-8080-exec-7] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 20:17:13.138  INFO 126308 --- [Thread-86] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:17:13.139  INFO 126308 --- [Thread-86] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-12-01 20:17:13.145  INFO 126308 --- [Thread-86] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-12-01 20:17:13.477  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:17:13.477  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:17:13.864  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:17:13.928  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:17:13.929  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:17:13.929  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:17:13.942  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:17:13.942  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 462 ms
+2019-12-01 20:17:14.073  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:17:14.103  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:17:14.230  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:17:14.273  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:17:14.284  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:17:14.294  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:17:14.313  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:17:14.359  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:17:14.360  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:17:14.365  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:17:14.375  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:17:14.406  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:17:14.407  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.967 seconds (JVM running for 35727.995)
+2019-12-01 20:17:14.409  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:17:17.439  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:17:17.440  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:17:17.443  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-01 20:17:27.761  INFO 126308 --- [http-nio-8080-exec-10] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:17:27.762  INFO 126308 --- [http-nio-8080-exec-10] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 20:17:27.765  INFO 126308 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-12-01 20:17:27.768  INFO 126308 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-12-01 20:17:27.777  INFO 126308 --- [http-nio-8080-exec-10] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:17:27.777  INFO 126308 --- [http-nio-8080-exec-10] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 20:17:27.780  INFO 126308 --- [http-nio-8080-exec-10] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:17:27.780  INFO 126308 --- [http-nio-8080-exec-10] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 20:20:03.745  INFO 126308 --- [Thread-92] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:20:03.746  INFO 126308 --- [Thread-92] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-12-01 20:20:03.750  INFO 126308 --- [Thread-92] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-12-01 20:20:04.036  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:20:04.036  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:20:04.419  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:20:04.481  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:20:04.481  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:20:04.481  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:20:04.494  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:20:04.494  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 455 ms
+2019-12-01 20:20:04.613  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:20:04.644  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:20:04.786  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:20:04.834  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:20:04.846  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:20:04.856  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:20:04.876  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:20:04.918  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:20:04.919  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:20:04.924  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:20:04.932  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:20:04.960  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:20:04.960  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.967 seconds (JVM running for 35898.547)
+2019-12-01 20:20:04.962  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:21:48.748  INFO 126308 --- [Thread-98] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:21:49.044  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:21:49.045  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:21:49.439  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:21:49.497  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:21:49.498  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:21:49.498  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:21:49.509  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:21:49.509  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 462 ms
+2019-12-01 20:21:49.602  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:21:49.628  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:21:49.748  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:21:49.786  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:21:49.795  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:21:49.803  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:21:49.820  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:21:49.860  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:21:49.861  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:21:49.867  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:21:49.877  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:21:49.906  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:21:49.906  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.911 seconds (JVM running for 36003.494)
+2019-12-01 20:21:49.908  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:23:04.624  INFO 126308 --- [Thread-104] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:23:04.889  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:23:04.890  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:23:05.317  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:23:05.408  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:23:05.409  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:23:05.409  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:23:05.421  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:23:05.421  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 529 ms
+2019-12-01 20:23:05.527  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:23:05.562  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:23:05.780  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:23:05.824  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:23:05.835  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:23:05.844  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:23:05.863  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:23:05.909  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:23:05.910  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:23:05.915  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:23:05.931  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:23:05.957  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:23:05.958  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.103 seconds (JVM running for 36079.545)
+2019-12-01 20:23:05.960  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:23:11.336  INFO 126308 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:23:11.336  INFO 126308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:23:11.339  INFO 126308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-01 20:23:47.920  INFO 126308 --- [Thread-110] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:23:48.199  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:23:48.199  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:23:48.589  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:23:48.649  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:23:48.650  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:23:48.650  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:23:48.661  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:23:48.661  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 459 ms
+2019-12-01 20:23:48.758  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:23:48.783  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:23:48.899  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:23:48.939  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:23:48.952  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:23:48.961  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:23:48.980  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:23:49.020  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:23:49.021  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:23:49.027  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:23:49.040  INFO 126308 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: areaSelectListUsingGET_1
+2019-12-01 20:23:49.068  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:23:49.069  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.917 seconds (JVM running for 36122.656)
+2019-12-01 20:23:49.070  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:23:53.029  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:23:53.029  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:23:53.032  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-01 20:23:58.577  INFO 126308 --- [http-nio-8080-exec-3] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 20:23:58.578  INFO 126308 --- [http-nio-8080-exec-3] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 20:23:58.579  INFO 126308 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2019-12-01 20:23:58.583  INFO 126308 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2019-12-01 20:24:45.110  INFO 126308 --- [Thread-116] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:24:45.111  INFO 126308 --- [Thread-116] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-12-01 20:24:45.118  INFO 126308 --- [Thread-116] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-12-01 20:24:45.428  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:24:45.428  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:24:45.815  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:24:45.870  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:24:45.870  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:24:45.870  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:24:45.882  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:24:45.882  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 452 ms
+2019-12-01 20:24:45.966  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:24:45.989  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:24:46.109  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:24:46.149  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:24:46.158  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:24:46.166  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:24:46.183  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:24:46.223  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:24:46.224  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:24:46.228  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:24:46.253  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:24:46.254  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.865 seconds (JVM running for 36179.841)
+2019-12-01 20:24:46.256  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:24:46.437  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:24:46.437  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:24:46.440  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-01 20:25:20.293  INFO 126308 --- [Thread-122] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:25:20.709  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:25:20.710  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:25:21.128  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:25:21.188  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:25:21.190  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:25:21.190  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:25:21.201  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:25:21.201  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 488 ms
+2019-12-01 20:25:21.290  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:25:21.314  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:25:21.428  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:25:21.466  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:25:21.475  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:25:21.483  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:25:21.499  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:25:21.539  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:25:21.540  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:25:21.545  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:25:21.575  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:25:21.576  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.915 seconds (JVM running for 36215.163)
+2019-12-01 20:25:21.577  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:25:39.179  INFO 126308 --- [Thread-128] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:25:39.454  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:25:39.454  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:25:39.838  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:25:39.896  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:25:39.897  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:25:39.897  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:25:39.908  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:25:39.908  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 451 ms
+2019-12-01 20:25:39.997  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:25:40.022  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:25:40.140  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:25:40.178  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:25:40.188  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:25:40.197  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:25:40.214  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:25:40.256  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:25:40.257  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:25:40.263  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:25:40.293  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:25:40.294  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.881 seconds (JVM running for 36233.88)
+2019-12-01 20:25:40.295  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 20:25:41.032  INFO 126308 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 20:25:41.032  INFO 126308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 20:25:41.035  INFO 126308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2019-12-01 20:29:47.899  INFO 126308 --- [Thread-134] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:29:49.577  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 20:29:49.577  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 20:29:49.971  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 20:29:50.031  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 20:29:50.032  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 20:29:50.032  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 20:29:50.044  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 20:29:50.044  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 463 ms
+2019-12-01 20:29:50.138  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 20:29:50.165  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 20:29:50.281  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 20:29:50.320  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 20:29:50.329  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 20:29:50.337  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 20:29:50.353  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 20:29:50.394  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 20:29:50.395  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 20:29:50.401  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 20:29:50.435  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 20:29:50.435  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 2.269 seconds (JVM running for 36484.023)
+2019-12-01 20:29:50.437  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 21:02:02.188  INFO 126308 --- [Thread-140] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:02:02.583  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 21:02:02.583  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 21:02:03.106  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 21:02:03.172  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 21:02:03.173  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 21:02:03.173  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 21:02:03.184  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 21:02:03.184  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 598 ms
+2019-12-01 21:02:03.279  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 21:02:03.307  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 21:02:03.430  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 21:02:03.474  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:02:03.484  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 21:02:03.493  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 21:02:03.513  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 21:02:03.559  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 21:02:03.560  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 21:02:03.565  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 21:02:03.595  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 21:02:03.597  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.06 seconds (JVM running for 38417.183)
+2019-12-01 21:02:03.600  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 21:13:30.528  INFO 126308 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 21:13:30.529  INFO 126308 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 21:13:30.532  INFO 126308 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-01 21:15:14.686  INFO 126308 --- [http-nio-8080-exec-1] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:15:14.687  INFO 126308 --- [http-nio-8080-exec-1] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 21:15:14.689  INFO 126308 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2019-12-01 21:15:14.697  INFO 126308 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2019-12-01 21:15:14.745 ERROR 126308 --- [http-nio-8080-exec-1] c.d.o.c.e.GlobalExceptionHandler         : 内部异常：
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/ShopCategoryDao.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id  FROM tb_shop_category     WHERE  parent_id=?    AND (shopCategoryName LIKE ?) ORDER BY priority DESC
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause'
+2019-12-01 21:15:14.746  WARN 126308 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/ShopCategoryDao.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id  FROM tb_shop_category     WHERE  parent_id=?    AND (shopCategoryName LIKE ?) ORDER BY priority DESC
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause']
+2019-12-01 21:16:39.832  WARN 126308 --- [HikariPool-5 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=48s422ms201µs700ns).
+2019-12-01 21:16:40.813  INFO 126308 --- [http-nio-8080-exec-2] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:16:40.814  INFO 126308 --- [http-nio-8080-exec-2] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 21:16:43.192 ERROR 126308 --- [http-nio-8080-exec-2] c.d.o.c.e.GlobalExceptionHandler         : 内部异常：
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/ShopCategoryDao.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id  FROM tb_shop_category     WHERE  parent_id=?    AND (shopCategoryName LIKE ?) ORDER BY priority DESC
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause'
+2019-12-01 21:16:43.194  WARN 126308 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/ShopCategoryDao.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id  FROM tb_shop_category     WHERE  parent_id=?    AND (shopCategoryName LIKE ?) ORDER BY priority DESC
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'shopCategoryName' in 'where clause']
+2019-12-01 21:17:42.922  INFO 126308 --- [Thread-146] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:17:42.923  INFO 126308 --- [Thread-146] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2019-12-01 21:17:42.926  INFO 126308 --- [Thread-146] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2019-12-01 21:17:44.735  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 21:17:44.736  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 21:17:45.222  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 21:17:45.284  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 21:17:45.285  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 21:17:45.286  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 21:17:45.298  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 21:17:45.298  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 558 ms
+2019-12-01 21:17:45.402  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 21:17:45.453  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 21:17:45.592  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 21:17:45.654  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:17:45.669  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 21:17:45.679  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 21:17:45.699  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 21:17:45.752  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 21:17:45.753  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 21:17:45.760  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 21:17:45.803  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 21:17:45.803  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.195 seconds (JVM running for 39359.391)
+2019-12-01 21:17:45.805  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 21:17:47.097  INFO 126308 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 21:17:47.097  INFO 126308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 21:17:47.100  INFO 126308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-01 21:17:51.528  INFO 126308 --- [http-nio-8080-exec-2] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:17:51.529  INFO 126308 --- [http-nio-8080-exec-2] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 21:17:51.531  INFO 126308 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2019-12-01 21:17:51.535  INFO 126308 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2019-12-01 21:18:02.384  INFO 126308 --- [http-nio-8080-exec-4] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:18:02.385  INFO 126308 --- [http-nio-8080-exec-4] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 21:20:10.280  INFO 126308 --- [Thread-152] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:20:10.285  INFO 126308 --- [Thread-152] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2019-12-01 21:20:10.289  INFO 126308 --- [Thread-152] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2019-12-01 21:20:10.700  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 21:20:10.700  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 21:20:11.093  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 21:20:11.150  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 21:20:11.151  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 21:20:11.152  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 21:20:11.163  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 21:20:11.163  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 459 ms
+2019-12-01 21:20:11.257  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 21:20:11.291  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 21:20:11.403  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 21:20:11.442  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:20:11.451  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 21:20:11.459  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 21:20:11.475  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 21:20:11.515  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 21:20:11.516  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 21:20:11.522  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 21:20:11.552  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 21:20:11.553  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.966 seconds (JVM running for 39505.14)
+2019-12-01 21:20:11.554  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 21:20:12.437  INFO 126308 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 21:20:12.438  INFO 126308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 21:20:12.440  INFO 126308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2019-12-01 21:20:14.701  INFO 126308 --- [http-nio-8080-exec-2] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:20:14.702  INFO 126308 --- [http-nio-8080-exec-2] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 21:20:14.705  INFO 126308 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2019-12-01 21:20:14.711  INFO 126308 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2019-12-01 21:45:55.514  INFO 126308 --- [Thread-158] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:45:55.514  INFO 126308 --- [Thread-158] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2019-12-01 21:45:55.950  INFO 126308 --- [Thread-158] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2019-12-01 21:45:57.428  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 126308 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-01 21:45:57.429  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-01 21:45:57.828  INFO 126308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccb38575] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-01 21:45:57.887  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-01 21:45:57.888  INFO 126308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-01 21:45:57.889  INFO 126308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-01 21:45:57.900  INFO 126308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-01 21:45:57.900  INFO 126308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 468 ms
+2019-12-01 21:45:57.997  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-01 21:45:58.027  WARN 126308 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-01 21:45:58.151  INFO 126308 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-01 21:45:58.193  INFO 126308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-01 21:45:58.203  INFO 126308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-01 21:45:58.212  INFO 126308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-01 21:45:58.230  WARN 126308 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-01 21:45:58.276  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-01 21:45:58.277  INFO 126308 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-01 21:45:58.284  INFO 126308 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-01 21:45:58.316  INFO 126308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-01 21:45:58.317  INFO 126308 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 0.992 seconds (JVM running for 41051.904)
+2019-12-01 21:45:58.319  INFO 126308 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-01 21:46:05.746  INFO 126308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-01 21:46:05.747  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-01 21:46:05.750  INFO 126308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2019-12-01 21:50:08.916 ERROR 126308 --- [http-nio-8080-exec-10] c.d.o.c.e.GlobalExceptionHandler         : 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'shopCategoryDO' on field 'shopCategoryId': rejected value [null]; codes [typeMismatch.shopCategoryDO.shopCategoryId,typeMismatch.shopCategoryId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [shopCategoryDO.shopCategoryId,shopCategoryId]; arguments []; default message [shopCategoryId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopCategoryId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
+2019-12-01 21:50:08.919  WARN 126308 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'shopCategoryDO' on field 'shopCategoryId': rejected value [null]; codes [typeMismatch.shopCategoryDO.shopCategoryId,typeMismatch.shopCategoryId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [shopCategoryDO.shopCategoryId,shopCategoryId]; arguments []; default message [shopCategoryId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopCategoryId'; nested exception is java.lang.NumberFormatException: For input string: "null"]]
+2019-12-01 21:52:48.230  INFO 126308 --- [http-nio-8080-exec-5] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:52:48.232  INFO 126308 --- [http-nio-8080-exec-5] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 21:52:48.233  INFO 126308 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2019-12-01 21:52:48.237  INFO 126308 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2019-12-01 21:55:05.274  INFO 126308 --- [http-nio-8080-exec-3] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:55:05.274  INFO 126308 --- [http-nio-8080-exec-3] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 21:55:17.410  INFO 126308 --- [http-nio-8080-exec-9] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:55:17.410  INFO 126308 --- [http-nio-8080-exec-9] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 21:56:00.626  INFO 126308 --- [http-nio-8080-exec-3] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-01 21:56:00.626  INFO 126308 --- [http-nio-8080-exec-3] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-01 23:55:56.786  INFO 126308 --- [Thread-169] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-01 23:55:56.787  INFO 126308 --- [Thread-169] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2019-12-01 23:55:56.790  INFO 126308 --- [Thread-169] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.

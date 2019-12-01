@@ -1,4 +1,4 @@
-package com.dyl.o2o.common.split;
+package com.dyl.o2o.common.multiDataSource;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 

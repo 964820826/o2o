@@ -1,6 +1,8 @@
 package com.dyl.o2o.domain;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.util.Date;
@@ -11,21 +13,29 @@ import java.util.Date;
  */
 @Data
 @TableName("tb_head_line")
+@ApiModel("头条对象")
 public class HeadLineDO {
-    //头条id
+    @ApiModelProperty(value = "头条id")
     private Long headLineId;
-    //头条名称
+
+    @ApiModelProperty(value = "头条名称")
     private String headLineName;
-    //头条指向链接
+
+    @ApiModelProperty(value = "头条指向链接")
     private String headLineLink;
-    //头条图片地址
+
+    @ApiModelProperty(value = "头条图片地址")
     private String headLineImg;
-    //权重
+
+    @ApiModelProperty(value = "权重越大，排名越靠前")
     private Integer priority;
-    //可用状态
+
+    @ApiModelProperty(value = "可用状态")
     private Integer enableStatus;
-    //创建时间
+
+    @ApiModelProperty(value = "创建时间")
     private Date createTime;
-    //最后修改时间
+
+    @ApiModelProperty(value = "最后修改时间")
     private Date lastEditTime;
 }

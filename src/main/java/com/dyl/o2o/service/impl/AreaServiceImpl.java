@@ -7,10 +7,11 @@ import com.dyl.o2o.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-/** 区域service层的实现类
+/**
+ * 区域service层的实现类
+ *
  * @author ：dyl
  * @date ：Created in 2019/9/19 23:15
  */
