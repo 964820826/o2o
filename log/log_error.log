@@ -2228,3 +2228,22 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 ### SQL: SELECT  shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status  FROM tb_shop     WHERE  shop_category_id=?               AND (enable_status = ?) ORDER BY priority DESC
 ### Cause: java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
 ; uncategorized SQLException; SQL state [null]; error code [0]; HikariDataSource HikariDataSource (HikariPool-1) has been closed.; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+2019-12-02 22:33:27.015 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field shopService in com.dyl.o2o.controller.ShopController required a bean of type 'com.dyl.o2o.service.ShopService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.dyl.o2o.service.ShopService' in your configuration.
+
+2019-12-02 23:56:47.055 [http-nio-8080-exec-10] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：toIndex = 1

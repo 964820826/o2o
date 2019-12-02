@@ -66,15 +66,17 @@ public class ShopController {
     }
 
     /**
-     * 查询店铺列表
+     * 分页查询店铺列表
      * @param shopDO
      * @return
      */
     @GetMapping(value = "/list")
     @ApiOperation(value = "分页查询店铺列表",notes = "若输入店铺类别为一级类别的id，则获取该一类下的所有店铺")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pageIndex",value = "页码",required = true),
+            @ApiImplicitParam(name = "pageSize",value = "每页显示数量",required = true)
+    })
     private R getShopListPage(ShopDO shopDO, int pageIndex, int pageSize, HttpServletRequest request){
-        //用于存放所有结果
-//        List<ShopDO> shopDOList = new ArrayList<>();
         //从session中获取店铺列表
         List<ShopDO> shopDOList = (List<ShopDO>) request.getSession().getAttribute("shopDOList");
         ShopDO oriShop = (ShopDO) request.getSession().getAttribute("oriShop");
@@ -85,42 +87,15 @@ public class ShopController {
         if (shopDOList == null || !shopDO.equals(oriShop)){
             //从数据库查询
             shopDOList = shopService.list(shopDO);
-
+            if (shopDOList.size() == 0){
+                return R.error(ResultCode.NO_RESULT);
+            }
             request.getSession().setAttribute("oriShop",shopDO);
             request.getSession().setAttribute("shopDOList",shopDOList);
         }
         //根据分页信息获取数据返回给前端
-        return R.success(shopDOList);
-//            shopDO.setEnableStatus(1);
-//            //判断店铺类别的输入条件是一级类别还是二级类别
-//            if (shopDO.getShopCategoryId() != null && shopDO.getShopCategoryId() > 0){
-//                ShopCategoryDO shopCategoryCondition = new ShopCategoryDO();
-//                shopCategoryCondition.setParentId(shopDO.getShopCategoryId());
-//                //获取下级店铺类别
-//                List<ShopCategoryDO> shopCategoryDOList = shopCategoryService.selectShopCategoryList(shopCategoryCondition);
-//                if (shopCategoryDOList.size() != 0){
-//                    //有下级类别，为一级店铺类别，获取该类别下所有二级类别
-//                    List<ShopDO> shopDOS = new ArrayList<>();
-//                    //根据店铺类别获取该店铺类别下的店铺，合并到一个列表中
-//                    for (ShopCategoryDO shopCategoryDO : shopCategoryDOList) {
-//                        shopDO.setShopCategoryId(shopCategoryDO.getShopCategoryId());
-//                        List<ShopDO> shoopDOS = shopService.list(new QueryWrapper<>(shopDO));
-//                        shopDOList.addAll(shoopDOS);
-//                    }
-//                } else {
-//                    //查询二级类别id查询店铺
-//                    shopDOList = shopService.list(new QueryWrapper<>(shopDO));
-//                }
-//            }else {
-//                //不依据店铺类别查询
-//                shopDOList = shopService.list(new QueryWrapper<>(shopDO));
-//            }
-//            if (shopDOList.size() ==0){
-//                return R.error(ResultCode.NO_RESULT);
-//            }
-//            request.getSession().setAttribute("shopDOList",shopDOList);
-//        }
-//        return R.success(shopDOList);
+        List<ShopDO> shopPageList = shopDOList.subList((pageIndex-1)*pageSize,pageIndex*pageSize);
+        return R.success(shopPageList);
     }
 
     /**

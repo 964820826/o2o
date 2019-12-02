@@ -11,6 +11,7 @@ import com.dyl.o2o.domain.ShopDO;
 import com.dyl.o2o.service.ShopService;
 import com.dyl.o2o.common.util.ImageUtil;
 import com.dyl.o2o.common.util.PathUtil;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -100,45 +101,41 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements Shop
     @Override
     public List<ShopDO> list(ShopDO shopDO) {
         List<ShopDO> shopDOList = new ArrayList<>();
-        //设置查询条件（可用、权重降序）
-//        shopDO.setEnableStatus(1);
+        //1.设置查询条件
         QueryWrapper<ShopDO> shopWrapper = new QueryWrapper<>(shopDO);
-        shopWrapper.eq("enable_status",1);
+        //若查询条件中未设置店铺状态，则只查询可用店铺
+        if (shopDO.getEnableStatus() != null){
+            shopWrapper.eq("enable_status",1);
+        }
         shopWrapper.orderByDesc("priority");
-        //判断店铺类别的输入条件是一级类别还是二级类别
+
+        //2.判断店铺类别的输入条件是一级类别还是二级类别
         if (shopDO.getShopCategoryId() != null && shopDO.getShopCategoryId() > 0) {
             ShopCategoryDO shopCategoryCondition = new ShopCategoryDO();
             shopCategoryCondition.setParentId(shopDO.getShopCategoryId());
             //获取下级店铺类别
-//            List<ShopCategoryDO> shopCategoryDOList = shopCategoryService.selectShopCategoryList(shopCategoryCondition);
             List<ShopCategoryDO> shopCategoryDOList = shopCategoryDao.selectList(new QueryWrapper<>(shopCategoryCondition));
             //有下级类别，则输入的是一级店铺类别，获取该类别下所有二级类别
             if (shopCategoryDOList.size() != 0) {
-//                List<ShopDO> shopDOS = new ArrayList<>();
-
+                //需要修改查询条件，故新建一个对象用来存放查询条件，不改变原shopDO数据
+                ShopDO shopCondition = new ShopDO();
+                BeanUtils.copyProperties(shopDO,shopCondition);
                 //根据店铺类别获取该店铺类别下的店铺，合并到一个列表中
                 for (ShopCategoryDO shopCategoryDO : shopCategoryDOList) {
-//                    shopWrapper.eq("shop_category_id",shopCategoryDO.getShopCategoryId());
                     //todo 值传递还是引用传递，此处的情况符合引用传递
-                    shopDO.setShopCategoryId(shopCategoryDO.getShopCategoryId());
-//                    List<ShopDO> shoopDOS = shopService.list(new QueryWrapper<>(shopDO));
-                    shopWrapper.setEntity(shopDO);
+                    shopCondition.setShopCategoryId(shopCategoryDO.getShopCategoryId());
+                    shopWrapper.setEntity(shopCondition);
                     List<ShopDO> shopDOS = shopDao.selectList(shopWrapper);
                     shopDOList.addAll(shopDOS);
                 }
             } else {
                 //查询二级类别id查询店铺
-//                shopDOList = shopService.list(new QueryWrapper<>(shopDO));
                 shopDOList = shopDao.selectList(shopWrapper);
             }
         } else {
             //不依据店铺类别查询
-//            shopDOList = shopService.list(new QueryWrapper<>(shopDO));
             shopDOList = shopDao.selectList(shopWrapper);
         }
-//        if (shopDOList.size() == 0) {
-////            return R.error(ResultCode.NO_RESULT);
-//        }
         return shopDOList;
     }
 
