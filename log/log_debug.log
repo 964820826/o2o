@@ -58,3 +58,282 @@
 2019-12-01 21:56:00.627 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE (parent_id IS NULL) ORDER BY priority DESC 
 2019-12-01 21:56:00.628 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 
 2019-12-01 21:56:00.629 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 6
+2019-12-02 14:04:19.257 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE (parent_id IS NULL) ORDER BY priority DESC 
+2019-12-02 14:04:19.266 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==>  Preparing: SELECT area_id,create_time,area_name,last_edit_time,priority FROM tb_area ORDER BY priority DESC 
+2019-12-02 14:04:19.277 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 
+2019-12-02 14:04:19.277 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==> Parameters: 
+2019-12-02 14:04:19.311 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 6
+2019-12-02 14:04:19.321 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - <==      Total: 3
+2019-12-02 14:07:58.394 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==>  Preparing: SELECT area_id,create_time,area_name,last_edit_time,priority FROM tb_area ORDER BY priority DESC 
+2019-12-02 14:07:58.396 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==> Parameters: 
+2019-12-02 14:07:58.397 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE (parent_id IS NULL) ORDER BY priority DESC 
+2019-12-02 14:07:58.402 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 
+2019-12-02 14:07:58.404 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - <==      Total: 3
+2019-12-02 14:07:58.415 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 6
+2019-12-02 14:08:02.562 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==>  Preparing: SELECT area_id,create_time,area_name,last_edit_time,priority FROM tb_area ORDER BY priority DESC 
+2019-12-02 14:08:02.562 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==> Parameters: 
+2019-12-02 14:08:02.562 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE (parent_id IS NULL) ORDER BY priority DESC 
+2019-12-02 14:08:02.563 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 
+2019-12-02 14:08:02.567 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.AreaDao.selectList - <==      Total: 3
+2019-12-02 14:08:02.569 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 6
+2019-12-02 14:09:40.209 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==>  Preparing: SELECT area_id,create_time,area_name,last_edit_time,priority FROM tb_area ORDER BY priority DESC 
+2019-12-02 14:09:40.209 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE (parent_id IS NULL) ORDER BY priority DESC 
+2019-12-02 14:09:40.237 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==> Parameters: 
+2019-12-02 14:09:40.237 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 
+2019-12-02 14:09:40.269 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - <==      Total: 3
+2019-12-02 14:09:40.271 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 6
+2019-12-02 14:12:55.932 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==>  Preparing: SELECT area_id,create_time,area_name,last_edit_time,priority FROM tb_area ORDER BY priority DESC 
+2019-12-02 14:12:55.935 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - ==> Parameters: 
+2019-12-02 14:12:55.938 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.AreaDao.selectList - <==      Total: 3
+2019-12-02 14:12:55.938 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE (parent_id IS NULL) ORDER BY priority DESC 
+2019-12-02 14:12:55.940 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 
+2019-12-02 14:12:55.944 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 6
+2019-12-02 14:36:22.839 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE enable_status=? 
+2019-12-02 14:36:22.841 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 14:36:22.857 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 14:37:02.526 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE enable_status=? 
+2019-12-02 14:37:02.527 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 14:37:02.540 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 14:37:50.553 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE enable_status=? 
+2019-12-02 14:37:50.555 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 14:37:50.567 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 14:38:53.468 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE enable_status=? 
+2019-12-02 14:38:53.728 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 14:38:53.947 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 16:04:55.778 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE enable_status=? 
+2019-12-02 16:04:55.781 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 16:04:55.797 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 16:06:59.187 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 16:06:59.434 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 16:06:59.637 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 16:13:07.089 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE area_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 16:13:07.091 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 2(Long), 1(Integer)
+2019-12-02 16:13:07.103 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 4
+2019-12-02 16:14:55.799 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE area_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 16:14:55.802 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 2(Long), 1(Integer)
+2019-12-02 16:14:55.815 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 4
+2019-12-02 16:15:46.279 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE area_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 16:15:46.281 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 2(Long), 1(Integer)
+2019-12-02 16:15:46.317 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 4
+2019-12-02 16:16:35.001 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE area_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 16:16:35.003 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 2(Long), 1(Integer)
+2019-12-02 16:16:35.016 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 4
+2019-12-02 16:52:01.599 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 16:52:01.859 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 16:52:02.094 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 16:55:09.435 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 16:55:09.460 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 16:55:09.489 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 16:55:55.064 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 16:55:55.066 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 16:55:55.069 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 16:56:48.698 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 16:56:48.721 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 16:56:48.745 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 16:57:18.251 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE area_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 16:57:18.253 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 2(Long), 1(Integer)
+2019-12-02 16:57:18.256 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 4
+2019-12-02 17:19:09.898 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:19:09.900 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 10(Long)
+2019-12-02 17:19:09.907 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 2
+2019-12-02 17:19:14.314 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND area_id=? AND (enable_status = ? AND shop_category = ?) ORDER BY priority DESC 
+2019-12-02 17:19:14.316 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 10(Long), 2(Long), 1(Integer), 14(Long)
+2019-12-02 17:20:59.556 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:20:59.861 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 17:21:00.269 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 17:23:02.374 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:23:02.377 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 10(Long)
+2019-12-02 17:23:02.384 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 2
+2019-12-02 17:23:04.123 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:23:04.125 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 10(Long), 1(Integer), 14(Long)
+2019-12-02 17:23:04.129 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:23:08.540 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:23:08.543 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 10(Long), 1(Integer), 14(Long), 15(Long)
+2019-12-02 17:23:08.547 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:24:13.771 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:24:13.772 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 10(Long)
+2019-12-02 17:24:13.782 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 2
+2019-12-02 17:24:46.798 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:24:46.801 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 10(Long), 1(Integer), 14(Long)
+2019-12-02 17:24:46.805 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:25:33.622 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:25:33.623 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 10(Long), 1(Integer), 14(Long), 15(Long)
+2019-12-02 17:25:33.625 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:25:43.649 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:25:43.653 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 20(Long)
+2019-12-02 17:25:43.657 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 0
+2019-12-02 17:25:44.162 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:25:44.165 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 20(Long), 1(Integer)
+2019-12-02 17:25:44.177 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 2
+2019-12-02 17:27:11.346 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:27:11.349 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 12(Long)
+2019-12-02 17:27:11.363 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 5
+2019-12-02 17:27:12.688 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:27:12.694 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 12(Long), 1(Integer), 20(Long)
+2019-12-02 17:27:12.697 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:27:15.462 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:27:15.464 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 12(Long), 1(Integer), 20(Long), 22(Long)
+2019-12-02 17:27:15.467 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:27:17.488 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:27:17.491 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 12(Long), 1(Integer), 20(Long), 22(Long), 33(Long)
+2019-12-02 17:27:17.496 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:28:04.612 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:28:04.615 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 12(Long), 1(Integer), 20(Long), 22(Long), 33(Long), 34(Long)
+2019-12-02 17:28:04.620 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:28:07.569 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:28:07.572 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 12(Long), 1(Integer), 20(Long), 22(Long), 33(Long), 34(Long), 35(Long)
+2019-12-02 17:28:07.576 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:28:36.941 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:28:36.949 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 12(Long)
+2019-12-02 17:28:36.969 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 5
+2019-12-02 17:28:55.908 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:28:55.911 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 12(Long), 1(Integer), 20(Long)
+2019-12-02 17:28:55.914 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:36:43.477 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:36:43.478 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 12(Long), 1(Integer), 20(Long), 22(Long)
+2019-12-02 17:36:43.480 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:36:43.485 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:36:43.485 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 12(Long), 1(Integer), 20(Long), 22(Long), 33(Long)
+2019-12-02 17:36:43.486 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:36:43.490 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:36:43.491 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 12(Long), 1(Integer), 20(Long), 22(Long), 33(Long), 34(Long)
+2019-12-02 17:36:43.493 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:36:43.499 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ? AND shop_category_id = ?) ORDER BY priority DESC 
+2019-12-02 17:36:43.500 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 12(Long), 1(Integer), 20(Long), 22(Long), 33(Long), 34(Long), 35(Long)
+2019-12-02 17:36:43.501 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:39:33.461 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:39:33.739 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 12(Long)
+2019-12-02 17:39:33.958 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 5
+2019-12-02 17:39:46.202 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:39:46.204 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 20(Long), 1(Integer)
+2019-12-02 17:39:46.218 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 2
+2019-12-02 17:40:09.786 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:40:09.787 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 22(Long), 1(Integer)
+2019-12-02 17:40:09.800 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 3
+2019-12-02 17:40:29.086 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:40:29.089 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 33(Long), 1(Integer)
+2019-12-02 17:40:29.092 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:40:31.091 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:40:31.097 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 34(Long), 1(Integer)
+2019-12-02 17:40:31.101 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:40:31.824 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:40:31.825 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 35(Long), 1(Integer)
+2019-12-02 17:40:31.827 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:42:02.444 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:42:02.447 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 12(Long)
+2019-12-02 17:42:02.450 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 5
+2019-12-02 17:42:02.456 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:42:02.457 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 20(Long), 1(Integer)
+2019-12-02 17:42:02.459 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 2
+2019-12-02 17:42:02.466 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:42:02.467 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 22(Long), 1(Integer)
+2019-12-02 17:42:02.468 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 3
+2019-12-02 17:42:02.472 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:42:02.472 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 33(Long), 1(Integer)
+2019-12-02 17:42:02.473 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:42:02.479 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:42:02.479 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 34(Long), 1(Integer)
+2019-12-02 17:42:02.480 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:42:02.487 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:42:41.781 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:42:42.080 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 1(Integer)
+2019-12-02 17:42:42.378 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 5
+2019-12-02 17:43:20.484 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_desc=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:43:20.486 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 22(String), 1(Integer)
+2019-12-02 17:43:20.488 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:43:34.390 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:43:34.392 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 22(Long)
+2019-12-02 17:43:34.395 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 0
+2019-12-02 17:43:39.405 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:43:39.408 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 22(Long), 1(Integer)
+2019-12-02 17:43:39.426 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 3
+2019-12-02 17:43:56.287 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:43:56.291 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 12(Long)
+2019-12-02 17:43:56.306 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 5
+2019-12-02 17:43:59.079 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:43:59.082 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 20(Long), 1(Integer)
+2019-12-02 17:43:59.096 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 2
+2019-12-02 17:44:00.588 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:44:00.588 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 22(Long), 1(Integer)
+2019-12-02 17:44:00.590 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 3
+2019-12-02 17:44:01.154 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:44:01.155 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 33(Long), 1(Integer)
+2019-12-02 17:44:01.156 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:44:01.808 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:44:01.809 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 34(Long), 1(Integer)
+2019-12-02 17:44:01.810 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:44:02.389 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:44:02.390 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 35(Long), 1(Integer)
+2019-12-02 17:44:02.391 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:44:17.196 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:44:17.197 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 12(Long)
+2019-12-02 17:44:17.200 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 5
+2019-12-02 17:44:17.204 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:44:17.204 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 20(Long), 1(Integer)
+2019-12-02 17:44:17.206 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 2
+2019-12-02 17:44:23.200 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:44:23.203 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 22(Long), 1(Integer)
+2019-12-02 17:44:23.221 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 3
+2019-12-02 17:44:24.826 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:44:24.827 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 33(Long), 1(Integer)
+2019-12-02 17:44:24.828 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:44:25.040 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:44:25.041 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 34(Long), 1(Integer)
+2019-12-02 17:44:25.042 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:44:25.241 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:44:25.242 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 35(Long), 1(Integer)
+2019-12-02 17:44:25.245 [http-nio-8080-exec-8] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:45:48.392 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:45:48.393 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 12(Long)
+2019-12-02 17:45:48.394 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 5
+2019-12-02 17:45:48.397 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:45:48.397 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 20(Long), 1(Integer)
+2019-12-02 17:45:48.399 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 2
+2019-12-02 17:45:48.927 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:45:48.927 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 22(Long), 1(Integer)
+2019-12-02 17:45:48.929 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 3
+2019-12-02 17:45:49.151 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:45:49.153 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 33(Long), 1(Integer)
+2019-12-02 17:45:49.155 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:45:49.337 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:45:49.338 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 34(Long), 1(Integer)
+2019-12-02 17:45:49.339 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:45:49.585 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:45:49.585 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 35(Long), 1(Integer)
+2019-12-02 17:45:49.586 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:51:16.321 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:51:16.734 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 12(Long)
+2019-12-02 17:51:17.039 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 5
+2019-12-02 17:51:20.331 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:51:20.333 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 20(Long), 1(Integer)
+2019-12-02 17:51:20.359 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 2
+2019-12-02 17:51:21.692 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:51:21.693 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 22(Long), 1(Integer)
+2019-12-02 17:51:21.695 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 3
+2019-12-02 17:51:22.195 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:51:22.196 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 33(Long), 1(Integer)
+2019-12-02 17:51:22.197 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:51:22.913 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:51:22.915 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 34(Long), 1(Integer)
+2019-12-02 17:51:22.917 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:51:23.346 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:51:23.347 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 35(Long), 1(Integer)
+2019-12-02 17:51:23.349 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:52:37.374 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT create_time,shop_category_id,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE parent_id=? 
+2019-12-02 17:52:37.377 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 12(Long)
+2019-12-02 17:52:37.387 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 5
+2019-12-02 17:56:05.045 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:56:05.045 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 20(Long), 1(Integer)
+2019-12-02 17:56:05.046 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 2
+2019-12-02 17:56:05.484 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:56:05.485 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 22(Long), 1(Integer)
+2019-12-02 17:56:05.489 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 3
+2019-12-02 17:56:05.910 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:56:05.911 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 33(Long), 1(Integer)
+2019-12-02 17:56:05.912 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:56:06.235 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:56:06.236 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 34(Long), 1(Integer)
+2019-12-02 17:56:06.237 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0
+2019-12-02 17:56:06.449 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE shop_category_id=? AND (enable_status = ?) ORDER BY priority DESC 
+2019-12-02 17:56:06.449 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - ==> Parameters: 35(Long), 1(Integer)
+2019-12-02 17:56:06.449 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ShopDao.selectList - <==      Total: 0

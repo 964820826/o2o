@@ -1,6 +1,8 @@
 $(function () {
     //加载可选店铺类别
     getShopCategory();
+    //加载区域选项
+    getAreaList();
 })
 
 //当前页面是否在加载中
@@ -36,4 +38,28 @@ function getShopCategory() {
             $("#shoplist-search-div").html(shopCategoryHtml);
         }
     })
+}
+
+/**
+ * 获取区域列表
+ */
+function getAreaList() {
+    $.getJSON(areaListUrl,function (data) {
+        if (data.code == 0){
+            //后台获取到的区域列表
+            var areaList = data.data;
+            var areaHtml = '<option value = "">全部区域</option>';
+            areaList.forEach(function (item) {
+                areaHtml += '<option value = "' + item.areaId + '">' + item.areaName + '</option>';
+            })
+            $("#area-search").html(areaHtml);
+        }
+    })
+}
+
+/**
+ * 获取分页展示的店铺信息
+ */
+function showItems() {
+
 }

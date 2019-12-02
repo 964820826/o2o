@@ -6,6 +6,7 @@ import com.dyl.o2o.domain.ShopDO;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.util.List;
 
 /** 店铺相关的service层
  * @author ：dyl
@@ -19,4 +20,11 @@ public interface ShopService extends IService<ShopDO> {
      * @param img
      */
     void update(ShopDO shopDO, File img) throws Exception;
+
+    /**
+     * 查询店铺列表
+     * @param shopDO
+     * @return
+     */
+    List<ShopDO> list(ShopDO shopDO);
 }
