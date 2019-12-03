@@ -3,14 +3,17 @@ $(function () {
     getShopCategory();
     //加载区域选项
     getAreaList();
+    //预加载一页的店铺列表
+    showItems(pageIndex,pageSize);
+
 })
 
 //当前页面是否在加载中
 var loading = false;
 //页码
-var pageNum = 1;
+var pageIndex = 1;
 //一页最多显示条数
-var pageSize = 10;
+var pageSize = 2;
 //获取店铺列表的url
 var shopListUrl = '/shop/list';
 //获取店铺类别的url
@@ -19,10 +22,10 @@ var shopCategoryListUrl = '/shopCategory/list';
 var areaListUrl = '/area/list';
 //从请求地址中获取类别id
 var shopCategoryId = getQueryString("shopCategoryId");
+//列表最多加载多少店铺信息
+var maxItems = 500;
 
-/**
- * 加载可选店铺类别
- */
+// 加载可选店铺类别
 function getShopCategory() {
     if (shopCategoryId != null){
         shopCategoryListUrl = shopCategoryListUrl + '?shopCategoryId=' + shopCategoryId;
@@ -40,9 +43,7 @@ function getShopCategory() {
     })
 }
 
-/**
- * 获取区域列表
- */
+// 获取区域列表
 function getAreaList() {
     $.getJSON(areaListUrl,function (data) {
         if (data.code == 0){
@@ -57,9 +58,75 @@ function getAreaList() {
     })
 }
 
-/**
- * 获取分页展示的店铺信息
- */
-function showItems() {
-
+// 获取分页展示的店铺信息
+function showItems(pageIndex, pageSize) {
+    //拼接分页查询店铺列表的url
+    var shopPageUrl = shopListUrl + '?pageIndex=' + pageIndex + '&pageSize=' + pageSize;
+        //+ '&shopName=' + shopName + '&shopCategoryId=' + shopCategoryId + '&areaId=' + areaId;
+    //设置加载符，若正在加载中就不能再次访问后台
+    loading = true;
+    //访问后台
+    $.getJSON(shopPageUrl,function (data) {
+        if (data.code == 0){
+            //取出分页查询到的店铺列表信息
+            var shopList = data.data;
+            var shopListHtml = '';
+            shopList.forEach(function (item) {
+                shopListHtml +=
+                    '<div class="card" data-shop-id="' + item.shopId + '">' +
+                        '<div class="card-header">' + item.shopName + '</div>' +
+                        '<div class="card-content">' +
+                            '<div class="list-block media-list">' +
+                                '<ul>' +
+                                    '<li class="item-content">' +
+                                        '<div class="item-media">' +
+                                            '<img src="' + item.shopImg + '" width="44">' +
+                                        '</div>' +
+                                        '<div class="item-inner">' +
+                                            '<div class="item-subtitle">'+ item.shopDesc + '</div>' +
+                                        '</div>' +
+                                    '</li>' +
+                                '</ul>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="card-footer">' +
+                            '<p class="color-gray">' + new Date(item.lastEditTime).format("yyyy-MM-dd") + '更新</p>' +
+                            '<span>点击查看</span>' +
+                        '</div>' +
+                    '</div>'
+            })
+            //将生成的html拼接到页面的店铺列表末尾
+            $(".shop-list").append(shopListHtml);
+            //获取已加载的长度，最多只允许加载500条
+            var total = $(".shop-list").length;
+            if (total >= maxItems){
+                //加载完成则注销无限加载事件，防止不必要的加载
+                $.detachInfiniteScroll($(".infinite-scroll"));
+                //删除加载提示符
+                $(".infinite-scroll-preloader").remove();
+            }else {
+                //页面还可加载，则页码+1
+                pageIndex += 1;
+                //设置加载符为false
+                loading = false;
+                //刷新页面，显示新加载的店铺
+                $.refreshScroller();
+            }
+        }
+    })
 }
+
+//todo 无级滚动
+//下滑屏幕自动进行分页搜索
+$(document).on('infinite','.infinite-scroll-bottom',function () {
+    if (loading){
+        return;
+    }
+    showItems(pageSize,pageIndex);
+})
+
+//点击卡片进入对应店铺的详情叶
+$('.card').on('click','.card',function (obj) {
+    var shopId = obj.currentTarget.dataset.shopId;
+    window.location.href = '/shopdetail/shopId';
+})

@@ -94,7 +94,12 @@ public class ShopController {
             request.getSession().setAttribute("shopDOList",shopDOList);
         }
         //根据分页信息获取数据返回给前端
-        List<ShopDO> shopPageList = shopDOList.subList((pageIndex-1)*pageSize,pageIndex*pageSize);
+        int beginIndex = (pageIndex-1)*pageSize;
+        int endIndex = pageIndex*pageSize;
+        if (shopDOList.size() < endIndex){
+            endIndex = shopDOList.size();
+        }
+        List<ShopDO> shopPageList = shopDOList.subList(beginIndex,endIndex);
         return R.success(shopPageList);
     }
 

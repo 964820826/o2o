@@ -2247,3 +2247,17 @@ Action:
 Consider defining a bean of type 'com.dyl.o2o.service.ShopService' in your configuration.
 
 2019-12-02 23:56:47.055 [http-nio-8080-exec-10] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：toIndex = 1
+2019-12-03 15:07:55.768 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'head_line_img' in 'field list'
+### The error may exist in com/dyl/o2o/dao/HeadLineDao.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  create_time,head_line_img,head_line_name,head_line_link,last_edit_time,priority,enable_status,head_line_id  FROM tb_head_line           ORDER BY priority DESC
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'head_line_img' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'head_line_img' in 'field list'
+2019-12-03 15:20:16.012 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "index"
+2019-12-03 15:27:01.172 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+2019-12-03 15:29:33.444 [http-nio-8080-exec-10] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+2019-12-03 15:30:09.520 [http-nio-8080-exec-7] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：toIndex = 10
+2019-12-03 15:56:29.948 [http-nio-8080-exec-9] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：toIndex = 3
+2019-12-03 15:57:35.062 [http-nio-8080-exec-7] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：toIndex = 3

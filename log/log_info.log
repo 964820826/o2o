@@ -43,3 +43,183 @@
 2019-12-03 00:01:16.389 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2019-12-03 00:01:16.392 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
 2019-12-03 00:01:36.975 [Thread-37] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-03 15:04:44.275 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-laptop with PID 489944 (D:\IDEAWorkspace\git\o2o\target\classes started by MI in D:\IDEAWorkspace\git\o2o)
+2019-12-03 15:04:44.281 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-03 15:04:44.353 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-03 15:04:44.353 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-03 15:04:46.319 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$24fc9822] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-03 15:04:46.752 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-03 15:04:46.782 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-03 15:04:46.782 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-03 15:04:46.910 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-03 15:04:46.911 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2557 ms
+2019-12-03 15:04:48.046 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-03 15:04:48.190 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-03 15:04:48.244 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-03 15:04:48.283 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-03 15:04:48.468 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-03 15:04:48.489 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-03 15:04:48.531 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-03 15:04:48.735 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-03 15:04:48.739 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 5.685 seconds (JVM running for 8.42)
+2019-12-03 15:07:55.025 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-03 15:07:55.026 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-03 15:07:55.036 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2019-12-03 15:07:55.456 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:07:55.457 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:07:55.474 [http-nio-8080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-03 15:07:55.614 [http-nio-8080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-03 15:11:23.000 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:11:23.001 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:11:45.388 [http-nio-8080-exec-6] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:11:45.388 [http-nio-8080-exec-6] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:13:06.547 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:13:06.548 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:13:12.863 [http-nio-8080-exec-6] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:13:12.864 [http-nio-8080-exec-6] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:13:12.865 [http-nio-8080-exec-8] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:13:12.865 [http-nio-8080-exec-8] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:20:13.243 [http-nio-8080-exec-6] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:20:13.244 [http-nio-8080-exec-6] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:20:13.246 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:20:13.246 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:20:18.064 [http-nio-8080-exec-5] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:20:18.065 [http-nio-8080-exec-5] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:20:18.065 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:20:18.065 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:20:20.114 [http-nio-8080-exec-10] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:20:20.115 [http-nio-8080-exec-10] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:20:21.869 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:20:21.869 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:20:23.389 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:20:23.390 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:20:23.390 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:20:23.390 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:21:33.293 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:21:33.293 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:21:33.303 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:21:33.303 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:22:03.469 [http-nio-8080-exec-2] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:22:03.469 [http-nio-8080-exec-2] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:22:03.469 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:22:03.470 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:25:48.231 [http-nio-8080-exec-8] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:25:48.231 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:25:48.231 [http-nio-8080-exec-8] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:25:48.231 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:27:01.172 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:27:01.172 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:27:01.172 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:27:01.172 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:28:29.264 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:28:29.264 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:28:29.265 [http-nio-8080-exec-8] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:28:29.265 [http-nio-8080-exec-8] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:29:36.226 [http-nio-8080-exec-8] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:29:36.227 [http-nio-8080-exec-8] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:29:36.227 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:29:36.228 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:30:07.192 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:30:07.193 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:56:24.179 [http-nio-8080-exec-8] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:56:24.179 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:56:24.179 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:56:24.179 [http-nio-8080-exec-8] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:56:56.158 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:56:56.158 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:56:56.159 [http-nio-8080-exec-8] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:56:56.159 [http-nio-8080-exec-8] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:57:40.167 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:57:40.168 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 15:57:40.169 [http-nio-8080-exec-5] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 15:57:40.169 [http-nio-8080-exec-5] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 16:06:13.074 [Thread-20] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-03 16:06:13.076 [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-12-03 16:06:13.081 [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-12-03 16:07:20.987 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-laptop with PID 498180 (D:\IDEAWorkspace\git\o2o\target\classes started by MI in D:\IDEAWorkspace\git\o2o)
+2019-12-03 16:07:20.992 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-03 16:07:21.051 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-03 16:07:21.051 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-03 16:07:22.534 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bef5d05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-03 16:07:22.939 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-03 16:07:22.962 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-03 16:07:22.963 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-03 16:07:23.063 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-03 16:07:23.064 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2013 ms
+2019-12-03 16:07:24.119 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-03 16:07:24.252 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-03 16:07:24.306 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-03 16:07:24.352 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-03 16:07:24.571 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-03 16:07:24.597 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-03 16:07:24.645 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-03 16:07:24.909 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-03 16:07:24.913 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 4.756 seconds (JVM running for 7.741)
+2019-12-03 16:07:27.928 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-03 16:07:27.929 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-03 16:07:27.941 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2019-12-03 16:07:28.713 [http-nio-8080-exec-5] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 16:07:28.714 [http-nio-8080-exec-5] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 16:07:28.723 [http-nio-8080-exec-6] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 16:07:28.724 [http-nio-8080-exec-6] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 16:07:28.742 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-03 16:07:29.066 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-03 16:07:39.390 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 16:07:39.390 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 16:09:07.976 [http-nio-8080-exec-6] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 16:09:07.977 [http-nio-8080-exec-6] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 16:09:07.977 [http-nio-8080-exec-5] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 16:09:07.977 [http-nio-8080-exec-5] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:13:57.032 [http-nio-8080-exec-8] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:13:57.035 [http-nio-8080-exec-8] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:13:57.036 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:13:57.036 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:14:02.138 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:14:02.138 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:17:50.626 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:17:50.627 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:17:50.627 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:17:50.627 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:21:15.417 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:21:15.418 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:21:15.418 [http-nio-8080-exec-10] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:21:15.419 [http-nio-8080-exec-10] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:21:44.256 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:21:44.257 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:21:44.258 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:21:44.260 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:22:00.048 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:22:02.577 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:22:02.578 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:22:02.578 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:23:13.364 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:23:13.365 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:23:13.366 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:23:13.366 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:25:34.889 [http-nio-8080-exec-5] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:25:34.890 [http-nio-8080-exec-5] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:25:34.890 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:25:34.890 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:28:46.158 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:28:46.159 [http-nio-8080-exec-8] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:28:46.159 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:28:46.159 [http-nio-8080-exec-8] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:31:18.687 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:31:18.688 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:31:30.028 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:31:30.029 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:37:35.149 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:37:36.754 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:37:36.754 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:37:36.754 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:38:02.060 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:38:02.060 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:38:06.884 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:38:06.886 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:38:46.456 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:38:46.456 [http-nio-8080-exec-10] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.AreaDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-03 17:38:46.456 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:38:46.456 [http-nio-8080-exec-10] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-03 17:56:15.652 [Thread-19] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-03 17:56:15.658 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-12-03 17:56:15.664 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
