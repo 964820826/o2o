@@ -1,11 +1,13 @@
 $(function () {
+    // 初始化页面
+    $.init();
+
     //加载可选店铺类别
-    getShopCategory();
+    getShopCategory(shopCategoryId);
     //加载区域选项
     getAreaList();
     //预加载一页的店铺列表
     showItems(pageIndex,pageSize);
-
 })
 
 //当前页面是否在加载中
@@ -13,22 +15,26 @@ var loading = false;
 //页码
 var pageIndex = 1;
 //一页最多显示条数
-var pageSize = 2;
+var pageSize = 5;
 //获取店铺列表的url
 var shopListUrl = '/shop/list';
 //获取店铺类别的url
 var shopCategoryListUrl = '/shopCategory/list';
 //获取区域列表的url
 var areaListUrl = '/area/list';
-//从请求地址中获取类别id
+//店铺类别查询条件(请求地址中获取类别id)
 var shopCategoryId = getQueryString("shopCategoryId");
 //列表最多加载多少店铺信息
 var maxItems = 500;
+//店铺名模糊查询条件
+var shopName;
+//区域查询条件
+var areaId;
 
 // 加载可选店铺类别
-function getShopCategory() {
-    if (shopCategoryId != null){
-        shopCategoryListUrl = shopCategoryListUrl + '?shopCategoryId=' + shopCategoryId;
+function getShopCategory(id) {
+    if (id != null){
+        shopCategoryListUrl = shopCategoryListUrl + '?shopCategoryId=' + id;
     }
     $.getJSON(shopCategoryListUrl, function (data) {
         if (data.code == 0){
@@ -59,10 +65,19 @@ function getAreaList() {
 }
 
 // 获取分页展示的店铺信息
-function showItems(pageIndex, pageSize) {
+function showItems(index, size) {
     //拼接分页查询店铺列表的url
-    var shopPageUrl = shopListUrl + '?pageIndex=' + pageIndex + '&pageSize=' + pageSize;
-        //+ '&shopName=' + shopName + '&shopCategoryId=' + shopCategoryId + '&areaId=' + areaId;
+    var shopPageUrl = shopListUrl + '?pageIndex=' + index + '&pageSize=' + size;
+    // + '&shopName=' + shopName + '&shopCategoryId=' + shopCategoryId + '&areaId=' + areaId;
+    if (shopCategoryId != null){
+        shopPageUrl += '&shopCategoryId=' + shopCategoryId;
+    }
+    if (shopName != null){
+        shopPageUrl += '&shopName=' + shopName;
+    }
+    if (areaId != null){
+        shopPageUrl +='&areaId=' + areaId;
+    }
     //设置加载符，若正在加载中就不能再次访问后台
     loading = true;
     //访问后台
@@ -99,7 +114,7 @@ function showItems(pageIndex, pageSize) {
             $(".shop-list").append(shopListHtml);
             //获取已加载的长度，最多只允许加载500条
             var total = $(".shop-list").length;
-            if (total >= maxItems){
+            if (total >= maxItems || shopList.length != size){
                 //加载完成则注销无限加载事件，防止不必要的加载
                 $.detachInfiniteScroll($(".infinite-scroll"));
                 //删除加载提示符
@@ -116,14 +131,25 @@ function showItems(pageIndex, pageSize) {
     })
 }
 
-//todo 无级滚动
 //下滑屏幕自动进行分页搜索
 $(document).on('infinite','.infinite-scroll-bottom',function () {
     if (loading){
         return;
     }
-    showItems(pageSize,pageIndex);
+    showItems(pageIndex,pageSize);
 })
+
+//点击店铺类别清空原先列表，重置页面，按照新的条件去查询
+$('#shoplist-search-div').on('click','button',function (obj) {
+    var shopCategoryId = obj.valueOf();
+    //重新加载可选店铺类别列表
+    getShopCategory(shopCategoryId);
+    $('#list-div').empty();
+    pageIndex = 1;
+    showItems(pageIndex,pageSize);
+})
+
+
 
 //点击卡片进入对应店铺的详情叶
 $('.card').on('click','.card',function (obj) {
