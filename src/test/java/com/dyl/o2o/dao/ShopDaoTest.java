@@ -21,6 +21,10 @@ public class ShopDaoTest extends BaseTest {
     private ShopDao shopDao;
 
     @Test
+    public void testSelectList(){
+        shopDao.selectList(new ShopDO());
+    }
+    @Test
     public void testInsertShop(){
         ShopDO shop = new ShopDO();
         shop.setShopName("王二烧烤");
@@ -41,19 +45,4 @@ public class ShopDaoTest extends BaseTest {
         System.out.println("更新 " + count + " 条记录！");
     }
 
-    @Test
-    public void testSelectList(){
-        Page<ShopDO> page = new Page<ShopDO>(1,5);
-        ShopDO shopDO = new ShopDO();
-        shopDO.setShopName("王二烤鱼");
-        QueryWrapper wrapper = new QueryWrapper(shopDO);
-
-        IPage<ShopDO> o = shopDao.selectPage(page,wrapper);
-        List<ShopDO> list = o.getRecords();
-        System.out.println("查询到"+list.size()+ "项结果");
-        for (ShopDO shop: list) {
-            System.out.println(shop.toString());
-        }
-        System.out.println("ok");
-    }
 }

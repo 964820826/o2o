@@ -101,15 +101,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements Shop
     @Override
     public List<ShopDO> list(ShopDO shopDO) {
         List<ShopDO> shopDOList = new ArrayList<>();
-        //1.设置查询条件
-        QueryWrapper<ShopDO> shopWrapper = new QueryWrapper<>(shopDO);
-        //若查询条件中未设置店铺状态，则只查询可用店铺
-        if (shopDO.getEnableStatus() != null){
-            shopWrapper.eq("enable_status",1);
-        }
-        shopWrapper.orderByDesc("priority");
-
-        //2.判断店铺类别的输入条件是一级类别还是二级类别
+        //判断店铺类别的输入条件是一级类别还是二级类别
         if (shopDO.getShopCategoryId() != null && shopDO.getShopCategoryId() > 0) {
             ShopCategoryDO shopCategoryCondition = new ShopCategoryDO();
             shopCategoryCondition.setParentId(shopDO.getShopCategoryId());
@@ -124,17 +116,16 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements Shop
                 for (ShopCategoryDO shopCategoryDO : shopCategoryDOList) {
                     //todo 值传递还是引用传递，此处的情况符合引用传递
                     shopCondition.setShopCategoryId(shopCategoryDO.getShopCategoryId());
-                    shopWrapper.setEntity(shopCondition);
-                    List<ShopDO> shopDOS = shopDao.selectList(shopWrapper);
+                    List<ShopDO> shopDOS = shopDao.selectList(shopCondition);
                     shopDOList.addAll(shopDOS);
                 }
             } else {
                 //查询二级类别id查询店铺
-                shopDOList = shopDao.selectList(shopWrapper);
+                shopDOList = shopDao.selectList(shopDO);
             }
         } else {
             //不依据店铺类别查询
-            shopDOList = shopDao.selectList(shopWrapper);
+            shopDOList = shopDao.selectList(shopDO);
         }
         return shopDOList;
     }

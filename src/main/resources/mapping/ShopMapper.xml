@@ -4,5 +4,14 @@
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dyl.o2o.dao.ShopDao">
 
-
+	<select id="selectList" resultType="com.dyl.o2o.domain.ShopDO">
+		select shop_id,shop_name,shop_desc,shop_img,priority,shop_addr,shop_phone,enable_status,advice,create_time,last_edit_time,owner_id,shop_category_id,area_id from tb_shop
+		<where>
+			<if test="shopDO.shopName != null and shopDO.shopName != ''">and shop_name like '%${shopDO.shopName}%'</if>
+			<if test="shopDO.shopCategoryId != null">and shop_category_id = #{shopDO.shopCategoryId}</if>
+			<if test="shopDO.areaId != null">and area_id = #{shopDO.areaId}</if>
+			<if test="shopDO.enableStatus != null"> and enable_status = #{shopDO.enableStatus}</if>
+		</where>
+		order by priority desc
+	</select>
 </mapper>
