@@ -2,6 +2,7 @@ package com.dyl.o2o.pageJump;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /** 店铺相关路由跳转controller
@@ -46,5 +47,14 @@ public class ShopJump {
     @GetMapping("/listShop")
     public String listShop(){
         return "shop/listShop";
+    }
+
+    /**
+     * 跳转到店铺详情页
+     * @return
+     */
+    @GetMapping("/detail")
+    public String shopDetail(){
+        return "shop/detail";
     }
 }

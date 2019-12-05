@@ -5,26 +5,12 @@ $(function () {
     //获取一级店铺类别
     getShopCategory();
 
-    // 若点击"我的"，则显示侧栏
-    $('#me').click(function () {
-        $.openPanel('#panel-right-demo');
-    });
-
-    $('.row').on('click', '.shop-classify', function (e) {
-        var shopCategoryId = e.currentTarget.dataset.category;
-        //将选取的店铺类别id设置到session中
-        // sessionStorage.setItem("shopCategoryId",shopCategoryId);
-        // var newUrl = '/shoplist';
-        var newUrl = '/listShop?parentId=' + shopCategoryId;
-        window.location.href = newUrl;
-    });
-
 });
 
 //获取头条的url
 var headLineUrl = '/headLine';
 //获取一级店铺类别的url
-var topShopCategory = '/shopCategory';
+var topShopCategory = '/shopCategory/list';
 
 //获取头条列表
 function getHeadLineList() {
@@ -43,12 +29,6 @@ function getHeadLineList() {
             //将拼接好的html语句设置到页面中
             $(".swiper-wrapper").html(swiperHtml);
             //设置轮播
-            // $(".swiper-container").swiper({
-            //     //每3秒换下张图片
-            //     autoplay:3000,
-            //     //用户对轮播图操作时，是否自动停止轮播
-            //     autoplayDisableOnInteraction:false
-            // })
             $(".swiper-container").swiper({
                 autoplay: 3000,
                 // 用户对轮播图进行操作时，是否自动停止autoplay
@@ -58,6 +38,7 @@ function getHeadLineList() {
     })
 }
 
+//获取店铺类别列表
 function getShopCategory() {
     $.getJSON(topShopCategory,function(data){
         if (data.code == 0){
@@ -79,3 +60,18 @@ function getShopCategory() {
         }
     })
 }
+
+//点击店铺类别调整到店铺列表
+$('.row').on('click', '.shop-classify', function (e) {
+    var shopCategoryId = e.currentTarget.dataset.category;
+    //将选取的店铺类别id设置到session中
+    // sessionStorage.setItem("shopCategoryId",shopCategoryId);
+    // var newUrl = '/shoplist';
+    var newUrl = '/shop/listShop?parentId=' + shopCategoryId;
+    window.location.href = newUrl;
+});
+
+// 若点击"我的"，则显示侧栏
+$('#me').click(function () {
+    $.openPanel('#panel-right-demo');
+});

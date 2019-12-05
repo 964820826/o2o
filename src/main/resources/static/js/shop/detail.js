@@ -2,10 +2,8 @@ $(function () {
 // 初始化页面
     $.init();
 
-    //加载可选店铺类别
-    getShopCategory(shopCategoryId);
-    //加载区域选项
-    getAreaList();
+    //加载可选商品类别
+    getProductCategory(shopId);
     //预加载一页的店铺列表
     showItems(pageIndex,pageSize);
 })
@@ -16,32 +14,25 @@ var loading = false;
 var pageIndex = 1;
 //一页最多显示条数
 var pageSize = 5;
-//获取店铺列表的url
-var shopListUrl = '/shop/list';
-//获取店铺类别的url
-var shopCategoryListUrl = '/shopCategory/list';
-//获取区域列表的url
-var areaListUrl = '/area/list';
-//店铺类别查询条件(请求地址中获取类别id)
-var shopCategoryId = getQueryString("shopCategoryId");
-//列表最多加载多少店铺信息
+//获取商品列表的url
+var productListUrl = '/product/list';
+//获取商品类别的url
+var productCategoryListUrl = '/productCategory/list';
+//商品类别查询条件(请求地址中获取类别id)
+var shopId = getQueryString("shopId");
+//列表最多加载多少商品信息
 var maxItems = 500;
-//店铺名模糊查询条件
-var shopName;
-//区域查询条件
-var areaId;
+//商品名模糊查询条件
+var productName;
 
 // 加载可选店铺类别
-function getShopCategory(id) {
-    var url = shopCategoryListUrl;
-    if (id != null){
-        url += '?parentId=' + id;
-    }
+function getProductCategory(id) {
+    var url = productCategoryListUrl+ '?shopId=' + id;
     $.getJSON(url, function (data) {
         if (data.code == 0){
             //后台获取到的店铺类别列表
-            var shopCategoryList = data.data;
-            var shopCategoryHtml = '<a href="#" class="col-33 button" data-category-id="">全部类别</a>';
+            var productCategoryList = data.data;
+            var productCategoryHtml = '<a href="#" class="col-33 button" data-category-id="">全部类别</a>';
             shopCategoryList.forEach(function (item) {
                 shopCategoryHtml += '<a href="#" class="col-33 button" data-category-id=' + item.shopCategoryId + '>' + item.shopCategoryName + '</a>';
             })
@@ -49,6 +40,11 @@ function getShopCategory(id) {
         }
     })
 }
+
+
+
+
+
 
 // 获取区域列表
 function getAreaList() {
@@ -90,25 +86,25 @@ function showItems(index, size) {
             shopList.forEach(function (item) {
                 shopListHtml +=
                     '<div class="card" data-shop-id="' + item.shopId + '">' +
-                        '<div class="card-header">' + item.shopName + '</div>' +
-                        '<div class="card-content">' +
-                            '<div class="list-block media-list">' +
-                                '<ul>' +
-                                    '<li class="item-content">' +
-                                        '<div class="item-media">' +
-                                            '<img src="' + item.shopImg + '" width="44">' +
-                                        '</div>' +
-                                        '<div class="item-inner">' +
-                                            '<div class="item-subtitle">'+ item.shopDesc + '</div>' +
-                                        '</div>' +
-                                    '</li>' +
-                                '</ul>' +
-                            '</div>' +
-                        '</div>' +
-                        '<div class="card-footer">' +
-                            '<p class="color-gray">' + new Date(item.lastEditTime).format("yyyy-MM-dd") + '更新</p>' +
-                            '<span>点击查看</span>' +
-                        '</div>' +
+                    '<div class="card-header">' + item.shopName + '</div>' +
+                    '<div class="card-content">' +
+                    '<div class="list-block media-list">' +
+                    '<ul>' +
+                    '<li class="item-content">' +
+                    '<div class="item-media">' +
+                    '<img src="' + item.shopImg + '" width="44">' +
+                    '</div>' +
+                    '<div class="item-inner">' +
+                    '<div class="item-subtitle">'+ item.shopDesc + '</div>' +
+                    '</div>' +
+                    '</li>' +
+                    '</ul>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="card-footer">' +
+                    '<p class="color-gray">' + new Date(item.lastEditTime).format("yyyy-MM-dd") + '更新</p>' +
+                    '<span>点击查看</span>' +
+                    '</div>' +
                     '</div>'
             })
             //将生成的html拼接到页面的店铺列表末尾
