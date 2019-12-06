@@ -31,6 +31,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public R NullExceptionHandler(Exception e){
         log.error("内部异常：" + e.getMessage());
+        e.printStackTrace();
         return R.error(ResultCode.INNER_ERROR);
     }
 }
