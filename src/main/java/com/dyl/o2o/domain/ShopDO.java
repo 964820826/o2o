@@ -4,6 +4,9 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.util.Date;
@@ -14,34 +17,48 @@ import java.util.Date;
  */
 @Data
 @TableName("tb_shop")
+@ApiModel(value = "shop对象",description = "店铺对象")
 public class ShopDO {
-    //店铺id
     @TableId(value = "shop_id", type = IdType.AUTO)
+    @ApiModelProperty(value = "店铺id")
     private Long shopId;
-    //店铺名称
+
+    @ApiModelProperty(value = "店铺名")
     private String shopName;
-    //店铺简介
+
+    @ApiModelProperty(value = "店铺简介")
     private String shopDesc;
-    //店铺图片
+
+    @ApiModelProperty(hidden = true)
     private String shopImg;
-    //权重
+
+    @ApiModelProperty(value = "权重（越大排名越靠前）")
     private Integer priority;
-    //地址
+
+    @ApiModelProperty(value = "地址")
     private String shopAddr;
-    //联系方式
+
+    @ApiModelProperty(value = "店铺联系电话")
     private String shopPhone;
-    //可用状态 -1:不可用 0:审核中 1:可用
+
+    @ApiModelProperty(value = "可用状态 -1:不可用 0:审核中 1:可用")
     private Integer enableStatus;
-    //建议（超管给店铺的建议）
+
+    @ApiModelProperty(value = "建议（超管给店铺的建议）")
     private String advice;
-    //创建时间
+
+    @ApiModelProperty(value = "创建时间")
     private Date createTime;
-    //最后修改时间
+
+    @ApiModelProperty(value = "最后修改时间")
     private Date lastEditTime;
-    //归属店主的id
+
+    @ApiModelProperty(value = "店主的personId")
     private Long ownerId;
-    //所在区域的id
-    private Long areaId;
-    //所在店铺类别的id
+
+    @ApiModelProperty(value = "店铺类别id")
     private Long shopCategoryId;
+
+    @ApiModelProperty(value = "区域id")
+    private Long areaId;
 }

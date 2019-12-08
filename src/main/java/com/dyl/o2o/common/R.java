@@ -1,5 +1,7 @@
 package com.dyl.o2o.common;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,14 +11,16 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @NoArgsConstructor
+@ApiModel("结果包装对象")
 public class R {
-    //状态码
+
+    @ApiModelProperty(value = "状态码，0为成功")
     private Integer code;
 
-    //状态信息
+    @ApiModelProperty(value = "状态信息")
     private String massage;
 
-    //成功返回的结果
+    @ApiModelProperty(value = "返回的结果内容")
     private Object data;
 
     /**

@@ -7,10 +7,11 @@ import com.dyl.o2o.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-/** 区域service层的实现类
+/**
+ * 区域service层的实现类
+ *
  * @author ：dyl
  * @date ：Created in 2019/9/19 23:15
  */
@@ -25,9 +26,8 @@ public class AreaServiceImpl implements AreaService {
         //权重降序查询所有区域信息
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.orderByDesc("priority");
-//        List<AreaDO> areaDoList = areaDao.selectList(queryWrapper);
-        List areaDoList = new ArrayList();
-        return areaDoList;
+        List<AreaDO> areaDOList = areaDao.selectList(queryWrapper);
+        return areaDOList;
     }
 
 }

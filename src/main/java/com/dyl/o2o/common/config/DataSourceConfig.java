@@ -3,14 +3,12 @@ package com.dyl.o2o.common.config;
 import com.baomidou.mybatisplus.core.MybatisConfiguration;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
-import com.dyl.o2o.common.split.DynamicDataSource;
-import com.dyl.o2o.common.split.DynamicDataSourceHolder;
-import com.dyl.o2o.common.split.DynamicDataSourceInterceptor;
+import com.dyl.o2o.common.multiDataSource.DynamicDataSource;
+import com.dyl.o2o.common.multiDataSource.DynamicDataSourceHolder;
+import com.dyl.o2o.common.multiDataSource.DynamicDataSourceInterceptor;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.type.JdbcType;
-import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -81,6 +79,10 @@ public class DataSourceConfig {
         return dynamicDataSource;
     }
 
+    /**
+     * 分页插件
+     * @return
+     */
     @Bean
     public PaginationInterceptor paginationInterceptor(){
         return new PaginationInterceptor();
@@ -114,7 +116,7 @@ public class DataSourceConfig {
         configuration.setCacheEnabled(false);
         sqlSessionFactory.setConfiguration(configuration);
         //加入上面两个拦截器
-        Interceptor interceptor[] = {paginationInterceptor(),dynamicDataSourceInterceptor()};
+        Interceptor[] interceptor = {paginationInterceptor(), dynamicDataSourceInterceptor()};
         sqlSessionFactory.setPlugins(interceptor);
         return sqlSessionFactory.getObject();
 

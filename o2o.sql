@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 本地数据库
+ Source Server         : 本地数据库-3306
  Source Server Type    : MySQL
  Source Server Version : 80017
  Source Host           : localhost:3306
@@ -11,11 +11,67 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 11/10/2019 23:59:23
+ Date: 08/12/2019 14:30:36
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for sys_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_menu`;
+CREATE TABLE `sys_menu`  (
+  `menu_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '权限名称',
+  `permission` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '权限标识',
+  PRIMARY KEY (`menu_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 87 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '权限表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for sys_role
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_role`;
+CREATE TABLE `sys_role`  (
+  `role_id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT '角色ID',
+  `role_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '角色名称',
+  PRIMARY KEY (`role_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for sys_role_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_role_menu`;
+CREATE TABLE `sys_role_menu`  (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `role_id` bigint(11) NULL DEFAULT NULL COMMENT '角色ID',
+  `menu_id` bigint(11) NULL DEFAULT NULL COMMENT '权限ID',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色与权限关系表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for sys_user
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_user`;
+CREATE TABLE `sys_user`  (
+  `user_id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
+  `password` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '密码',
+  `status` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '状态 PROHIBIT：禁用   NORMAL：正常',
+  PRIMARY KEY (`user_id`) USING BTREE,
+  UNIQUE INDEX `username`(`username`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '系统用户表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for sys_user_role
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_user_role`;
+CREATE TABLE `sys_user_role`  (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `user_id` bigint(11) NULL DEFAULT NULL COMMENT '用户ID',
+  `role_id` bigint(11) NULL DEFAULT NULL COMMENT '角色ID',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户与角色关系表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for tb_area
@@ -29,13 +85,15 @@ CREATE TABLE `tb_area`  (
   `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`area_id`) USING BTREE,
   UNIQUE INDEX `UK_AREA`(`area_name`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '区域信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '区域信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_area
 -- ----------------------------
 INSERT INTO `tb_area` VALUES (2, '东苑', 1, NULL, NULL);
 INSERT INTO `tb_area` VALUES (3, '西苑', 2, NULL, NULL);
+INSERT INTO `tb_area` VALUES (4, '南苑', 3, NULL, NULL);
+INSERT INTO `tb_area` VALUES (5, '西区', 0, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tb_head_line
@@ -156,7 +214,7 @@ CREATE TABLE `tb_product_category`  (
   `product_category_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '商品类别名称',
   `priority` int(2) NULL DEFAULT 0 COMMENT '权重',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `last_edit_id` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`product_category_id`) USING BTREE,
   INDEX `fk_procate_shop`(`shop_id`) USING BTREE,
   CONSTRAINT `fk_procate_shop` FOREIGN KEY (`shop_id`) REFERENCES `tb_shop` (`shop_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -182,8 +240,8 @@ DROP TABLE IF EXISTS `tb_product_img`;
 CREATE TABLE `tb_product_img`  (
   `product_img_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '商品图片id',
   `product_id` int(20) NOT NULL COMMENT '所属商品id（外键，只对应id）',
-  `img_addr` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '图片地址',
-  `img_desc` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '图片描述',
+  `product_img_addr` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '图片地址',
+  `product_img_desc` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '图片描述',
   `priority` int(2) NULL DEFAULT 0 COMMENT '权重（越大排名越靠前）',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`product_img_id`) USING BTREE,
@@ -245,28 +303,20 @@ CREATE TABLE `tb_shop`  (
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`shop_id`) USING BTREE,
+  UNIQUE INDEX `un_owner_id`(`owner_id`) USING BTREE COMMENT '一个人只能拥有一个店铺',
   INDEX `fk_shop_area`(`area_id`) USING BTREE,
   INDEX `fk_shop_profile`(`owner_id`) USING BTREE,
   INDEX `fk_shop_shopcate`(`shop_category_id`) USING BTREE,
   CONSTRAINT `fk_shop_area` FOREIGN KEY (`area_id`) REFERENCES `tb_area` (`area_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_shop_profile` FOREIGN KEY (`owner_id`) REFERENCES `tb_person` (`person_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_shop_shopcate` FOREIGN KEY (`shop_category_id`) REFERENCES `tb_shop_category` (`shop_category_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 55 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '店铺信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 66 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '店铺信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_shop
 -- ----------------------------
-INSERT INTO `tb_shop` VALUES (1, 1, 3, 14, '王三烧烤', '测试描述', '/upload/item/shop/1/2017091621545314507.jpg', 10, '正式地址', '13810524086', 0, '审核中', '2017-08-03 00:08:32', '2019-10-04 15:57:17');
 INSERT INTO `tb_shop` VALUES (28, 1, 2, 22, '王三烧烤', '不接受预订，请直接来店里进行消费', '/upload/images/item/shop/28/2017092601041469991.png', 50, '位于东苑2号', '13810524086', 1, NULL, '2017-09-26 01:04:13', '2019-10-04 15:57:17');
-INSERT INTO `tb_shop` VALUES (29, 1, 3, 22, '王三烧烤', '过来喝喝就知道啦，你是我的奶茶', '/upload/images/item/shop/29/2017092601054939287.jpg', 40, '西苑1号', '1211334565', 1, NULL, '2017-09-26 01:05:49', '2019-10-04 15:57:17');
-INSERT INTO `tb_shop` VALUES (30, 1, 2, 20, '王三烧烤', '敢说不好吃吗', '/upload/images/item/shop/30/2017092601063878278.jpg', 30, '东苑1号', '13628763625', 1, NULL, '2017-09-26 01:06:37', '2019-10-04 15:57:17');
-INSERT INTO `tb_shop` VALUES (31, 1, 2, 20, '王三烧烤', '干掉彪哥大排档', '/upload/images/item/shop/31/2017092601072177572.jpg', 20, '东苑南路', '126554437261', 1, NULL, '2017-09-26 01:07:21', '2019-10-04 15:57:17');
-INSERT INTO `tb_shop` VALUES (32, 1, 2, 22, '王三烧烤', '奶茶店再次来袭', '/upload/images/item/shop/32/2017092601081463136.jpg', 10, '东苑六路', '13652384615', 1, NULL, '2017-09-26 01:08:13', '2019-10-04 15:57:17');
-INSERT INTO `tb_shop` VALUES (35, 8, 2, 22, '王三烧烤', '奶茶来了', NULL, 0, '西苑7路', NULL, 0, NULL, NULL, '2019-10-04 15:57:17');
-INSERT INTO `tb_shop` VALUES (36, 1, 2, 10, '王wu烧烤', '', '', 0, '', '', 0, '', '2019-10-04 07:12:09', '2019-10-04 16:39:29');
-INSERT INTO `tb_shop` VALUES (37, 8, 3, 12, '王二烤鱼', '', 'E:\\IDEAWorkspace\\git\\o2o\\img\\37\\2019100821103976103.jpg', 0, '', '', 0, '', '2019-10-08 13:10:39', '2019-10-08 21:10:39');
-INSERT INTO `tb_shop` VALUES (48, 8, 3, 12, '王二烤鱼', '', '\\48\\2019100822084749611.jpg', 0, '', '', 0, '', '2019-10-08 14:08:45', '2019-10-08 22:08:47');
-INSERT INTO `tb_shop` VALUES (49, 8, 3, 12, '王二烤鱼', '', '\\49\\2019100822123168936.jpg', 0, '', '', 0, '', '2019-10-08 14:12:26', '2019-10-08 22:16:34');
+INSERT INTO `tb_shop` VALUES (29, 8, 3, 22, '王三烧烤', '过来喝喝就知道啦，你是我的奶茶', '/upload/images/item/shop/29/2017092601054939287.jpg', 40, '西苑1号', '1211334565', 1, NULL, '2017-09-26 01:05:49', '2019-11-28 22:06:25');
 
 -- ----------------------------
 -- Table structure for tb_shop_category
@@ -289,7 +339,6 @@ CREATE TABLE `tb_shop_category`  (
 -- ----------------------------
 -- Records of tb_shop_category
 -- ----------------------------
-INSERT INTO `tb_shop_category` VALUES (-1, 12, 'test3', '', NULL, 0, NULL, '2019-10-11 23:17:20');
 INSERT INTO `tb_shop_category` VALUES (10, NULL, '二手市场', '二手商品交易', '/upload/images/item/shopcategory/2017061223272255687.png', 100, '2017-06-04 20:10:58', '2017-06-12 23:27:22');
 INSERT INTO `tb_shop_category` VALUES (11, NULL, '美容美发', '美容美发', '/upload/images/item/shopcategory/2017061223273314635.png', 99, '2017-06-04 20:12:57', '2017-06-12 23:27:33');
 INSERT INTO `tb_shop_category` VALUES (12, NULL, '美食饮品', '美食饮品', '/upload/images/item/shopcategory/2017061223274213433.png', 98, '2017-06-04 20:15:21', '2017-06-12 23:27:42');

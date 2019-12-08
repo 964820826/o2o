@@ -1,2 +1,0 @@
-2019-09-29 22:45:30.337 [main] WARN  c.b.mybatisplus.core.metadata.TableInfoHelper - Warn: Could not find @TableId in Class: com.dyl.o2o.domain.AreaDO.
-2019-09-29 22:45:31.180 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.

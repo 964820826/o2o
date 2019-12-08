@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dyl.o2o.dao.ProductDao">
+<!--	<select id="selectPage" resultType="com.dyl.o2o.domain.ProductDO">-->
+<!--		SELECT-->
+<!--		product_desc,product_category_id,product_id,create_time,discount_price,normal_price,shop_id,last_edit_time,priority,product_thum,enable_status,product_name-->
+<!--		FROM tb_product-->
+<!--		<where>-->
+<!--			<if test="productDO.productName != null and productDO.productName != ''">and product_name like '%${productDO.productName}%'</if>-->
+<!--			<if test="productDO.productCategoryId != null">and product_category_id = ${productDO.productCategoryId}</if>-->
+<!--		</where>-->
+<!--		ORDER BY priority DESC-->
+<!--		LIMIT ${beginIndex},${pageSize}-->
+<!--	</select>-->
+</mapper>

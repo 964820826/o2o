@@ -13,9 +13,16 @@ public enum ResultCode {
     CAPTCHA_FAIL(10001,"验证码错误"),
     PARAM_NOT_COMPLETE(10002,"参数缺失"),
     PARAM_TYPE_ERROR(10003,"参数类型错误"),
+    NULL_PARAM(10004,"无法获取到参数异常"),
 
     //内部错误
-    INNER_ERROR(50001,"内部错误");
+    NO_RESULT(50000,"无相关数据"),
+    INNER_ERROR(50001,"内部错误"),
+    NO_AUTHORITY(50002,"无操作权限"),
+    IO_ERROR(50003,"数据传输异常"),
+
+    //业务异常
+    SERVICE_ERROR(99999,"业务异常");
 
     /**
      * 状态码
