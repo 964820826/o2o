@@ -3,6 +3,11 @@ package com.dyl.o2o.common.exception;
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.LockedException;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -31,7 +36,20 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public R NullExceptionHandler(Exception e){
         log.error("内部异常：" + e.getMessage());
-        e.printStackTrace();
         return R.error(ResultCode.INNER_ERROR);
     }
+
+    @ExceptionHandler(value = AccessDeniedException.class)
+    public R AccessDeniedExceptionHandler(AccessDeniedException e){
+        log.error("无操作权限：" + e.getMessage());
+        return R.error(ResultCode.NO_AUTHORITY);
+    }
+
+    @ExceptionHandler(value = AuthenticationException.class)
+    public R AuthenticationExceptionHandler(AuthenticationException  e){
+        log.error("未登陆：" + e.getMessage());
+        return R.error(ResultCode.NO_LOG_IN);
+    }
+
+    //todo 登陆失败异常处理
 }

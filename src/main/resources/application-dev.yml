@@ -24,6 +24,18 @@ spring:
 #      jdbc-url: jdbc:mysql://localhost:3307/o2o?useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
       driver-class-name: com.mysql.cj.jdbc.Driver
 
+#JWT配置
+jwt:
+  #密钥
+  secret: dyljwt
+  #HeaderKEY
+  tokenHeader: Authorization
+  #Token前缀字符
+  tokenPrefix: Sans-
+  #过期时间 单位秒 1天：86400 7天：604800
+  expiration: 86400
+  #配置不需要认证的接口
+  antMatchers: /index
 
   #开发工具
   devtools:

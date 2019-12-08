@@ -275,3 +275,309 @@ Consider the following:
 2019-12-08 14:30:26.271  INFO 12280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2019-12-08 14:30:26.272  INFO 12280 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.065 seconds (JVM running for 70087.736)
 2019-12-08 14:30:26.273  INFO 12280 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-08 18:34:57.869  INFO 12280 --- [Thread-68] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:34:58.362  INFO 12280 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 12280 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 18:34:58.363  INFO 12280 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 18:34:58.785  INFO 12280 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$650ed228] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 18:34:58.857  INFO 12280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-08 18:34:58.858  INFO 12280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-08 18:34:58.858  INFO 12280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-08 18:34:58.876  INFO 12280 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-12-08 18:34:58.876  INFO 12280 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 511 ms
+2019-12-08 18:34:58.938  WARN 12280 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductDO.
+2019-12-08 18:34:58.972  WARN 12280 --- [restartedMain] c.b.m.core.injector.AbstractMethod       : [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-08 18:34:58.991  WARN 12280 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-08 18:34:59.036  WARN 12280 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductCategoryDO.
+2019-12-08 18:34:59.061  WARN 12280 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductImgDO.
+2019-12-08 18:34:59.083  WARN 12280 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-08 18:34:59.201  INFO 12280 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-08 18:34:59.248  INFO 12280 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:34:59.265  INFO 12280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-08 18:34:59.275  INFO 12280 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-08 18:34:59.298  WARN 12280 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-08 18:34:59.352  INFO 12280 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-08 18:34:59.353  INFO 12280 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-08 18:34:59.357  INFO 12280 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-08 18:34:59.394  INFO 12280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 18:34:59.394  INFO 12280 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.086 seconds (JVM running for 84760.858)
+2019-12-08 18:34:59.396  INFO 12280 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-08 18:37:13.545  INFO 12280 --- [Thread-74] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:37:13.779  INFO 12280 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 12280 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 18:37:13.779  INFO 12280 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 18:37:14.249  INFO 12280 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$650ed228] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 18:37:14.330  INFO 12280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-08 18:37:14.331  INFO 12280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-08 18:37:14.331  INFO 12280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-08 18:37:14.351  INFO 12280 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-12-08 18:37:14.351  INFO 12280 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 570 ms
+2019-12-08 18:37:14.411  WARN 12280 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductDO.
+2019-12-08 18:37:14.443  WARN 12280 --- [restartedMain] c.b.m.core.injector.AbstractMethod       : [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-08 18:37:14.461  WARN 12280 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-08 18:37:14.501  WARN 12280 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductCategoryDO.
+2019-12-08 18:37:14.526  WARN 12280 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductImgDO.
+2019-12-08 18:37:14.547  WARN 12280 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-08 18:37:14.658  INFO 12280 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-08 18:37:14.697  INFO 12280 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:37:14.705  INFO 12280 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-08 18:37:14.714  INFO 12280 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-08 18:37:14.731  WARN 12280 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-08 18:37:14.773  INFO 12280 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-08 18:37:14.774  INFO 12280 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-08 18:37:14.779  INFO 12280 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-08 18:37:14.815  INFO 12280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 18:37:14.816  INFO 12280 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.073 seconds (JVM running for 84896.28)
+2019-12-08 18:37:14.817  INFO 12280 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-08 18:39:48.145  INFO 12280 --- [Thread-85] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:39:50.798  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 9408 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 18:39:50.801  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 18:39:50.836  INFO 9408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-08 18:39:50.837  INFO 9408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-08 18:39:51.885  INFO 9408 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37931338] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 18:39:52.213  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-08 18:39:52.232  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-08 18:39:52.232  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-08 18:39:52.321  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-08 18:39:52.321  INFO 9408 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1484 ms
+2019-12-08 18:39:52.682  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductDO.
+2019-12-08 18:39:52.739  WARN 9408 --- [restartedMain] c.b.m.core.injector.AbstractMethod       : [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-08 18:39:52.782  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-08 18:39:52.826  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductCategoryDO.
+2019-12-08 18:39:52.859  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductImgDO.
+2019-12-08 18:39:52.889  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-08 18:39:53.191  INFO 9408 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-08 18:39:53.303  INFO 9408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:39:53.344  INFO 9408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-08 18:39:53.373  INFO 9408 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-08 18:39:53.413  WARN 9408 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-08 18:39:53.540  INFO 9408 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9e45de49-1ad8-4b30-ad6f-2ff777455674
+
+2019-12-08 18:39:53.641  INFO 9408 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ff86f3, org.springframework.security.web.context.SecurityContextPersistenceFilter@6a57e156, org.springframework.security.web.header.HeaderWriterFilter@6cc5d3f9, org.springframework.security.web.csrf.CsrfFilter@6b583cc4, org.springframework.security.web.authentication.logout.LogoutFilter@467d6562, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1588e057, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3258493a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@76830cd8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f0f3ec0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6eddfe55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@154ee79d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a7315ac, org.springframework.security.web.session.SessionManagementFilter@2e56cd02, org.springframework.security.web.access.ExceptionTranslationFilter@cbbae1b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@76b391ff]
+2019-12-08 18:39:53.727  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-08 18:39:53.743  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-08 18:39:53.775  INFO 9408 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-08 18:39:53.959  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 18:39:53.962  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 3.735 seconds (JVM running for 4.383)
+2019-12-08 18:40:00.136  INFO 9408 --- [Thread-11] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:40:00.376  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 9408 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 18:40:00.376  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 18:40:00.875  INFO 9408 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37931338] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 18:40:00.958  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-08 18:40:00.959  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-08 18:40:00.959  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-08 18:40:00.972  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-08 18:40:00.973  INFO 9408 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 595 ms
+2019-12-08 18:40:01.060  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductDO.
+2019-12-08 18:40:01.117  WARN 9408 --- [restartedMain] c.b.m.core.injector.AbstractMethod       : [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-08 18:40:01.138  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-08 18:40:01.170  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductCategoryDO.
+2019-12-08 18:40:01.203  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductImgDO.
+2019-12-08 18:40:01.231  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-08 18:40:01.367  INFO 9408 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-08 18:40:01.410  INFO 9408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:40:01.419  INFO 9408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-08 18:40:01.428  INFO 9408 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-08 18:40:01.448  WARN 9408 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-08 18:40:01.482  INFO 9408 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fece403a-ca9f-4523-a5a9-e5938726c50a
+
+2019-12-08 18:40:01.492  INFO 9408 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27984543, org.springframework.security.web.context.SecurityContextPersistenceFilter@1aaf237f, org.springframework.security.web.header.HeaderWriterFilter@55399dc8, org.springframework.security.web.csrf.CsrfFilter@34e44093, org.springframework.security.web.authentication.logout.LogoutFilter@3a58dc55, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6866f65c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@590fa8d0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2a623856, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@60e87869, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@489df21, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1dc7c5a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75e9ff50, org.springframework.security.web.session.SessionManagementFilter@cd91aaf, org.springframework.security.web.access.ExceptionTranslationFilter@2f8637dc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b80def8]
+2019-12-08 18:40:01.531  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-08 18:40:01.532  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-08 18:40:01.538  INFO 9408 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-08 18:40:01.588  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 18:40:01.589  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.261 seconds (JVM running for 12.009)
+2019-12-08 18:40:01.591  INFO 9408 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-08 18:40:41.160  INFO 9408 --- [Thread-21] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:40:41.454  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 9408 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 18:40:41.455  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 18:40:41.882  INFO 9408 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37931338] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 18:40:41.949  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-08 18:40:41.950  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-08 18:40:41.950  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-08 18:40:41.962  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-08 18:40:41.962  INFO 9408 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 505 ms
+2019-12-08 18:40:42.029  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductDO.
+2019-12-08 18:40:42.070  WARN 9408 --- [restartedMain] c.b.m.core.injector.AbstractMethod       : [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-08 18:40:42.089  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-08 18:40:42.118  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductCategoryDO.
+2019-12-08 18:40:42.149  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductImgDO.
+2019-12-08 18:40:42.176  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-08 18:40:42.300  INFO 9408 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-08 18:40:42.344  INFO 9408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:40:42.352  INFO 9408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-08 18:40:42.362  INFO 9408 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-08 18:40:42.380  WARN 9408 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-08 18:40:42.409  INFO 9408 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a38e180d-ddf4-4b90-8553-538b1b105c23
+
+2019-12-08 18:40:42.418  INFO 9408 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a61a72b, org.springframework.security.web.context.SecurityContextPersistenceFilter@74d47c32, org.springframework.security.web.header.HeaderWriterFilter@57a6e4a3, org.springframework.security.web.csrf.CsrfFilter@46e5d852, org.springframework.security.web.authentication.logout.LogoutFilter@51d016a5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55bbbab0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6b2dfad, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@96d7701, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7acce11a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@228bea8d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42688183, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18b32a6, org.springframework.security.web.session.SessionManagementFilter@1c9b00bb, org.springframework.security.web.access.ExceptionTranslationFilter@7304a1a4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b7b089e]
+2019-12-08 18:40:42.455  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-08 18:40:42.455  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-08 18:40:42.461  INFO 9408 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-08 18:40:42.508  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 18:40:42.508  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.11 seconds (JVM running for 52.928)
+2019-12-08 18:40:42.510  INFO 9408 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-08 18:41:38.184  INFO 9408 --- [Thread-27] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:41:38.457  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 9408 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 18:41:38.457  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 18:41:38.928  INFO 9408 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37931338] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 18:41:39.017  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-08 18:41:39.018  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-08 18:41:39.018  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-08 18:41:39.031  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-08 18:41:39.031  INFO 9408 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 572 ms
+2019-12-08 18:41:39.099  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductDO.
+2019-12-08 18:41:39.145  WARN 9408 --- [restartedMain] c.b.m.core.injector.AbstractMethod       : [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-08 18:41:39.164  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-08 18:41:39.190  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductCategoryDO.
+2019-12-08 18:41:39.218  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductImgDO.
+2019-12-08 18:41:39.244  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-08 18:41:39.365  INFO 9408 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-08 18:41:39.406  INFO 9408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 18:41:39.415  INFO 9408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-08 18:41:39.424  INFO 9408 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-08 18:41:39.442  WARN 9408 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-08 18:41:39.472  INFO 9408 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2015b3b5-c282-40f3-8790-f0d56eda383d
+
+2019-12-08 18:41:39.481  INFO 9408 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4974be19, org.springframework.security.web.context.SecurityContextPersistenceFilter@17e191f4, org.springframework.security.web.header.HeaderWriterFilter@7124a6fb, org.springframework.security.web.csrf.CsrfFilter@97bac53, org.springframework.security.web.authentication.logout.LogoutFilter@799e7354, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@47d29906, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@626b20dc, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7d5fa91a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1bcddd5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1001d833, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44c6a7b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e96151e, org.springframework.security.web.session.SessionManagementFilter@432cb4f6, org.springframework.security.web.access.ExceptionTranslationFilter@1bc38487, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@271271bc]
+2019-12-08 18:41:39.517  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-08 18:41:39.517  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-08 18:41:39.522  INFO 9408 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-08 18:41:39.565  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 18:41:39.565  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.152 seconds (JVM running for 109.985)
+2019-12-08 18:41:39.567  INFO 9408 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-08 19:00:44.790  INFO 9408 --- [Thread-33] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 19:00:45.055  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 9408 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 19:00:45.055  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 19:00:45.463  INFO 9408 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37931338] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 19:00:45.529  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-08 19:00:45.529  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-08 19:00:45.529  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-08 19:00:45.541  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-08 19:00:45.541  INFO 9408 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 483 ms
+2019-12-08 19:00:45.605  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductDO.
+2019-12-08 19:00:45.643  WARN 9408 --- [restartedMain] c.b.m.core.injector.AbstractMethod       : [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-08 19:00:45.661  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-08 19:00:45.688  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductCategoryDO.
+2019-12-08 19:00:45.716  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductImgDO.
+2019-12-08 19:00:45.741  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-08 19:00:45.857  INFO 9408 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-08 19:00:45.897  INFO 9408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 19:00:45.907  INFO 9408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-08 19:00:45.916  INFO 9408 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-08 19:00:45.934  WARN 9408 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-08 19:00:45.963  INFO 9408 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: eedc18c3-22e7-4ffc-8f5e-f89eeabf70d9
+
+2019-12-08 19:00:45.972  INFO 9408 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a894859, org.springframework.security.web.context.SecurityContextPersistenceFilter@368c3789, org.springframework.security.web.header.HeaderWriterFilter@5a39b078, org.springframework.security.web.csrf.CsrfFilter@8f30f92, org.springframework.security.web.authentication.logout.LogoutFilter@4b8f92ad, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@787ac44, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1c68ded6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@147e5f6e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4c61a3c6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34f38c7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23de50e8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e212429, org.springframework.security.web.session.SessionManagementFilter@26133346, org.springframework.security.web.access.ExceptionTranslationFilter@517a60f6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5fd629f7]
+2019-12-08 19:00:46.007  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-08 19:00:46.008  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-08 19:00:46.013  INFO 9408 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-08 19:00:46.055  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 19:00:46.055  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.042 seconds (JVM running for 1256.475)
+2019-12-08 19:00:46.057  INFO 9408 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-08 19:02:54.176  INFO 9408 --- [Thread-39] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 19:02:54.452  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 9408 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 19:02:54.452  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 19:02:54.926  INFO 9408 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37931338] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 19:02:55.034  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-08 19:02:55.034  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-08 19:02:55.034  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-08 19:02:55.049  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-08 19:02:55.050  INFO 9408 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 595 ms
+2019-12-08 19:02:55.126  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductDO.
+2019-12-08 19:02:55.179  WARN 9408 --- [restartedMain] c.b.m.core.injector.AbstractMethod       : [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-08 19:02:55.198  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-08 19:02:55.233  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductCategoryDO.
+2019-12-08 19:02:55.283  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductImgDO.
+2019-12-08 19:02:55.323  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-08 19:02:55.459  INFO 9408 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-08 19:02:55.506  INFO 9408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 19:02:55.516  INFO 9408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-08 19:02:55.526  INFO 9408 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-08 19:02:55.545  WARN 9408 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-08 19:02:55.579  INFO 9408 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7d317ac4-1291-4932-9163-71eda52336b2
+
+2019-12-08 19:02:55.589  INFO 9408 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48ddaecb, org.springframework.security.web.context.SecurityContextPersistenceFilter@7206d414, org.springframework.security.web.header.HeaderWriterFilter@2cb49752, org.springframework.security.web.csrf.CsrfFilter@35a0d7bf, org.springframework.security.web.authentication.logout.LogoutFilter@4f1a48c8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4f6fdd6c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@b789bc7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@734e82a5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@64068bbd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a5a8d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d23a134, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@427ba51d, org.springframework.security.web.session.SessionManagementFilter@4128fea1, org.springframework.security.web.access.ExceptionTranslationFilter@7b218eb7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2543cd78]
+2019-12-08 19:02:55.629  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-08 19:02:55.630  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-08 19:02:55.635  INFO 9408 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-08 19:02:55.689  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 19:02:55.689  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.281 seconds (JVM running for 1386.109)
+2019-12-08 19:02:55.691  INFO 9408 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-08 19:03:54.372  INFO 9408 --- [Thread-45] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 19:03:54.636  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 9408 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 19:03:54.636  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 19:03:55.115  INFO 9408 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37931338] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 19:03:55.183  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-08 19:03:55.184  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-08 19:03:55.184  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-08 19:03:55.195  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-08 19:03:55.195  INFO 9408 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 556 ms
+2019-12-08 19:03:55.262  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductDO.
+2019-12-08 19:03:55.298  WARN 9408 --- [restartedMain] c.b.m.core.injector.AbstractMethod       : [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-08 19:03:55.316  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-08 19:03:55.368  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductCategoryDO.
+2019-12-08 19:03:55.398  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductImgDO.
+2019-12-08 19:03:55.421  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-08 19:03:55.562  INFO 9408 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-08 19:03:55.612  INFO 9408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 19:03:55.623  INFO 9408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-08 19:03:55.632  INFO 9408 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-08 19:03:55.654  WARN 9408 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-08 19:03:55.688  INFO 9408 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bd9d063c-f785-492e-ad4e-ccf0d0667fc2
+
+2019-12-08 19:03:55.701  INFO 9408 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17400441, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d4cc1c6, org.springframework.security.web.header.HeaderWriterFilter@299fbd05, org.springframework.security.web.csrf.CsrfFilter@1e8c847, org.springframework.security.web.authentication.logout.LogoutFilter@6779d32, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@10d566e8, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@dbe2fb2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@61fcd092, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f6ef424, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7feb31b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b48ccd8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5aa50863, org.springframework.security.web.session.SessionManagementFilter@2a219e35, org.springframework.security.web.access.ExceptionTranslationFilter@18f14882, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b6fa4a7]
+2019-12-08 19:03:55.744  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-08 19:03:55.745  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-08 19:03:55.752  INFO 9408 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-08 19:03:55.797  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 19:03:55.798  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.208 seconds (JVM running for 1446.217)
+2019-12-08 19:03:55.799  INFO 9408 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-08 19:05:52.257  INFO 9408 --- [Thread-51] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 19:05:52.512  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 9408 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 19:05:52.513  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 19:05:52.959  INFO 9408 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37931338] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 19:05:53.030  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-08 19:05:53.031  INFO 9408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-08 19:05:53.031  INFO 9408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-08 19:05:53.043  INFO 9408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-08 19:05:53.043  INFO 9408 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 528 ms
+2019-12-08 19:05:53.107  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductDO.
+2019-12-08 19:05:53.139  WARN 9408 --- [restartedMain] c.b.m.core.injector.AbstractMethod       : [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-08 19:05:53.156  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.HeadLineDO.
+2019-12-08 19:05:53.181  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductCategoryDO.
+2019-12-08 19:05:53.206  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ProductImgDO.
+2019-12-08 19:05:53.228  WARN 9408 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.dyl.o2o.domain.ShopCategoryDO.
+2019-12-08 19:05:53.342  INFO 9408 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-08 19:05:53.382  INFO 9408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-08 19:05:53.390  INFO 9408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-08 19:05:53.399  INFO 9408 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-08 19:05:53.418  WARN 9408 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-08 19:05:53.448  INFO 9408 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5a99e751-a29b-4538-8710-63bbc553ca00
+
+2019-12-08 19:05:53.456  INFO 9408 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@511490aa, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d5d9182, org.springframework.security.web.header.HeaderWriterFilter@6e719f11, org.springframework.security.web.csrf.CsrfFilter@2c92c2a2, org.springframework.security.web.authentication.logout.LogoutFilter@6bbff7c9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@12675485, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5a5fac81, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6136d3c1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@589b8e15, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5975b67c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b9e3354, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49dd601e, org.springframework.security.web.session.SessionManagementFilter@67e0d80e, org.springframework.security.web.access.ExceptionTranslationFilter@75ee3845, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@664acb12]
+2019-12-08 19:05:53.491  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-08 19:05:53.491  INFO 9408 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-08 19:05:53.496  INFO 9408 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-08 19:05:53.535  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-08 19:05:53.536  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.065 seconds (JVM running for 1563.956)
+2019-12-08 19:05:53.538  INFO 9408 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-08 19:06:03.949  INFO 9408 --- [Thread-57] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-08 19:06:04.234  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 9408 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-08 19:06:04.234  INFO 9408 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-08 19:06:04.659  INFO 9408 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$37931338] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-08 19:06:04.740  INFO 9408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
