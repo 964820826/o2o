@@ -85,49 +85,55 @@ function showItems(index, size) {
     $.getJSON(shopPageUrl,function (data) {
         if (data.code == 0){
             //取出分页查询到的店铺列表信息
-            var shopList = data.data;
-            var shopListHtml = '';
-            shopList.forEach(function (item) {
-                shopListHtml +=
-                    '<div class="card" data-shop-id="' + item.shopId + '">' +
-                        '<div class="card-header">' + item.shopName + '</div>' +
-                        '<div class="card-content">' +
-                            '<div class="list-block media-list">' +
-                                '<ul>' +
-                                    '<li class="item-content">' +
-                                        '<div class="item-media">' +
-                                            '<img src="' + item.shopImg + '" width="44">' +
-                                        '</div>' +
-                                        '<div class="item-inner">' +
-                                            '<div class="item-subtitle">'+ item.shopDesc + '</div>' +
-                                        '</div>' +
-                                    '</li>' +
-                                '</ul>' +
+            var shopList = data.data.records;
+            if (shopList.length == 0){
+                $.toast("未查询到结果");
+            }else {
+                var shopListHtml = '';
+                shopList.forEach(function (item) {
+                    shopListHtml +=
+                        '<div class="card" data-shop-id="' + item.shopId + '">' +
+                            '<div class="card-header">' + item.shopName + '</div>' +
+                            '<div class="card-content">' +
+                                '<div class="list-block media-list">' +
+                                    '<ul>' +
+                                        '<li class="item-content">' +
+                                            '<div class="item-media">' +
+                                                '<img src="' + item.shopImg + '" width="44">' +
+                                            '</div>' +
+                                            '<div class="item-inner">' +
+                                                '<div class="item-subtitle">'+ item.shopDesc + '</div>' +
+                                            '</div>' +
+                                        '</li>' +
+                                    '</ul>' +
+                                '</div>' +
                             '</div>' +
-                        '</div>' +
-                        '<div class="card-footer">' +
-                            '<p class="color-gray">' + new Date(item.lastEditTime).format("yyyy-MM-dd") + '更新</p>' +
-                            '<span>点击查看</span>' +
-                        '</div>' +
-                    '</div>'
-            })
-            //将生成的html拼接到页面的店铺列表末尾
-            $(".shop-list").append(shopListHtml);
+                            '<div class="card-footer">' +
+                                '<p class="color-gray">' + new Date(item.lastEditTime).format("yyyy-MM-dd") + '更新</p>' +
+                                '<span>点击查看</span>' +
+                            '</div>' +
+                        '</div>'
+                })
+                //将生成的html拼接到页面的店铺列表末尾
+                $(".shop-list").append(shopListHtml);
+            }
             //获取已加载的长度，最多只允许加载500条
-            var total = $(".shop-list").length;
-            if (total >= maxItems || shopList.length != size){
+            var total = $(".shop-list>.card").length;
+            var dbTotal = data.data.total;
+            if (shopList.length == 0 || total>=dbTotal){
                 //加载完成则注销无限加载事件，防止不必要的加载
                 $.detachInfiniteScroll($(".infinite-scroll"));
-                //删除加载提示符
-                $(".infinite-scroll-preloader").remove();
+                //隐藏加载提示符
+                $(".infinite-scroll-preloader").hide();
             }else {
+                $(".infinite-scroll-preloader").show();
                 //页面还可加载，则页码+1
                 pageIndex += 1;
-                //设置加载符为false
-                loading = false;
-                //刷新页面，显示新加载的店铺
-                $.refreshScroller();
             }
+            //设置加载符为false
+            loading = false;
+            //刷新页面，显示新加载的店铺
+            $.refreshScroller();
         }
     })
 }
@@ -142,6 +148,8 @@ $(document).on('infinite','.infinite-scroll-bottom',function () {
 
 //点击店铺类别清空原先列表，重置页面，按照新的条件去查询
 $(".shoplist-button-div").on("click",".button",function (obj) {
+    //使无极滚动生效
+    $.attachInfiniteScroll($(".infinite-scroll"));
     shopCategoryId = obj.currentTarget.dataset.categoryId;
     //重新加载可选店铺类别列表
     getShopCategory(shopCategoryId);
@@ -152,6 +160,8 @@ $(".shoplist-button-div").on("click",".button",function (obj) {
 
 //选择区域清空原列表，重置页面
 $('#area-search').on("change",function () {
+    //使无极滚动生效
+    $.attachInfiniteScroll($(".infinite-scroll"));
     areaId = $('#area-search').val();
     $('.list-div').empty();
     pageIndex = 1;
@@ -160,6 +170,8 @@ $('#area-search').on("change",function () {
 
 //输入关键字模糊查询店铺名
 $('#search').on('change',function () {
+    //使无极滚动生效
+    $.attachInfiniteScroll($(".infinite-scroll"));
     shopName = $('#search').val();
     $('.list-div').empty();
     pageIndex = 1;

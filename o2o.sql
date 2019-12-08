@@ -11,11 +11,67 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 28/11/2019 23:15:33
+ Date: 08/12/2019 14:30:36
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for sys_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_menu`;
+CREATE TABLE `sys_menu`  (
+  `menu_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '权限名称',
+  `permission` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '权限标识',
+  PRIMARY KEY (`menu_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 87 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '权限表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for sys_role
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_role`;
+CREATE TABLE `sys_role`  (
+  `role_id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT '角色ID',
+  `role_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '角色名称',
+  PRIMARY KEY (`role_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for sys_role_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_role_menu`;
+CREATE TABLE `sys_role_menu`  (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `role_id` bigint(11) NULL DEFAULT NULL COMMENT '角色ID',
+  `menu_id` bigint(11) NULL DEFAULT NULL COMMENT '权限ID',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色与权限关系表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for sys_user
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_user`;
+CREATE TABLE `sys_user`  (
+  `user_id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
+  `password` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '密码',
+  `status` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '状态 PROHIBIT：禁用   NORMAL：正常',
+  PRIMARY KEY (`user_id`) USING BTREE,
+  UNIQUE INDEX `username`(`username`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '系统用户表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for sys_user_role
+-- ----------------------------
+DROP TABLE IF EXISTS `sys_user_role`;
+CREATE TABLE `sys_user_role`  (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `user_id` bigint(11) NULL DEFAULT NULL COMMENT '用户ID',
+  `role_id` bigint(11) NULL DEFAULT NULL COMMENT '角色ID',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户与角色关系表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for tb_area
@@ -53,7 +109,7 @@ CREATE TABLE `tb_head_line`  (
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`head_line_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_head_line
@@ -78,7 +134,7 @@ CREATE TABLE `tb_local_auth`  (
   UNIQUE INDEX `uk_local_profile`(`local_auth_name`) USING BTREE,
   INDEX `fk_localauth_profile`(`person_id`) USING BTREE,
   CONSTRAINT `fk_localauth_profile` FOREIGN KEY (`person_id`) REFERENCES `tb_person` (`person_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_local_auth
@@ -100,7 +156,7 @@ CREATE TABLE `tb_person`  (
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`person_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '个人信息表（用户表）' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '个人信息表（用户表）' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_person
@@ -158,7 +214,7 @@ CREATE TABLE `tb_product_category`  (
   `product_category_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '商品类别名称',
   `priority` int(2) NULL DEFAULT 0 COMMENT '权重',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
-  `last_edit_id` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`product_category_id`) USING BTREE,
   INDEX `fk_procate_shop`(`shop_id`) USING BTREE,
   CONSTRAINT `fk_procate_shop` FOREIGN KEY (`shop_id`) REFERENCES `tb_shop` (`shop_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -184,8 +240,8 @@ DROP TABLE IF EXISTS `tb_product_img`;
 CREATE TABLE `tb_product_img`  (
   `product_img_id` int(20) NOT NULL AUTO_INCREMENT COMMENT '商品图片id',
   `product_id` int(20) NOT NULL COMMENT '所属商品id（外键，只对应id）',
-  `img_addr` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '图片地址',
-  `img_desc` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '图片描述',
+  `product_img_addr` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '图片地址',
+  `product_img_desc` varchar(2000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '图片描述',
   `priority` int(2) NULL DEFAULT 0 COMMENT '权重（越大排名越靠前）',
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`product_img_id`) USING BTREE,
@@ -247,10 +303,10 @@ CREATE TABLE `tb_shop`  (
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`shop_id`) USING BTREE,
+  UNIQUE INDEX `un_owner_id`(`owner_id`) USING BTREE COMMENT '一个人只能拥有一个店铺',
   INDEX `fk_shop_area`(`area_id`) USING BTREE,
   INDEX `fk_shop_profile`(`owner_id`) USING BTREE,
   INDEX `fk_shop_shopcate`(`shop_category_id`) USING BTREE,
-  UNIQUE INDEX `un_owner_id`(`owner_id`) USING BTREE COMMENT '一个人只能拥有一个店铺',
   CONSTRAINT `fk_shop_area` FOREIGN KEY (`area_id`) REFERENCES `tb_area` (`area_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_shop_profile` FOREIGN KEY (`owner_id`) REFERENCES `tb_person` (`person_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_shop_shopcate` FOREIGN KEY (`shop_category_id`) REFERENCES `tb_shop_category` (`shop_category_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -317,7 +373,7 @@ CREATE TABLE `tb_wechat_auth`  (
   UNIQUE INDEX `open_id`(`open_id`) USING BTREE,
   INDEX `fk_wechatauth_profile`(`person_id`) USING BTREE,
   CONSTRAINT `fk_wechatauth_profile` FOREIGN KEY (`person_id`) REFERENCES `tb_person` (`person_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '微信授权表（生成后不可修改，故不需设置最后修改时间）' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '微信授权表（生成后不可修改，故不需设置最后修改时间）' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_wechat_auth

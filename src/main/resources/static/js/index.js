@@ -67,7 +67,7 @@ $('.row').on('click', '.shop-classify', function (e) {
     //将选取的店铺类别id设置到session中
     // sessionStorage.setItem("shopCategoryId",shopCategoryId);
     // var newUrl = '/shoplist';
-    var newUrl = '/shop/listShop?parentId=' + shopCategoryId;
+    var newUrl = '/shop/listShop?shopCategoryId=' + shopCategoryId;
     window.location.href = newUrl;
 });
 

@@ -45,7 +45,6 @@ public class Swagger2Config {
                 .title("RESTful APIs")
                 .description("练习项目，好好钻研技术呀！")
                 .termsOfServiceUrl("o2o")
-                .contact("dyl")
                 .version("1.0")
                 .build();
     }

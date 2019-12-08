@@ -10,7 +10,7 @@ import java.util.Date;
  * @date ：Created in 2019/9/28 16:40
  */
 @Data
-@TableName("td_product_img")
+@TableName("tb_product_img")
 public class ProductImgDO {
     //图片id
     private Long productImgId;

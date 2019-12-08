@@ -1,9 +1,8 @@
 package com.dyl.o2o.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.dyl.o2o.domain.ProductDO;
-
-import java.util.List;
 
 /** 商品相关业务层接口
  * @author ：dyl
@@ -11,5 +10,19 @@ import java.util.List;
  */
 public interface ProductService extends IService<ProductDO>{
 
-    List<ProductDO> page(ProductDO productDO, int pageIndex, int pagesize);
+    /**
+     * 分页查询商品列表
+     * @param productDO
+     * @param pageIndex
+     * @param pagesize
+     * @return
+     */
+    IPage<ProductDO> page(ProductDO productDO, int pageIndex, int pagesize);
+
+    /**
+     * 根据id获取商品详情
+     * @param id
+     * @return
+     */
+    ProductDO getById(Long id);
 }

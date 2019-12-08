@@ -1,12 +1,12 @@
 package com.dyl.o2o.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
 import com.dyl.o2o.common.util.CaptchaUtil;
-import com.dyl.o2o.domain.AreaDO;
+import com.dyl.o2o.common.util.PageUtil;
 import com.dyl.o2o.domain.PersonDO;
-import com.dyl.o2o.domain.ShopCategoryDO;
 import com.dyl.o2o.domain.ShopDO;
 import com.dyl.o2o.service.AreaService;
 import com.dyl.o2o.service.ShopCategoryService;
@@ -21,10 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /** 店铺管理controller
  * @author ：dyl
@@ -87,20 +84,17 @@ public class ShopController {
         if (shopDOList == null || !shopDO.equals(oriShop)){
             //从数据库查询
             shopDOList = shopService.list(shopDO);
-            if (shopDOList.size() == 0){
-                return R.error(ResultCode.NO_RESULT);
+            if (shopDOList == null){
+                return R.success();
             }
             request.getSession().setAttribute("oriShop",shopDO);
             request.getSession().setAttribute("shopDOList",shopDOList);
         }
         //根据分页信息获取数据返回给前端
-        int beginIndex = (pageIndex-1)*pageSize;
-        int endIndex = pageIndex*pageSize;
-        if (shopDOList.size() < endIndex){
-            endIndex = shopDOList.size();
-        }
-        List<ShopDO> shopPageList = shopDOList.subList(beginIndex,endIndex);
-        return R.success(shopPageList);
+        List<ShopDO> shopPageList = PageUtil.toPage(pageIndex,pageSize,shopDOList);
+        Page<ShopDO> pageShop = new Page<>(pageIndex,pageSize,shopDOList.size());
+        pageShop.setRecords(shopPageList);
+        return R.success(pageShop);
     }
 
     /**
@@ -188,13 +182,11 @@ public class ShopController {
      * @return
      */
     @GetMapping("/{id}")
-    public R getShopById(HttpServletRequest request, @PathVariable("id") Long id){
-        Map<String ,Object> map = new HashMap<>();
+    @ApiOperation("根据id获取店铺")
+    @ApiImplicitParam("店铺id")
+    public R getShopById(@PathVariable("id") Long id){
         ShopDO shopDO = shopService.getById(id);
-        List<AreaDO> areaDOList = areaService.selectList();
-        request.setAttribute("shopDO", shopDO);
-        request.setAttribute("areaDOList", areaDOList);
-        return R.success();
+        return R.success(shopDO);
     }
 
     /**

@@ -1,53 +1,76 @@
-2019-12-06 10:24:54.101 [http-nio-8080-exec-6] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'productCategoryDO' on field 'shopId': rejected value [null]; codes [typeMismatch.productCategoryDO.shopId,typeMismatch.shopId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productCategoryDO.shopId,shopId]; arguments []; default message [shopId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
-2019-12-06 10:25:42.271 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'productCategoryDO' on field 'shopId': rejected value [null]; codes [typeMismatch.productCategoryDO.shopId,typeMismatch.shopId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productCategoryDO.shopId,shopId]; arguments []; default message [shopId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
-2019-12-06 10:26:04.670 [http-nio-8080-exec-9] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'productCategoryDO' on field 'shopId': rejected value [null]; codes [typeMismatch.productCategoryDO.shopId,typeMismatch.shopId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productCategoryDO.shopId,shopId]; arguments []; default message [shopId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
-2019-12-06 10:27:16.655 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'productCategoryDO' on field 'shopId': rejected value [null]; codes [typeMismatch.productCategoryDO.shopId,typeMismatch.shopId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productCategoryDO.shopId,shopId]; arguments []; default message [shopId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
-2019-12-06 10:38:34.849 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'productCategoryDO' on field 'shopId': rejected value [null]; codes [typeMismatch.productCategoryDO.shopId,typeMismatch.shopId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productCategoryDO.shopId,shopId]; arguments []; default message [shopId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
-2019-12-06 10:39:06.245 [http-nio-8080-exec-10] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'productCategoryDO' on field 'shopId': rejected value [null]; codes [typeMismatch.productCategoryDO.shopId,typeMismatch.shopId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productCategoryDO.shopId,shopId]; arguments []; default message [shopId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
-2019-12-06 10:50:09.511 [http-nio-8080-exec-9] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'productCategoryDO' on field 'shopId': rejected value [null]; codes [typeMismatch.productCategoryDO.shopId,typeMismatch.shopId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productCategoryDO.shopId,shopId]; arguments []; default message [shopId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
-2019-12-06 11:16:36.598 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'productCategoryDO' on field 'shopId': rejected value [null]; codes [typeMismatch.productCategoryDO.shopId,typeMismatch.shopId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productCategoryDO.shopId,shopId]; arguments []; default message [shopId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
-2019-12-06 11:17:12.690 [http-nio-8080-exec-1] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'productCategoryDO' on field 'shopId': rejected value [null]; codes [typeMismatch.productCategoryDO.shopId,typeMismatch.shopId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productCategoryDO.shopId,shopId]; arguments []; default message [shopId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
-2019-12-06 11:17:28.030 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：org.springframework.validation.BeanPropertyBindingResult: 1 errors
-Field error in object 'productCategoryDO' on field 'shopId': rejected value [null]; codes [typeMismatch.productCategoryDO.shopId,typeMismatch.shopId,typeMismatch.java.lang.Long,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productCategoryDO.shopId,shopId]; arguments []; default message [shopId]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.lang.Long' for property 'shopId'; nested exception is java.lang.NumberFormatException: For input string: "null"]
-2019-12-06 12:05:06.660 [http-nio-8080-exec-3] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Optional int parameter 'pageIndex' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
-2019-12-06 15:44:28.954 [http-nio-8080-exec-6] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:44:30.523 [http-nio-8080-exec-5] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:44:31.884 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:47:05.014 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:47:37.812 [http-nio-8080-exec-2] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:49:05.736 [http-nio-8080-exec-2] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:55:09.838 [http-nio-8080-exec-9] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:56:10.566 [http-nio-8080-exec-3] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:56:14.870 [http-nio-8080-exec-2] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:56:23.450 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:56:45.979 [http-nio-8080-exec-9] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:56:59.184 [http-nio-8080-exec-3] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 15:57:40.421 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:00:08.952 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:01:38.088 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:04:55.842 [http-nio-8080-exec-7] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:05:42.985 [http-nio-8080-exec-2] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:06:36.469 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:09:31.228 [http-nio-8080-exec-1] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:11:03.154 [http-nio-8080-exec-6] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:22:37.408 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:22:49.175 [http-nio-8080-exec-1] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:22:50.763 [http-nio-8080-exec-3] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:22:54.509 [http-nio-8080-exec-10] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:22:55.614 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:22:56.366 [http-nio-8080-exec-6] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:23:11.953 [http-nio-8080-exec-1] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 16:23:26.113 [http-nio-8080-exec-3] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 17:29:25.477 [http-nio-8080-exec-3] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 17:44:24.447 [http-nio-8080-exec-3] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 17:44:31.903 [http-nio-8080-exec-7] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
-2019-12-06 17:44:33.580 [http-nio-8080-exec-9] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+2019-12-08 14:15:16.926 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-12-08 14:26:47.611 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-12-08 14:27:13.353 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-12-08 14:28:30.744 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
