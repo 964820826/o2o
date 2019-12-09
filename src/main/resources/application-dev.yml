@@ -31,7 +31,7 @@ jwt:
   #HeaderKEY
   tokenHeader: Authorization
   #Token前缀字符
-  tokenPrefix: Sans-
+  tokenPrefix: Bearer
   #过期时间 单位秒 1天：86400 7天：604800
   expiration: 86400
   #配置不需要认证的接口
@@ -43,10 +43,6 @@ jwt:
       enabled: true #开启热部署
   freemarker:
     cache: false #页面不加载，修改即生效
-
-mybatis-plus:
-  mapper-locations: classpath:mapping/*.xml
-  type-aliases-package: com.dyl.o2o.domain
 
 #设置日志相关
 logging:

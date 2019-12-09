@@ -8,7 +8,7 @@ $(function () {
     getAreaList();
     //预加载一页的店铺列表
     showItems(pageIndex,pageSize);
-})
+});
 
 //当前页面是否在加载中
 var loading = false;
@@ -44,7 +44,7 @@ function getShopCategory(id) {
             var shopCategoryHtml = '<a href="#" class="col-33 button" data-category-id="">全部类别</a>';
             shopCategoryList.forEach(function (item) {
                 shopCategoryHtml += '<a href="#" class="col-33 button" data-category-id=' + item.shopCategoryId + '>' + item.shopCategoryName + '</a>';
-            })
+            });
             $("#shoplist-search-div").html(shopCategoryHtml);
         }
     })
@@ -59,7 +59,7 @@ function getAreaList() {
             var areaHtml = '<option value = "">全部区域</option>';
             areaList.forEach(function (item) {
                 areaHtml += '<option value = "' + item.areaId + '">' + item.areaName + '</option>';
-            })
+            });
             $("#area-search").html(areaHtml);
         }
     })
@@ -113,7 +113,7 @@ function showItems(index, size) {
                                 '<span>点击查看</span>' +
                             '</div>' +
                         '</div>'
-                })
+                });
                 //将生成的html拼接到页面的店铺列表末尾
                 $(".shop-list").append(shopListHtml);
             }
@@ -144,7 +144,7 @@ $(document).on('infinite','.infinite-scroll-bottom',function () {
         return;
     }
     showItems(pageIndex,pageSize);
-})
+});
 
 //点击店铺类别清空原先列表，重置页面，按照新的条件去查询
 $(".shoplist-button-div").on("click",".button",function (obj) {
@@ -156,7 +156,7 @@ $(".shoplist-button-div").on("click",".button",function (obj) {
     $('.list-div').empty();
     pageIndex = 1;
     showItems(pageIndex,pageSize);
-})
+});
 
 //选择区域清空原列表，重置页面
 $('#area-search').on("change",function () {
@@ -166,7 +166,7 @@ $('#area-search').on("change",function () {
     $('.list-div').empty();
     pageIndex = 1;
     showItems(pageIndex,pageSize);
-})
+});
 
 //输入关键字模糊查询店铺名
 $('#search').on('change',function () {
@@ -176,13 +176,13 @@ $('#search').on('change',function () {
     $('.list-div').empty();
     pageIndex = 1;
     showItems(pageIndex,pageSize);
-})
+});
 
 //点击卡片进入对应店铺的详情页
 $('.list-div ').on('click','.card',function (obj) {
     var shopId = obj.currentTarget.dataset.shopId;
     window.location.href = '/shop/detail?shopId=' + shopId;
-})
+});
 
 // 点击后打开右侧栏
 $('#me').click(function() {

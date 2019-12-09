@@ -25,7 +25,7 @@ function getHeadLineList() {
                     '<img class="banner-img" src="' + item.headLineImg + '" alt="' + item.headLineName + '">' +
                     '</a>' +
                     '</div>';
-            })
+            });
             //将拼接好的html语句设置到页面中
             $(".swiper-wrapper").html(swiperHtml);
             //设置轮播
@@ -55,7 +55,7 @@ function getShopCategory() {
                             '<img class="shop-img" src="' + item.shopCategoryImg + '">' +
                         '</div>' +
                     '</div>'
-            })
+            });
             $(".row").html(categoryHtml);
         }
     })

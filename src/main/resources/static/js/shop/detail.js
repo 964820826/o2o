@@ -8,7 +8,7 @@ $(function () {
     getProductCategory(shopId);
     //预加载一页的店铺列表
     showItems(pageIndex, pageSize);
-})
+});
 
 //当前页面是否在加载中
 var loading = false;
@@ -58,7 +58,7 @@ function getProductCategory(id) {
             var productCategoryHtml = '<a href="#" class="col-33 button" data-category-id="">全部类别</a>';
             productCategoryList.forEach(function (item) {
                 productCategoryHtml += '<a href="#" class="col-33 button" data-category-id=' + item.productCategoryId + '>' + item.productCategoryName + '</a>';
-            })
+            });
             $("#productCategory-button-div").html(productCategoryHtml);
         }
     })
@@ -139,7 +139,7 @@ $(document).on('infinite', '.infinite-scroll-bottom', function () {
         return;
     }
     showItems(pageIndex, pageSize);
-})
+});
 
 //点击商品类别清空原先列表，重置页面，按照新的条件去查询
 $(".productCategory-button-div").on("click", ".button", function (obj) {
@@ -151,7 +151,7 @@ $(".productCategory-button-div").on("click", ".button", function (obj) {
     $('.list-div').empty();
     pageIndex = 1;
     showItems(pageIndex, pageSize);
-})
+});
 
 //输入关键字模糊查询商品名
 $('#search').on('change', function () {
@@ -161,13 +161,13 @@ $('#search').on('change', function () {
     $('.list-div').empty();
     pageIndex = 1;
     showItems(pageIndex, pageSize);
-})
+});
 
 //点击卡片进入对应商品的详情页
 $('.list-div ').on('click', '.card', function (obj) {
     var productId = obj.currentTarget.dataset.productId;
     window.location.href = '/product/detail?productId=' + productId;
-})
+});
 
 // 点击后打开右侧栏
 $('#me').click(function () {

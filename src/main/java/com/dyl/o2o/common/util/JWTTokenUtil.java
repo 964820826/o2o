@@ -1,13 +1,12 @@
 package com.dyl.o2o.common.util;
 
 import com.alibaba.fastjson.JSON;
+import com.dyl.o2o.common.config.JWTConfigBean;
 import com.dyl.o2o.common.util.security.JWTUser;
-import com.dyl.o2o.common.util.security.JWTUserEntity;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Date;
 
@@ -18,13 +17,6 @@ import java.util.Date;
 @Slf4j
 public class JWTTokenUtil {
 
-    //从配置文件中获取过期时间
-    @Value("${jwt.expiration}")
-    private static Long expiration;
-    //密钥
-    @Value("${jwt.secret}")
-    private static String secret;
-
     /**
      * 生成token
      * @param jWTUser 用户安全实体
@@ -34,19 +26,19 @@ public class JWTTokenUtil {
         //登陆成功生成JWT
         String token = Jwts.builder()
                 //用户id
-                .setId(JWTUser.getUserId().toString())
+                .setId(jWTUser.getUserId().toString())
                 //主题
-                .setSubject(JWTUser.getUsername())
+                .setSubject(jWTUser.getUsername())
                 //签发时间
                 .setIssuedAt(new Date())
                 //签发者
                 .setIssuer("dyl")
                 //自定义属性，放入用户拥有权限
-                .claim("authorities", JSON.toJSONString(JWTUser.getAuthorities()))
+                .claim("authorities", JSON.toJSONString(jWTUser.getAuthorities()))
                 //失效时间
-                .setExpiration(new Date(System.currentTimeMillis() + expiration*1000))
+                .setExpiration(new Date(System.currentTimeMillis() + JWTConfigBean.expiration*1000))
                 //签名算法和密钥
-                .signWith(SignatureAlgorithm.HS512, secret)
+                .signWith(SignatureAlgorithm.HS512, JWTConfigBean.secret)
                 .compact();
         log.debug("生成Token：" + token);
         return token;
@@ -73,7 +65,7 @@ public class JWTTokenUtil {
 
     public static Claims getTokenBody(String token){
         return Jwts.parser()
-                .setSigningKey(secret)
+                .setSigningKey(JWTConfigBean.secret)
                 .parseClaimsJws(token)
                 .getBody();
     }

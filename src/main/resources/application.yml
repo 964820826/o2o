@@ -2,3 +2,7 @@
 spring:
   profiles:
     active: dev #使用application-dev中的配置
+
+mybatis-plus:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.dyl.o2o.domain

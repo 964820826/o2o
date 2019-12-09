@@ -8,11 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 /** 供权限框架调用
  * @author ：dyl
  * @date ：Created in 2019/12/8 23:13
  */
+@Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
