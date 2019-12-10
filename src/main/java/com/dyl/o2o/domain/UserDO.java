@@ -1,5 +1,6 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.util.Date;
@@ -9,6 +10,7 @@ import java.util.Date;
  * @date ：Created in 2019/12/8 18:56
  */
 @Data
+@TableName("sys_user")
 public class UserDO {
     //账户Id
     private Long userId;

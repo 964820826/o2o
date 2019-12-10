@@ -7,6 +7,7 @@ import com.dyl.o2o.dto.LoginUser;
 import com.dyl.o2o.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,7 +27,7 @@ public class UserController {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @PostMapping("")
+    @PostMapping("/register")
     public R registerUser(LoginUser loginUser){
         UserDO userDO = new UserDO();
         userDO.setUsername(loginUser.getUsername());
@@ -37,5 +38,10 @@ public class UserController {
         }else{
             return R.error(ResultCode.SERVICE_ERROR);
         }
+    }
+
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello";
     }
 }

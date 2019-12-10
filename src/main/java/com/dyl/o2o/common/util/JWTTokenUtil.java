@@ -1,7 +1,7 @@
 package com.dyl.o2o.common.util;
 
 import com.alibaba.fastjson.JSON;
-import com.dyl.o2o.common.config.JWTConfigBean;
+import com.dyl.o2o.common.security.JWTConfigBean;
 import com.dyl.o2o.common.util.security.JWTUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
