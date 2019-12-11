@@ -19,9 +19,10 @@ public class UserDO {
     //密码
     private String password;
     //账户是否可用
-    private boolean status;
-    //创建时间
-    private Date createTime;
-    //最后修改时间
-    private Date lastEditTime;
+    private String status;
+//    //创建时间
+//    private Date createTime;
+//    //最后修改时间
+//    private Date lastEditTime;
+
 }

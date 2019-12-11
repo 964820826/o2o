@@ -49,7 +49,7 @@ public class JWTTokenUtil {
      * @param token
      * @return
      */
-    public static String getUsername(String token){
+    public static String getUsernameFromToken(String token){
         return getTokenBody(token).getSubject();
     }
 

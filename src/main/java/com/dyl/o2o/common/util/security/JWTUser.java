@@ -23,7 +23,7 @@ public class JWTUser implements UserDetails {
     //密码
     private String password;
     //账户是否可用
-    private boolean status;
+    private String status;
     //创建时间
     private Date createTime;
     //最后修改时间
