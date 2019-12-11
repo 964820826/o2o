@@ -54,22 +54,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     //参考smc  package com.wotall.smc.core.config 的 WebSecurityConfig类
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.cors().and()
-                //禁用CSRF
-                .csrf().disable()
+        //禁用CSRF（security自带的跨域处理）
+        http.csrf().disable()
                 .authorizeRequests()
                 //测试用资源
-                .antMatchers("/tasks/**").authenticated()
-                // swagger start
-                .antMatchers("/swagger-ui.html").anonymous()
-                .antMatchers("/swagger-resources/**").anonymous()
-                .antMatchers("/webjars/**").anonymous()
-                .antMatchers("/*/api-docs").anonymous()
+//                .antMatchers("/tasks/**").authenticated()
+//                // swagger start
+//                .antMatchers("/swagger-ui.html").anonymous()
+//                .antMatchers("/swagger-resources/**").anonymous()
+//                .antMatchers("/webjars/**").anonymous()
+//                .antMatchers("/*/api-docs").anonymous()
                 //其他的都放行
-                .anyRequest().permitAll().and()
-//                .addFilter(new JWTLoginFilter(authenticationManager()))
-//                .addFilter(new JWTAuthorizationFilter(authenticationManager()))
-                //不需要session
+                .anyRequest().permitAll()
+                .and()
+                //设置session策略，不需要session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
     }

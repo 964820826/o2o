@@ -24,6 +24,15 @@ spring:
 #      jdbc-url: jdbc:mysql://localhost:3307/o2o?useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
       driver-class-name: com.mysql.cj.jdbc.Driver
 
+  #开发工具
+  devtools:
+    restart:
+      enabled: true #开启热部署
+  freemarker:
+    cache: false #页面不加载，修改即生效
+
+
+
 #JWT配置
 jwt:
   #密钥
@@ -37,12 +46,6 @@ jwt:
   #配置不需要认证的接口
   antMatchers: /index
 
-  #开发工具
-  devtools:
-    restart:
-      enabled: true #开启热部署
-  freemarker:
-    cache: false #页面不加载，修改即生效
 
 #设置日志相关
 logging:

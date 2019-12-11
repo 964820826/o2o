@@ -4,5 +4,7 @@ spring:
     active: dev #使用application-dev中的配置
 
 mybatis-plus:
+  #指定mapper的xml文件的位置
   mapper-locations: classpath:mapping/*.xml
+  #设置之后在mapper中引用实体类时就不需要再写全路径了，只需要写类名就可以；如：parameterType="com.bean.User"可以写成parameterType = "User"
   type-aliases-package: com.dyl.o2o.domain
