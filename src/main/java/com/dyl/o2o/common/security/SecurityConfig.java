@@ -33,6 +33,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     JWTAuthorizationFilter jwtAuthorizationFilter;
+    @Autowired
+    EntryPointUnauthorizedHandler entryPointUnauthorizedHandler;
+    @Autowired
+    MyAccessDeniedHandler myAccessDeniedHandler;
 
     //加密密码
     @Bean
@@ -57,6 +61,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //禁用CSRF（security自带的跨域处理）
         http.csrf().disable()
                 .authorizeRequests()
+//                .antMatchers("/auth").authenticated()       // 需携带有效 token
+//                .antMatchers("/admin").hasAuthority("admin")   // 需拥有 admin 这个权限
+//                .antMatchers("/ADMIN").hasRole("ADMIN")     // 需拥有 ADMIN 这个身份
                 //测试用资源
 //                .antMatchers("/tasks/**").authenticated()
 //                // swagger start
@@ -65,10 +72,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers("/webjars/**").anonymous()
 //                .antMatchers("/*/api-docs").anonymous()
                 //其他的都放行
-                .anyRequest().permitAll()
+                .anyRequest().authenticated()
+                .and()
+                //配置拦截时的处理
+                .exceptionHandling()
+                .authenticationEntryPoint(this.entryPointUnauthorizedHandler)//添加token无效或未携带token的处理
+                .accessDeniedHandler(this.myAccessDeniedHandler)//无权限时的处理
                 .and()
                 //设置session策略，不需要session
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .addFilter(new JWTLoginFilter(authenticationManager()))
+                .addFilter(new JWTAuthorizationFilter());
+        /**
+         * 本次 json web token 权限控制的核心配置部分
+         * 在 Spring Security 开始判断本次会话是否有权限时的前一瞬间
+         * 通过添加过滤器将 token 解析，将用户所有的权限写入本次会话
+         */
         http.addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
     }
 

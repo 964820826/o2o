@@ -10,6 +10,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.stereotype.Component;
@@ -17,6 +18,8 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -28,8 +31,7 @@ import java.util.ArrayList;
  * @date ：Created in 2019/12/9 13:59
  */
 @Slf4j
-@Component
-public class JWTAuthorizationFilter extends OncePerRequestFilter {
+public class JWTAuthorizationFilter extends UsernamePasswordAuthenticationFilter {
 
     @Autowired
     UserDetailsServiceImpl userDetailsService;
@@ -43,11 +45,13 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
      * @throws ServletException
      */
     @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
-        log.debug("鉴权url： '{}'",request.getRequestURI());
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        // 将 ServletRequest 转换为 HttpServletRequest 才能拿到请求头中的 token
+        HttpServletRequest httpRequest = (HttpServletRequest) request;
+        log.info("鉴权url： '{}'",httpRequest.getRequestURI());
 
         //获取请求头
-        String tokenHeader = request.getHeader(JWTConfigBean.tokenHeader);
+        String tokenHeader = httpRequest.getHeader(JWTConfigBean.tokenHeader);
 //        //如果请求头中没有Authorization信息则直接放行
 //        if (tokenHeader == null || !tokenHeader.startsWith(JWTConfigBean.tokenPrefix)){
 //            chain.doFilter(request, response);
@@ -57,15 +61,26 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
         if (tokenHeader != null && tokenHeader.startsWith("Bearer ")){
             //从请求头中获取token，进而获取用户名
             String token = tokenHeader.substring(7);
-            String username = JWTTokenUtil.getUsername(token);
+            String username = JWTTokenUtil.getUsernameFromToken(token);
             //若有用户名，则通过用户名获取该用户
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null){
+                //获取保存用户权限的实体类
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-                if (userDetails != null){
+                if (userDetails != null){//todo 添加校验token是否过期
+                    //若用户权限类不为空，则生成通过认证
                     UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
-                    authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                    authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpRequest));
+                    //将权限写入本次会话
+                    //todo 给用户关联权限
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);
                 }
+                //todo 添加判断用户关停的处理
+//                if (!userDetails.isEnabled()){
+//                    response.setCharacterEncoding("UTF-8");
+//                    response.setContentType("application/json;charset=UTF-8");
+//                    response.getWriter().print("{\"code\":\"452\",\"data\":\"\",\"message\":\"账号处于黑名单\"}");
+//                    return;
+//                }
             }
         }
         chain.doFilter(request,response);

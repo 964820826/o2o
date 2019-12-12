@@ -2,6 +2,7 @@ package com.dyl.o2o.controller;
 
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
+import com.dyl.o2o.common.util.JWTTokenUtil;
 import com.dyl.o2o.domain.UserDO;
 import com.dyl.o2o.dto.LoginUser;
 import com.dyl.o2o.service.UserService;
@@ -40,8 +41,4 @@ public class UserController {
         }
     }
 
-    @GetMapping("/hello")
-    public String hello(){
-        return "hello";
-    }
 }

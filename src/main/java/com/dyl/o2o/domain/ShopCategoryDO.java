@@ -1,5 +1,6 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -17,6 +18,7 @@ import java.util.Date;
 @ApiModel(value = "shopCategory对象", description = "店铺类别对象")
 public class ShopCategoryDO {
     @ApiModelProperty("店铺类别id")
+    @TableId
     private Long shopCategoryId;
 
     @ApiModelProperty("店铺类别名称")

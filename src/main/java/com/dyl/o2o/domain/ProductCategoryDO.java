@@ -1,5 +1,6 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -16,6 +17,7 @@ import java.util.Date;
 @ApiModel("商品类别")
 public class ProductCategoryDO {
     //商品类别id
+    @TableId
     @ApiModelProperty("商品类别Id")
     private Long productCategoryId;
 

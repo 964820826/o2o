@@ -1,6 +1,7 @@
 package com.dyl.o2o.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -19,6 +20,7 @@ import java.util.List;
 public class ProductDO {
     //商品id
     @ApiModelProperty("商品Id")
+    @TableId
     private Long productId;
 
     //商品名称

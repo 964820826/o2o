@@ -1,5 +1,6 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
@@ -13,6 +14,7 @@ import java.util.Date;
 @TableName("sys_user")
 public class UserDO {
     //账户Id
+    @TableId
     private Long userId;
     //账户名
     private String username;

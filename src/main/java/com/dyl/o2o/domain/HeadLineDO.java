@@ -1,5 +1,6 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -16,6 +17,7 @@ import java.util.Date;
 @ApiModel("头条对象")
 public class HeadLineDO {
     @ApiModelProperty(value = "头条id")
+    @TableId
     private Long headLineId;
 
     @ApiModelProperty(value = "头条名称")

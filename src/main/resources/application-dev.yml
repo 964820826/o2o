@@ -50,6 +50,6 @@ jwt:
 #设置日志相关
 logging:
   level:
-    root: debug
+    root: info
     com.dyl.o2o.dao: debug
   path: ./log

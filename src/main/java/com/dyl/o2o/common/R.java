@@ -46,13 +46,13 @@ public class R {
     }
 
     /**
-     * 失败的方法(失败信息自定义)
+     * 参数校验失败的方法(失败信息自定义)
      * @param massage
      * @return
      */
     public static R error(String massage){
         R r = new R();
-        r.setCode(1);
+        r.setCode(10000);
         r.setMassage(massage);
         return r;
     }

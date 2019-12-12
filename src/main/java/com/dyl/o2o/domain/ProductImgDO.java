@@ -1,5 +1,6 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
@@ -13,6 +14,7 @@ import java.util.Date;
 @TableName("tb_product_img")
 public class ProductImgDO {
     //图片id
+    @TableId
     private Long productImgId;
     //图片地址
     private String productImgAddr;
