@@ -22,6 +22,8 @@ import java.io.IOException;
 public class EntryPointUnauthorizedHandler implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException e) throws IOException, ServletException {
-        response.getWriter().write(JSON.toJSONString(R.error(ResultCode.NO_LOG_IN)));
+        String result = JSON.toJSONString(R.error(ResultCode.NO_LOG_IN));
+        response.setContentType("text/html;charset=utf-8");//避免乱码
+        response.getWriter().write(result);
     }
 }

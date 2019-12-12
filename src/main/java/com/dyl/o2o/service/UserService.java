@@ -8,5 +8,4 @@ import com.dyl.o2o.domain.UserDO;
  * @date ：Created in 2019/12/9 15:17
  */
 public interface UserService extends IService<UserDO> {
-    UserDO getUserByUsername(String username);
 }

@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  * Swagger2配置类
- * 访问地址：http://项目地址/swagger-ui.html
+ * 访问地址：localhost:8080/swagger-ui.html
  *
  * @author ：dyl
  * @date ：Created in 2019/11/25 22:44

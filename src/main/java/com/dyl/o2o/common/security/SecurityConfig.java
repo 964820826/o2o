@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -29,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     //UserDetailsService的实现类有很多，通过此注解限制注入的实现类
     @Qualifier("userDetailsServiceImpl")
-    private UserDetailsService userDetailsService;
+    UserDetailsService userDetailsService;
 
     @Autowired
     JWTAuthorizationFilter jwtAuthorizationFilter;
@@ -44,18 +45,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    /**
-     * 登陆时调用
-     * @param auth
-     * @throws Exception
-     */
+    //登陆时调用;AuthenticationManager的建造器，配置 AuthenticationManagerBuilder 会让Security 自动构建一个 AuthenticationManager
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
     }
 
+    //配置静态资源的处理方式
+    @Override
+    public void configure(WebSecurity web) {
+        web.ignoring().antMatchers("/resource/static/**/*.js","/resource/static/**/*.css","/resource/templates/**/*.html");
+    }
 
-    //参考smc  package com.wotall.smc.core.config 的 WebSecurityConfig类
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         //禁用CSRF（security自带的跨域处理）
@@ -64,26 +65,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers("/auth").authenticated()       // 需携带有效 token
 //                .antMatchers("/admin").hasAuthority("admin")   // 需拥有 admin 这个权限
 //                .antMatchers("/ADMIN").hasRole("ADMIN")     // 需拥有 ADMIN 这个身份
-                //测试用资源
-//                .antMatchers("/tasks/**").authenticated()
-//                // swagger start
-//                .antMatchers("/swagger-ui.html").anonymous()
-//                .antMatchers("/swagger-resources/**").anonymous()
-//                .antMatchers("/webjars/**").anonymous()
-//                .antMatchers("/*/api-docs").anonymous()
+                // swagger start
+                .antMatchers("/swagger-ui.html").anonymous()
+                .antMatchers("/swagger-resources/**").anonymous()
+                .antMatchers("/webjars/**").anonymous()
+                .antMatchers("/*/api-docs").anonymous()
                 //其他的都放行
-                .anyRequest().authenticated()
-                .and()
+                .anyRequest().permitAll().and()
+
                 //配置拦截时的处理
                 .exceptionHandling()
-                .authenticationEntryPoint(this.entryPointUnauthorizedHandler)//添加token无效或未携带token的处理
-                .accessDeniedHandler(this.myAccessDeniedHandler)//无权限时的处理
+                .authenticationEntryPoint(entryPointUnauthorizedHandler)//未登录、添加token无效或未携带token的处理
+                .accessDeniedHandler(myAccessDeniedHandler)//无权限时的处理
                 .and()
+
                 //设置session策略，不需要session
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .addFilter(new JWTLoginFilter(authenticationManager()))
-                .addFilter(new JWTAuthorizationFilter());
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         /**
          * 本次 json web token 权限控制的核心配置部分
          * 在 Spring Security 开始判断本次会话是否有权限时的前一瞬间

@@ -14,6 +14,7 @@ public enum ResultCode {
     PARAM_NOT_COMPLETE(10002,"参数缺失"),
     PARAM_TYPE_ERROR(10003,"参数类型错误"),
     NULL_PARAM(10004,"无法获取到参数异常"),
+    PASSWORD_ERROR(100005,"密码错误"),
 
     //内部错误
     NO_RESULT(50000,"无相关数据"),
@@ -21,6 +22,7 @@ public enum ResultCode {
     NO_AUTHORITY(50002,"无操作权限"),
     IO_ERROR(50003,"数据传输异常"),
     NO_LOG_IN(50004,"未登陆"),
+    ACCOUNT_USELESS(50005,"账号不可用"),
     //业务异常
     SERVICE_ERROR(99999,"业务异常");
 

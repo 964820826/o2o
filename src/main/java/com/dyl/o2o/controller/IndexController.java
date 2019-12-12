@@ -2,6 +2,7 @@ package com.dyl.o2o.controller;
 
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
+import com.dyl.o2o.common.util.EncryptUtil;
 import com.dyl.o2o.common.util.JWTTokenUtil;
 import com.dyl.o2o.common.util.security.JWTUser;
 import com.dyl.o2o.domain.HeadLineDO;
@@ -9,9 +10,11 @@ import com.dyl.o2o.domain.UserDO;
 import com.dyl.o2o.dto.LoginUser;
 import com.dyl.o2o.service.HeadLineService;
 import com.dyl.o2o.service.UserService;
+import com.dyl.o2o.service.impl.UserDetailsServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,6 +38,8 @@ public class IndexController {
     HeadLineService headLineService;
     @Autowired
     UserService userService;
+    @Autowired
+    UserDetailsServiceImpl userDetailsServiceImpl;
 
     /**
      * 获取头条列表
@@ -62,9 +67,13 @@ public class IndexController {
         }
         //todo 校验输入参数合法性
         //查数据库获取用户信息
-        UserDO userDO = userService.getUserByUsername(loginUser.getUsername());
+        JWTUser jwtUser = (JWTUser) userDetailsServiceImpl.loadUserByUsername(loginUser.getUsername());
+        //核对密码
+        if (!jwtUser.getPassword().equals(EncryptUtil.encryptPassword(loginUser.getPassword()))){
+            return R.error(ResultCode.PASSWORD_ERROR);
+        }
         //根据用户生成token
-        String token = JWTTokenUtil.createAccessToken(new JWTUser(userDO));
+        String token = JWTTokenUtil.createAccessToken(jwtUser);
         return R.success(token);
     }
 

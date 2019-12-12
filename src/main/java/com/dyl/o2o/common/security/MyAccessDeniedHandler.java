@@ -19,7 +19,8 @@ import java.io.IOException;
 @Component
 public class MyAccessDeniedHandler implements AccessDeniedHandler {
     @Override
-    public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e) throws IOException, ServletException {
-        response.getWriter().write(JSON.toJSONString(R.error(ResultCode.NO_LOG_IN)));
+    public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e) throws IOException {
+        response.setContentType("text/html;charset=utf-8");//避免乱码
+        response.getWriter().write(JSON.toJSONString(R.error(ResultCode.NO_AUTHORITY)));
     }
 }

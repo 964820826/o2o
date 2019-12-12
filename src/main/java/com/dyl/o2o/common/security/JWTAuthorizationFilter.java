@@ -31,7 +31,8 @@ import java.util.ArrayList;
  * @date ：Created in 2019/12/9 13:59
  */
 @Slf4j
-public class JWTAuthorizationFilter extends UsernamePasswordAuthenticationFilter {
+@Component
+public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     @Autowired
     UserDetailsServiceImpl userDetailsService;
@@ -45,13 +46,11 @@ public class JWTAuthorizationFilter extends UsernamePasswordAuthenticationFilter
      * @throws ServletException
      */
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        // 将 ServletRequest 转换为 HttpServletRequest 才能拿到请求头中的 token
-        HttpServletRequest httpRequest = (HttpServletRequest) request;
-        log.info("鉴权url： '{}'",httpRequest.getRequestURI());
+    public void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
+        log.info("鉴权url： '{}'",request.getRequestURI());
 
         //获取请求头
-        String tokenHeader = httpRequest.getHeader(JWTConfigBean.tokenHeader);
+        String tokenHeader = request.getHeader(JWTConfigBean.tokenHeader);
 //        //如果请求头中没有Authorization信息则直接放行
 //        if (tokenHeader == null || !tokenHeader.startsWith(JWTConfigBean.tokenPrefix)){
 //            chain.doFilter(request, response);
@@ -69,7 +68,7 @@ public class JWTAuthorizationFilter extends UsernamePasswordAuthenticationFilter
                 if (userDetails != null){//todo 添加校验token是否过期
                     //若用户权限类不为空，则生成通过认证
                     UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
-                    authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpRequest));
+                    authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                     //将权限写入本次会话
                     //todo 给用户关联权限
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);
@@ -84,9 +83,6 @@ public class JWTAuthorizationFilter extends UsernamePasswordAuthenticationFilter
             }
         }
         chain.doFilter(request,response);
-//        //如果请求头中有token，则进行解析，并设置认证信息
-//        SecurityContextHolder.getContext().setAuthentication(getAuthentication(tokenHeader));
-//        super.doFilterInternal(request, response, chain);
     }
 
 //    private UsernamePasswordAuthenticationToken getAuthentication(String tokenHeader){
