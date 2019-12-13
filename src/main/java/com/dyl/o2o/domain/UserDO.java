@@ -1,10 +1,12 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.Set;
 
 /** 用户实体类（临时使用）todo 废除person类，使用user作为用户
  * @author ：dyl
@@ -22,6 +24,10 @@ public class UserDO {
     private String password;
     //账户是否可用
     private String status;
+
+    //用户角色
+    @TableField(exist = false)
+    private Set<RoleDO> roles;
 //    //创建时间
 //    private Date createTime;
 //    //最后修改时间

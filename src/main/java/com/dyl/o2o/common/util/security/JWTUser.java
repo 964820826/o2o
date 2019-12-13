@@ -1,5 +1,7 @@
 package com.dyl.o2o.common.util.security;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.dyl.o2o.domain.RoleDO;
 import com.dyl.o2o.domain.UserDO;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
@@ -8,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.Set;
 
 /** 用户安全实体
  * @author ：dyl
@@ -28,8 +31,10 @@ public class JWTUser implements UserDetails {
     private Date createTime;
     //最后修改时间
     private Date lastEditTime;
-
     //用户角色
+    private Set<RoleDO> roles;
+
+    //用户权限
     private Collection<GrantedAuthority> authorities;
     //是否过期
     private boolean isAccountNonExpired = false;

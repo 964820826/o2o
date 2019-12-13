@@ -54,3 +54,138 @@
 2019-12-13 00:01:17.451 [Thread-26] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
 2019-12-13 00:01:17.453 [Thread-26] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
 2019-12-13 00:01:17.456 [Thread-26] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2019-12-13 09:40:31.921 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-laptop with PID 29428 (D:\IDEAWorkspace\git\o2o\target\classes started by MI in D:\IDEAWorkspace\git\o2o)
+2019-12-13 09:40:31.925 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-13 09:40:31.986 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-13 09:40:31.987 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-13 09:40:33.713 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$406e1799] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 09:40:33.739 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a7c04f5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 09:40:33.796 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 09:40:33.799 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@55a3a287' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 09:40:33.805 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$6542ba4b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 09:40:33.810 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 09:40:34.497 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-13 09:40:34.524 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-13 09:40:34.525 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-13 09:40:34.666 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-13 09:40:34.667 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2680 ms
+2019-12-13 09:40:36.538 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-13 09:40:36.668 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resource/static/**/*.js'], []
+2019-12-13 09:40:36.668 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resource/static/**/*.css'], []
+2019-12-13 09:40:36.668 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resource/templates/**/*.html'], []
+2019-12-13 09:40:36.704 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b3bc9cc, org.springframework.security.web.context.SecurityContextPersistenceFilter@60b5bda0, org.springframework.security.web.header.HeaderWriterFilter@55653d98, org.springframework.security.web.authentication.logout.LogoutFilter@ac6cb36, com.dyl.o2o.common.security.JWTAuthorizationFilter@30c9296, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69f3be0e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@214116fe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c624375, org.springframework.security.web.session.SessionManagementFilter@3469f574, org.springframework.security.web.access.ExceptionTranslationFilter@3bd4a678, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@699c7341]
+2019-12-13 09:40:36.893 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-13 09:40:36.963 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-13 09:40:37.013 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-13 09:40:37.281 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-13 09:40:37.307 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-13 09:40:37.351 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-13 09:40:37.600 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-13 09:40:37.604 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 6.424 seconds (JVM running for 7.934)
+2019-12-13 09:43:20.652 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-13 09:43:20.653 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-13 09:43:20.666 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2019-12-13 09:43:20.687 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/'
+2019-12-13 09:43:22.684 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/css/index.css'
+2019-12-13 09:43:23.075 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/index.js'
+2019-12-13 09:43:23.532 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shopCategory/list'
+2019-12-13 09:43:23.532 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/headLine'
+2019-12-13 09:43:23.752 [http-nio-8080-exec-5] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-13 09:43:23.752 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-13 09:43:23.753 [http-nio-8080-exec-5] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-13 09:43:23.753 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-13 09:43:23.766 [http-nio-8080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-13 09:43:23.884 [http-nio-8080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-13 09:43:23.994 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223272255687.png'
+2019-12-13 09:43:23.994 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223273314635.png'
+2019-12-13 09:43:24.203 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223274213433.png'
+2019-12-13 09:43:24.204 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223280082147.png'
+2019-12-13 09:43:24.204 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223281361578.png'
+2019-12-13 09:43:24.204 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223275121460.png'
+2019-12-13 09:43:24.848 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320400198256.jpg'
+2019-12-13 09:43:24.959 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320393452772.jpg'
+2019-12-13 09:43:24.959 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320371786788.jpg'
+2019-12-13 09:43:24.959 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320315746624.jpg'
+2019-12-13 09:43:38.138 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/'
+2019-12-13 09:43:38.221 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/css/index.css'
+2019-12-13 09:43:38.225 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/index.js'
+2019-12-13 09:43:38.288 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/headLine'
+2019-12-13 09:43:38.288 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shopCategory/list'
+2019-12-13 09:43:38.290 [http-nio-8080-exec-6] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-13 09:43:38.291 [http-nio-8080-exec-6] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-13 09:43:38.291 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-13 09:43:38.291 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-13 09:43:38.330 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320393452772.jpg'
+2019-12-13 09:43:38.330 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320400198256.jpg'
+2019-12-13 09:43:38.331 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320371786788.jpg'
+2019-12-13 09:43:38.332 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320315746624.jpg'
+2019-12-13 09:43:38.335 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223273314635.png'
+2019-12-13 09:43:38.335 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223272255687.png'
+2019-12-13 09:43:38.340 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223274213433.png'
+2019-12-13 09:43:38.344 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223275121460.png'
+2019-12-13 09:43:38.345 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223280082147.png'
+2019-12-13 09:43:38.347 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223281361578.png'
+2019-12-13 09:45:09.637 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/swagger-ui.html'
+2019-12-13 09:45:09.727 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/springfox.css'
+2019-12-13 09:45:09.727 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/swagger-ui.css'
+2019-12-13 09:45:09.728 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/swagger-ui-bundle.js'
+2019-12-13 09:45:09.729 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js'
+2019-12-13 09:45:09.734 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/springfox.js'
+2019-12-13 09:45:10.081 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/swagger-resources/configuration/ui'
+2019-12-13 09:45:10.111 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/swagger-resources/configuration/security'
+2019-12-13 09:45:10.123 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/swagger-resources'
+2019-12-13 09:45:10.177 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/v2/api-docs'
+2019-12-13 09:45:10.178 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/'
+2019-12-13 09:45:10.180 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2'
+2019-12-13 09:45:10.223 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2'
+2019-12-13 09:45:10.271 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/csrf'
+2019-12-13 09:45:10.425 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2'
+2019-12-13 09:45:10.426 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2'
+2019-12-13 09:45:26.057 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/swagger-ui.html'
+2019-12-13 09:45:26.138 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/springfox.css'
+2019-12-13 09:45:26.138 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/swagger-ui.css'
+2019-12-13 09:45:26.139 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/swagger-ui-bundle.js'
+2019-12-13 09:45:26.139 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js'
+2019-12-13 09:45:26.139 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/springfox.js'
+2019-12-13 09:45:26.492 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/swagger-resources/configuration/ui'
+2019-12-13 09:45:26.498 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/swagger-resources/configuration/security'
+2019-12-13 09:45:26.504 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/swagger-resources'
+2019-12-13 09:45:26.547 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/v2/api-docs'
+2019-12-13 09:45:26.548 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/'
+2019-12-13 09:45:26.552 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-700.woff2'
+2019-12-13 09:45:26.586 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2'
+2019-12-13 09:45:26.613 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/csrf'
+2019-12-13 09:45:26.736 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-700.woff2'
+2019-12-13 09:45:26.737 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-300.woff2'
+2019-12-13 09:46:54.152 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/fonts/source-code-pro-v7-latin-600.woff2'
+2019-12-13 09:46:56.569 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-regular.woff2'
+2019-12-13 09:47:05.284 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/favicon-16x16.png'
+2019-12-13 09:47:06.192 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/favicon-16x16.png'
+2019-12-13 09:47:07.075 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/webjars/springfox-swagger-ui/favicon-16x16.png'
+2019-12-13 09:47:08.921 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/captchaImage'
+2019-12-13 10:12:01.447 [Thread-21] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-13 10:12:01.448 [Thread-21] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-12-13 10:12:01.452 [Thread-21] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-12-13 11:21:16.760 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$dd45bc39] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 11:21:16.769 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4497f3ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 11:21:16.803 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 11:21:16.805 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3e33d73e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 11:21:16.811 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$21a5eeb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 11:21:16.819 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-13 11:21:18.984 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-13 11:21:19.205 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resource/static/**/*.js'], []
+2019-12-13 11:21:19.207 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resource/static/**/*.css'], []
+2019-12-13 11:21:19.207 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resource/templates/**/*.html'], []
+2019-12-13 11:21:19.683 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64502326, org.springframework.security.web.context.SecurityContextPersistenceFilter@43471a7e, org.springframework.security.web.header.HeaderWriterFilter@3e900e1a, org.springframework.security.web.authentication.logout.LogoutFilter@64ae105d, com.dyl.o2o.common.security.JWTAuthorizationFilter@6dca31eb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a1ccaaf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a38f122, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a058df8, org.springframework.security.web.session.SessionManagementFilter@160e99e0, org.springframework.security.web.access.ExceptionTranslationFilter@2e71240b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@63fd4dda]
+2019-12-13 11:21:20.265 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-13 11:21:20.352 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-13 11:21:20.829 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-13 11:21:20.861 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-13 11:21:20.906 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-13 11:21:21.550 [main] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.getUserRole] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-13 11:21:21.551 [main] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-13 11:21:21.576 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-13 11:21:21.814 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-13 11:21:21.954 [Thread-3] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-13 11:21:21.960 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-12-13 11:21:21.966 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
