@@ -3,6 +3,7 @@ package com.dyl.o2o.common.security;
 import com.alibaba.fastjson.JSON;
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
+import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
@@ -13,17 +14,32 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 用户未登陆结果处理类
+ * 用户登陆时出现异常的结果处理类
  *
  * @author ：dyl
  * @date ：Created in 2019/12/10 15:58
  */
 @Component
 public class EntryPointUnauthorizedHandler implements AuthenticationEntryPoint {
+
+    /**
+     * 出现登陆异常时security框架自动调用，也可在登陆校验时手动调用返回结果
+     * @param request
+     * @param response
+     * @param e
+     * @throws IOException
+     * @throws ServletException
+     */
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException e) throws IOException, ServletException {
-        String result = JSON.toJSONString(R.error(ResultCode.NO_LOG_IN));
         response.setContentType("text/html;charset=utf-8");//避免乱码
+        String result;
+        if (e instanceof DisabledException){
+            result = JSON.toJSONString(R.error(e.getMessage()));
+            response.getWriter().write(e.getMessage());
+        }else {
+            result = JSON.toJSONString(R.error(ResultCode.NO_LOG_IN));
+        }
         response.getWriter().write(result);
     }
 }

@@ -38,7 +38,6 @@ public class AreaController {
      */
     @GetMapping("/list")
     @ApiOperation("获取所有区域信息")
-    @PreAuthorize("hasAnyRole('admin')")
     public R areaSelectList() {
         List<AreaDO> areaDoList = areaService.selectList();
         return R.success(areaDoList);

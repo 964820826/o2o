@@ -2,7 +2,7 @@
 //
 //import com.dyl.o2o.common.security.JWTConfigBean;
 //import com.dyl.o2o.common.util.JWTTokenUtil;
-//import com.dyl.o2o.common.util.security.JWTUser;
+//import com.dyl.o2o.common.security.JWTUser;
 //import com.dyl.o2o.dto.LoginUser;
 //import com.dyl.o2o.service.impl.UserDetailsServiceImpl;
 //import com.fasterxml.jackson.databind.ObjectMapper;

@@ -22,6 +22,6 @@ public interface RoleDao extends BaseMapper<RoleDO> {
      * @param id
      * @return
      */
-    @Select("select * from sys_menu where (select menu_id from sys_role_menu where menu_id=${id} and menu_id = sys_menu.menu_id)")
+    @Select("select * from sys_menu where (select menu_id from sys_role_menu where role_id=${id} and menu_id = sys_menu.menu_id)")
     Set<MenuDO> getPermissionByRoleId(Long id);
 }

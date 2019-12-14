@@ -46,7 +46,7 @@ public class R {
     }
 
     /**
-     * 参数校验失败的方法(失败信息自定义)
+     * 失败的方法(失败信息自定义)
      * @param massage
      * @return
      */

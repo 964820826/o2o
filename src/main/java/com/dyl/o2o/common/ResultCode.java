@@ -23,6 +23,8 @@ public enum ResultCode {
     IO_ERROR(50003,"数据传输异常"),
     NO_LOG_IN(50004,"未登陆"),
     ACCOUNT_USELESS(50005,"账号不可用"),
+    USER_EXPIRE(50006,"用户已过期"),
+
     //业务异常
     SERVICE_ERROR(99999,"业务异常");
 

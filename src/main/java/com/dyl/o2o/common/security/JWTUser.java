@@ -1,4 +1,4 @@
-package com.dyl.o2o.common.util.security;
+package com.dyl.o2o.common.security;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.dyl.o2o.domain.RoleDO;
@@ -47,6 +47,12 @@ public class JWTUser implements UserDetails {
 
     public JWTUser(UserDO userDO){
         BeanUtils.copyProperties(userDO,this);
+        if (userDO.isStatus()){
+            //状态可用代表未锁定
+            this.isAccountNonLocked = false;
+        }else {
+            this.isAccountNonLocked = true;
+        }
     }
 
     @Override

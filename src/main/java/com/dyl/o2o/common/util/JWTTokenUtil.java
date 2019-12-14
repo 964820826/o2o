@@ -2,7 +2,7 @@ package com.dyl.o2o.common.util;
 
 import com.alibaba.fastjson.JSON;
 import com.dyl.o2o.common.security.JWTConfigBean;
-import com.dyl.o2o.common.util.security.JWTUser;
+import com.dyl.o2o.common.security.JWTUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -60,7 +60,6 @@ public class JWTTokenUtil {
      * @return 过期返回true，未过期返回false
      */
     public static boolean isExpiration(String token){
-        //todo 添加校验
         //获取设置的超时时间点，该时间点在当前时间之前则为超时
         return getTokenBody(token).getExpiration().before(new Date());
     }
@@ -93,7 +92,7 @@ public class JWTTokenUtil {
 //    public Date getCreatedDateFromToken(String token) {
 //        Date created;
 //        try {
-//            final Claims claims = this.getClaimsFromToken(token);
+//            final Claims claims = getTokenBody(token);
 //            created = new Date((Long) claims.get("created"));
 //        } catch (Exception e) {
 //            created = null;

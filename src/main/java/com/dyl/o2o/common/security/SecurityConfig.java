@@ -57,14 +57,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring().antMatchers("/resource/static/**/*.js","/resource/static/**/*.css","/resource/templates/**/*.html");
     }
 
+    //配置security
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         //禁用CSRF（security自带的跨域处理）
         http.csrf().disable()
                 .authorizeRequests()
-//                .antMatchers("/auth").authenticated()       // 需携带有效 token
-//                .antMatchers("/admin").hasAuthority("admin")   // 需拥有 admin 这个权限
-//                .antMatchers("/ADMIN").hasRole("ADMIN")     // 需拥有 ADMIN 这个身份
                 // swagger start
                 .antMatchers("/swagger-ui.html").anonymous()
                 .antMatchers("/swagger-resources/**").anonymous()

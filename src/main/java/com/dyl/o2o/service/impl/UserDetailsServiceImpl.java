@@ -2,7 +2,7 @@ package com.dyl.o2o.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.dyl.o2o.common.util.security.JWTUser;
+import com.dyl.o2o.common.security.JWTUser;
 import com.dyl.o2o.dao.RoleDao;
 import com.dyl.o2o.dao.UserDao;
 import com.dyl.o2o.domain.MenuDO;
@@ -11,14 +11,13 @@ import com.dyl.o2o.domain.UserDO;
 import com.dyl.o2o.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /** 用户及权限相关的业务层
  * @author ：dyl
@@ -46,7 +45,7 @@ public class UserDetailsServiceImpl extends ServiceImpl<UserDao, UserDO> impleme
         user.setRoles(userDao.getUserRole(user.getUserId()));
         JWTUser jwtUser = new JWTUser(user);
         jwtUser.setAuthorities(getRolePermission(jwtUser.getRoles()));
-        return new JWTUser(user);
+        return jwtUser;
     }
 
     /**
@@ -60,6 +59,10 @@ public class UserDetailsServiceImpl extends ServiceImpl<UserDao, UserDO> impleme
             permissions.addAll(roleDao.getPermissionByRoleId(role.getRoleId()));
         }
 
-
+        List<GrantedAuthority> grantedAuthorityList = new ArrayList<>();
+        for (MenuDO permission : permissions) {
+            grantedAuthorityList.add(new SimpleGrantedAuthority(permission.getPermission()));
+        }
+        return grantedAuthorityList;
     }
 }

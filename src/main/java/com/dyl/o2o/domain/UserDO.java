@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 import java.util.Set;
@@ -23,14 +25,13 @@ public class UserDO {
     //密码
     private String password;
     //账户是否可用
-    private String status;
+    private boolean status;
 
     //用户角色
     @TableField(exist = false)
     private Set<RoleDO> roles;
-//    //创建时间
-//    private Date createTime;
-//    //最后修改时间
-//    private Date lastEditTime;
-
+    //创建时间
+    private Date createTime;
+    //最后修改时间
+    private Date lastEditTime;
 }
