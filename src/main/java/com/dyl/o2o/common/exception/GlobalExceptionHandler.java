@@ -34,7 +34,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(value = Exception.class)
-    public R NullExceptionHandler(Exception e){
+    public R ExceptionHandler(Exception e){
         log.error("内部异常：" + e.getMessage());
         return R.error(ResultCode.INNER_ERROR);
     }
@@ -45,11 +45,10 @@ public class GlobalExceptionHandler {
         return R.error(ResultCode.NO_AUTHORITY);
     }
 
-    @ExceptionHandler(value = AuthenticationException.class)
-    public R AuthenticationExceptionHandler(AuthenticationException  e){
-        log.error("未登陆：" + e.getMessage());
-        return R.error(ResultCode.NO_LOG_IN);
-    }
+//    @ExceptionHandler(value = AuthenticationException.class)
+//    public R AuthenticationExceptionHandler(AuthenticationException  e){
+//        log.error("未登陆：" + e.getMessage());
+//        return R.error(ResultCode.NO_LOG_IN);
+//    }
 
-    //todo 登陆失败异常处理
 }

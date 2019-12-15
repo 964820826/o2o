@@ -28,17 +28,15 @@ public class UserController {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    /**
+     * 普通用户注册
+     * @param loginUser
+     * @return
+     */
     @PostMapping("/register")
     public R registerUser(LoginUser loginUser){
-        UserDO userDO = new UserDO();
-        userDO.setUsername(loginUser.getUsername());
-        userDO.setPassword(bCryptPasswordEncoder.encode(loginUser.getPassword()));
-        //添加数据库
-        if (userService.save(userDO)){
-            return R.success();
-        }else{
-            return R.error(ResultCode.SERVICE_ERROR);
-        }
+        userService.addUser(loginUser);
+        return R.success();
     }
 
 }

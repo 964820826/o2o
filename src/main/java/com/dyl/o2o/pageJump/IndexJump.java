@@ -16,4 +16,9 @@ public class IndexJump {
     public String indexPage() {
         return "/index";
     }
+
+    @GetMapping("/loginPage")
+    public String loginPage(){
+        return "/login";
+    }
 }

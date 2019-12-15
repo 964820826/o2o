@@ -32,3 +32,40 @@ Date.prototype.format = function(fmt) {
     }
     return fmt;
 };
+
+//从本地获取token
+function getToken() {
+    var token = localStorage.getItem("token");
+    if (token){
+        return token;
+    }else {
+        return null;
+    }
+}
+
+//判断是否需要重新登陆
+function testTokenFailed(code) {
+    //若未登陆或token过期，则清除本地存放的token，并提示重新登陆
+    if (code == 5004 || code == 5006){
+        localStorage.clear();
+        $.toast("登陆信息已过期，请重新登陆");
+        setTimeout(function () {
+            window.location.href = '/login';
+        },1000)
+    }
+}
+
+//检测是否登陆，根据登陆信息调整侧边栏显示内容
+function checkLogin() {
+    if (localStorage.getItem('token')){
+        $(".login").show();
+    }else {
+        $(".unLogin").show();
+    }
+}
+
+//登出，清除登陆信息
+function logout() {
+    localStorage.clear();
+    location.reload();
+}

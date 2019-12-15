@@ -2,10 +2,12 @@ package com.dyl.o2o.controller;
 
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
+import com.dyl.o2o.common.util.CaptchaUtil;
 import com.dyl.o2o.common.util.EncryptUtil;
 import com.dyl.o2o.common.util.JWTTokenUtil;
 import com.dyl.o2o.common.security.JWTUser;
 import com.dyl.o2o.domain.HeadLineDO;
+import com.dyl.o2o.domain.RoleDO;
 import com.dyl.o2o.dto.LoginUser;
 import com.dyl.o2o.service.HeadLineService;
 import com.dyl.o2o.service.UserService;
@@ -19,7 +21,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 
 /**
@@ -58,12 +64,18 @@ public class IndexController {
      * @return
      */
     @PostMapping("/login")
-    public R login(@Validated LoginUser loginUser, BindingResult bindingResult){
+    //被@Validated注解的参数后面必须紧跟BindingResult，否则BindingResult不生效
+    public R login(@Validated LoginUser loginUser, BindingResult bindingResult, String verifyCodeActual, boolean needVerify, HttpSession session){
         //参数校验
         if (bindingResult.hasErrors()){
             return R.error(bindingResult.getFieldError().getDefaultMessage());
         }
-        //todo 校验输入参数合法性
+        if (needVerify){
+            if (!CaptchaUtil.checkVerifyCode(verifyCodeActual,session)){
+                return R.error(ResultCode.CAPTCHA_FAIL);
+            }
+        }
+        //todo 将登陆部分的代码移植到service层，controller层尽量少写业务逻辑
         //查数据库获取用户信息
         JWTUser jwtUser = (JWTUser) userDetailsServiceImpl.loadUserByUsername(loginUser.getUsername());
         //核对密码
@@ -72,11 +84,13 @@ public class IndexController {
         }
         //根据用户生成token
         String token = JWTTokenUtil.createAccessToken(jwtUser);
-        return R.success(token);
-    }
-
-    @PostMapping("/token")
-    public String hello(String token){
-        return JWTTokenUtil.getUsernameFromToken(token);
+        //获取用户角色
+        Set <RoleDO> userRoleSet = userService.getUserRoleByUserId(jwtUser.getUserId());
+        String userRole = userRoleSet.iterator().next().getRoleName();
+        //构建返回结果
+        Map resultMap = new HashMap();
+        resultMap.put("token", token);
+        resultMap.put("role",userRole);
+        return R.success(resultMap);
     }
 }

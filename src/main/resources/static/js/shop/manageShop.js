@@ -1,4 +1,5 @@
 $(function () {
+    var token = localStorage.getItem("token");
     //获取当前用户的店铺
     var currentUserShop = "/shop/currentUser";
     $.getJSON(currentUserShop,function (data) {

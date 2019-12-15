@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
 import org.springframework.security.authentication.DisabledException;
+import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
@@ -31,12 +32,14 @@ public class EntryPointUnauthorizedHandler implements AuthenticationEntryPoint {
      * @throws ServletException
      */
     @Override
-    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException e) throws IOException, ServletException {
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException e) throws IOException{
         response.setContentType("text/html;charset=utf-8");//避免乱码
         String result;
-        if (e instanceof DisabledException){
-            result = JSON.toJSONString(R.error(e.getMessage()));
+        if (e instanceof DisabledException){//过期
+            result = JSON.toJSONString(R.error(ResultCode.USER_EXPIRE));
             response.getWriter().write(e.getMessage());
+        }else if (e instanceof LockedException){
+            result = JSON.toJSONString(R.error(ResultCode.ACCOUNT_USELESS));
         }else {
             result = JSON.toJSONString(R.error(ResultCode.NO_LOG_IN));
         }

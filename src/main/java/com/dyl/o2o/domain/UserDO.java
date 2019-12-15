@@ -1,11 +1,12 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import com.dyl.o2o.dto.LoginUser;
+import lombok.*;
+import org.springframework.beans.BeanUtils;
 
 import java.util.Date;
 import java.util.Set;
@@ -16,16 +17,17 @@ import java.util.Set;
  */
 @Data
 @TableName("sys_user")
+@NoArgsConstructor
 public class UserDO {
     //账户Id
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Long userId;
     //账户名
     private String username;
     //密码
     private String password;
-    //账户是否可用
-    private boolean status;
+    //账户是否可用 默认可用
+    private boolean status = true;
 
     //用户角色
     @TableField(exist = false)
@@ -34,4 +36,8 @@ public class UserDO {
     private Date createTime;
     //最后修改时间
     private Date lastEditTime;
+
+    public UserDO(LoginUser loginUser){
+        BeanUtils.copyProperties(loginUser,this);
+    }
 }
