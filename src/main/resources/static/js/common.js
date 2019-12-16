@@ -59,6 +59,11 @@ function testTokenFailed(code) {
 function checkLogin() {
     if (localStorage.getItem('token')){
         $(".login").show();
+        if (localStorage.getItem('role') == 'consumer'){
+            $(".customer").show();
+        }else {
+            $(".myShop").show();
+        }
     }else {
         $(".unLogin").show();
     }

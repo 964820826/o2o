@@ -58,6 +58,8 @@ $('#submit').click(function () {
                 if (loginCount >= 3) {
                     // 登录失败三次，需要做验证码校验
                     $('#verifyPart').show();
+                    //更换验证码
+                    $('captcha_img').click();
                 }
             }
         }

@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 本地数据库-3306
+ Source Server         : 本地数据库
  Source Server Type    : MySQL
  Source Server Version : 80017
- Source Host           : localhost:3306
+ Source Host           : 127.0.0.1:3306
  Source Schema         : o2o
 
  Target Server Type    : MySQL
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 08/12/2019 14:30:36
+ Date: 16/12/2019 21:06:43
 */
 
 SET NAMES utf8mb4;
@@ -26,7 +26,13 @@ CREATE TABLE `sys_menu`  (
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '权限名称',
   `permission` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '权限标识',
   PRIMARY KEY (`menu_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 87 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '权限表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '权限表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of sys_menu
+-- ----------------------------
+INSERT INTO `sys_menu` VALUES (1, '管理员', 'admin');
+INSERT INTO `sys_menu` VALUES (2, '店铺修改', 'shop_update');
 
 -- ----------------------------
 -- Table structure for sys_role
@@ -36,7 +42,13 @@ CREATE TABLE `sys_role`  (
   `role_id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT '角色ID',
   `role_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '角色名称',
   PRIMARY KEY (`role_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of sys_role
+-- ----------------------------
+INSERT INTO `sys_role` VALUES (1, 'admin');
+INSERT INTO `sys_role` VALUES (2, 'customer');
 
 -- ----------------------------
 -- Table structure for sys_role_menu
@@ -47,7 +59,12 @@ CREATE TABLE `sys_role_menu`  (
   `role_id` bigint(11) NULL DEFAULT NULL COMMENT '角色ID',
   `menu_id` bigint(11) NULL DEFAULT NULL COMMENT '权限ID',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色与权限关系表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色与权限关系表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of sys_role_menu
+-- ----------------------------
+INSERT INTO `sys_role_menu` VALUES (1, 1, 1);
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -58,9 +75,16 @@ CREATE TABLE `sys_user`  (
   `username` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
   `password` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '密码',
   `status` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '状态 PROHIBIT：禁用   NORMAL：正常',
+  `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+  `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`user_id`) USING BTREE,
   UNIQUE INDEX `username`(`username`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '系统用户表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of sys_user
+-- ----------------------------
+INSERT INTO `sys_user` VALUES (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '1', NULL, '2019-12-16 10:31:47');
 
 -- ----------------------------
 -- Table structure for sys_user_role
@@ -71,7 +95,12 @@ CREATE TABLE `sys_user_role`  (
   `user_id` bigint(11) NULL DEFAULT NULL COMMENT '用户ID',
   `role_id` bigint(11) NULL DEFAULT NULL COMMENT '角色ID',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户与角色关系表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户与角色关系表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of sys_user_role
+-- ----------------------------
+INSERT INTO `sys_user_role` VALUES (1, 1, 1);
 
 -- ----------------------------
 -- Table structure for tb_area
@@ -85,7 +114,7 @@ CREATE TABLE `tb_area`  (
   `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`area_id`) USING BTREE,
   UNIQUE INDEX `UK_AREA`(`area_name`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '区域信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '区域信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_area
@@ -156,13 +185,36 @@ CREATE TABLE `tb_person`  (
   `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
   `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`person_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '个人信息表（用户表）' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '个人信息表（用户表）' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_person
 -- ----------------------------
 INSERT INTO `tb_person` VALUES (1, '测试', 'test', 'test', '1', 1, 2, NULL, NULL);
 INSERT INTO `tb_person` VALUES (8, '李翔', 'http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJmNzyG67YKicCIOXYUKHEC32ZJANTfoaRGVB1MvkW8KagcYfDOic9IicZO5Gibp5QBsLC3p2tLq22quQ/0', NULL, '1', 1, 1, '2017-10-11 04:28:41', NULL);
+
+-- ----------------------------
+-- Table structure for tb_person_info
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_person_info`;
+CREATE TABLE `tb_person_info`  (
+  `user_id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `profile_img` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `email` varchar(1024) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `gender` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `enable_status` int(2) NOT NULL DEFAULT 0 COMMENT '0:禁止使用本商城，1:允许使用本商城',
+  `user_type` int(2) NOT NULL DEFAULT 1 COMMENT '1:顾客，2:店家，3:超级管理员',
+  `create_time` datetime(0) NULL DEFAULT NULL,
+  `last_edit_time` datetime(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`user_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tb_person_info
+-- ----------------------------
+INSERT INTO `tb_person_info` VALUES (1, '测试', 'test', 'test', '1', 1, 2, NULL, NULL);
+INSERT INTO `tb_person_info` VALUES (8, '李翔', 'http://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJmNzyG67YKicCIOXYUKHEC32ZJANTfoaRGVB1MvkW8KagcYfDOic9IicZO5Gibp5QBsLC3p2tLq22quQ/0', NULL, '1', 1, 1, '2017-10-11 04:28:41', NULL);
 
 -- ----------------------------
 -- Table structure for tb_product

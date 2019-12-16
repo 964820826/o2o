@@ -1170,3 +1170,166 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2019-12-15 22:57:50.260 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-16 10:21:04.141 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Starting O2oApplication on dyl-laptop with PID 17412 (D:\IDEAWorkspace\git\o2o\target\classes started by MI in D:\IDEAWorkspace\git\o2o)
+2019-12-16 10:21:04.144 [restartedMain] INFO  com.dyl.o2o.O2oApplication - The following profiles are active: dev
+2019-12-16 10:21:04.193 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-16 10:21:04.194 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-16 10:21:05.576 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$df822f3b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 10:21:05.586 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$46d46701] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 10:21:05.606 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 10:21:05.608 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4f20efd' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 10:21:05.611 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$456d1ed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 10:21:05.614 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-16 10:21:06.016 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-12-16 10:21:06.039 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-16 10:21:06.040 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-16 10:21:06.145 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-16 10:21:06.145 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1951 ms
+2019-12-16 10:21:07.532 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-16 10:21:07.683 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resource/static/**/*.js'], []
+2019-12-16 10:21:07.683 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resource/static/**/*.css'], []
+2019-12-16 10:21:07.683 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/resource/templates/**/*.html'], []
+2019-12-16 10:21:07.731 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e446f93, org.springframework.security.web.context.SecurityContextPersistenceFilter@567bd1db, org.springframework.security.web.header.HeaderWriterFilter@56cd5eed, org.springframework.security.web.authentication.logout.LogoutFilter@790b01b6, com.dyl.o2o.common.security.JWTAuthorizationFilter@12e8bea3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@af5ef25, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46a30798, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e88a1d1, org.springframework.security.web.session.SessionManagementFilter@763faab, org.springframework.security.web.access.ExceptionTranslationFilter@3eb59376, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@68531def]
+2019-12-16 10:21:07.919 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-16 10:21:07.988 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-12-16 10:21:08.035 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2019-12-16 10:21:08.288 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2019-12-16 10:21:08.311 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-12-16 10:21:08.351 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2019-12-16 10:21:08.632 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-16 10:21:08.640 [restartedMain] INFO  com.dyl.o2o.O2oApplication - Started O2oApplication in 5.348 seconds (JVM running for 7.776)
+2019-12-16 10:22:15.481 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-16 10:22:15.482 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-16 10:22:15.495 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2019-12-16 10:22:15.520 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/'
+2019-12-16 10:22:15.750 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/css/index.css'
+2019-12-16 10:22:15.752 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/common.js'
+2019-12-16 10:22:15.752 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/index.js'
+2019-12-16 10:22:15.908 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/headLine'
+2019-12-16 10:22:15.925 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shopCategory/list'
+2019-12-16 10:22:16.073 [http-nio-8080-exec-5] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:22:16.073 [http-nio-8080-exec-6] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:22:16.074 [http-nio-8080-exec-6] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:22:16.074 [http-nio-8080-exec-5] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:22:16.090 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-16 10:22:16.592 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-16 10:22:16.741 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223272255687.png'
+2019-12-16 10:22:16.741 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223273314635.png'
+2019-12-16 10:22:16.741 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223274213433.png'
+2019-12-16 10:22:16.743 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223280082147.png'
+2019-12-16 10:22:16.743 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223281361578.png'
+2019-12-16 10:22:16.743 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223275121460.png'
+2019-12-16 10:22:16.768 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320400198256.jpg'
+2019-12-16 10:22:16.768 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320393452772.jpg'
+2019-12-16 10:22:16.769 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320371786788.jpg'
+2019-12-16 10:22:16.769 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320315746624.jpg'
+2019-12-16 10:22:21.558 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/loginPage'
+2019-12-16 10:22:21.589 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/captchaImage'
+2019-12-16 10:22:21.590 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/common.js'
+2019-12-16 10:22:21.599 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/login.js'
+2019-12-16 10:22:22.012 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/favicon.ico'
+2019-12-16 10:22:29.163 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/login'
+2019-12-16 10:22:29.265 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.selectOne] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:22:29.266 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:22:29.360 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/favicon.ico'
+2019-12-16 10:30:00.519 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/login'
+2019-12-16 10:30:00.522 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.selectOne] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:30:00.522 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:30:00.528 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.getUserRole] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:30:00.528 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:30:00.544 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.RoleDao.getPermissionByRoleId] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:30:00.544 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:30:41.710 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/login'
+2019-12-16 10:30:41.712 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.selectOne] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:30:41.712 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:30:41.716 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.getUserRole] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:30:41.716 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:30:41.718 [http-nio-8080-exec-3] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.RoleDao.getPermissionByRoleId] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:30:41.718 [http-nio-8080-exec-3] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:31:38.103 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/login'
+2019-12-16 10:31:38.105 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.selectOne] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:31:38.105 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:31:38.109 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.getUserRole] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:31:38.109 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:31:38.111 [http-nio-8080-exec-1] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.RoleDao.getPermissionByRoleId] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:31:38.111 [http-nio-8080-exec-1] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:31:53.388 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/login'
+2019-12-16 10:31:53.390 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.selectOne] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:31:53.390 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:31:53.393 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.getUserRole] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:31:53.393 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:31:53.395 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.RoleDao.getPermissionByRoleId] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:31:53.395 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:31:56.741 [http-nio-8080-exec-4] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.UserDao.getUserRole] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:31:56.741 [http-nio-8080-exec-4] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:31:56.763 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/index'
+2019-12-16 10:31:56.786 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/css/index.css'
+2019-12-16 10:31:56.786 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/common.js'
+2019-12-16 10:31:56.786 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/index.js'
+2019-12-16 10:31:56.843 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shopCategory/list'
+2019-12-16 10:31:56.843 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/headLine'
+2019-12-16 10:31:56.846 [http-nio-8080-exec-9] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:31:56.846 [http-nio-8080-exec-9] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:31:56.846 [http-nio-8080-exec-10] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 10:31:56.846 [http-nio-8080-exec-10] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 10:31:56.875 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320393452772.jpg'
+2019-12-16 10:31:56.875 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320400198256.jpg'
+2019-12-16 10:31:56.876 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320371786788.jpg'
+2019-12-16 10:31:56.880 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320315746624.jpg'
+2019-12-16 10:31:56.894 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223272255687.png'
+2019-12-16 10:31:56.897 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223275121460.png'
+2019-12-16 10:31:56.897 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223274213433.png'
+2019-12-16 10:31:56.897 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223273314635.png'
+2019-12-16 10:31:56.900 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223280082147.png'
+2019-12-16 10:31:56.901 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223281361578.png'
+2019-12-16 11:06:28.171 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/index'
+2019-12-16 11:06:28.193 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/css/index.css'
+2019-12-16 11:06:28.195 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/common.js'
+2019-12-16 11:06:28.196 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/index.js'
+2019-12-16 11:06:28.235 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/headLine'
+2019-12-16 11:06:28.235 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shopCategory/list'
+2019-12-16 11:06:28.239 [http-nio-8080-exec-7] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopCategoryDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 11:06:28.240 [http-nio-8080-exec-7] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 11:06:28.240 [http-nio-8080-exec-2] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.HeadLineDao.selectList] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 11:06:28.241 [http-nio-8080-exec-2] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 11:06:28.263 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/favicon.ico'
+2019-12-16 11:06:28.284 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320400198256.jpg'
+2019-12-16 11:06:28.288 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320371786788.jpg'
+2019-12-16 11:06:28.291 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320393452772.jpg'
+2019-12-16 11:06:28.292 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223272255687.png'
+2019-12-16 11:06:28.293 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320315746624.jpg'
+2019-12-16 11:06:28.294 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223273314635.png'
+2019-12-16 11:06:28.297 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223281361578.png'
+2019-12-16 11:06:28.298 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223275121460.png'
+2019-12-16 11:06:28.299 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223274213433.png'
+2019-12-16 11:06:28.300 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/shopcategory/2017061223280082147.png'
+2019-12-16 11:06:32.108 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/manage'
+2019-12-16 11:06:35.972 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/css/shop/manageShop.css'
+2019-12-16 11:06:35.974 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/shop/manageShop.js'
+2019-12-16 11:06:36.038 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/currentUser'
+2019-12-16 11:06:36.045 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/favicon.ico'
+2019-12-16 11:06:36.066 [http-nio-8080-exec-2] INFO  c.d.o.c.m.DynamicDataSourceInterceptor - 设置方法[com.dyl.o2o.dao.ShopDao.selectOne] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-16 11:06:36.066 [http-nio-8080-exec-2] INFO  c.d.o.c.multiDataSource.DynamicDataSourceHolder - 使用的数据源为:slave
+2019-12-16 11:54:54.217 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/manage'
+2019-12-16 11:54:54.236 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/css/shop/manageShop.css'
+2019-12-16 11:54:54.242 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/shop/manageShop.js'
+2019-12-16 11:54:54.393 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/favicon.ico'
+2019-12-16 11:54:56.628 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/modify'
+2019-12-16 11:54:56.793 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/favicon.ico'
+2019-12-16 16:58:15.258 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/modify'
+2019-12-16 16:58:22.422 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/modify'
+2019-12-16 16:59:41.199 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/modify'
+2019-12-16 17:01:39.857 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/modify'
+2019-12-16 17:03:12.727 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/manage'
+2019-12-16 17:03:12.741 [http-nio-8080-exec-5] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/css/shop/manageShop.css'
+2019-12-16 17:03:12.746 [http-nio-8080-exec-1] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/shop/manageShop.js'
+2019-12-16 17:03:14.346 [http-nio-8080-exec-4] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/manage'
+2019-12-16 17:03:14.359 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/css/shop/manageShop.css'
+2019-12-16 17:03:14.362 [http-nio-8080-exec-3] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/shop/manageShop.js'
+2019-12-16 17:03:14.405 [http-nio-8080-exec-6] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/favicon.ico'
+2019-12-16 17:03:16.222 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/shop/modify'
+2019-12-16 17:03:17.698 [http-nio-8080-exec-7] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/captchaImage'
+2019-12-16 17:03:17.698 [http-nio-8080-exec-2] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/js/shop/modifyShop.js'
+2019-12-16 21:05:21.540 [Thread-20] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-16 21:05:21.547 [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-12-16 21:05:21.553 [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

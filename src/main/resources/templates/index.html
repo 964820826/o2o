@@ -68,15 +68,22 @@
     <div class="panel-overlay"></div>
     <div class="panel panel-right panel-reveal" id="panel-right-demo">
         <div class="content-block">
+            <!--登陆前显示-->
             <p class="unLogin" hidden>
                 <a href="/loginPage" class="close-panel">登陆</a>
             </p>
             <p class="unLogin" hidden>
                 <a href="/signIn" class="close-panel">注册</a>
             </p>
-            <p class="login" hidden>
-                <a href="/shop/add" class="close-panel">我的店铺</a>
+
+            <!--登陆后显示-->
+            <p class="customer" hidden>
+                <a href="/shop/add" class="close-panel">我要开店</a>
             </p>
+            <p class="myShop" hidden>
+                <a href="/shop/manage" class="close-panel">我的店铺</a>
+            </p>
+
             <p class="login" hidden>
                 <a href="/o2o/frontend/myrecord" class="close-panel">消费记录</a>
             </p>

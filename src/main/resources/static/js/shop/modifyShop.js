@@ -1,3 +1,23 @@
+//获取token
+var token = localStorage.getItem('token');
+
+var getShopInfoUrl = 'shop/'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // $(function () {
 //     //页面加载时自动调用方法
 //     var shopId = getQueryString("shopId");

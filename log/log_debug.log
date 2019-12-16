@@ -189,3 +189,65 @@
 2019-12-15 21:50:41.197 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 
 2019-12-15 21:50:41.198 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.HeadLineDao.selectList - <==      Total: 4
 2019-12-15 21:50:41.198 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 6
+2019-12-16 10:22:16.611 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.HeadLineDao.selectList - ==>  Preparing: SELECT head_line_id,create_time,head_line_img,head_line_name,head_line_link,last_edit_time,priority,enable_status FROM tb_head_line ORDER BY priority DESC 
+2019-12-16 10:22:16.611 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT shop_category_id,create_time,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE (parent_id IS NULL) ORDER BY priority DESC 
+2019-12-16 10:22:16.635 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.HeadLineDao.selectList - ==> Parameters: 
+2019-12-16 10:22:16.635 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 
+2019-12-16 10:22:16.671 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.HeadLineDao.selectList - <==      Total: 4
+2019-12-16 10:22:16.672 [http-nio-8080-exec-6] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 6
+2019-12-16 10:22:29.270 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==>  Preparing: SELECT user_id,password,create_time,last_edit_time,status,username FROM sys_user WHERE status=? AND username=? 
+2019-12-16 10:22:29.272 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==> Parameters: true(Boolean), admin(String)
+2019-12-16 10:30:00.524 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==>  Preparing: SELECT user_id,password,create_time,last_edit_time,status,username FROM sys_user WHERE status=? AND username=? 
+2019-12-16 10:30:00.525 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==> Parameters: true(Boolean), admin(String)
+2019-12-16 10:30:00.527 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.UserDao.selectOne - <==      Total: 1
+2019-12-16 10:30:00.529 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - ==>  Preparing: select * from sys_role where exists (select role_id from sys_user_role where user_id = ? and role_id = sys_role.role_id) 
+2019-12-16 10:30:00.530 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - ==> Parameters: 1(Long)
+2019-12-16 10:30:00.534 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - <==      Total: 1
+2019-12-16 10:30:00.546 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - ==>  Preparing: select * from sys_menu where (select menu_id from sys_role_menu where role_id=1 and menu_id = sys_menu.menu_id) 
+2019-12-16 10:30:00.546 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - ==> Parameters: 
+2019-12-16 10:30:00.550 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - <==      Total: 1
+2019-12-16 10:30:41.713 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==>  Preparing: SELECT user_id,password,create_time,last_edit_time,status,username FROM sys_user WHERE status=? AND username=? 
+2019-12-16 10:30:41.714 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==> Parameters: true(Boolean), admin(String)
+2019-12-16 10:30:41.715 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.UserDao.selectOne - <==      Total: 1
+2019-12-16 10:30:41.716 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - ==>  Preparing: select * from sys_role where exists (select role_id from sys_user_role where user_id = ? and role_id = sys_role.role_id) 
+2019-12-16 10:30:41.717 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - ==> Parameters: 1(Long)
+2019-12-16 10:30:41.717 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - <==      Total: 1
+2019-12-16 10:30:41.719 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - ==>  Preparing: select * from sys_menu where (select menu_id from sys_role_menu where role_id=1 and menu_id = sys_menu.menu_id) 
+2019-12-16 10:30:41.719 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - ==> Parameters: 
+2019-12-16 10:30:41.720 [http-nio-8080-exec-3] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - <==      Total: 1
+2019-12-16 10:31:38.106 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==>  Preparing: SELECT user_id,password,create_time,last_edit_time,status,username FROM sys_user WHERE status=? AND username=? 
+2019-12-16 10:31:38.107 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==> Parameters: true(Boolean), admin(String)
+2019-12-16 10:31:38.109 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.UserDao.selectOne - <==      Total: 1
+2019-12-16 10:31:38.110 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - ==>  Preparing: select * from sys_role where exists (select role_id from sys_user_role where user_id = ? and role_id = sys_role.role_id) 
+2019-12-16 10:31:38.110 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - ==> Parameters: 1(Long)
+2019-12-16 10:31:38.111 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - <==      Total: 1
+2019-12-16 10:31:38.112 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - ==>  Preparing: select * from sys_menu where (select menu_id from sys_role_menu where role_id=1 and menu_id = sys_menu.menu_id) 
+2019-12-16 10:31:38.112 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - ==> Parameters: 
+2019-12-16 10:31:38.113 [http-nio-8080-exec-1] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - <==      Total: 1
+2019-12-16 10:31:53.391 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==>  Preparing: SELECT user_id,password,create_time,last_edit_time,status,username FROM sys_user WHERE status=? AND username=? 
+2019-12-16 10:31:53.392 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==> Parameters: true(Boolean), admin(String)
+2019-12-16 10:31:53.392 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.UserDao.selectOne - <==      Total: 1
+2019-12-16 10:31:53.394 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - ==>  Preparing: select * from sys_role where exists (select role_id from sys_user_role where user_id = ? and role_id = sys_role.role_id) 
+2019-12-16 10:31:53.394 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - ==> Parameters: 1(Long)
+2019-12-16 10:31:53.395 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - <==      Total: 1
+2019-12-16 10:31:53.396 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - ==>  Preparing: select * from sys_menu where (select menu_id from sys_role_menu where role_id=1 and menu_id = sys_menu.menu_id) 
+2019-12-16 10:31:53.396 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - ==> Parameters: 
+2019-12-16 10:31:53.397 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - <==      Total: 1
+2019-12-16 10:31:56.743 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - ==>  Preparing: select * from sys_role where exists (select role_id from sys_user_role where user_id = ? and role_id = sys_role.role_id) 
+2019-12-16 10:31:56.743 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - ==> Parameters: 1(Long)
+2019-12-16 10:31:56.744 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.UserDao.getUserRole - <==      Total: 1
+2019-12-16 10:31:56.849 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.HeadLineDao.selectList - ==>  Preparing: SELECT head_line_id,create_time,head_line_img,head_line_name,head_line_link,last_edit_time,priority,enable_status FROM tb_head_line ORDER BY priority DESC 
+2019-12-16 10:31:56.849 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT shop_category_id,create_time,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE (parent_id IS NULL) ORDER BY priority DESC 
+2019-12-16 10:31:56.850 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.HeadLineDao.selectList - ==> Parameters: 
+2019-12-16 10:31:56.850 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 
+2019-12-16 10:31:56.854 [http-nio-8080-exec-10] DEBUG com.dyl.o2o.dao.HeadLineDao.selectList - <==      Total: 4
+2019-12-16 10:31:56.854 [http-nio-8080-exec-9] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 6
+2019-12-16 11:06:28.251 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.HeadLineDao.selectList - ==>  Preparing: SELECT head_line_id,create_time,head_line_img,head_line_name,head_line_link,last_edit_time,priority,enable_status FROM tb_head_line ORDER BY priority DESC 
+2019-12-16 11:06:28.251 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==>  Preparing: SELECT shop_category_id,create_time,shop_category_desc,shop_category_name,shop_category_img,last_edit_time,priority,parent_id FROM tb_shop_category WHERE (parent_id IS NULL) ORDER BY priority DESC 
+2019-12-16 11:06:28.256 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - ==> Parameters: 
+2019-12-16 11:06:28.258 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.HeadLineDao.selectList - ==> Parameters: 
+2019-12-16 11:06:28.262 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.HeadLineDao.selectList - <==      Total: 4
+2019-12-16 11:06:28.275 [http-nio-8080-exec-7] DEBUG com.dyl.o2o.dao.ShopCategoryDao.selectList - <==      Total: 6
+2019-12-16 11:06:36.068 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectOne - ==>  Preparing: SELECT shop_id,shop_desc,shop_category_id,shop_addr,advice,shop_name,owner_id,priority,area_id,create_time,shop_img,shop_phone,last_edit_time,enable_status FROM tb_shop WHERE owner_id=? 
+2019-12-16 11:06:36.069 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectOne - ==> Parameters: 1(Long)
+2019-12-16 11:06:36.073 [http-nio-8080-exec-2] DEBUG com.dyl.o2o.dao.ShopDao.selectOne - <==      Total: 1
