@@ -1,7 +1,7 @@
 package com.dyl.o2o.common.security;
 
 import com.dyl.o2o.common.util.JWTTokenUtil;
-import com.dyl.o2o.service.impl.UserDetailsServiceImpl;
+import com.dyl.o2o.service.impl.UserServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.DisabledException;
@@ -29,7 +29,7 @@ import java.io.IOException;
 public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     @Autowired
-    UserDetailsServiceImpl userDetailsService;
+    UserServiceImpl userDetailsService;
     @Autowired
     EntryPointUnauthorizedHandler entryPointUnauthorizedHandler;
 

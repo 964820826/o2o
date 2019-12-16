@@ -12,13 +12,30 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class IndexJump {
 
+    /**
+     * 首页跳转
+     * @return
+     */
     @GetMapping("/index")
     public String indexPage() {
         return "/index";
     }
 
+    /**
+     * 登陆页跳转
+     * @return
+     */
     @GetMapping("/loginPage")
     public String loginPage(){
         return "/login";
+    }
+
+    /**
+     * 注册页跳转
+     * @return
+     */
+    @GetMapping("/signIn")
+    public String registerPage(){
+        return "/register";
     }
 }

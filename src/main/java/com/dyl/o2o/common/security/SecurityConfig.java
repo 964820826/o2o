@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     //UserDetailsService的实现类有很多，通过此注解限制注入的实现类
-    @Qualifier("userDetailsServiceImpl")
+    @Qualifier("userServiceImpl")
     UserDetailsService userDetailsService;
 
     @Autowired

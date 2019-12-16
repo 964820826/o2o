@@ -13,12 +13,5 @@ import java.util.Set;
  */
 public interface UserService extends IService<UserDO> {
 
-    /**
-     * 通过用户id获取该用户角色
-     * @param id
-     * @return
-     */
-    Set<RoleDO> getUserRoleByUserId(Long id);
-
-    void addUser(LoginUser loginUser);
+    UserDO addUser(LoginUser loginUser);
 }

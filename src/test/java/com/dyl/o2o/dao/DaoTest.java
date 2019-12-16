@@ -16,9 +16,4 @@ public class DaoTest extends BaseTest {
     @Autowired
     UserDao userDao;
 
-    @Test
-    public void getRoleTest(){
-        Set<RoleDO> roleDOS =  userDao.getUserRole(1L);
-        roleDOS.stream().forEach(System.out::println);
-    }
 }

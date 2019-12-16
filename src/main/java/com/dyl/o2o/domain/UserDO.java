@@ -29,9 +29,8 @@ public class UserDO {
     //账户是否可用 默认可用
     private boolean status = true;
 
-    //用户角色
-    @TableField(exist = false)
-    private Set<RoleDO> roles;
+    //用户角色Id
+    private Long roleId;
     //创建时间
     private Date createTime;
     //最后修改时间

@@ -10,8 +10,9 @@ import com.dyl.o2o.domain.HeadLineDO;
 import com.dyl.o2o.domain.RoleDO;
 import com.dyl.o2o.dto.LoginUser;
 import com.dyl.o2o.service.HeadLineService;
+import com.dyl.o2o.service.RoleService;
 import com.dyl.o2o.service.UserService;
-import com.dyl.o2o.service.impl.UserDetailsServiceImpl;
+import com.dyl.o2o.service.impl.UserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ import java.util.Set;
  * @author ：dyl
  * @date ：Created in 2019/11/29 20:23
  */
-@Api(tags = "首页相关")
+@Api(tags = "首页相关、登陆注册")
 @RestController
 public class IndexController {
 
@@ -43,7 +44,9 @@ public class IndexController {
     @Autowired
     UserService userService;
     @Autowired
-    UserDetailsServiceImpl userDetailsServiceImpl;
+    UserServiceImpl userServiceImpl;
+    @Autowired
+    RoleService roleService;
 
     /**
      * 获取头条列表
@@ -77,16 +80,15 @@ public class IndexController {
         }
         //todo 将登陆部分的代码移植到service层，controller层尽量少写业务逻辑
         //查数据库获取用户信息
-        JWTUser jwtUser = (JWTUser) userDetailsServiceImpl.loadUserByUsername(loginUser.getUsername());
+        JWTUser jwtUser = (JWTUser) userServiceImpl.loadUserByUsername(loginUser.getUsername());
         //核对密码
         if (!jwtUser.getPassword().equals(EncryptUtil.encryptPassword(loginUser.getPassword()))){
             return R.error(ResultCode.PASSWORD_ERROR);
         }
         //根据用户生成token
         String token = JWTTokenUtil.createAccessToken(jwtUser);
-        //获取用户角色
-        Set <RoleDO> userRoleSet = userService.getUserRoleByUserId(jwtUser.getUserId());
-        String userRole = userRoleSet.iterator().next().getRoleName();
+        //获取用户角色标识
+        String userRole = roleService.getById(jwtUser.getRoleId()).getRoleMark();
         //构建返回结果
         Map resultMap = new HashMap();
         resultMap.put("token", token);

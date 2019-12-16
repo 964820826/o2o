@@ -197,6 +197,7 @@ public class ShopController {
      * @return
      */
     @GetMapping("")
+    @PreAuthorize("hasAnyAuthority('admin','get_current_shop')")
     public R getCurrentUserShop(HttpServletRequest request){
         //从session中获取当前登陆用户personId
         Long personId = 1L;

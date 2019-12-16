@@ -69,3 +69,105 @@ Field error in object 'loginUser' on field 'username': rejected value [1]; codes
 ### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'create_time' in 'field list'
 ; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'create_time' in 'field list']
 2019-12-16 17:01:29.534 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m8s355ms258µs100ns).
+2019-12-16 21:49:26.128 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 21:49:27.266 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 21:51:48.239 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 21:51:48.821 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 21:55:57.754 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 21:55:58.422 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 22:00:46.110 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 22:00:46.672 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 22:06:26.675 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 22:06:27.246 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 22:07:41.489 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 22:07:42.225 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 22:08:23.067 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 22:08:23.626 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 22:11:15.985 [HikariPool-4 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=51s147ms718µs500ns).
+2019-12-16 22:13:57.805 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 22:13:57.928 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.dyl.o2o.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-12-16 22:14:01.789 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 22:14:02.454 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 22:19:42.243 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 22:19:42.254 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [ForkJoinPool.commonPool-worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+ java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+ java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2019-12-16 22:19:42.254 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [ForkJoinPool.commonPool-worker-10] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+ java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+ java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2019-12-16 22:19:42.254 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [ForkJoinPool.commonPool-worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+ java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+ java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2019-12-16 22:19:42.254 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [ForkJoinPool.commonPool-worker-12] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+ java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+ java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2019-12-16 22:19:42.255 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [ForkJoinPool.commonPool-worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+ java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+ java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2019-12-16 22:19:42.255 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [ForkJoinPool.commonPool-worker-14] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+ java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+ java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2019-12-16 22:19:42.255 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [ForkJoinPool.commonPool-worker-7] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+ java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+ java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2019-12-16 22:19:42.255 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [ForkJoinPool.commonPool-worker-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+ java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+ java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2019-12-16 22:19:42.256 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [ForkJoinPool.commonPool-worker-9] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+ java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+ java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2019-12-16 22:19:42.256 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [ForkJoinPool.commonPool-worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+ java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+ java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+2019-12-16 22:19:42.257 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2019-12-16 22:31:05.100 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 22:31:05.847 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 22:52:07.039 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 22:52:08.286 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 23:00:54.616 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m43s898ms819µs900ns).
+2019-12-16 23:00:54.620 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'o2o.sys_user_role' doesn't exist
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.getUserRole-Inline
+### The error occurred while setting parameters
+### SQL: select * from sys_role where exists (select role_id from sys_user_role where user_id = ? and role_id = sys_role.role_id)
+### Cause: java.sql.SQLSyntaxErrorException: Table 'o2o.sys_user_role' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'o2o.sys_user_role' doesn't exist]
+2019-12-16 23:00:59.768 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 23:01:00.871 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 23:01:18.912 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'o2o.role_d_o' doesn't exist
+### The error may exist in com/dyl/o2o/dao/RoleDao.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT role_id,role_name,role_mark FROM role_d_o WHERE role_id=?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'o2o.role_d_o' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'o2o.role_d_o' doesn't exist]
+2019-12-16 23:02:33.042 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 23:02:33.647 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 23:05:31.813 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 23:05:32.388 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 23:39:59.181 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 23:40:00.395 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-16 23:41:10.752 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-16 23:41:11.344 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
