@@ -1995,3 +1995,58 @@ Caused by: java.lang.ClassNotFoundException: com.dyl.o2o.domain.RoleDO
 ### SQL: SELECT role_id,role_name,role_mark FROM role_d_o WHERE role_id=?
 ### Cause: java.sql.SQLSyntaxErrorException: Table 'o2o.role_d_o' doesn't exist
 ; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'o2o.role_d_o' doesn't exist
+2019-12-17 10:18:02.585 [http-nio-8080-exec-9] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin' for key 'username'
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO sys_user  ( password, create_time, role_id,  status, username )  VALUES  ( ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin' for key 'username'
+; Duplicate entry 'admin' for key 'username'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin' for key 'username'
+2019-12-17 10:39:53.443 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: com.dyl.o2o.dao.UserDao.checkUsernameExist(Ljava/lang/String;)Z
+2019-12-17 10:40:37.649 [http-nio-8080-exec-3] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: com.dyl.o2o.dao.UserDao.checkUsernameExist(Ljava/lang/String;)Z
+2019-12-17 11:24:38.091 [http-nio-8080-exec-5] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: com.dyl.o2o.dao.UserDao.checkUsernameExist(Ljava/lang/String;)Z
+2019-12-17 11:25:01.375 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: com.dyl.o2o.dao.UserDao.checkUsernameExist(Ljava/lang/String;)Z
+2019-12-17 11:25:50.401 [http-nio-8080-exec-5] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.checkUsernameExist-Inline
+### The error occurred while setting parameters
+### SQL: select count(*) from sys_user where username = admin
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+2019-12-17 11:36:52.154 [http-nio-8080-exec-6] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.checkUsernameExist-Inline
+### The error occurred while setting parameters
+### SQL: select count(*) from sys_user where username = admin
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+2019-12-17 11:39:14.117 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.checkUsernameExist-Inline
+### The error occurred while setting parameters
+### SQL: select count(*) from sys_user where username = admin
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+2019-12-17 11:40:26.549 [http-nio-8080-exec-5] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.checkUsernameExist-Inline
+### The error occurred while setting parameters
+### SQL: select count(*) from sys_user where username = admin
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+2019-12-17 14:16:19.829 [http-nio-8080-exec-9] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：用户名已存在
+2019-12-17 14:17:04.959 [http-nio-8080-exec-1] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：用户名已存在
+2019-12-17 14:56:07.419 [http-nio-8080-exec-5] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 用户名已存在：用户名已存在
+2019-12-17 14:57:40.873 [http-nio-8080-exec-6] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 用户名已存在：用户名已存在
+2019-12-17 14:59:17.432 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 用户名已存在：
+2019-12-17 14:59:58.275 [http-nio-8080-exec-2] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 用户名已存在：
+2019-12-17 15:48:34.642 [http-nio-8080-exec-3] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 无操作权限：不允许访问
+2019-12-17 16:07:11.165 [http-nio-8080-exec-6] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Request method 'POST' not supported
+2019-12-17 16:08:13.043 [http-nio-8080-exec-7] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 无操作权限：不允许访问
+2019-12-17 16:09:22.114 [http-nio-8080-exec-2] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 无操作权限：不允许访问
+2019-12-17 16:09:59.681 [http-nio-8080-exec-9] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 无操作权限：不允许访问

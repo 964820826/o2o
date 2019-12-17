@@ -7,8 +7,10 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 /** JWT(Json Web Token)工具类
@@ -71,6 +73,17 @@ public class JWTTokenUtil {
                 .getBody();
     }
 
+    /**
+     * 获取当前登陆的用户
+     * @return
+     */
+    public static JWTUser getCurrentUser(){
+        //todo 待完善
+        JWTUser user = (JWTUser) SecurityContextHolder.getContext()
+                .getAuthentication()
+                .getPrincipal();
+        return user;
+    }
 //    /**
 //     * 检查 token 是否处于有效期内
 //     * @param token

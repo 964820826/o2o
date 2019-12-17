@@ -29,7 +29,7 @@ $('#submit').click(function () {
                 localStorage.setItem('token', data.data.token);
                 localStorage.setItem('role', data.data.role);
             } else {
-                $.toast("注册失败！");
+                $.toast(data.massage);
             }
             //1秒后跳转到首页
             setTimeout(function () {

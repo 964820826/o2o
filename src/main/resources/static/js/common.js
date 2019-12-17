@@ -59,7 +59,7 @@ function testTokenFailed(code) {
 function checkLogin() {
     if (localStorage.getItem('token')){
         $(".login").show();
-        if (localStorage.getItem('role') == 'consumer'){
+        if (localStorage.getItem('role') == 'customer'){
             $(".customer").show();
         }else {
             $(".myShop").show();

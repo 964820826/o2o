@@ -24,6 +24,7 @@ public enum ResultCode {
     NO_LOG_IN(5004,"未登陆"),
     ACCOUNT_USELESS(5005,"账号不可用"),
     USER_EXPIRE(5006,"用户已过期"),
+    USER_EXIST(5007,"用户名已占用"),
 
     //业务异常
     SERVICE_ERROR(9999,"业务异常");

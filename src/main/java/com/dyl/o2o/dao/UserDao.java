@@ -18,4 +18,6 @@ import java.util.Set;
 @Component
 public interface UserDao extends BaseMapper<UserDO> {
 
+    @Select("select count(*) from sys_user where username = #{username}")
+    boolean checkUsernameExist(String username);
 }

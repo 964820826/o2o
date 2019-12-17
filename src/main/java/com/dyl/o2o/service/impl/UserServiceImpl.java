@@ -2,20 +2,15 @@ package com.dyl.o2o.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.dyl.o2o.common.exception.UserAlreadyExistException;
 import com.dyl.o2o.common.security.JWTUser;
 import com.dyl.o2o.common.util.EncryptUtil;
-import com.dyl.o2o.dao.RoleDao;
 import com.dyl.o2o.dao.UserDao;
-import com.dyl.o2o.domain.MenuDO;
-import com.dyl.o2o.domain.RoleDO;
 import com.dyl.o2o.domain.UserDO;
 import com.dyl.o2o.dto.LoginUser;
 import com.dyl.o2o.service.RoleService;
 import com.dyl.o2o.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -62,6 +57,11 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserDO> implements Use
     @Override
     @Transactional
     public UserDO addUser(LoginUser loginUser) {
+        //检查该用户名是否存在
+        if (userDao.checkUsernameExist(loginUser.getUsername())){
+            //用户名存在则抛异常
+            throw new UserAlreadyExistException("");
+        }
         UserDO userDO = new UserDO(loginUser);
         userDO.setPassword(EncryptUtil.encryptPassword(userDO.getPassword()));
         userDO.setCreateTime(new Date());

@@ -1,8 +1,37 @@
+$(function () {
+    //获取店铺信息
+    getShopInfo();
+});
+
 //获取token
 var token = localStorage.getItem('token');
 
-var getShopInfoUrl = 'shop/'
+var getShopInfoUrl = '/shop';
 
+//获取店铺信息
+function getShopInfo() {
+    var formData = document.forms;
+    //通过ajax与后台交互
+    $.ajax({
+        url: getShopInfoUrl,
+        type: 'GET',
+        headers:{
+            Authorization: 'Bearer ' + token
+        },
+        contentType: false,//要传参数要传文件，所以用false
+        processData: false,
+        cache: false,
+        success: function (data) {
+            if (data.code == 0){
+                
+            } else if (data.code == 5002 || data.code ==5004) {
+                //未登陆或无操作权限，返回上一页
+                window.history.go(-1);
+            }
+
+        }
+    })
+}
 
 
 

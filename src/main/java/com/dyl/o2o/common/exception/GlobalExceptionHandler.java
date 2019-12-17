@@ -45,6 +45,13 @@ public class GlobalExceptionHandler {
         return R.error(ResultCode.NO_AUTHORITY);
     }
 
+    @ExceptionHandler(value = UserAlreadyExistException.class)
+    public R UserAreadyExistExceptionHandler(UserAlreadyExistException e){
+        log.error("用户名已存在：" + e.getMessage());
+        return R.error(ResultCode.USER_EXIST);
+    }
+
+
 //    @ExceptionHandler(value = AuthenticationException.class)
 //    public R AuthenticationExceptionHandler(AuthenticationException  e){
 //        log.error("未登陆：" + e.getMessage());

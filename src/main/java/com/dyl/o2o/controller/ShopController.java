@@ -4,15 +4,14 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
-import com.dyl.o2o.common.util.CaptchaUtil;
-import com.dyl.o2o.common.util.PageUtil;
+import com.dyl.o2o.common.security.JWTConfigBean;
+import com.dyl.o2o.common.security.JWTUser;
+import com.dyl.o2o.common.util.*;
 import com.dyl.o2o.domain.PersonDO;
 import com.dyl.o2o.domain.ShopDO;
 import com.dyl.o2o.service.AreaService;
 import com.dyl.o2o.service.ShopCategoryService;
 import com.dyl.o2o.service.ShopService;
-import com.dyl.o2o.common.util.ImageUtil;
-import com.dyl.o2o.common.util.PathUtil;
 import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -199,6 +198,8 @@ public class ShopController {
     @GetMapping("")
     @PreAuthorize("hasAnyAuthority('admin','get_current_shop')")
     public R getCurrentUserShop(HttpServletRequest request){
+        JWTUser user = JWTTokenUtil.getToken();
+
         //从session中获取当前登陆用户personId
         Long personId = 1L;
         ShopDO queryCondition = new ShopDO();

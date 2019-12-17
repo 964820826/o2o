@@ -171,3 +171,70 @@ Field error in object 'loginUser' on field 'username': rejected value [1]; codes
 2019-12-16 23:40:00.395 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
 2019-12-16 23:41:10.752 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
 2019-12-16 23:41:11.344 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-17 10:13:12.048 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-17 10:13:13.139 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-17 10:18:02.586 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin' for key 'username'
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO sys_user  ( password, create_time, role_id,  status, username )  VALUES  ( ?, ?, ?,  ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin' for key 'username'
+; Duplicate entry 'admin' for key 'username'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'admin' for key 'username']
+2019-12-17 10:39:53.443 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: com.dyl.o2o.dao.UserDao.checkUsernameExist(Ljava/lang/String;)Z]
+2019-12-17 10:40:37.651 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: com.dyl.o2o.dao.UserDao.checkUsernameExist(Ljava/lang/String;)Z]
+2019-12-17 11:24:38.094 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: com.dyl.o2o.dao.UserDao.checkUsernameExist(Ljava/lang/String;)Z]
+2019-12-17 11:25:01.377 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: com.dyl.o2o.dao.UserDao.checkUsernameExist(Ljava/lang/String;)Z]
+2019-12-17 11:25:36.888 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-17 11:25:37.977 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-17 11:25:50.425 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.checkUsernameExist-Inline
+### The error occurred while setting parameters
+### SQL: select count(*) from sys_user where username = admin
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause']
+2019-12-17 11:36:52.157 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.checkUsernameExist-Inline
+### The error occurred while setting parameters
+### SQL: select count(*) from sys_user where username = admin
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause']
+2019-12-17 11:39:14.120 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.checkUsernameExist-Inline
+### The error occurred while setting parameters
+### SQL: select count(*) from sys_user where username = admin
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause']
+2019-12-17 11:40:26.554 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+### The error may exist in com/dyl/o2o/dao/UserDao.java (best guess)
+### The error may involve com.dyl.o2o.dao.UserDao.checkUsernameExist-Inline
+### The error occurred while setting parameters
+### SQL: select count(*) from sys_user where username = admin
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'admin' in 'where clause']
+2019-12-17 11:50:31.942 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-17 11:50:32.991 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-17 14:16:19.830 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.RuntimeException: 用户名已存在]
+2019-12-17 14:17:04.961 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.RuntimeException: 用户名已存在]
+2019-12-17 14:55:51.127 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-17 14:55:52.443 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-17 14:56:07.449 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.dyl.o2o.common.exception.UserAlreadyExistException: 用户名已存在]
+2019-12-17 14:57:45.503 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.dyl.o2o.common.exception.UserAlreadyExistException: 用户名已存在]
+2019-12-17 14:59:17.437 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.dyl.o2o.common.exception.UserAlreadyExistException: ]
+2019-12-17 14:59:58.279 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.dyl.o2o.common.exception.UserAlreadyExistException: ]
+2019-12-17 15:48:34.643 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.access.AccessDeniedException: 不允许访问]
+2019-12-17 16:06:51.927 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s515ms618µs100ns).
+2019-12-17 16:07:11.167 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2019-12-17 16:08:13.045 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.access.AccessDeniedException: 不允许访问]
+2019-12-17 16:09:22.117 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.access.AccessDeniedException: 不允许访问]
+2019-12-17 16:09:59.682 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.access.AccessDeniedException: 不允许访问]
+2019-12-17 17:38:43.343 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [com.dyl.o2o.dao.ShopDao.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2019-12-17 17:38:44.571 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-17 17:46:19.302 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m17s298ms377µs100ns).
