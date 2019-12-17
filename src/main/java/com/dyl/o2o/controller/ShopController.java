@@ -7,6 +7,7 @@ import com.dyl.o2o.common.ResultCode;
 import com.dyl.o2o.common.security.JWTConfigBean;
 import com.dyl.o2o.common.security.JWTUser;
 import com.dyl.o2o.common.util.*;
+import com.dyl.o2o.dao.ShopDao;
 import com.dyl.o2o.domain.PersonDO;
 import com.dyl.o2o.domain.ShopDO;
 import com.dyl.o2o.service.AreaService;
@@ -16,6 +17,7 @@ import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -23,7 +25,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.util.List;
 
-/** 店铺管理controller
+/**
+ * 店铺管理controller
+ *
  * @author ：dyl
  * @date ：Created in 2019/10/8 23:13
  */
@@ -64,35 +68,36 @@ public class ShopController {
 
     /**
      * 分页查询店铺列表
+     *
      * @param shopDO
      * @return
      */
     @GetMapping(value = "/list")
-    @ApiOperation(value = "分页查询店铺列表",notes = "若输入店铺类别为一级类别的id，则获取该一类下的所有店铺")
+    @ApiOperation(value = "分页查询店铺列表", notes = "若输入店铺类别为一级类别的id，则获取该一类下的所有店铺")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageIndex",value = "页码",required = true),
-            @ApiImplicitParam(name = "pageSize",value = "每页显示数量",required = true)
+            @ApiImplicitParam(name = "pageIndex", value = "页码", required = true),
+            @ApiImplicitParam(name = "pageSize", value = "每页显示数量", required = true)
     })
-    private R getShopListPage(ShopDO shopDO, int pageIndex, int pageSize, HttpServletRequest request){
+    private R getShopListPage(ShopDO shopDO, int pageIndex, int pageSize, HttpServletRequest request) {
         //从session中获取店铺列表
         List<ShopDO> shopDOList = (List<ShopDO>) request.getSession().getAttribute("shopDOList");
         ShopDO oriShop = (ShopDO) request.getSession().getAttribute("oriShop");
-        if (oriShop == null){
+        if (oriShop == null) {
             oriShop = new ShopDO();
         }
         //若无缓存数据或输入条件与原先不同
-        if (shopDOList == null || !shopDO.equals(oriShop)){
+        if (shopDOList == null || !shopDO.equals(oriShop)) {
             //从数据库查询
             shopDOList = shopService.list(shopDO);
-            if (shopDOList == null){
+            if (shopDOList == null) {
                 return R.success();
             }
-            request.getSession().setAttribute("oriShop",shopDO);
-            request.getSession().setAttribute("shopDOList",shopDOList);
+            request.getSession().setAttribute("oriShop", shopDO);
+            request.getSession().setAttribute("shopDOList", shopDOList);
         }
         //根据分页信息获取数据返回给前端
-        List<ShopDO> shopPageList = PageUtil.toPage(pageIndex,pageSize,shopDOList);
-        Page<ShopDO> pageShop = new Page<>(pageIndex,pageSize,shopDOList.size());
+        List<ShopDO> shopPageList = PageUtil.toPage(pageIndex, pageSize, shopDOList);
+        Page<ShopDO> pageShop = new Page<>(pageIndex, pageSize, shopDOList.size());
         pageShop.setRecords(shopPageList);
         return R.success(pageShop);
     }
@@ -192,19 +197,18 @@ public class ShopController {
 
     /**
      * 获取当前用户名下的店铺信息
+     *
      * @param request
      * @return
      */
     @GetMapping("")
     @PreAuthorize("hasAnyAuthority('admin','get_current_shop')")
-    public R getCurrentUserShop(HttpServletRequest request){
-        JWTUser user = JWTTokenUtil.getToken();
+    public R getCurrentUserShop(HttpServletRequest request) {
+        //获取当前登陆用户
+        JWTUser user = JWTTokenUtil.getCurrentUser();
+        Long userId = user.getUserId();
+        ShopDO shopDO = shopService.getShopByOwnerId(userId);
 
-        //从session中获取当前登陆用户personId
-        Long personId = 1L;
-        ShopDO queryCondition = new ShopDO();
-        queryCondition.setOwnerId(personId);
-        ShopDO shopDO = shopService.getOne(new QueryWrapper<>(queryCondition));
         return R.success(shopDO);
     }
 }

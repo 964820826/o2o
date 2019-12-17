@@ -130,6 +130,16 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements Shop
         return shopDOList;
     }
 
+    /**
+     * 根据店铺拥有者的id获取店铺信息
+     * @param userId
+     * @return
+     */
+    @Override
+    public ShopDO getShopByOwnerId(Long userId) {
+        return shopDao.getByOwnerId(userId);
+    }
+
     @Override
     public boolean updateById(ShopDO entity) {
         return super.updateById(entity);

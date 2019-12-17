@@ -23,7 +23,13 @@ function getShopInfo() {
         cache: false,
         success: function (data) {
             if (data.code == 0){
-                
+                var shop = data.data;
+                $('#shopName').val(shop.shopName);
+                $('#shopCategory').val(shop.shopCategory);
+                $('#area').val(shop.area);
+                $('#shopAddr').val(shop.shopAddr);
+                $('#shopPhone').val(shop.shopPhone);
+                $('#shopDesc').val(shop.shopDesc);
             } else if (data.code == 5002 || data.code ==5004) {
                 //未登陆或无操作权限，返回上一页
                 window.history.go(-1);
@@ -33,6 +39,38 @@ function getShopInfo() {
     })
 }
 
+
+// 加载可选店铺类别
+//todo 获取所有二级店铺类别
+function getShopCategory() {
+    var url = shopCategoryListUrl;
+    $.getJSON(url, function (data) {
+        if (data.code == 0){
+            //后台获取到的店铺类别列表
+            var shopCategoryList = data.data;
+            var shopCategoryHtml = '<option  value = ""></option>';
+            shopCategoryList.forEach(function (item) {
+                shopCategoryHtml += '<option  value = ""> + item.shopCategoryName + </option>';
+            });
+            $("#shopCategory").html(shopCategoryHtml);
+        }
+    })
+}
+
+// 获取区域列表
+function getAreaList() {
+    $.getJSON(areaListUrl,function (data) {
+        if (data.code == 0){
+            //后台获取到的区域列表
+            var areaList = data.data;
+            var areaHtml = '<option value = "">全部区域</option>';
+            areaList.forEach(function (item) {
+                areaHtml += '<option value = "' + item.areaId + '">' + item.areaName + '</option>';
+            });
+            $("#area-search").html(areaHtml);
+        }
+    })
+}
 
 
 

@@ -78,7 +78,6 @@ public class JWTTokenUtil {
      * @return
      */
     public static JWTUser getCurrentUser(){
-        //todo 待完善
         JWTUser user = (JWTUser) SecurityContextHolder.getContext()
                 .getAuthentication()
                 .getPrincipal();
