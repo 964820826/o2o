@@ -21,10 +21,14 @@
 <body>
 <div class="page-group">
     <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left" external href="javascript:history.go(-1);" data-transition='slide-out'>
+            <span class="icon icon-left" ></span> 返回
+        </a>
         <h1 class='title'>商店信息</h1>
     </header>
     <div class="content">
         <form class="list-block" id="form">
+            <input type="hidden" name="_method" value="put" />
             <ul>
                 <!--店铺名称-文本框-->
                 <li>
@@ -45,7 +49,7 @@
                         <div class="item-inner">
                             <div class="item-title label">店铺分类</div>
                             <div class="item-input" >
-                                <select id="shopCategory" name="shopCategoryId">
+                                <select id="shopCategory" name="shopCategory">
                                     <!---->
                                 </select>
                             </div>
@@ -59,7 +63,7 @@
                         <div class="item-inner">
                             <div class="item-title label">所属区域</div>
                             <div class="item-input">
-                                <select id="area" name="areaId">
+                                <select id="area" name="area">
                                     <!---->
                                 </select>
                             </div>
@@ -127,13 +131,12 @@
                         </div>
                     </div>
                 </li>
-
             </ul>
         </form>
             <div class="content-block">
                 <div class="row">
-                    <div class="col-50"><a href="#" class="button button-big button-fill button-danger">返回</a></div>
-                    <div class="col-50"><input type="submit" href="#" class="button button-big button-fill button-success" id="submit"></input></div>
+                    <div class="col-50"><a class="button button-big button-fill button-danger">返回</a></div>
+                    <div class="col-50"><input type="submit" class="button button-big button-fill button-success" id="submit"/></div>
                 </div>
             </div>
     </div>

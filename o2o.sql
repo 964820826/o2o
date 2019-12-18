@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 本地数据库-3306
+ Source Server         : 本地数据库
  Source Server Type    : MySQL
  Source Server Version : 80017
- Source Host           : localhost:3306
+ Source Host           : 127.0.0.1:3306
  Source Schema         : o2o
 
  Target Server Type    : MySQL
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 18/12/2019 00:05:54
+ Date: 18/12/2019 17:54:25
 */
 
 SET NAMES utf8mb4;

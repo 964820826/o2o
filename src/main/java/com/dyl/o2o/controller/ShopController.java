@@ -143,44 +143,52 @@ public class ShopController {
 //        return R.success();
 //    }
 
-//    /**
-//     * 更新店铺
-//     * @param shopDO
-//     * @param request
-//     * @return
-//     * @throws Exception
-//     */
-//    //todo:参数校验，入参id不可为空
-//    //todo:获取登陆的用户，只能展示该用户下的店铺，若修改其他店铺则报错
-//    @PutMapping("")
-//    @ApiOperation(value = "修改店铺")
-//    @PreAuthorize("hasAnyAuthority('admin','shop_update')")
-//    public R updateShop(@ApiParam(value = "新图片") MultipartFile newImg, ShopDO shopDO, String captcha, HttpServletRequest request) throws Exception {
-//        //校验验证码
-//        if (!CaptchaUtil.checkVerifyCode(captcha, request.getSession())){
-//            return R.error(ResultCode.CAPTCHA_FAIL);
-//        }
-//        //若有上传图片则更新图片
-//        if (request.getAttribute("img") != null){
-//            //从请求中获取图片
-////            MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
-////            MultipartFile newImg = multipartHttpServletRequest.getFile("img");
-//            //保存图片
-//            String imgFileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(newImg.getOriginalFilename());
-//            File img = new File(imgFileAbsolutePath);
-//            if (!img.getParentFile().exists()){
-//                img.getParentFile().mkdirs();
-//            }
-//            newImg.transferTo(img);
-//            ImageUtil.generateThumbnail(img);
-//
-//            //更新店铺信息及图片
-//            shopService.update(shopDO,img);
-//        }else {
-//            shopService.updateById(shopDO);
-//        }
-//        return R.success();
-//    }
+    /**
+     * 更新店铺
+     * @param shopDO
+     * @param request
+     * @return
+     * @throws Exception
+     */
+    //todo:参数校验，入参id不可为空
+    //todo:获取登陆的用户，只能展示该用户下的店铺，若修改其他店铺则报错
+    @PutMapping("")
+    @ApiOperation(value = "修改店铺")
+    @PreAuthorize("hasAnyAuthority('admin','shop_update')")
+    public R updateShop(@ApiParam(value = "新图片") MultipartFile newImg, ShopDO shopDO, String captcha, HttpServletRequest request) throws Exception {
+        //校验验证码
+        if (!CaptchaUtil.checkVerifyCode(captcha, request.getSession())){
+            return R.error(ResultCode.CAPTCHA_FAIL);
+        }
+
+        //处理图片，获取生成的图片地址
+
+        //调用service方法更新数据库
+
+        //若异常则删除用户上传的图片
+
+
+        //若有上传图片则更新图片
+        if (request.getAttribute("img") != null){
+            //从请求中获取图片
+//            MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
+//            MultipartFile newImg = multipartHttpServletRequest.getFile("img");
+            //保存图片
+            String imgFileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(newImg.getOriginalFilename());
+            File img = new File(imgFileAbsolutePath);
+            if (!img.getParentFile().exists()){
+                img.getParentFile().mkdirs();
+            }
+            newImg.transferTo(img);
+            ImageUtil.generateThumbnail(img);
+
+            //更新店铺信息及图片
+            shopService.update(shopDO,img);
+        }else {
+            shopService.updateById(shopDO);
+        }
+        return R.success();
+    }
 
 //    /**
 //     * 根据id获取店铺信息

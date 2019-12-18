@@ -14,6 +14,7 @@ import com.dyl.o2o.common.util.PathUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -140,8 +141,4 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements Shop
         return shopDao.getByOwnerId(userId);
     }
 
-    @Override
-    public boolean updateById(ShopDO entity) {
-        return super.updateById(entity);
-    }
 }

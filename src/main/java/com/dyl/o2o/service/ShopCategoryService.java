@@ -15,4 +15,6 @@ public interface ShopCategoryService {
      * @return
      */
     List<ShopCategoryDO> selectShopCategoryList(ShopCategoryDO condition);
+
+    List<ShopCategoryDO> selectChildShopCategoryList();
 }

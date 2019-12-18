@@ -34,4 +34,10 @@ public class ShopCategoryController {
         List<ShopCategoryDO> shopCategoryDOList = shopCategoryService.selectShopCategoryList(shopCategoryDO);
         return R.success(shopCategoryDOList);
     }
+
+    @GetMapping("/child")
+    public R getChildShopCategoryList(){
+        List<ShopCategoryDO> shopCategoryDOList = shopCategoryService.selectChildShopCategoryList();
+        return R.success(shopCategoryDOList);
+    }
 }
