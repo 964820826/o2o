@@ -3,7 +3,6 @@ package com.dyl.o2o.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.dyl.o2o.domain.ShopDO;
 
-import java.io.File;
 import java.util.List;
 
 /**
@@ -15,12 +14,11 @@ import java.util.List;
 public interface ShopService extends IService<ShopDO> {
 
     /**
-     * 更新店铺信息及图片
+     * 更新店铺信息
      *
      * @param shopDO
-     * @param img
      */
-    void update(ShopDO shopDO, File img) throws Exception;
+    void update(ShopDO shopDO);
 
     /**
      * 查询店铺列表

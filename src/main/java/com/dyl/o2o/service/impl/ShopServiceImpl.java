@@ -21,12 +21,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/** 店铺相关的service层实现类
+/**
+ * 店铺相关的service层实现类
+ *
  * @author ：dyl
  * @date ：Created in 2019/10/7 12:11
  */
 @Service
-public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements ShopService {
+public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO> implements ShopService {
 
     @Autowired
     ShopDao shopDao;
@@ -62,6 +64,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements Shop
 
     /**
      * 创建店铺
+     *
      * @param shopDO
      * @return
      */
@@ -74,28 +77,23 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements Shop
     }
 
     /**
-     * 更新店铺
+     * 更新店铺信息
+     *
      * @param shopDO
-     * @param img 新上传的图片（需转为File类型）
      */
-    public void update(ShopDO shopDO, File img) throws Exception {
-        //获取原图片地址
-        String imgPath = shopDao.selectById(shopDO.getShopId()).getShopImg();
-        //保存新图片
-        ImageUtil.generateThumbnail(img);//生成缩略图替换掉原文件
-        shopDO.setShopImg(img.getName());
-        if (shopDao.updateById(shopDO) != 1){
-            //若更新店铺失败则删除上传的图片
-            img.delete();
-            throw new Exception("更新店铺失败");
-        }
+    @Override
+    public void update(ShopDO shopDO) {
+        //获取原来保存的图片地址
+        String oldImgPath = shopDao.selectById(shopDO.getShopId()).getShopImg();
+        //更新数据库数据
+        shopDao.updateById(shopDO);
         //删除原图片
-        File oldImg = new File(imgPath);
-        oldImg.delete();
+        ImageUtil.deleteImg(oldImgPath);
     }
 
     /**
      * 查询店铺列表，若输入的店铺区域类别为一级店铺类别，则获取所有该一级类别下的店铺列表
+     *
      * @param shopDO
      * @return
      */
@@ -112,7 +110,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements Shop
             if (shopCategoryDOList.size() != 0) {
                 //需要修改查询条件，故新建一个对象用来存放查询条件，不改变原shopDO数据
                 ShopDO shopCondition = new ShopDO();
-                BeanUtils.copyProperties(shopDO,shopCondition);
+                BeanUtils.copyProperties(shopDO, shopCondition);
                 //根据店铺类别获取该店铺类别下的店铺，合并到一个列表中
                 for (ShopCategoryDO shopCategoryDO : shopCategoryDOList) {
                     //todo 值传递还是引用传递，此处的情况符合引用传递
@@ -133,6 +131,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO>implements Shop
 
     /**
      * 根据店铺拥有者的id获取店铺信息
+     *
      * @param userId
      * @return
      */

@@ -3,6 +3,7 @@ package com.dyl.o2o.common.util;
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -33,7 +34,7 @@ public class ImageUtil {
      *
      * @param img
      */
-    public static void generateThumbnail(File img) {
+    public static void img2Thumbnail(File img) {
         //图片完整路径
         String fullPath = img.getAbsolutePath();
         try {
@@ -81,6 +82,42 @@ public class ImageUtil {
         int rannum = random.nextInt(89999) + 10000;//大于10000小于99999
         return nowTimeStr + rannum;
     }
+
+
+    /**
+     * 根据用户上传的文件生成缩略图
+     * @param newImg
+     * @return
+     * @throws IOException
+     */
+    public static String generateThumbnail(MultipartFile newImg) throws IOException {
+        //生成服务器上保存图片的地址
+        String imgFileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(newImg.getOriginalFilename());
+        //根据地址创建文件
+        File img = new File(imgFileAbsolutePath);
+        //若文件地址不存在，生成地址
+        if (!img.getParentFile().exists()){
+            img.getParentFile().mkdirs();
+        }
+        //multipartFile转file，方便其他方法操作和单元测试
+        newImg.transferTo(img);
+        //用服务器上的图片生成带水印的缩略图，并将原图覆盖
+        ImageUtil.img2Thumbnail(img);
+        return imgFileAbsolutePath;
+    }
+
+    /**
+     * 删除文件
+     * @param shopImg
+     */
+    public static void deleteImg(String shopImg) {
+        File file = new File(shopImg);
+        if (file.exists()){
+            file.delete();
+        }
+    }
+
+
 
     /**
      * 创建一个带有水印的缩略图

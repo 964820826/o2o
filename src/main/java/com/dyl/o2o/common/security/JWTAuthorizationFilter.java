@@ -2,6 +2,7 @@ package com.dyl.o2o.common.security;
 
 import com.dyl.o2o.common.util.JWTTokenUtil;
 import com.dyl.o2o.service.impl.UserServiceImpl;
+import io.jsonwebtoken.ExpiredJwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.DisabledException;
@@ -54,9 +55,11 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
         if (tokenHeader != null && tokenHeader.startsWith("Bearer ")) {
             //从请求头中获取token，进而获取用户名
             String token = tokenHeader.substring(7);
-            username = JWTTokenUtil.getUsernameFromToken(token);
-            if (JWTTokenUtil.isExpiration(token)) {
-                log.error(username + "——token已过期");
+            try {
+                username = JWTTokenUtil.getUsernameFromToken(token);
+            } catch (ExpiredJwtException e) {
+                e.printStackTrace();
+                log.error("token已过期");
                 entryPointUnauthorizedHandler.commence(request, response, new DisabledException("用户信息已过期，请重新登陆"));
             }
         }

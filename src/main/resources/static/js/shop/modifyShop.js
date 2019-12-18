@@ -64,6 +64,7 @@ function getShopInfo() {
         success: function (data) {
             if (data.code == 0){
                 var shop = data.data;
+                $('#shopId').val(shop.shopId);
                 $('#shopName').val(shop.shopName);
                 // $('#shopCategory').val(shop.shopCategory);
                 $('#area').val(shop.area);
@@ -75,6 +76,8 @@ function getShopInfo() {
             } else if (data.code == 5002 || data.code ==5004) {
                 //未登陆或无操作权限，返回上一页
                 window.history.go(-1);
+            } else {
+                $.toast(data.massage);
             }
 
         }
@@ -85,10 +88,12 @@ function getShopInfo() {
 $('#submit').click(function () {
     if ($("#captcha").val() == null || $("#captcha").val() == ''){
         $.toast("请输入验证码");
+        return;
     }
+    var file = document.getElementById("shopImg").files[0];
     var form = document.getElementById("form");
     var formData = new FormData(form);
-    var shopName = formData.get("shopName");
+    formData.append("newImg",file);
     $("#captcha").click();
     //todo 校验上传的图片格式是否正确
     //通过ajax与后台交互
@@ -105,13 +110,10 @@ $('#submit').click(function () {
         success: function (data) {
             if (data.code == 0){
                 $.toast('提交成功！');
-                $("#form input").each(function () {
-                    $(this).val("");
-                })
             }else{
                 $.toast('提交失败！' + data.massage);
-                $("#captcha").val("");
             }
+            $("#captcha").val("");
         }
     });
 });

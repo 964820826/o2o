@@ -37,7 +37,6 @@ public class EntryPointUnauthorizedHandler implements AuthenticationEntryPoint {
         String result;
         if (e instanceof DisabledException){//过期
             result = JSON.toJSONString(R.error(ResultCode.USER_EXPIRE));
-            response.getWriter().write(e.getMessage());
         }else if (e instanceof LockedException){
             result = JSON.toJSONString(R.error(ResultCode.ACCOUNT_USELESS));
         }else {

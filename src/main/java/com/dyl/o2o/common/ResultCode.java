@@ -27,7 +27,8 @@ public enum ResultCode {
     USER_EXIST(5007,"用户名已占用"),
 
     //业务异常
-    SERVICE_ERROR(9999,"业务异常");
+    SERVICE_ERROR(9999,"业务异常"),
+    UPDATE_FAIL(9002,"更新失败");
 
     /**
      * 状态码

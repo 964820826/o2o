@@ -2,6 +2,7 @@ package com.dyl.o2o.common.exception;
 
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
+import io.jsonwebtoken.ExpiredJwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -50,6 +51,13 @@ public class GlobalExceptionHandler {
         log.error("用户名已存在：" + e.getMessage());
         return R.error(ResultCode.USER_EXIST);
     }
+
+    @ExceptionHandler(value = ExpiredJwtException.class)
+    public R ExpiredJwtExceptionHandler(ExpiredJwtException e){
+        log.error("token已过期" + e.getMessage());
+        return R.error(ResultCode.USER_EXPIRE);
+    }
+
 
 
 //    @ExceptionHandler(value = AuthenticationException.class)

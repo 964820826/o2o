@@ -29,6 +29,7 @@
     <div class="content">
         <form class="list-block" id="form">
             <input type="hidden" name="_method" value="put" />
+            <input type="hidden" id="shopId" name="shopId"/>
             <ul>
                 <!--店铺名称-文本框-->
                 <li>
@@ -135,7 +136,7 @@
         </form>
             <div class="content-block">
                 <div class="row">
-                    <div class="col-50"><a class="button button-big button-fill button-danger">返回</a></div>
+                    <div class="col-50"><a class="button button-big button-fill button-danger" href="javascript:history.go(-1);">返回</a></div>
                     <div class="col-50"><input type="submit" class="button button-big button-fill button-success" id="submit"/></div>
                 </div>
             </div>

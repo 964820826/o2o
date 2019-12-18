@@ -151,7 +151,6 @@ public class ShopController {
      * @throws Exception
      */
     //todo:参数校验，入参id不可为空
-    //todo:获取登陆的用户，只能展示该用户下的店铺，若修改其他店铺则报错
     @PutMapping("")
     @ApiOperation(value = "修改店铺")
     @PreAuthorize("hasAnyAuthority('admin','shop_update')")
@@ -161,31 +160,21 @@ public class ShopController {
             return R.error(ResultCode.CAPTCHA_FAIL);
         }
 
-        //处理图片，获取生成的图片地址
-
+        //若传入图片则处理图片
+        String thumbnailPath;
+        if (newImg != null){
+            //处理图片，获取生成的图片地址
+            thumbnailPath = ImageUtil.generateThumbnail(newImg);
+            shopDO.setShopImg(thumbnailPath);
+        }
         //调用service方法更新数据库
-
-        //若异常则删除用户上传的图片
-
-
-        //若有上传图片则更新图片
-        if (request.getAttribute("img") != null){
-            //从请求中获取图片
-//            MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
-//            MultipartFile newImg = multipartHttpServletRequest.getFile("img");
-            //保存图片
-            String imgFileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(newImg.getOriginalFilename());
-            File img = new File(imgFileAbsolutePath);
-            if (!img.getParentFile().exists()){
-                img.getParentFile().mkdirs();
-            }
-            newImg.transferTo(img);
-            ImageUtil.generateThumbnail(img);
-
-            //更新店铺信息及图片
-            shopService.update(shopDO,img);
-        }else {
-            shopService.updateById(shopDO);
+        try {
+            shopService.update(shopDO);
+        } catch (Exception e) {
+            log.error("修改店铺失败：" + e.getMessage());
+            //若异常则删除用户上传的图片
+            ImageUtil.deleteImg(shopDO.getShopImg());
+            return R.error(ResultCode.UPDATE_FAIL);
         }
         return R.success();
     }
@@ -206,12 +195,11 @@ public class ShopController {
     /**
      * 获取当前用户名下的店铺信息
      *
-     * @param request
      * @return
      */
     @GetMapping("")
     @PreAuthorize("hasAnyAuthority('admin','get_current_shop')")
-    public R getCurrentUserShop(HttpServletRequest request) {
+    public R getCurrentUserShop() {
         //获取当前登陆用户
         JWTUser user = JWTTokenUtil.getCurrentUser();
         Long userId = user.getUserId();

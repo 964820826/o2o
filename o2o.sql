@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 本地数据库
+ Source Server         : 本地数据库-3306
  Source Server Type    : MySQL
  Source Server Version : 80017
- Source Host           : 127.0.0.1:3306
+ Source Host           : localhost:3306
  Source Schema         : o2o
 
  Target Server Type    : MySQL
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 18/12/2019 17:54:25
+ Date: 19/12/2019 00:05:27
 */
 
 SET NAMES utf8mb4;
@@ -356,7 +356,7 @@ CREATE TABLE `tb_shop`  (
 -- ----------------------------
 -- Records of tb_shop
 -- ----------------------------
-INSERT INTO `tb_shop` VALUES (28, 1, 2, 22, '王三烧烤', '不接受预订，请直接来店里进行消费', '/upload/images/item/shop/28/2017092601041469991.png', 50, '位于东苑2号', '13810524086', 1, NULL, '2017-09-26 01:04:13', '2019-10-04 15:57:17');
+INSERT INTO `tb_shop` VALUES (28, 1, 2, 22, '王三烧烤', '不接受预订，请直接来店里进行消费', 'E:\\IDEAWorkspace\\git\\o2o\\img\\2019121823242243888.png', 50, '位于东苑3号', '13810524086', 1, NULL, '2017-09-26 01:04:13', '2019-12-18 23:24:43');
 INSERT INTO `tb_shop` VALUES (29, 8, 3, 22, '王三烧烤', '过来喝喝就知道啦，你是我的奶茶', '/upload/images/item/shop/29/2017092601054939287.jpg', 40, '西苑1号', '1211334565', 1, NULL, '2017-09-26 01:05:49', '2019-11-28 22:06:25');
 
 -- ----------------------------
