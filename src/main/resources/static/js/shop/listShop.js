@@ -1,5 +1,5 @@
 $(function () {
-// 初始化页面
+    // 初始化页面
     $.init();
 
     //加载可选店铺类别
@@ -69,7 +69,6 @@ function getAreaList() {
 function showItems(index, size) {
     //拼接分页查询店铺列表的url
     var shopPageUrl = shopListUrl + '?pageIndex=' + index + '&pageSize=' + size;
-    // + '&shopName=' + shopName + '&shopCategoryId=' + shopCategoryId + '&areaId=' + areaId;
     if (shopCategoryId != null){
         shopPageUrl += '&shopCategoryId=' + shopCategoryId;
     }

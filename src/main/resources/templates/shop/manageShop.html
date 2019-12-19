@@ -22,13 +22,17 @@
 <body>
 <div class="page-group">
     <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-left" external href="/index" data-transition='slide-out'>
+            <span class="icon icon-left" ></span> 返回
+        </a>
         <h1 class='title'>商店管理</h1>
     </header>
     <div class="content">
         <div class="content-block">
             <div class="row">
+                <input type="hidden" id="shopId">
                 <div class="col-50 mb">
-                    <a id="shopInfo" href="" class="button button-big button-fill">商铺信息</a>
+                    <a id="shopInfo" href="/shop/modify" class="button button-big button-fill">商铺信息</a>
                 </div>
                 <div class="col-50 mb">
                     <a id="manageProduct" href="" class="button button-big button-fill">商品管理</a>
@@ -55,7 +59,7 @@
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.js' charset='utf-8'></script>
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.js' charset='utf-8'></script>
 <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
-
+<script type='text/javascript' src='/js/common.js' charset='utf-8'></script>
 <script type='text/javascript' src='/js/shop/manageShop.js' charset='utf-8'></script>
 </body>
 </html>

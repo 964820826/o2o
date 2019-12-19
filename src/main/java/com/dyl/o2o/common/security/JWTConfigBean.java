@@ -22,21 +22,21 @@ public class JWTConfigBean {
 
     @Value("${jwt.secret}")
     public void setSecret(String secret) {
-        this.secret = secret;
+        JWTConfigBean.secret = secret;
     }
 
     @Value("${jwt.tokenHeader}")
     public void setTokenHeader(String tokenHeader) {
-        this.tokenHeader = tokenHeader;
+        JWTConfigBean.tokenHeader = tokenHeader;
     }
 
     @Value("${jwt.tokenPrefix}")
     public void setTokenPrefix(String tokenPrefix) {
-        this.tokenPrefix = tokenPrefix;
+        JWTConfigBean.tokenPrefix = tokenPrefix;
     }
 
     @Value("${jwt.expiration}")
     public void setExpiration(Long expiration) {
-        this.expiration = expiration;
+        JWTConfigBean.expiration = expiration;
     }
 }

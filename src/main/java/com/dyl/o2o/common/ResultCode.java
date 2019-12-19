@@ -10,23 +10,25 @@ public enum ResultCode {
 
     //失败
     //参数原因
-    CAPTCHA_FAIL(10001,"验证码错误"),
-    PARAM_NOT_COMPLETE(10002,"参数缺失"),
-    PARAM_TYPE_ERROR(10003,"参数类型错误"),
-    NULL_PARAM(10004,"无法获取到参数异常"),
-    PASSWORD_ERROR(100005,"密码错误"),
+    CAPTCHA_FAIL(1001,"验证码错误"),
+    PARAM_NOT_COMPLETE(1002,"参数缺失"),
+    PARAM_TYPE_ERROR(1003,"参数类型错误"),
+    NULL_PARAM(1004,"无法获取到参数异常"),
+    PASSWORD_ERROR(1005,"密码错误"),
 
     //内部错误
-    NO_RESULT(50000,"无相关数据"),
-    INNER_ERROR(50001,"内部错误"),
-    NO_AUTHORITY(50002,"无操作权限"),
-    IO_ERROR(50003,"数据传输异常"),
-    NO_LOG_IN(50004,"未登陆"),
-    ACCOUNT_USELESS(50005,"账号不可用"),
-    USER_EXPIRE(50006,"用户已过期"),
+    NO_RESULT(5000,"无相关数据"),
+    INNER_ERROR(5001,"内部错误"),
+    NO_AUTHORITY(5002,"无操作权限"),
+    IO_ERROR(5003,"数据传输异常"),
+    NO_LOG_IN(5004,"未登陆"),
+    ACCOUNT_USELESS(5005,"账号不可用"),
+    USER_EXPIRE(5006,"用户已过期"),
+    USER_EXIST(5007,"用户名已占用"),
 
     //业务异常
-    SERVICE_ERROR(99999,"业务异常");
+    SERVICE_ERROR(9999,"业务异常"),
+    UPDATE_FAIL(9002,"更新失败");
 
     /**
      * 状态码

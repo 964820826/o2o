@@ -2,6 +2,7 @@ package com.dyl.o2o.common.exception;
 
 import com.dyl.o2o.common.R;
 import com.dyl.o2o.common.ResultCode;
+import io.jsonwebtoken.ExpiredJwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -29,12 +30,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = NullPointerException.class)
     public R NullExceptionHandler(NullPointerException e){
+        e.printStackTrace();
         log.error("未获取到参数异常：" + e.getMessage());
         return R.error(ResultCode.NULL_PARAM);
     }
 
     @ExceptionHandler(value = Exception.class)
-    public R NullExceptionHandler(Exception e){
+    public R ExceptionHandler(Exception e){
         log.error("内部异常：" + e.getMessage());
         return R.error(ResultCode.INNER_ERROR);
     }
@@ -45,11 +47,24 @@ public class GlobalExceptionHandler {
         return R.error(ResultCode.NO_AUTHORITY);
     }
 
-    @ExceptionHandler(value = AuthenticationException.class)
-    public R AuthenticationExceptionHandler(AuthenticationException  e){
-        log.error("未登陆：" + e.getMessage());
-        return R.error(ResultCode.NO_LOG_IN);
+    @ExceptionHandler(value = UserAlreadyExistException.class)
+    public R UserAreadyExistExceptionHandler(UserAlreadyExistException e){
+        log.error("用户名已存在：" + e.getMessage());
+        return R.error(ResultCode.USER_EXIST);
     }
 
-    //todo 登陆失败异常处理
+    @ExceptionHandler(value = ExpiredJwtException.class)
+    public R ExpiredJwtExceptionHandler(ExpiredJwtException e){
+        log.error("token已过期" + e.getMessage());
+        return R.error(ResultCode.USER_EXPIRE);
+    }
+
+
+
+//    @ExceptionHandler(value = AuthenticationException.class)
+//    public R AuthenticationExceptionHandler(AuthenticationException  e){
+//        log.error("未登陆：" + e.getMessage());
+//        return R.error(ResultCode.NO_LOG_IN);
+//    }
+
 }

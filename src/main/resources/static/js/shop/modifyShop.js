@@ -1,76 +1,119 @@
-// $(function () {
-//     //页面加载时自动调用方法
-//     var shopId = getQueryString("shopId");
-//     //修改店铺，获取店铺原信息
-//     getShopInitInfo(shopId);
-// })
-//
-// //获取店铺初始信息（下拉框、原参数）
-// function getShopInitInfo(shopId) {
-//     var initUrl = '/shopAdmin/shop/'+shopId;
-//     $.getJSON(initUrl, function (data) {//访问initUrl,返回的数据为data
-//         if (data.code == 0){
-//             var shopCategoryOption = '';
-//             var areaOption = '';
-//             var shopCategoryList = data.data.shopCategoryDOList;
-//             for (var i = 0; i < shopCategoryList.length; i++) {
-//                 shopCategoryOption += '<option value="' + shopCategoryList[i].shopCategoryId + '">' + shopCategoryList[i].shopCategoryName + '</option>';
-//             }
-//             // data.shopCategoryDOList.forEach(function (item, index){//遍历shopCategoryList，生成下拉框
-//             //     tempHtml += '<option data-id="' + item.shopCagetoryId + '">' + item.shopCategoryName + '</option>';
-//             // });
-//             var areaList = data.data.areaDOList;
-//             for (var i = 0; i < areaList.length; i++) {
-//                 areaOption += '<option value="' + areaList[i].areaId + '">' + areaList[i].areaName + '</option>';
-//             }
-//             // data.areaDOList.map(function (item, index) {
-//             //     tempAreaHtml += '<option data-id="' + item.areaId + '">' + item.areaName + '</option>';
-//             // });
-//             //将js生成的下拉列表填充到前端
-//             $('#shopCategory').html(shopCategoryOption);
-//             $('#area').html(areaOption);
-//         }else{
-//             $.toast('获取初始信息失败!' + data.massage);
-//         }
-//     });
-// }
-//
-// //点击提交时执行
-// $('#submit').click(function () {
-//     var form = document.getElementById("form");
-//     var formData = new FormData(form);
-//     var shopName = formData.get("shopName");
-//     $("#captcha").click();
-//     //通过ajax与后台交互
-//     $.ajax({
-//         url: registerShopUrl,
-//         type: 'POST',
-//         data: formData,
-//         contentType: false,//要传参数要传文件，所以用false
-//         processData: false,
-//         cache: false,
-//         success: function (data) {
-//             if (data.code == 0){
-//                 $.toast('提交成功！');
-//                 $("#form input").each(function () {
-//                     $(this).val("");
-//                 })
-//             }else{
-//                 $.toast('提交失败！' + data.massage);
-//                 $("#captcha").val("");
-//             }
-//         }
-//     });
-// })
-//
-// function getQueryString(name) {
-//     //匹配字符串开头或者以&开头的，中间为任意长度除&号的部分，结尾以&或者字符串结尾结束;如&shopId=3
-//     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-//     //查询字符串参数？之后的部分匹配正则表达式
-//     var r = window.location.search.substr(1).match(reg);
-//     if (typeof (r) != "number"){
-//         return null;
-//     }else {
-//         return r;
-//     }
-// }
+$(function () {
+    //获取店铺类别选项
+    getShopCategory();
+    //获取区域选项
+    getAreaList();
+    //获取店铺信息
+    getShopInfo();
+});
+
+//获取token
+var token = localStorage.getItem('token');
+
+//获取店铺信息url(get)
+var getShopInfoUrl = '/shop';
+//获取二级店铺类别url
+var childShopCategoryUrl = '/shopCategory/child';
+//获取区域列表url
+var areaListUrl = '/area/list';
+//修改店铺信息url(put)
+var modifyShopUrl = '/shop';
+
+// 加载可选店铺类别
+function getShopCategory() {
+    $.getJSON(childShopCategoryUrl, function (data) {
+        if (data.code === 0){
+            //后台获取到的店铺类别列表
+            var shopCategoryList = data.data;
+            var shopCategoryHtml = '';
+            shopCategoryList.forEach(function (item) {
+                shopCategoryHtml += '<option value = "' + item.shopCategoryId + '">' + item.shopCategoryName + '</option>';
+            });
+            $("#shopCategory").html(shopCategoryHtml);
+        }
+    })
+}
+
+// 获取区域列表
+function getAreaList() {
+    $.getJSON(areaListUrl, function (data) {
+        if (data.code == 0) {
+            //后台获取到的区域列表
+            var areaList = data.data;
+            var areaHtml = '';
+            areaList.forEach(function (item) {
+                areaHtml += '<option value = "' + item.areaId + '">' + item.areaName + '</option>';
+            });
+            $("#area").html(areaHtml);
+        }
+    })
+}
+
+//获取店铺信息
+function getShopInfo() {
+    //通过ajax与后台交互
+    $.ajax({
+        url: getShopInfoUrl,
+        type: 'GET',
+        headers:{
+            Authorization: 'Bearer ' + token
+        },
+        contentType: false,//要传参数要传文件，所以用false
+        processData: false,
+        cache: false,
+        success: function (data) {
+            if (data.code == 0){
+                var shop = data.data;
+                $('#shopId').val(shop.shopId);
+                $('#shopName').val(shop.shopName);
+                // $('#shopCategory').val(shop.shopCategory);
+                $('#area').val(shop.area);
+                $('#shopAddr').val(shop.shopAddr);
+                $('#shopPhone').val(shop.shopPhone);
+                $('#shopDesc').val(shop.shopDesc);
+                $("#shopCategory option[value = '"+shop.shopCategoryId+"']").attr("selected",true);
+                $("#area option[value = '"+shop.areaId+"']").attr("selected",true);
+            } else if (data.code == 5002 || data.code ==5004) {
+                //未登陆或无操作权限，返回上一页
+                window.history.go(-1);
+            } else {
+                $.toast(data.massage);
+            }
+
+        }
+    })
+}
+
+//点击提交时执行
+$('#submit').click(function () {
+    if ($("#captcha").val() == null || $("#captcha").val() == ''){
+        $.toast("请输入验证码");
+        return;
+    }
+    var file = document.getElementById("shopImg").files[0];
+    var form = document.getElementById("form");
+    var formData = new FormData(form);
+    formData.append("newImg",file);
+    $("#captcha").click();
+    //todo 校验上传的图片格式是否正确
+    //通过ajax与后台交互
+    $.ajax({
+        url: modifyShopUrl,
+        type: 'POST',
+        data: formData,
+        headers:{
+            Authorization: 'Bearer ' + token
+        },
+        contentType: false,//要传参数要传文件，所以用false
+        processData: false,
+        cache: false,
+        success: function (data) {
+            if (data.code == 0){
+                $.toast('提交成功！');
+            }else{
+                $.toast('提交失败！' + data.massage);
+            }
+            $("#captcha").val("");
+        }
+    });
+});

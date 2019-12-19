@@ -1,10 +1,12 @@
 package com.dyl.o2o.common.security;
 
 import com.dyl.o2o.common.util.JWTTokenUtil;
-import com.dyl.o2o.service.impl.UserDetailsServiceImpl;
+import com.dyl.o2o.service.impl.UserServiceImpl;
+import io.jsonwebtoken.ExpiredJwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.DisabledException;
+import org.springframework.security.authentication.LockedException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -28,7 +30,7 @@ import java.io.IOException;
 public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     @Autowired
-    UserDetailsServiceImpl userDetailsService;
+    UserServiceImpl userDetailsService;
     @Autowired
     EntryPointUnauthorizedHandler entryPointUnauthorizedHandler;
 
@@ -53,8 +55,11 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
         if (tokenHeader != null && tokenHeader.startsWith("Bearer ")) {
             //从请求头中获取token，进而获取用户名
             String token = tokenHeader.substring(7);
-            username = JWTTokenUtil.getUsernameFromToken(token);
-            if (JWTTokenUtil.isExpiration(token)) {
+            try {
+                username = JWTTokenUtil.getUsernameFromToken(token);
+            } catch (ExpiredJwtException e) {
+                e.printStackTrace();
+                log.error("token已过期");
                 entryPointUnauthorizedHandler.commence(request, response, new DisabledException("用户信息已过期，请重新登陆"));
             }
         }
@@ -64,75 +69,20 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
             //获取保存用户权限的实体类
             userDetails = userDetailsService.loadUserByUsername(username);
             if (userDetails.isAccountNonLocked()) {
-                entryPointUnauthorizedHandler.commence(request, response, new DisabledException("该账户不可用"));
+                log.error(username + "——账户不可用");
+                entryPointUnauthorizedHandler.commence(request, response, new LockedException("该账户不可用"));
             }
         }
 
         //设置权限及通过校验
         if (userDetails != null){
             //若用户权限类不为空，则生成通过认证
-                    UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
-                    authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-                    //将权限写入本次会话
-                    SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+            UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
+            authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+            //将权限写入本次会话
+            SecurityContextHolder.getContext().setAuthentication(authenticationToken);
         }
         chain.doFilter(request,response);
     }
-
-//        //若请求头不存在或不合规则，直接执行下个过滤器
-//        try{
-//            //从请求头中获取token，进而获取用户名
-//            String token = tokenHeader.substring(7);
-//            String username = JWTTokenUtil.getUsernameFromToken(token);
-//            //获取保存用户权限的实体类
-//            UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-//            if (JWTTokenUtil.isExpiration(token)){
-//                entryPointUnauthorizedHandler.commence(request,response,new DisabledException("用户信息已过期，请重新登陆"));
-//            }
-//            if (userDetails.isAccountNonLocked()){
-//                entryPointUnauthorizedHandler.commence(request,response,new DisabledException("该账户不可用"));
-//            }
-//            //若用户权限类不为空，则生成通过认证
-//            UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
-//            authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-//            //将权限写入本次会话
-//            SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-//        }catch (Exception e){
-//            log.error("用户信息认证失败：" + e.getMessage());
-//            entryPointUnauthorizedHandler.commence(request,response,new DisabledException("用户信息认证失败"));
-//        }
-//        //执行下一个过滤器
-//        chain.doFilter(request,response);
-//
-//
-//        //若请求头格式正确
-//        if (tokenHeader != null && tokenHeader.startsWith("Bearer ")){
-//            //从请求头中获取token，进而获取用户名
-//            if (JWTTokenUtil.isExpiration(token)){
-//                entryPointUnauthorizedHandler.commence(request,response,new DisabledException("用户信息已过期，请重新登陆"));
-//            }
-//            String token = tokenHeader.substring(7);
-//            String username = JWTTokenUtil.getUsernameFromToken(token);
-//            //若有用户名且没有设置过权限，则通过用户名获取该用户
-//            if (username != null && SecurityContextHolder.getContext().getAuthentication() == null){
-//                //获取保存用户权限的实体类
-//                UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-//                if (userDetails != null){
-//                    //若用户权限类不为空，则生成通过认证
-//                    UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
-//                    authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-//                    //将权限写入本次会话
-//                    SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-//                }
-//                if (!userDetails.isEnabled()){
-//                    response.setCharacterEncoding("UTF-8");
-//                    response.setContentType("application/json;charset=UTF-8");
-//                    response.getWriter().print("{\"code\":\"452\",\"data\":\"\",\"message\":\"账号处于黑名单\"}");
-//                    return;
-//                }
-//            }
-//        }
-//        chain.doFilter(request,response);
-//    }
 
 }

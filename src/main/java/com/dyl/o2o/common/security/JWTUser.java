@@ -1,7 +1,5 @@
 package com.dyl.o2o.common.security;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.dyl.o2o.domain.RoleDO;
 import com.dyl.o2o.domain.UserDO;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
@@ -10,7 +8,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.Date;
-import java.util.Set;
 
 /** 用户安全实体
  * @author ：dyl
@@ -32,7 +29,7 @@ public class JWTUser implements UserDetails {
     //最后修改时间
     private Date lastEditTime;
     //用户角色
-    private Set<RoleDO> roles;
+    private Long roleId;
 
     //用户权限
     private Collection<GrantedAuthority> authorities;
@@ -47,12 +44,8 @@ public class JWTUser implements UserDetails {
 
     public JWTUser(UserDO userDO){
         BeanUtils.copyProperties(userDO,this);
-        if (userDO.isStatus()){
-            //状态可用代表未锁定
-            this.isAccountNonLocked = false;
-        }else {
-            this.isAccountNonLocked = true;
-        }
+        //状态可用代表未锁定
+        this.isAccountNonLocked = !userDO.isStatus();
     }
 
     @Override

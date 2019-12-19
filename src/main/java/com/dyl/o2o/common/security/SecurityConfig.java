@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     //UserDetailsService的实现类有很多，通过此注解限制注入的实现类
-    @Qualifier("userDetailsServiceImpl")
+    @Qualifier("userServiceImpl")
     UserDetailsService userDetailsService;
 
     @Autowired
@@ -64,16 +64,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 // swagger start
-                .antMatchers("/swagger-ui.html").anonymous()
-                .antMatchers("/swagger-resources/**").anonymous()
-                .antMatchers("/webjars/**").anonymous()
-                .antMatchers("/*/api-docs").anonymous()
+//                .antMatchers("/swagger-ui.html").anonymous()
+//                .antMatchers("/swagger-resources/**").anonymous()
+//                .antMatchers("/webjars/**").anonymous()
+//                .antMatchers("/*/api-docs").anonymous()
                 //其他的都放行
                 .anyRequest().permitAll().and()
 
                 //配置拦截时的处理
                 .exceptionHandling()
-                .authenticationEntryPoint(entryPointUnauthorizedHandler)//未登录、添加token无效或未携带token的处理
+//                .authenticationEntryPoint(entryPointUnauthorizedHandler)//未登录、添加token无效或未携带token的处理
                 .accessDeniedHandler(myAccessDeniedHandler)//无权限时的处理
                 .and()
 

@@ -68,26 +68,33 @@
     <div class="panel-overlay"></div>
     <div class="panel panel-right panel-reveal" id="panel-right-demo">
         <div class="content-block">
-            <p>
-                <a href="/login" class="close-panel">登陆</a>
+            <!--登陆前显示-->
+            <p class="unLogin" hidden>
+                <a href="/loginPage" class="close-panel">登陆</a>
             </p>
-            <p>
-                <a href="/logUp" class="close-panel">注册</a>
+            <p class="unLogin" hidden>
+                <a href="/signIn" class="close-panel">注册</a>
             </p>
-            <p>
+
+            <!--登陆后显示-->
+            <p class="customer" hidden>
                 <a href="/shop/add" class="close-panel">我要开店</a>
             </p>
-            <p>
+            <p class="myShop" hidden>
+                <a href="/shop/manage" class="close-panel">我的店铺</a>
+            </p>
+
+            <p class="login" hidden>
                 <a href="/o2o/frontend/myrecord" class="close-panel">消费记录</a>
             </p>
-            <p>
+            <p class="login" hidden>
                 <a href="/o2o/frontend/mypoint" class="close-panel">我的积分</a>
             </p>
-            <p>
+            <p class="login" hidden>
                 <a href="/o2o/frontend/pointrecord" class="close-panel">兑换记录</a>
             </p>
-            <p>
-                <a href="#" usertype="1" class="close-panel" id="log-out">登出系统</a>
+            <p class="login" hidden>
+                <a onclick="logout()" usertype="1" class="close-panel" id="log-out">登出系统</a>
             </p>
             <!-- Click on link with "close-panel" class will close panel -->
         </div>
@@ -98,6 +105,7 @@
 <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='/js/common.js' charset='utf-8'></script>
 <script type='text/javascript' src='/js/index.js' charset='utf-8'></script>
 
 </body>
