@@ -44,12 +44,8 @@ public class JWTUser implements UserDetails {
 
     public JWTUser(UserDO userDO){
         BeanUtils.copyProperties(userDO,this);
-        if (userDO.isStatus()){
-            //状态可用代表未锁定
-            this.isAccountNonLocked = false;
-        }else {
-            this.isAccountNonLocked = true;
-        }
+        //状态可用代表未锁定
+        this.isAccountNonLocked = !userDO.isStatus();
     }
 
     @Override

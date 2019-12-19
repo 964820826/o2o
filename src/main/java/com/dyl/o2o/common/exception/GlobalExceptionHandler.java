@@ -30,6 +30,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = NullPointerException.class)
     public R NullExceptionHandler(NullPointerException e){
+        e.printStackTrace();
         log.error("未获取到参数异常：" + e.getMessage());
         return R.error(ResultCode.NULL_PARAM);
     }

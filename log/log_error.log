@@ -6,3 +6,26 @@
 2019-12-19 00:02:40.999 [http-nio-8080-exec-2] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 无操作权限：不允许访问
 2019-12-19 00:04:05.671 [http-nio-8080-exec-6] ERROR com.dyl.o2o.common.security.JWTAuthorizationFilter - token已过期
 2019-12-19 00:04:12.062 [http-nio-8080-exec-6] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 无操作权限：不允许访问
+2019-12-19 09:43:36.093 [http-nio-8080-exec-2] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Optional int parameter 'pageIndex' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-12-19 10:02:21.586 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Optional int parameter 'pageIndex' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+2019-12-19 10:03:04.651 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "listPage"
+2019-12-19 10:03:20.127 [http-nio-8080-exec-5] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "listPage"
+2019-12-19 10:10:58.229 [http-nio-8080-exec-8] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 10:12:54.239 [http-nio-8080-exec-1] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 10:16:34.434 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 10:17:05.776 [http-nio-8080-exec-5] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 10:18:14.152 [http-nio-8080-exec-7] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 10:19:38.766 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 10:23:26.036 [http-nio-8080-exec-5] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 11:16:44.286 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 11:26:40.806 [http-nio-8080-exec-2] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 11:34:13.900 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 11:34:13.900 [http-nio-8080-exec-2] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 11:34:13.900 [http-nio-8080-exec-6] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 14:40:22.778 [http-nio-8080-exec-3] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 14:43:08.067 [http-nio-8080-exec-6] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 未获取到参数异常：null
+2019-12-19 16:08:43.393 [http-nio-8080-exec-7] ERROR com.dyl.o2o.common.security.JWTAuthorizationFilter - token已过期
+2019-12-19 16:08:57.995 [http-nio-8080-exec-7] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 无操作权限：不允许访问
+2019-12-19 16:10:27.981 [http-nio-8080-exec-4] ERROR com.dyl.o2o.common.security.JWTAuthorizationFilter - token已过期
+2019-12-19 16:10:27.982 [http-nio-8080-exec-4] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 无操作权限：不允许访问
+2019-12-19 18:13:51.452 [http-nio-8080-exec-7] ERROR c.dyl.o2o.common.exception.GlobalExceptionHandler - 内部异常：Optional int parameter 'pageIndex' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
