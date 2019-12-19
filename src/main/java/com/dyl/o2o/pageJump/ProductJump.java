@@ -33,4 +33,13 @@ public class ProductJump {
     public String productListPage() {
         return "/product/listProduct";
     }
+
+    /**
+     * 商品详情修改页跳转
+     * @return
+     */
+    @GetMapping("/modify")
+    public String productModifyPage(){
+        return "/product/modifyProduct";
+    }
 }

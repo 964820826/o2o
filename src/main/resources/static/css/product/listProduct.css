@@ -1,16 +1,19 @@
-.row-product-category {
+.row-product {
     border: 1px solid #999;
     padding: .5rem;
     border-bottom: none;
 }
-.row-product-category:last-child {
+.row-product * {
+    white-space: nowrap;
+    overflow: scroll;
+}
+.row-product:last-child {
     border-bottom: 1px solid #999;
 }
-.category-input {
-    border: none;
-    background-color: #eee;
-}
-.product-category-name {
+.product-name {
     white-space: nowrap;
     overflow-x: scroll;
+}
+.product-wrap a {
+    margin-right: 1rem;
 }

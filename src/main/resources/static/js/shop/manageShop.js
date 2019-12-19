@@ -4,7 +4,7 @@ $(function () {
 });
 
 //获取当前用户的token
-var token = localStorage.getItem("token");
+var token = getToken();
 //获取当前登陆用户的店铺信息的url
 var getShopInfoUrl = '/shop';
 
