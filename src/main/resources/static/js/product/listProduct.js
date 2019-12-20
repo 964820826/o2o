@@ -31,7 +31,7 @@ function getProductList() {
                 productList.forEach(function (item) {
                     productListHtml +=
                     '<div class="row row-product">'+
-                        '<div class="col-33">' + item.productName + '</div>'+
+                        '<div class="col-40">' + item.productName + '</div>'+
                         '<div class="col-20">' + item.priority + '</div>'+
                         '<div class="col-40">'+
                             '<a href="/product/modify?productId='+item.productId + '">编辑</a>'+

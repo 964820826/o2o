@@ -39,7 +39,7 @@ public class ImageUtil {
         String fullPath = img.getAbsolutePath();
         try {
             //获取水印图片
-            System.out.println("水印图片地址" + classPath + "static/img/watermark.png");
+//            System.out.println("水印图片地址" + classPath + "static/img/watermark.png");
             BufferedImage buffer = ImageIO.read(new File(classPath + "static/img/watermark.png"));
             //生成缩略图
             Thumbnails.of(img).size(500, 500).watermark(Positions.BOTTOM_RIGHT, buffer, 0.25f).outputQuality(0.8f).toFile(img.getAbsolutePath());
@@ -85,25 +85,32 @@ public class ImageUtil {
 
 
     /**
-     * 根据用户上传的文件生成缩略图
+     * 根据用户上传的文件生成带水印的缩略图
      * @param newImg
      * @return
      * @throws IOException
      */
-    public static String generateThumbnail(MultipartFile newImg) throws IOException {
-        //生成服务器上保存图片的地址
-        String imgFileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(newImg.getOriginalFilename());
-        //根据地址创建文件
-        File img = new File(imgFileAbsolutePath);
-        //若文件地址不存在，生成地址
-        if (!img.getParentFile().exists()){
-            img.getParentFile().mkdirs();
-        }
-        //multipartFile转file，方便其他方法操作和单元测试
-        newImg.transferTo(img);
+    public static String uploadThumbnail(MultipartFile newImg) throws IOException {
+        String imgFileAbsolutePath = uploadFile(newImg);
+
         //用服务器上的图片生成带水印的缩略图，并将原图覆盖
         ImageUtil.img2Thumbnail(img);
         return imgFileAbsolutePath;
+    }
+
+    public static String uploadFile(MultipartFile userFile) throws IOException {
+        //生成服务器上保存图片的地址
+        String fileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(newImg.getOriginalFilename());
+        //根据地址创建文件
+        File file = new File(fileAbsolutePath);
+        //若文件地址不存在，生成地址
+        if (!file.getParentFile().exists()){
+            file.getParentFile().mkdirs();
+        }
+        //multipartFile转file，方便其他方法操作和单元测试
+        userFile.transferTo(file);
+        //用服务器上的图片生成带水印的缩略图，并将原图覆盖
+        return fileAbsolutePath;
     }
 
     /**

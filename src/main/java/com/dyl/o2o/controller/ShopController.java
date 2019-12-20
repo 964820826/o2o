@@ -137,7 +137,7 @@ public class ShopController {
         String thumbnailPath;
         if (newImg != null){
             //处理图片，获取生成的图片地址
-            thumbnailPath = ImageUtil.generateThumbnail(newImg);
+            thumbnailPath = ImageUtil.uploadThumbnail(newImg);
             shopDO.setShopImg(thumbnailPath);
         }
         //调用service方法更新数据库

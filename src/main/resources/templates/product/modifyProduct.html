@@ -92,7 +92,7 @@
                     <div class="item-inner">
                         <div class="item-title label">折扣价</div>
                         <div class="item-input">
-                            <input type="number" id="promotion-price" placeholder="可选">
+                            <input type="number" id="discountPrice" placeholder="可选">
                         </div>
                     </div>
                 </div>
@@ -161,8 +161,7 @@
                             id="j_captcha" name="j_captcha" type="text"
                             class="form-control in" placeholder="验证码"/>
                         <div class="item-input">
-                            <img id="captcha_img" alt="点击更换" title="点击更换"
-                                 onclick="changeVerifyCode(this)" src="../Kaptcha"/>
+                            <img src="/captchaImage" alt="点击更换" onclick="this.src='/captchaImage'">
                         </div>
                     </div>
                 </div>
