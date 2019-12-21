@@ -1,9 +1,11 @@
 package com.dyl.o2o.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /** 商品图片实体类
@@ -12,9 +14,9 @@ import java.util.Date;
  */
 @Data
 @TableName("tb_product_img")
-public class ProductImgDO {
+public class ProductImgDO implements Serializable {
     //图片id
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Long productImgId;
     //图片地址
     private String productImgAddr;

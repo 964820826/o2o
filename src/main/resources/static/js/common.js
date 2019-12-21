@@ -74,3 +74,14 @@ function logout() {
     localStorage.clear();
     location.reload();
 }
+
+//判断文件是不是图片
+function isImg(imgName) {
+    //获取扩展码
+    var extend = imgName.substr(imgName.lastIndexOf('.'),imgName.length).toLocaleUpperCase();
+    if (extend === '.PNG' || extend === '.JPG' || extend === '.JPEG' || extend === '.GIF'){
+        return true;
+    }else {
+        return false;
+    }
+}

@@ -146,7 +146,7 @@ public class ShopController {
         } catch (Exception e) {
             log.error("修改店铺失败：" + e.getMessage());
             //若异常则删除用户上传的图片
-            ImageUtil.deleteImg(shopDO.getShopImg());
+            ImageUtil.deleteFile(shopDO.getShopImg());
             return R.error(ResultCode.UPDATE_FAIL);
         }
         return R.success();
