@@ -9,6 +9,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.LockedException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -57,6 +58,12 @@ public class GlobalExceptionHandler {
     public R ExpiredJwtExceptionHandler(ExpiredJwtException e){
         log.error("token已过期" + e.getMessage());
         return R.error(ResultCode.USER_EXPIRE);
+    }
+
+    @ExceptionHandler(value = HttpRequestMethodNotSupportedException.class)
+    public R HttpRequestMethodNotSupportedExceptionHandler(HttpRequestMethodNotSupportedException e){
+        log.error("不支持的提交方式：" + e.getMessage());
+        return R.error(ResultCode.SUBMIT_TYPE_ERROR);
     }
 
 

@@ -97,11 +97,11 @@ public class ImageUtil {
         if (ObjectUtils.isEmpty(newImg.getOriginalFilename())){
             return null;
         }
-        String imgFileAbsolutePath = uploadFile(newImg);
-        File img = new File(imgFileAbsolutePath);
+        String relativePath = uploadFile(newImg);
+        File img = new File(PathUtil.getImgBasePath() + relativePath);
         //用服务器上的图片生成带水印的缩略图，并将原图覆盖
         ImageUtil.img2Thumbnail(img);
-        return imgFileAbsolutePath;
+        return relativePath;
     }
 
     /**
@@ -115,8 +115,10 @@ public class ImageUtil {
         if (ObjectUtils.isEmpty(userFile.getOriginalFilename())){
             return null;
         }
+        //生成相对路径（文件全名）
+        String relativePath = "\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(userFile.getOriginalFilename());
         //生成服务器上保存图片的地址
-        String fileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(userFile.getOriginalFilename());
+        String fileAbsolutePath = PathUtil.getImgBasePath() + relativePath;
         //根据地址创建文件
         File file = new File(fileAbsolutePath);
         //若文件地址不存在，生成地址
@@ -126,7 +128,7 @@ public class ImageUtil {
         //multipartFile转file，方便其他方法操作和单元测试
         userFile.transferTo(file);
         //用服务器上的图片生成带水印的缩略图，并将原图覆盖
-        return fileAbsolutePath;
+        return relativePath;
     }
 
     /**
@@ -148,7 +150,7 @@ public class ImageUtil {
         if (ObjectUtils.isEmpty(filePath)){
             return;
         }
-        File file = new File(filePath);
+        File file = new File(PathUtil.getImgBasePath() + filePath);
         if (file.exists()){
             file.delete();
         }

@@ -35,4 +35,10 @@ public interface ProductService extends IService<ProductDO>{
      * @param productDO
      */
     void updateDetail(String productThumbnailPath, List<String> productDetailImgPathList, ProductDO productDO);
+
+    /**
+     * 根据商品id删除商品信息
+     * @param productId
+     */
+    void remove(Long productId);
 }

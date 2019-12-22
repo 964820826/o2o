@@ -1,5 +1,6 @@
 package com.dyl.o2o.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -101,6 +102,30 @@ public class ProductServiceImpl extends ServiceImpl<ProductDao, ProductDO> imple
             ImageUtil.deleteFile(oldThumbnailPath);
             ImageUtil.deleteFileList(oldDetailImgPathList);
         }catch (Exception e){
+            log.error("删除图片失败：" + e.getMessage());
+        }
+    }
+
+    /**
+     * 根据商品id删除商品信息
+     * @param productId
+     */
+    @Override
+    @Transactional
+    public void remove(Long productId) {
+        //1.获取商品图片地址
+        List<String> imgPathList = productImgDao.selectImgPathListByProductId(productId);
+
+        //3.删除数据库保存的商品图片信息
+        productImgDao.deleteByProductId(productId);
+
+        //2.删除商品信息
+        productDao.deleteById(productId);
+
+        //4.删除商品详情图片文件
+        try {
+            ImageUtil.deleteFileList(imgPathList);
+        } catch (Exception e) {
             log.error("删除图片失败：" + e.getMessage());
         }
     }

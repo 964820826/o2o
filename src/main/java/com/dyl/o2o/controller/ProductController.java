@@ -13,6 +13,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -70,9 +71,19 @@ public class ProductController {
         return R.success(productDO);
     }
 
-    //用户上传图片的处理：在controller层将用户上传的图片保存到服务器上，然后在service层里对服务器上的图片进行操作
+    /**
+     * 修改商品信息
+     * @param productImg
+     * @param productDetailImgList
+     * @param productDO
+     * @param captcha
+     * @param request
+     * @return
+     * @throws IOException
+     */
     @PutMapping("")
     @ApiOperation("修改商品信息")
+    @PreAuthorize("hasAnyAuthority('admin','product_modify')")
     public R modifyProduct(MultipartFile productImg, List<MultipartFile> productDetailImgList,
                            ProductDO productDO, String captcha, HttpServletRequest request) throws IOException {
         //1.校验验证码
@@ -103,4 +114,12 @@ public class ProductController {
         return R.success();
     }
 
+    @DeleteMapping("")
+    @ApiOperation("删除商品信息")
+    @ApiImplicitParam(value = "商品Id")
+    @PreAuthorize("hasAnyAuthority('admin','product_delete')")
+    public R deleteProduct(Long productId){
+        productService.remove(productId);
+        return R.success();
+    }
 }

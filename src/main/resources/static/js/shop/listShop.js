@@ -15,7 +15,7 @@ var loading = false;
 //页码
 var pageIndex = 1;
 //一页最多显示条数
-var pageSize = 5;
+var pageSize = 10;
 //获取店铺列表的url
 var shopListUrl = '/shop/list';
 //获取店铺类别的url

@@ -1,6 +1,8 @@
 $(function() {
 	//初始化
 	$.init();
+	//获取商品信息
+	getProduct();
 });
 // 从地址栏的URL里获取productId
 var productId = getQueryString('productId');
@@ -12,10 +14,11 @@ function getProduct(){
 		if (data.code == 0){
 			//获取商品信息
 			var product = data.data;
+			var imgPath = '/image/2019122200372840204.png';
 			// 商品缩略图
-			$('#product-img').attr('src',product.productThum);
+			$('#product-img').attr('src',imgPath);
 			// 商品更新时间
-			$('#product-time').text(new Date(product.lastEditTime).Format("yyyy-MM-dd"));
+			// $('#product-time').text(new Date(product.lastEditTime).Format("yyyy-MM-dd"));
 
 
 
