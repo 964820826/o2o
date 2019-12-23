@@ -2,6 +2,7 @@ package com.dyl.o2o.pageJump;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -22,6 +23,15 @@ public class ProductJump {
     @GetMapping("/detail")
     public String productDetail() {
         return "product/productDetail";
+    }
+
+    /**
+     * 商品添加页跳转
+     * @return
+     */
+    @GetMapping("/add")
+    public String productAdd(){
+        return "/product/addProduct";
     }
 
     /**

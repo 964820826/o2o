@@ -933,3 +933,14 @@
 2019-12-23 22:49:09.293 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.ProductDao.selectPage - ==>  Preparing: SELECT product_id,product_desc,product_category_id,create_time,discount_price,normal_price,shop_id,last_edit_time,priority,product_thum,enable_status,product_name FROM tb_product ORDER BY priority DESC LIMIT ?,? 
 2019-12-23 22:49:09.293 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.ProductDao.selectPage - ==> Parameters: 0(Long), 500(Long)
 2019-12-23 22:49:09.294 [http-nio-8080-exec-4] DEBUG com.dyl.o2o.dao.ProductDao.selectPage - <==      Total: 10
+2019-12-23 23:03:57.410 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==>  Preparing: SELECT user_id,password,create_time,role_id,last_edit_time,status,username FROM sys_user WHERE status=? AND username=? 
+2019-12-23 23:03:57.411 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.UserDao.selectOne - ==> Parameters: true(Boolean), admin(String)
+2019-12-23 23:03:57.411 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.UserDao.selectOne - <==      Total: 1
+2019-12-23 23:03:57.424 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - ==>  Preparing: select * from sys_menu where (select menu_id from sys_role_menu where role_id=1 and menu_id = sys_menu.menu_id) 
+2019-12-23 23:03:57.424 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - ==> Parameters: 
+2019-12-23 23:03:57.425 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.RoleDao.getPermissionByRoleId - <==      Total: 1
+2019-12-23 23:03:57.440 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ProductDao.selectPage - ==>  Preparing: SELECT COUNT(1) FROM tb_product 
+2019-12-23 23:03:57.440 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ProductDao.selectPage - ==> Parameters: 
+2019-12-23 23:03:57.442 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ProductDao.selectPage - ==>  Preparing: SELECT product_id,product_desc,product_category_id,create_time,discount_price,normal_price,shop_id,last_edit_time,priority,product_thum,enable_status,product_name FROM tb_product ORDER BY priority DESC LIMIT ?,? 
+2019-12-23 23:03:57.442 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ProductDao.selectPage - ==> Parameters: 0(Long), 500(Long)
+2019-12-23 23:03:57.444 [http-nio-8080-exec-5] DEBUG com.dyl.o2o.dao.ProductDao.selectPage - <==      Total: 10

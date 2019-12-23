@@ -1923,3 +1923,83 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2019-12-23 22:49:09.277  INFO 15688 --- [http-nio-8080-exec-4] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
 2019-12-23 22:49:09.290  INFO 15688 --- [http-nio-8080-exec-4] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ProductDao.selectPage] use [slave] Strategy,SqlCommandType [SELECT]..
 2019-12-23 22:49:09.290  INFO 15688 --- [http-nio-8080-exec-4] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-23 23:02:11.988  INFO 15688 --- [Thread-23] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-23 23:02:11.989  INFO 15688 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-12-23 23:02:11.993  INFO 15688 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-12-23 23:02:12.265  INFO 15688 --- [restartedMain] com.dyl.o2o.O2oApplication               : Starting O2oApplication on dyl-pc with PID 15688 (E:\IDEAWorkspace\git\o2o\target\classes started by A in E:\IDEAWorkspace\git\o2o)
+2019-12-23 23:02:12.265  INFO 15688 --- [restartedMain] com.dyl.o2o.O2oApplication               : The following profiles are active: dev
+2019-12-23 23:02:12.721  INFO 15688 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$5243e3ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-23 23:02:12.723  INFO 15688 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b9961b73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-23 23:02:12.725  INFO 15688 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-23 23:02:12.725  INFO 15688 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5fe30c41' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-23 23:02:12.727  INFO 15688 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$7718865f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-23 23:02:12.727  INFO 15688 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-23 23:02:12.819  INFO 15688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-23 23:02:12.820  INFO 15688 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-23 23:02:12.820  INFO 15688 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-23 23:02:12.832  INFO 15688 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-23 23:02:12.832  INFO 15688 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 564 ms
+2019-12-23 23:02:13.017  WARN 15688 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [shopDOList] for session [AF87F6AE699D8EB9FB0163CA14BDF0A5]
+2019-12-23 23:02:13.348  INFO 15688 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-23 23:02:13.377  INFO 15688 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resource/static/**/*.js'], []
+2019-12-23 23:02:13.377  INFO 15688 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resource/static/**/*.css'], []
+2019-12-23 23:02:13.377  INFO 15688 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/resource/templates/**/*.html'], []
+2019-12-23 23:02:13.392  INFO 15688 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fab4d55, org.springframework.security.web.context.SecurityContextPersistenceFilter@68d0f275, org.springframework.security.web.header.HeaderWriterFilter@5d92a96e, org.springframework.security.web.authentication.logout.LogoutFilter@1f91e704, com.dyl.o2o.common.security.JWTAuthorizationFilter@47823e4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37298a9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7fb88cce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b65f4bc, org.springframework.security.web.session.SessionManagementFilter@49a52d90, org.springframework.security.web.access.ExceptionTranslationFilter@13bc3b0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2067bfa5]
+2019-12-23 23:02:13.468  INFO 15688 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-23 23:02:13.490  INFO 15688 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-12-23 23:02:13.505  INFO 15688 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-12-23 23:02:13.539  WARN 15688 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-23 23:02:13.621  INFO 15688 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-23 23:02:13.621  INFO 15688 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-23 23:02:13.626  INFO 15688 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-23 23:02:13.672  WARN 15688 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-23 23:02:13.689  INFO 15688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-23 23:02:13.690  INFO 15688 --- [restartedMain] com.dyl.o2o.O2oApplication               : Started O2oApplication in 1.471 seconds (JVM running for 13403.943)
+2019-12-23 23:02:13.692  INFO 15688 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-12-23 23:03:57.144  INFO 15688 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-23 23:03:57.145  INFO 15688 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-23 23:03:57.149  INFO 15688 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-12-23 23:03:57.149  INFO 15688 --- [http-nio-8080-exec-1] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/product/listPage'
+2019-12-23 23:03:57.179  INFO 15688 --- [http-nio-8080-exec-2] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/css/product/listProduct.css'
+2019-12-23 23:03:57.185  INFO 15688 --- [http-nio-8080-exec-3] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/js/common.js'
+2019-12-23 23:03:57.187  INFO 15688 --- [http-nio-8080-exec-4] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/js/product/listProduct.js'
+2019-12-23 23:03:57.390  INFO 15688 --- [http-nio-8080-exec-5] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/product/list'
+2019-12-23 23:03:57.402  INFO 15688 --- [http-nio-8080-exec-5] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.UserDao.selectOne] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-23 23:03:57.402  INFO 15688 --- [http-nio-8080-exec-5] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-23 23:03:57.404  INFO 15688 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2019-12-23 23:03:57.409  INFO 15688 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2019-12-23 23:03:57.424  INFO 15688 --- [http-nio-8080-exec-5] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.RoleDao.getPermissionByRoleId] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-23 23:03:57.424  INFO 15688 --- [http-nio-8080-exec-5] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-23 23:03:57.439  INFO 15688 --- [http-nio-8080-exec-5] c.d.o.c.m.DynamicDataSourceInterceptor   : 设置方法[com.dyl.o2o.dao.ProductDao.selectPage] use [slave] Strategy,SqlCommandType [SELECT]..
+2019-12-23 23:03:57.439  INFO 15688 --- [http-nio-8080-exec-5] c.d.o.c.m.DynamicDataSourceHolder        : 使用的数据源为:slave
+2019-12-23 23:03:59.115  INFO 15688 --- [http-nio-8080-exec-6] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/product/add'
+2019-12-23 23:03:59.131  INFO 15688 --- [http-nio-8080-exec-7] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/css/shop/productmanagement.css'
+2019-12-23 23:03:59.132  INFO 15688 --- [http-nio-8080-exec-8] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/Kaptcha'
+2019-12-23 23:03:59.174  INFO 15688 --- [http-nio-8080-exec-9] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/common/common.js'
+2019-12-23 23:03:59.174  INFO 15688 --- [http-nio-8080-exec-10] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/shop/productoperation.js'
+2019-12-23 23:03:59.256  INFO 15688 --- [http-nio-8080-exec-1] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/common/common.js'
+2019-12-23 23:03:59.261  INFO 15688 --- [http-nio-8080-exec-2] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/shop/productoperation.js'
+2019-12-23 23:03:59.277  INFO 15688 --- [http-nio-8080-exec-4] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/favicon.ico'
+2019-12-23 23:06:26.573  INFO 15688 --- [http-nio-8080-exec-6] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/product/add'
+2019-12-23 23:06:26.591  INFO 15688 --- [http-nio-8080-exec-7] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/css/shop/productmanagement.css'
+2019-12-23 23:06:26.591  INFO 15688 --- [http-nio-8080-exec-8] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/captchaImage'
+2019-12-23 23:06:26.643  INFO 15688 --- [http-nio-8080-exec-9] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/common/common.js'
+2019-12-23 23:06:26.644  INFO 15688 --- [http-nio-8080-exec-10] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/shop/productoperation.js'
+2019-12-23 23:06:26.732  INFO 15688 --- [http-nio-8080-exec-1] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/common/common.js'
+2019-12-23 23:06:26.738  INFO 15688 --- [http-nio-8080-exec-2] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/shop/productoperation.js'
+2019-12-23 23:08:37.183  INFO 15688 --- [http-nio-8080-exec-3] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/product/add'
+2019-12-23 23:08:37.196  INFO 15688 --- [http-nio-8080-exec-6] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/css/shop/productmanagement.css'
+2019-12-23 23:08:37.197  INFO 15688 --- [http-nio-8080-exec-7] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/captchaImage'
+2019-12-23 23:08:37.246  INFO 15688 --- [http-nio-8080-exec-8] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/common/common.js'
+2019-12-23 23:08:37.247  INFO 15688 --- [http-nio-8080-exec-9] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/shop/productoperation.js'
+2019-12-23 23:08:37.319  INFO 15688 --- [http-nio-8080-exec-10] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/common/common.js'
+2019-12-23 23:08:37.324  INFO 15688 --- [http-nio-8080-exec-1] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/js/shop/productoperation.js'
+2019-12-23 23:10:27.187  INFO 15688 --- [http-nio-8080-exec-5] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/product/add'
+2019-12-23 23:10:27.203  INFO 15688 --- [http-nio-8080-exec-6] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/captchaImage'
+2019-12-23 23:10:27.203  INFO 15688 --- [http-nio-8080-exec-3] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/resources/css/shop/productmanagement.css'
+2019-12-23 23:10:27.250  INFO 15688 --- [http-nio-8080-exec-7] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/js/common.js'
+2019-12-23 23:10:27.250  INFO 15688 --- [http-nio-8080-exec-8] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/js/product/addProduct.js'
+2019-12-23 23:10:49.997  INFO 15688 --- [http-nio-8080-exec-9] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/favicon.ico'
+2019-12-23 23:44:00.424  INFO 15688 --- [Thread-34] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-23 23:44:00.425  INFO 15688 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-12-23 23:44:00.427  INFO 15688 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.

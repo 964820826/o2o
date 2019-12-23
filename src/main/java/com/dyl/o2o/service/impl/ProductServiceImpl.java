@@ -20,6 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /** 商品业务实现层
@@ -104,6 +105,20 @@ public class ProductServiceImpl extends ServiceImpl<ProductDao, ProductDO> imple
         }catch (Exception e){
             log.error("删除图片失败：" + e.getMessage());
         }
+    }
+
+    /**
+     * 新增商品信息
+     * @param productDetailImgPathList
+     * @param productDO
+     */
+    @Override
+    @Transactional
+    public void save(List<String> productDetailImgPathList, ProductDO productDO) {
+        //1.保存商品信息
+        productDao.insert(productDO);
+        //2.保存商品详情图片
+        productImgService.batchAddProductImg(productDO.getProductId(),productDetailImgPathList);
     }
 
     /**

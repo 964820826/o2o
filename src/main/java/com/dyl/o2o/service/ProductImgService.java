@@ -13,6 +13,9 @@ import java.util.List;
  */
 public interface ProductImgService extends IService<ProductImgDO> {
 
-    //批量修改商品图片
-    void batchModifyProductImg(Long productId, List<String> imgPathList);
+    //批量修改商品明细图片
+    void batchModifyProductImg(Long productId, List<String> productDetailImgPathList);
+
+    //批量新增商品明细图片
+    void batchAddProductImg(Long productId, List<String> productDetailImgPathList);
 }

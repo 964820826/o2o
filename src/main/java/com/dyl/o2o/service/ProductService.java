@@ -29,12 +29,19 @@ public interface ProductService extends IService<ProductDO>{
     ProductDO getById(Long id);
 
     /**
-     * 更新数据库信息
+     * 更新商品信息
      * @param productThumbnailPath
      * @param productDetailImgPathList
      * @param productDO
      */
     void updateDetail(String productThumbnailPath, List<String> productDetailImgPathList, ProductDO productDO);
+
+    /**
+     * 新增商品信息
+     * @param productDetailImgPathList
+     * @param productDO
+     */
+    void save(List<String> productDetailImgPathList, ProductDO productDO);
 
     /**
      * 根据商品id删除商品信息

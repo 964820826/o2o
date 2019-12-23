@@ -11,6 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -129,6 +130,23 @@ public class ImageUtil {
         userFile.transferTo(file);
         //用服务器上的图片生成带水印的缩略图，并将原图覆盖
         return relativePath;
+    }
+
+    /**
+     * 批量上传图片到服务器
+     * @param fileList
+     * @return 保存服务器图片地址的相对路径List
+     * @throws IOException
+     */
+    public static List<String> uploadFileList(List<MultipartFile> fileList) throws IOException {
+        List<String> imgPathList = new ArrayList<>();
+        for (MultipartFile file : fileList) {
+            String imgPath = ImageUtil.uploadFile(file);
+            if (imgPath != null) {
+                imgPathList.add(imgPath);
+            }
+        }
+        return imgPathList;
     }
 
     /**

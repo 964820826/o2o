@@ -366,3 +366,6 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2019-12-23 20:19:02.555 [restartedMain] WARN  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [shopDOList] for session [CAD305D2D214AC45E518EFACB7717138]
 2019-12-23 20:19:03.142 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
 2019-12-23 20:19:03.303 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-23 23:02:13.017 [restartedMain] WARN  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [shopDOList] for session [AF87F6AE699D8EB9FB0163CA14BDF0A5]
+2019-12-23 23:02:13.539 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-23 23:02:13.672 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>

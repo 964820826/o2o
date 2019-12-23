@@ -93,13 +93,7 @@ public class ProductController {
 
         //2.将用户上传的图片加工为缩略图保存到服务器上（若没有上传，获取到的路径为null）
         String productThumbnailPath = ImageUtil.uploadThumbnail(productImg);
-        List<String> productDetailImgPathList = new ArrayList<>();
-        for (MultipartFile file : productDetailImgList) {
-            String imgPath = ImageUtil.uploadFile(file);
-            if (imgPath != null) {
-                productDetailImgPathList.add(imgPath);
-            }
-        }
+        List<String> productDetailImgPathList = ImageUtil.uploadFileList(productDetailImgList);
 
         //3.调用service层方法，将商品和图片信息更新到数据库
         try {
@@ -120,6 +114,27 @@ public class ProductController {
     @PreAuthorize("hasAnyAuthority('admin','product_delete')")
     public R deleteProduct(Long productId){
         productService.remove(productId);
+        return R.success();
+    }
+
+    @PostMapping("")
+    @ApiOperation("添加商品信息")
+    @PreAuthorize("hasAnyAuthority('admin','product_add')")
+    public R addProduct(MultipartFile productImg, List<MultipartFile> productDetailImgList, ProductDO productDO, String captcha, HttpServletRequest request) throws IOException {
+        //1.校验验证码
+//        if (!CaptchaUtil.checkVerifyCode(captcha,request.getSession())){
+//            return R.error(ResultCode.CAPTCHA_FAIL);
+//        }
+
+        //2.将用户上传的图片保存到本地
+        String productThumPath = ImageUtil.uploadThumbnail(productImg);
+        List<String> productDetailImgPathList = ImageUtil.uploadFileList(productDetailImgList);
+
+        //3.调用service方法，新增数据到数据库
+        productDO.setProductThum(productThumPath);
+        productService.save(productDetailImgPathList,productDO);
+
+        //4.返回结果
         return R.success();
     }
 }
