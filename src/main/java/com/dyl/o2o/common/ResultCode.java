@@ -15,6 +15,7 @@ public enum ResultCode {
     PARAM_TYPE_ERROR(1003,"参数类型错误"),
     NULL_PARAM(1004,"无法获取到参数异常"),
     PASSWORD_ERROR(1005,"密码错误"),
+    SUBMIT_TYPE_ERROR(1006,"提交方式错误"),
 
     //内部错误
     NO_RESULT(5000,"无相关数据"),

@@ -2,21 +2,16 @@ package com.dyl.o2o.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.dyl.o2o.common.R;
-import com.dyl.o2o.common.ResultCode;
 import com.dyl.o2o.dao.ShopCategoryDao;
 import com.dyl.o2o.dao.ShopDao;
 import com.dyl.o2o.domain.ShopCategoryDO;
 import com.dyl.o2o.domain.ShopDO;
 import com.dyl.o2o.service.ShopService;
 import com.dyl.o2o.common.util.ImageUtil;
-import com.dyl.o2o.common.util.PathUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -88,7 +83,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO> implements Sho
         //更新数据库数据
         shopDao.updateById(shopDO);
         //删除原图片
-        ImageUtil.deleteImg(oldImgPath);
+        ImageUtil.deleteFile(oldImgPath);
     }
 
     /**
@@ -115,16 +110,16 @@ public class ShopServiceImpl extends ServiceImpl<ShopDao, ShopDO> implements Sho
                 for (ShopCategoryDO shopCategoryDO : shopCategoryDOList) {
                     //todo 值传递还是引用传递，此处的情况符合引用传递
                     shopCondition.setShopCategoryId(shopCategoryDO.getShopCategoryId());
-                    List<ShopDO> shopDOS = shopDao.selectList(shopCondition);
+                    List<ShopDO> shopDOS = shopDao.getShopList(shopCondition);
                     shopDOList.addAll(shopDOS);
                 }
             } else {
                 //查询二级类别id查询店铺
-                shopDOList = shopDao.selectList(shopDO);
+                shopDOList = shopDao.getShopList(shopDO);
             }
         } else {
             //不依据店铺类别查询
-            shopDOList = shopDao.selectList(shopDO);
+            shopDOList = shopDao.getShopList(shopDO);
         }
         return shopDOList;
     }

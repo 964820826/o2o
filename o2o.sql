@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 19/12/2019 00:05:27
+ Date: 23/12/2019 22:49:43
 */
 
 SET NAMES utf8mb4;
@@ -232,18 +232,16 @@ CREATE TABLE `tb_product`  (
 -- ----------------------------
 -- Records of tb_product
 -- ----------------------------
-INSERT INTO `tb_product` VALUES (1, 3, 29, '大黄人', '我是大黄人', 'upload/images/item/shop/29/2017092601204036435.jpg', 2.00, 1.00, 100, 1, '2017-09-26 01:20:40', '2017-09-26 01:20:40');
+INSERT INTO `tb_product` VALUES (1, 3, 29, '大黄人', '我是大黄人', '\\2019122319230350070.png', 2.00, 1.00, 100, 1, '2017-09-26 01:20:40', '2019-12-23 19:23:08');
 INSERT INTO `tb_product` VALUES (2, 2, 29, '小黄人', '我是小黄人', 'upload/images/item/shop/29/2017092601212211185.jpg', 3.00, 2.00, 90, 1, '2017-09-26 01:21:22', '2017-09-26 01:21:22');
 INSERT INTO `tb_product` VALUES (3, 3, 29, '暴漫人', '开心了', 'upload/images/item/shop/29/2017092601220059819.jpg', 3.00, 2.00, 80, 1, '2017-09-26 01:22:00', '2017-09-26 01:22:00');
 INSERT INTO `tb_product` VALUES (4, 3, 29, '宇宙第一', '宇宙无敌', 'upload/images/item/shop/29/2017092601224389939.jpg', 5.00, 2.00, 70, 1, '2017-09-26 01:22:43', '2017-09-26 01:22:43');
 INSERT INTO `tb_product` VALUES (5, 3, 29, '眼凸凸', '宇宙无敌', 'upload/images/item/shop/29/2017092601231570458.jpg', 3.00, 2.00, 60, 1, '2017-09-26 01:23:15', '2017-09-26 01:23:15');
-INSERT INTO `tb_product` VALUES (6, 3, 29, '笑眯眯', '笑眯眯 甜蜜蜜', 'upload/images/item/shop/29/2017092601234922140.jpg', 2.00, 2.00, 50, 1, '2017-09-26 01:23:49', '2017-09-26 01:23:49');
 INSERT INTO `tb_product` VALUES (7, 4, 28, '优质小黄人奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216554368403.jpg', 6.00, 3.00, 100, 1, '2017-10-02 16:55:43', '2017-10-02 16:55:43');
 INSERT INTO `tb_product` VALUES (8, 4, 28, '优质暴漫奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216561443475.jpg', 6.00, 3.00, 100, 1, '2017-10-02 16:56:14', '2017-10-02 16:56:14');
 INSERT INTO `tb_product` VALUES (9, 4, 28, '优质大白奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216564398563.jpg', 6.00, 3.00, 90, 1, '2017-10-02 16:56:43', '2017-10-02 16:56:43');
 INSERT INTO `tb_product` VALUES (10, 4, 28, '优质二维码奶茶', '非常好喝哦', '/upload/images/item/shop/28/2017100216570762900.jpg', 5.00, 3.00, 80, 1, '2017-10-02 16:57:07', '2017-10-02 16:57:07');
 INSERT INTO `tb_product` VALUES (11, 6, 28, '优质二维码咖啡', '非常好喝哦', '/upload/images/item/shop/28/2017100216573090557.jpg', 8.00, 3.00, 60, 1, '2017-10-02 16:57:30', '2017-10-02 16:57:30');
-INSERT INTO `tb_product` VALUES (12, 6, 28, '优质大白咖啡', '非常好喝哦', '/upload/images/item/shop/28/2017100216575922088.jpg', 8.00, 3.00, 50, 1, '2017-10-02 16:57:59', '2017-10-02 16:57:59');
 
 -- ----------------------------
 -- Table structure for tb_product_category
@@ -288,23 +286,17 @@ CREATE TABLE `tb_product_img`  (
   PRIMARY KEY (`product_img_id`) USING BTREE,
   INDEX `fk_proimg_product`(`product_id`) USING BTREE,
   CONSTRAINT `fk_proimg_product` FOREIGN KEY (`product_id`) REFERENCES `tb_product` (`product_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 31 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品图片' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '商品图片' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_product_img
 -- ----------------------------
-INSERT INTO `tb_product_img` VALUES (1, 1, 'upload/images/item/shop/29/2017092601204025128.jpg', NULL, NULL, '2017-09-26 01:20:40');
-INSERT INTO `tb_product_img` VALUES (2, 1, 'upload/images/item/shop/29/2017092601204051262.jpg', NULL, NULL, '2017-09-26 01:20:40');
-INSERT INTO `tb_product_img` VALUES (3, 2, 'upload/images/item/shop/29/2017092601212217105.jpg', NULL, NULL, '2017-09-26 01:21:22');
-INSERT INTO `tb_product_img` VALUES (4, 2, 'upload/images/item/shop/29/2017092601212268219.jpg', NULL, NULL, '2017-09-26 01:21:22');
 INSERT INTO `tb_product_img` VALUES (5, 3, 'upload/images/item/shop/29/2017092601220074062.jpg', NULL, NULL, '2017-09-26 01:22:00');
 INSERT INTO `tb_product_img` VALUES (6, 3, 'upload/images/item/shop/29/2017092601220019993.jpg', NULL, NULL, '2017-09-26 01:22:00');
 INSERT INTO `tb_product_img` VALUES (7, 4, 'upload/images/item/shop/29/2017092601224322685.jpg', NULL, NULL, '2017-09-26 01:22:43');
 INSERT INTO `tb_product_img` VALUES (8, 4, 'upload/images/item/shop/29/2017092601224353777.jpg', NULL, NULL, '2017-09-26 01:22:43');
 INSERT INTO `tb_product_img` VALUES (9, 5, 'upload/images/item/shop/29/2017092601231572675.jpg', NULL, NULL, '2017-09-26 01:23:15');
 INSERT INTO `tb_product_img` VALUES (10, 5, 'upload/images/item/shop/29/2017092601231516853.jpg', NULL, NULL, '2017-09-26 01:23:15');
-INSERT INTO `tb_product_img` VALUES (11, 6, 'upload/images/item/shop/29/2017092601234987131.jpg', NULL, NULL, '2017-09-26 01:23:49');
-INSERT INTO `tb_product_img` VALUES (12, 6, 'upload/images/item/shop/29/2017092601234984991.jpg', NULL, NULL, '2017-09-26 01:23:49');
 INSERT INTO `tb_product_img` VALUES (13, 7, '/upload/images/item/shop/28/2017100216554379623.jpg', NULL, NULL, '2017-10-02 16:55:43');
 INSERT INTO `tb_product_img` VALUES (14, 7, '/upload/images/item/shop/28/2017100216554382464.jpg', NULL, NULL, '2017-10-02 16:55:43');
 INSERT INTO `tb_product_img` VALUES (15, 7, '/upload/images/item/shop/28/2017100216554324232.jpg', NULL, NULL, '2017-10-02 16:55:43');
@@ -320,9 +312,9 @@ INSERT INTO `tb_product_img` VALUES (24, 10, '/upload/images/item/shop/28/201710
 INSERT INTO `tb_product_img` VALUES (25, 11, '/upload/images/item/shop/28/2017100216573094393.jpg', NULL, NULL, '2017-10-02 16:57:30');
 INSERT INTO `tb_product_img` VALUES (26, 11, '/upload/images/item/shop/28/2017100216573050300.jpg', NULL, NULL, '2017-10-02 16:57:30');
 INSERT INTO `tb_product_img` VALUES (27, 11, '/upload/images/item/shop/28/2017100216573037951.jpg', NULL, NULL, '2017-10-02 16:57:30');
-INSERT INTO `tb_product_img` VALUES (28, 12, '/upload/images/item/shop/28/2017100216580055004.jpg', NULL, NULL, '2017-10-02 16:58:00');
-INSERT INTO `tb_product_img` VALUES (29, 12, '/upload/images/item/shop/28/2017100216580081030.jpg', NULL, NULL, '2017-10-02 16:58:00');
-INSERT INTO `tb_product_img` VALUES (30, 12, '/upload/images/item/shop/28/2017100216580022626.jpg', NULL, NULL, '2017-10-02 16:58:00');
+INSERT INTO `tb_product_img` VALUES (32, 1, '\\2019122319230317435.png', '', 100, '2019-12-23 11:23:09');
+INSERT INTO `tb_product_img` VALUES (33, 1, '\\2019122319230365163.png', '', 99, '2019-12-23 11:23:09');
+INSERT INTO `tb_product_img` VALUES (34, 1, '\\2019122319230339935.png', '', 98, '2019-12-23 11:23:09');
 
 -- ----------------------------
 -- Table structure for tb_shop
@@ -356,7 +348,7 @@ CREATE TABLE `tb_shop`  (
 -- ----------------------------
 -- Records of tb_shop
 -- ----------------------------
-INSERT INTO `tb_shop` VALUES (28, 1, 2, 22, '王三烧烤', '不接受预订，请直接来店里进行消费', 'E:\\IDEAWorkspace\\git\\o2o\\img\\2019121823242243888.png', 50, '位于东苑3号', '13810524086', 1, NULL, '2017-09-26 01:04:13', '2019-12-18 23:24:43');
+INSERT INTO `tb_shop` VALUES (28, 1, 2, 22, '王三烧烤', '不接受预订，请直接来店里进行消费', '\\2019122320131220217.png', 50, '位于东苑3号', '13810524086', 1, NULL, '2017-09-26 01:04:13', '2019-12-23 20:13:12');
 INSERT INTO `tb_shop` VALUES (29, 8, 3, 22, '王三烧烤', '过来喝喝就知道啦，你是我的奶茶', '/upload/images/item/shop/29/2017092601054939287.jpg', 40, '西苑1号', '1211334565', 1, NULL, '2017-09-26 01:05:49', '2019-11-28 22:06:25');
 
 -- ----------------------------

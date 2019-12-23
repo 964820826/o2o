@@ -66,9 +66,11 @@ Restful风格编写，且使用swagger提供对外的接口调用
 ## 项目结构设计：
    
 ### controller层设计
+- controller层对前台上传的数据做校验和初步加工，具体业务逻辑交给service层处理
 - 因前后端未完全分离，前端页面跳转需经过controller层处理，但不想让跳转方法暴露到swagger中，故单独将用于跳转的controller放在pageJump包中
 - controller中不处理业务层中出现的异常，直接抛出由全局异常处理器处理
 - 后端给前端返回类型统一使用R类包装返回，R中包含程序执行的状态码和状态消息和所需数据，状态码与状态消息使用枚举类ResultCode确保唯一性
+- 用户上传的图片传到后台是MultipartFile的类型，在controller层中将用户上传的文件保存到服务器上，在service层中再对图片进行加工
 ----------------------------------------------
 ### service层设计
 - service层方法命名参考mybatisplus中提供的service层方法来命名

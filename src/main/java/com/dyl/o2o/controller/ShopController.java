@@ -137,7 +137,7 @@ public class ShopController {
         String thumbnailPath;
         if (newImg != null){
             //处理图片，获取生成的图片地址
-            thumbnailPath = ImageUtil.generateThumbnail(newImg);
+            thumbnailPath = ImageUtil.uploadThumbnail(newImg);
             shopDO.setShopImg(thumbnailPath);
         }
         //调用service方法更新数据库
@@ -146,9 +146,11 @@ public class ShopController {
         } catch (Exception e) {
             log.error("修改店铺失败：" + e.getMessage());
             //若异常则删除用户上传的图片
-            ImageUtil.deleteImg(shopDO.getShopImg());
+            ImageUtil.deleteFile(shopDO.getShopImg());
             return R.error(ResultCode.UPDATE_FAIL);
         }
+        //更新成功删除分页信息
+        request.getSession().removeAttribute("oriShop");
         return R.success();
     }
 

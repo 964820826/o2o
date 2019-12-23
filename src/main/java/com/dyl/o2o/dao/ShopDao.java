@@ -25,7 +25,7 @@ public interface ShopDao extends BaseMapper<ShopDO> {
      * @param shopDO
      * @return
      */
-    List<ShopDO> selectList(@Param("shopDO") ShopDO shopDO);
+    List<ShopDO> getShopList(@Param("shopDO") ShopDO shopDO);
 
     /**
      * 通过店铺拥有者的id获取店铺信息

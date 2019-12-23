@@ -3,6 +3,7 @@ package com.dyl.o2o.common.util;
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
@@ -11,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -39,7 +41,7 @@ public class ImageUtil {
         String fullPath = img.getAbsolutePath();
         try {
             //获取水印图片
-            System.out.println("水印图片地址" + classPath + "static/img/watermark.png");
+//            System.out.println("水印图片地址" + classPath + "static/img/watermark.png");
             BufferedImage buffer = ImageIO.read(new File(classPath + "static/img/watermark.png"));
             //生成缩略图
             Thumbnails.of(img).size(500, 500).watermark(Positions.BOTTOM_RIGHT, buffer, 0.25f).outputQuality(0.8f).toFile(img.getAbsolutePath());
@@ -85,39 +87,74 @@ public class ImageUtil {
 
 
     /**
-     * 根据用户上传的文件生成缩略图
+     * 根据用户上传的文件生成带水印的缩略图，保存到服务器
      * @param newImg
      * @return
      * @throws IOException
      */
-    public static String generateThumbnail(MultipartFile newImg) throws IOException {
-        //生成服务器上保存图片的地址
-        String imgFileAbsolutePath = PathUtil.getImgBasePath() +"\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(newImg.getOriginalFilename());
-        //根据地址创建文件
-        File img = new File(imgFileAbsolutePath);
-        //若文件地址不存在，生成地址
-        if (!img.getParentFile().exists()){
-            img.getParentFile().mkdirs();
+    public static String uploadThumbnail(MultipartFile newImg) throws IOException {
+        //入参校验
+        if (ObjectUtils.isEmpty(newImg.getOriginalFilename())){
+            return null;
         }
-        //multipartFile转file，方便其他方法操作和单元测试
-        newImg.transferTo(img);
+        String relativePath = uploadFile(newImg);
+        File img = new File(PathUtil.getImgBasePath() + relativePath);
         //用服务器上的图片生成带水印的缩略图，并将原图覆盖
         ImageUtil.img2Thumbnail(img);
-        return imgFileAbsolutePath;
+        return relativePath;
+    }
+
+    /**
+     * 保存用户上传图片到服务器
+     * @param userFile
+     * @return
+     * @throws IOException
+     */
+    public static String uploadFile(MultipartFile userFile) throws IOException {
+        //入参校验
+        if (ObjectUtils.isEmpty(userFile.getOriginalFilename())){
+            return null;
+        }
+        //生成相对路径（文件全名）
+        String relativePath = "\\"+ ImageUtil.getRandomFileName() + ImageUtil.getFileNameExtension(userFile.getOriginalFilename());
+        //生成服务器上保存图片的地址
+        String fileAbsolutePath = PathUtil.getImgBasePath() + relativePath;
+        //根据地址创建文件
+        File file = new File(fileAbsolutePath);
+        //若文件地址不存在，生成地址
+        if (!file.getParentFile().exists()){
+            file.getParentFile().mkdirs();
+        }
+        //multipartFile转file，方便其他方法操作和单元测试
+        userFile.transferTo(file);
+        //用服务器上的图片生成带水印的缩略图，并将原图覆盖
+        return relativePath;
+    }
+
+    /**
+     * 批量删除文件
+     * @param filePathList
+     */
+    public static void deleteFileList(List<String> filePathList){
+        for (String path : filePathList) {
+            deleteFile(path);
+        }
     }
 
     /**
      * 删除文件
-     * @param shopImg
+     * @param filePath
      */
-    public static void deleteImg(String shopImg) {
-        File file = new File(shopImg);
+    public static void deleteFile(String filePath) {
+        //入参校验
+        if (ObjectUtils.isEmpty(filePath)){
+            return;
+        }
+        File file = new File(PathUtil.getImgBasePath() + filePath);
         if (file.exists()){
             file.delete();
         }
     }
-
-
 
     /**
      * 创建一个带有水印的缩略图

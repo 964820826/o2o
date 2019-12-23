@@ -5,8 +5,6 @@ $(function () {
     //获取一级店铺类别
     getShopCategory();
 
-    //检测是否登陆，根据登陆信息调整侧边栏显示内容
-    checkLogin();
 });
 
 //获取头条的url

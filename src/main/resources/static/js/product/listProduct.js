@@ -13,6 +13,8 @@ var pageSize = 500;
 
 //获取商品列表的url
 var getProductListUrl = "/product/list";
+//删除商品的url
+var deleteProductUrl = "/product";
 
 //获取商品列表
 function getProductList() {
@@ -31,12 +33,12 @@ function getProductList() {
                 productList.forEach(function (item) {
                     productListHtml +=
                     '<div class="row row-product">'+
-                        '<div class="col-33">' + item.productName + '</div>'+
+                        '<div class="col-40">' + item.productName + '</div>'+
                         '<div class="col-20">' + item.priority + '</div>'+
                         '<div class="col-40">'+
                             '<a href="/product/modify?productId='+item.productId + '">编辑</a>'+
-                            '<a href="#">删除</a>'+
-                            '<a href="#">预览</a>'+
+                            '<a href="javascript:deleteProduct(' + item.productId + ')">删除</a>'+
+                            '<a href="/product/detail?productId=' + item.productId + '">预览</a>'+
                         '</div>'+
                     '</div>'
                 })
@@ -46,4 +48,28 @@ function getProductList() {
             }
         }
     })
+}
+
+//删除商品
+function deleteProduct(productId) {
+    $.ajax({
+        url: deleteProductUrl,
+        type: 'POST',
+        data: {
+            _method: "DELETE",
+            productId: productId
+        },
+        headers: {
+            Authorization: "Bearer " + token
+        },
+        cache: false,
+        success: function (data) {
+            if (data.code == 0){
+                getProductList();
+                $.toast("删除成功");
+            }else {
+                $.toast("删除失败 " + data.massage);
+            }
+        }
+    });
 }

@@ -42,7 +42,7 @@ jwt:
   #Token前缀字符
   tokenPrefix: Bearer
   #过期时间 单位秒 1小时：3600 1天：86400 7天：604800
-  expiration: 3600
+  expiration: 86400
 
 
 #设置日志相关

@@ -74,7 +74,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //配置拦截时的处理
                 .exceptionHandling()
 //                .authenticationEntryPoint(entryPointUnauthorizedHandler)//未登录、添加token无效或未携带token的处理
-                .accessDeniedHandler(myAccessDeniedHandler)//无权限时的处理
+                .accessDeniedHandler(myAccessDeniedHandler)//无权限的处理器
                 .and()
 
                 //设置session策略，不需要session

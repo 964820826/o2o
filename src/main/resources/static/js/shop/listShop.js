@@ -15,7 +15,7 @@ var loading = false;
 //页码
 var pageIndex = 1;
 //一页最多显示条数
-var pageSize = 5;
+var pageSize = 10;
 //获取店铺列表的url
 var shopListUrl = '/shop/list';
 //获取店铺类别的url
@@ -98,7 +98,7 @@ function showItems(index, size) {
                                     '<ul>' +
                                         '<li class="item-content">' +
                                             '<div class="item-media">' +
-                                                '<img src="' + item.shopImg + '" width="44">' +
+                                                '<img src="/image' + item.shopImg + '" width="150">' +
                                             '</div>' +
                                             '<div class="item-inner">' +
                                                 '<div class="item-subtitle">'+ item.shopDesc + '</div>' +

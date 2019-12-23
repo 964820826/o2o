@@ -14,6 +14,7 @@ public class PathUtil {
      * @return
      */
     public static String getImgBasePath(){
+        //项目根目录下的img文件
         String imgBasePath = System.getProperty("user.dir") + "/img";
         //获取系统名称
 //        String os = System.getProperty("os.name");

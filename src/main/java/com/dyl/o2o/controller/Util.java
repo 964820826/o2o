@@ -1,4 +1,4 @@
-package com.dyl.o2o.controller.util;
+package com.dyl.o2o.controller;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import io.swagger.annotations.Api;
