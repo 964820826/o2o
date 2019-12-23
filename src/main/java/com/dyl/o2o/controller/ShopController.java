@@ -149,6 +149,8 @@ public class ShopController {
             ImageUtil.deleteFile(shopDO.getShopImg());
             return R.error(ResultCode.UPDATE_FAIL);
         }
+        //更新成功删除分页信息
+        request.getSession().removeAttribute("oriShop");
         return R.success();
     }
 

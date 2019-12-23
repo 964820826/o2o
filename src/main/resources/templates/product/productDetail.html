@@ -26,7 +26,7 @@
             <h1 class="title" id="product-name">商品详情</h1>
         </header>
         <nav class="bar bar-tab">
-            <a class="tab-item" href="/o2o/frontend/index" external> <span
+            <a class="tab-item" href="/index" external> <span
                     class="icon icon-home"></span> <span class="tab-label">首页</span>
             </a> <a class="tab-item" href="#" id="me"> <span
                 class="icon icon-me"></span> <span class="tab-label">我</span>
@@ -37,8 +37,7 @@
             <!-- 这里是页面内容区 -->
             <div class="shop-detail-dev">
                 <div class="card">
-                    <div valign="bottom"
-                         class="card-header color-white no-border no-padding">
+                    <div valign="bottom" class="card-header color-white no-border no-padding">
                         <img class="card-cover" id="product-img"/>
                     </div>
                     <div class="card-content">
@@ -49,7 +48,7 @@
                             </p>
                             <p id="price" hidden="true">
                                 <span class="color-gray" id="normalPrice"> </span> <span><font
-                                    color="red" size="4" id="promotionPrice"></font></span>
+                                    color="red" size="4" id="discountPrice"></font></span>
                             </p>
                             <p id="product-desc"></p>
                         </div>
@@ -64,23 +63,25 @@
     <div class="panel-overlay"></div>
     <div class="panel panel-right panel-reveal" id="panel-right-demo">
         <div class="content-block">
-            <p>
-                <a href="/o2o/local/accountbind?usertype=1" class="close-panel">绑定帐号</a>
+            <!--登陆后显示-->
+            <p class="customer" hidden>
+                <a href="/shop/add" class="close-panel">我要开店</a>
             </p>
-            <p>
-                <a href="/o2o/local/changepsw?usertype=1" class="close-panel">修改密码</a>
+            <p class="myShop" hidden>
+                <a href="/shop/manage" class="close-panel">我的店铺</a>
             </p>
-            <p>
+
+            <p class="login" hidden>
                 <a href="/o2o/frontend/myrecord" class="close-panel">消费记录</a>
             </p>
-            <p>
+            <p class="login" hidden>
                 <a href="/o2o/frontend/mypoint" class="close-panel">我的积分</a>
             </p>
-            <p>
+            <p class="login" hidden>
                 <a href="/o2o/frontend/pointrecord" class="close-panel">兑换记录</a>
             </p>
-            <p>
-                <a href="#" usertype="1" class="close-panel" id="log-out">登出系统</a>
+            <p class="login" hidden>
+                <a onclick="logout()" usertype="1" class="close-panel" id="log-out">登出系统</a>
             </p>
             <!-- Click on link with "close-panel" class will close panel -->
         </div>

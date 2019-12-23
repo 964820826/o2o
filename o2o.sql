@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 23/12/2019 00:31:33
+ Date: 23/12/2019 22:49:43
 */
 
 SET NAMES utf8mb4;
@@ -103,7 +103,7 @@ CREATE TABLE `tb_area`  (
   `last_edit_time` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '最后修改时间',
   PRIMARY KEY (`area_id`) USING BTREE,
   UNIQUE INDEX `UK_AREA`(`area_name`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '区域信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '区域信息表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_area
@@ -197,7 +197,7 @@ CREATE TABLE `tb_person_info`  (
   `create_time` datetime(0) NULL DEFAULT NULL,
   `last_edit_time` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_person_info
@@ -232,7 +232,7 @@ CREATE TABLE `tb_product`  (
 -- ----------------------------
 -- Records of tb_product
 -- ----------------------------
-INSERT INTO `tb_product` VALUES (1, 3, 29, '大黄人', '我是大黄人', 'E:\\IDEAWorkspace\\git\\o2o\\img\\2019122200372355293.png', 2.00, 1.00, 100, 1, '2017-09-26 01:20:40', '2019-12-22 00:37:43');
+INSERT INTO `tb_product` VALUES (1, 3, 29, '大黄人', '我是大黄人', '\\2019122319230350070.png', 2.00, 1.00, 100, 1, '2017-09-26 01:20:40', '2019-12-23 19:23:08');
 INSERT INTO `tb_product` VALUES (2, 2, 29, '小黄人', '我是小黄人', 'upload/images/item/shop/29/2017092601212211185.jpg', 3.00, 2.00, 90, 1, '2017-09-26 01:21:22', '2017-09-26 01:21:22');
 INSERT INTO `tb_product` VALUES (3, 3, 29, '暴漫人', '开心了', 'upload/images/item/shop/29/2017092601220059819.jpg', 3.00, 2.00, 80, 1, '2017-09-26 01:22:00', '2017-09-26 01:22:00');
 INSERT INTO `tb_product` VALUES (4, 3, 29, '宇宙第一', '宇宙无敌', 'upload/images/item/shop/29/2017092601224389939.jpg', 5.00, 2.00, 70, 1, '2017-09-26 01:22:43', '2017-09-26 01:22:43');
@@ -312,7 +312,9 @@ INSERT INTO `tb_product_img` VALUES (24, 10, '/upload/images/item/shop/28/201710
 INSERT INTO `tb_product_img` VALUES (25, 11, '/upload/images/item/shop/28/2017100216573094393.jpg', NULL, NULL, '2017-10-02 16:57:30');
 INSERT INTO `tb_product_img` VALUES (26, 11, '/upload/images/item/shop/28/2017100216573050300.jpg', NULL, NULL, '2017-10-02 16:57:30');
 INSERT INTO `tb_product_img` VALUES (27, 11, '/upload/images/item/shop/28/2017100216573037951.jpg', NULL, NULL, '2017-10-02 16:57:30');
-INSERT INTO `tb_product_img` VALUES (31, 1, 'E:\\IDEAWorkspace\\git\\o2o\\img\\2019122200372840204.png', '', 100, '2019-12-21 16:37:35');
+INSERT INTO `tb_product_img` VALUES (32, 1, '\\2019122319230317435.png', '', 100, '2019-12-23 11:23:09');
+INSERT INTO `tb_product_img` VALUES (33, 1, '\\2019122319230365163.png', '', 99, '2019-12-23 11:23:09');
+INSERT INTO `tb_product_img` VALUES (34, 1, '\\2019122319230339935.png', '', 98, '2019-12-23 11:23:09');
 
 -- ----------------------------
 -- Table structure for tb_shop
@@ -346,7 +348,7 @@ CREATE TABLE `tb_shop`  (
 -- ----------------------------
 -- Records of tb_shop
 -- ----------------------------
-INSERT INTO `tb_shop` VALUES (28, 1, 2, 22, '王三烧烤', '不接受预订，请直接来店里进行消费', 'E:\\IDEAWorkspace\\git\\o2o\\img\\2019121823242243888.png', 50, '位于东苑3号', '13810524086', 1, NULL, '2017-09-26 01:04:13', '2019-12-18 23:24:43');
+INSERT INTO `tb_shop` VALUES (28, 1, 2, 22, '王三烧烤', '不接受预订，请直接来店里进行消费', '\\2019122320131220217.png', 50, '位于东苑3号', '13810524086', 1, NULL, '2017-09-26 01:04:13', '2019-12-23 20:13:12');
 INSERT INTO `tb_shop` VALUES (29, 8, 3, 22, '王三烧烤', '过来喝喝就知道啦，你是我的奶茶', '/upload/images/item/shop/29/2017092601054939287.jpg', 40, '西苑1号', '1211334565', 1, NULL, '2017-09-26 01:05:49', '2019-11-28 22:06:25');
 
 -- ----------------------------

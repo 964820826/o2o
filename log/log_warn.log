@@ -359,3 +359,10 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:555)
 	at com.mysql.cj.jdbc.ConnectionImpl.getMetaData(ConnectionImpl.java:1234)
 	... 141 common frames omitted
+2019-12-23 19:18:52.318 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-23 19:18:52.688 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-23 20:19:00.291 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m42s388ms527µs).
+2019-12-23 20:19:00.291 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m42s388ms509µs900ns).
+2019-12-23 20:19:02.555 [restartedMain] WARN  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [shopDOList] for session [CAD305D2D214AC45E518EFACB7717138]
+2019-12-23 20:19:03.142 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-23 20:19:03.303 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>

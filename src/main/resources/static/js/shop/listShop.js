@@ -98,7 +98,7 @@ function showItems(index, size) {
                                     '<ul>' +
                                         '<li class="item-content">' +
                                             '<div class="item-media">' +
-                                                '<img src="' + item.shopImg + '" width="44">' +
+                                                '<img src="/image' + item.shopImg + '" width="150">' +
                                             '</div>' +
                                             '<div class="item-inner">' +
                                                 '<div class="item-subtitle">'+ item.shopDesc + '</div>' +
