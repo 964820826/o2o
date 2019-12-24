@@ -369,3 +369,18 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2019-12-23 23:02:13.017 [restartedMain] WARN  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [shopDOList] for session [AF87F6AE699D8EB9FB0163CA14BDF0A5]
 2019-12-23 23:02:13.539 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
 2019-12-23 23:02:13.672 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 13:37:14.822 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-24 13:37:15.204 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 13:37:15.221 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 14:34:18.379 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2019-12-24 15:24:54.619 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "category"]
+2019-12-24 15:27:28.840 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-24 15:27:29.146 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 15:27:29.162 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 15:30:23.893 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m50s1ms559µs900ns).
+2019-12-24 16:31:28.141 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-24 16:31:28.449 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 16:31:28.465 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 17:03:22.558 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-24 17:03:22.904 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 17:03:22.926 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>

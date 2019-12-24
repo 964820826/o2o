@@ -15,6 +15,9 @@
 </head>
 <body>
 <header class="bar bar-nav">
+    <a class="button button-link button-nav pull-left" external href="javascript:history.go(-1);" data-transition='slide-out'>
+        <span class="icon icon-left" ></span> 返回
+    </a>
     <h1 class="title">商品编辑</h1>
 </header>
 <div class="content">
@@ -39,10 +42,9 @@
                         <i class="icon icon-form-email"></i>
                     </div>
                     <div class="item-inner">
-                        <div class="item-title label">目录</div>
+                        <div class="item-title label">商品类别</div>
                         <div class="item-input">
-                            <select id="category">
-                            </select>
+                            <select id="category"></select>
                         </div>
                     </div>
                 </div>
@@ -55,7 +57,7 @@
                     <div class="item-inner">
                         <div class="item-title label">优先级</div>
                         <div class="item-input">
-                            <input type="number" id="priority" placeholder="数字越大越排前面">
+                            <input type="number" id="priority" placeholder="数字越大越排前面(最大值为100)" required>
                         </div>
                     </div>
                 </div>

@@ -41,7 +41,7 @@ public class ProductJump {
      */
     @GetMapping("/listPage")
     public String productListPage() {
-        return "/product/listProduct";
+        return "/product/manageProduct";
     }
 
     /**

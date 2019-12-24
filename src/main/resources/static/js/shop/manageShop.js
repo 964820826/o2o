@@ -20,8 +20,11 @@ function getCurrentShopId() {
         success:function (data) {
             if (data.code == 0){
                 $('#shopId').val(data.data.shopId);
-                $('#manageProduct').attr("href","/product/listPage?shopId=" + data.data.shopId)
-            } else if (data.code == 5002 || data.code ==5004) {
+                //设置商品管理跳转地址
+                $('#manageProduct').attr("href","/product/listPage?shopId=" + data.data.shopId);
+                //设置类别管理跳转地址
+                $('#productCategory').attr("href","/productCategory/manage?shopId=" + data.data.shopId);
+            } else if (data.code === 5002 || data.code ===5004) {
                 //未登陆或无操作权限，返回上一页
                 window.history.go(-1);
             } else {
