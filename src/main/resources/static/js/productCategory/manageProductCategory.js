@@ -18,7 +18,7 @@ function getProductCategoryList() {
             var productCategoryListHtml = '';
             productCategoryList.forEach(function (item) {
                 productCategoryListHtml +=
-                    '<div class="row row-product">' +
+                    '<div class="row row-product-category">' +
                         '<div class="col-40">' + item.productCategoryName + '</div>' +
                         '<div class="col-20">' + item.priority + '</div>' +
                         '<div class="col-40">' +

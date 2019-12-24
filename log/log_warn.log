@@ -384,3 +384,12 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 2019-12-24 17:03:22.558 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
 2019-12-24 17:03:22.904 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
 2019-12-24 17:03:22.926 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 23:09:58.634 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-24 23:09:58.982 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 23:09:59.000 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 23:15:28.494 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-24 23:15:28.812 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 23:15:28.829 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 23:20:57.547 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-24 23:20:57.866 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
+2019-12-24 23:20:57.882 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.util.List<org.springframework.web.multipart.MultipartFile>
