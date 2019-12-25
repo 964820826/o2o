@@ -2898,3 +2898,6 @@
 2019-12-24 23:29:54.418 [http-nio-8080-exec-8] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320393452772.jpg'
 2019-12-24 23:29:54.420 [http-nio-8080-exec-10] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320371786788.jpg'
 2019-12-24 23:29:54.422 [http-nio-8080-exec-9] INFO  com.dyl.o2o.common.security.JWTAuthorizationFilter - 鉴权url： '/upload/images/item/headtitle/2017061320315746624.jpg'
+2019-12-24 23:43:05.688 [Thread-17] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-24 23:43:05.690 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-12-24 23:43:05.695 [Thread-17] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

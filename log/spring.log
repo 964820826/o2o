@@ -3621,3 +3621,6 @@ org.springframework.security.web.firewall.RequestRejectedException: The request 
 2019-12-24 23:29:54.418  INFO 23352 --- [http-nio-8080-exec-8] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/upload/images/item/headtitle/2017061320393452772.jpg'
 2019-12-24 23:29:54.420  INFO 23352 --- [http-nio-8080-exec-10] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/upload/images/item/headtitle/2017061320371786788.jpg'
 2019-12-24 23:29:54.422  INFO 23352 --- [http-nio-8080-exec-9] c.d.o.c.security.JWTAuthorizationFilter  : 鉴权url： '/upload/images/item/headtitle/2017061320315746624.jpg'
+2019-12-24 23:43:05.688  INFO 23352 --- [Thread-17] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-24 23:43:05.690  INFO 23352 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-24 23:43:05.695  INFO 23352 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
